@@ -1,5 +1,8 @@
 # designbybenbrasso-website
 
+> ⚠️ **Usage Notice**  
+> This portfolio repository is for reference only.  
+> **Forking, copying, or reusing any part of this project without explicit permission is prohibited.**
 ---
 
 ---
