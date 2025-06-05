@@ -49,7 +49,7 @@ This portfolio showcases my work as a Full-Stack UX Product Design Lead, featuri
 
 ```
 app/
-├── components/          # Reusable UI components
+├── components/         # Reusable UI components
 ├── contact/            # Contact page and form logic
 ├── read-me/            # Personal README page
 ├── work/               # Project case studies
@@ -178,7 +178,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Contact
 
 **Ben Brasso**
-- Portfolio: [your-domain.com](https://your-domain.com)
+- Portfolio: [benbrasso.com](https://www.benbrasso.com)
 - LinkedIn: [linkedin.com/in/benbrasso](https://linkedin.com/in/benbrasso)
 - GitHub: [github.com/benbrasso-agile6](https://github.com/benbrasso-agile6)
 - Email: benbrasso@gmail.com
