@@ -47,7 +47,7 @@ This portfolio showcases my work as a Full-Stack UX Product Design Lead, featuri
 
 ## 🏗️ Project Structure
 
-```
+\`\`\`
 app/
 ├── components/         # Reusable UI components
 ├── contact/            # Contact page and form logic
@@ -60,7 +60,7 @@ app/
 
 components/ui/          # shadcn/ui components
 public/                 # Static assets
-```
+\`\`\`
 
 ## 🚀 Getting Started
 
@@ -71,40 +71,40 @@ public/                 # Static assets
 ### Installation
 
 1. Clone the repository:
-```bash
+\`\`\`bash
 git clone https://github.com/YOUR_USERNAME/designbybenbrasso-portfolio.git
 cd designbybenbrasso-portfolio
-```
+\`\`\`
 
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
 # or
 yarn install
 # or
 pnpm install
-```
+\`\`\`
 
 3. Set up environment variables:
-```bash
+\`\`\`bash
 cp .env.example .env.local
-```
+\`\`\`
 
 Add your environment variables:
-```
+\`\`\`
 RESEND_API_KEY=your_resend_api_key
 NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY=your_turnstile_site_key
 CLOUDFLARE_TURNSTILE_SECRET_KEY=your_turnstile_secret_key
-```
+\`\`\`
 
 4. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-```
+\`\`\`
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -146,10 +146,10 @@ The contact form uses Resend for email delivery. To set it up:
 
 ### Manual Deployment
 
-```bash
+\`\`\`bash
 npm run build
 npm run start
-```
+\`\`\`
 
 ## 📱 Features
 
@@ -186,7 +186,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Built with ❤️ using Next.js 15 and deployed on Vercel.
-```
+\`\`\`
 
 This README includes:
 
