@@ -93,8 +93,7 @@ cp .env.example .env.local
 Add your environment variables:
 \`\`\`
 RESEND_API_KEY=your_resend_api_key
-NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY=your_turnstile_site_key
-CLOUDFLARE_TURNSTILE_SECRET_KEY=your_turnstile_secret_key
+# Add other environment variables as needed
 \`\`\`
 
 4. Run the development server:
@@ -186,23 +185,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Built with ❤️ using Next.js 15 and deployed on Vercel.
-\`\`\`
-
-This README includes:
-
-- **Project overview** and live demo link
-- **Complete tech stack** breakdown
-- **Project structure** explanation
-- **Step-by-step setup** instructions
-- **Environment variables** configuration
-- **Customization guide** for content updates
-- **Deployment instructions** for Vercel
-- **Feature list** highlighting key capabilities
-- **Contact information** and links
-
-Just replace `YOUR_USERNAME` with your actual GitHub username and update the live demo URL once you deploy!
-
----
 
 ---
 
