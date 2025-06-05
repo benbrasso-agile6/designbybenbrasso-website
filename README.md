@@ -2,11 +2,14 @@
 
 ---
 
-## 📝 License
+---
+
+## 📝 License & Usage
 
 - **Code**: Licensed under the [MIT License](./LICENSE).
 - **Design, Content & Images**: Licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+- **Repository Access Policy**: Forking, copying, or mirroring this repository is **not permitted without prior written consent**.
 
-You are welcome to reuse or adapt the **codebase** for personal or non-commercial projects with attribution. However, **all design assets, text, and visual content are protected under the CC BY-NC license** and may not be used for commercial purposes without explicit permission from Ben Brasso.
+This repository is intended for viewing and reference only. If you're interested in reusing any part of this project, please [contact me](mailto:your-email@example.com) for permission.
 
 © 2025 Ben Brasso. All rights reserved.
