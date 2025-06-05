@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description:
     "Design Portfolio for Ben Brasso, Full-Stack UX Product Design Lead, showcasing projects and expertise in user experience, product strategy, AI, and delivery. Specializing in health care design, research, accessibility, content design, and human-centered design methodologies.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
