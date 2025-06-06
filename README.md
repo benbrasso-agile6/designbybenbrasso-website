@@ -1,12 +1,10 @@
-# designbybenbrasso-website
+# Ben Brasso Portfolio
 
 > ⚠️ **Usage Notice**  
 > This portfolio repository is for reference only.  
 > **Forking, copying, or reusing any part of this project without explicit permission is prohibited.**
 
 ---
-
-# Ben Brasso Portfolio
 
 A modern, responsive portfolio website showcasing UX design work, built with Next.js 15 and deployed on Vercel.
 
