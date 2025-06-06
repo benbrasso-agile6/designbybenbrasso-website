@@ -10,7 +10,7 @@ A modern, responsive portfolio website showcasing UX design work, built with Nex
 
 ## 🚀 Live Demo
 
-[View Live Site](https://www.benbrasso.com/)
+[Visit live site](https://www.benbrasso.com/)
 
 ## 📋 About
 
