@@ -43,9 +43,10 @@ This portfolio showcases my work as a Full-Stack UX Product Design Lead, featuri
 - **Vercel** - Deployment platform with automatic CI/CD
 - **Cloudinary** - Image optimization and delivery
 
+<pre lang="markdown">
 ## 🏗️ Project Structure
 
-\`\`\`
+```plaintext
 app/
 ├── components/         # Reusable UI components
 ├── contact/            # Contact page and form logic
@@ -58,7 +59,9 @@ app/
 
 components/ui/          # shadcn/ui components
 public/                 # Static assets
-\`\`\`
+```
+</pre>
+
 
 ## 🚀 Getting Started
 
