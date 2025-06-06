@@ -4,10 +4,21 @@ import Image from "next/image"
 import { ArrowLeftIcon } from "lucide-react"
 import type { Metadata } from "next"
 
+// Add import for the new component
+import ProjectDetailsTable from "../components/project-details-table"
+
 export const metadata: Metadata = {
   title: "Case Study: Patient check-in | Ben Brasso",
   description: "Detailed case study of the Patient Check-in design project by Ben Brasso.",
 }
+
+// Define project details data
+const projectDetails = [
+  { label: "Client Type", value: "Government Agency (Healthcare)" },
+  { label: "Role", value: ["Lead UX/UI Designer", "Accessibility Advocate"] },
+  { label: "Timeline", value: "8 Months" },
+  { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
+]
 
 export default function MobileBankingAppPage() {
   return (
@@ -18,6 +29,10 @@ export default function MobileBankingAppPage() {
           Back to All Projects
         </Link>
       </Button>
+
+      {/* Add the ProjectDetailsTable component here */}
+      <ProjectDetailsTable details={projectDetails} />
+
       <article className="prose prose-lg max-w-none dark:prose-invert">
         <h1>Mobile patient check-in</h1>
         <Image

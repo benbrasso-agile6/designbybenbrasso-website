@@ -3,11 +3,21 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeftIcon } from "lucide-react"
 import type { Metadata } from "next"
+// Add import for the new component
+import ProjectDetailsTable from "../components/project-details-table"
 
 export const metadata: Metadata = {
   title: "Case Study: AI scribe KPI dashboard | Ben Brasso",
   description: "Detailed case study of the AI Scribe KPI Dashboard project by Ben Brasso.",
 }
+
+// Define project details data
+const projectDetails = [
+  { label: "Client Type", value: "Healthcare Technology (B2B SaaS)" },
+  { label: "Role", value: ["UX Strategist", "Lead Product Designer"] },
+  { label: "Timeline", value: "4 Months" },
+  { label: "Tools", value: ["Figma", "Miro", "UserTesting.com", "Amplitude"] },
+]
 
 export default function SaasDashboardOptimizationPage() {
   return (
@@ -18,6 +28,10 @@ export default function SaasDashboardOptimizationPage() {
           Back to All Projects
         </Link>
       </Button>
+
+      {/* Add the ProjectDetailsTable component here */}
+      <ProjectDetailsTable details={projectDetails} />
+
       <article className="prose prose-lg max-w-none dark:prose-invert">
         <h1>AI scribe pilot KPI dashboard</h1>
         <Image

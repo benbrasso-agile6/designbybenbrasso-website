@@ -4,10 +4,21 @@ import Image from "next/image"
 import { ArrowLeftIcon } from "lucide-react"
 import type { Metadata } from "next"
 
+// Add import for the new component
+import ProjectDetailsTable from "../components/project-details-table"
+
 export const metadata: Metadata = {
   title: "Case Study: Direct online scheduling | Ben Brasso",
   description: "Detailed case study of the Direct Online Scheduling project by Ben Brasso.",
 }
+
+// Define project details data
+const projectDetails = [
+  { label: "Client Type", value: "Government Agency (Healthcare)" },
+  { label: "Role", value: ["Lead UX Designer", "User Researcher"] },
+  { label: "Timeline", value: "Ongoing (Multiple Phases)" },
+  { label: "Tools", value: ["Figma", "Optimal Workshop", "VA.gov Design System", "GitHub"] },
+]
 
 export default function EcommercePlatformRedesignPage() {
   return (
@@ -22,8 +33,11 @@ export default function EcommercePlatformRedesignPage() {
           Back to All Projects
         </Link>
       </Button>
+
+      {/* Add the ProjectDetailsTable component here */}
+      <ProjectDetailsTable details={projectDetails} />
+
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-        {/* Using prose-neutral for black/white theme */}
         <h1>Provider online scheduling</h1>
         <Image
           src="/placeholder.svg?width=800&height=450"
