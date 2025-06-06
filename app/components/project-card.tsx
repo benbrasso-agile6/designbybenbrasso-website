@@ -38,6 +38,7 @@ export default function ProjectCard({
               width={890}
               height={500}
               className="object-contain w-full h-full transition-transform duration-300"
+              unoptimized // Added this prop
             />
           </div>
         </div>
