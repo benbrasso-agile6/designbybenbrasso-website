@@ -45,8 +45,7 @@ This portfolio showcases my work as a Full-Stack UX Product Design Lead, featuri
 
 ## 🏗️ Project Structure
 
-<pre><code>
-app/
+<pre><code>app/
 ├── components/         # Reusable UI components
 ├── contact/            # Contact page and form logic
 ├── read-me/            # Personal README page
