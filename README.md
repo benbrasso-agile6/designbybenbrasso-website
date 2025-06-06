@@ -59,7 +59,6 @@ app/
 components/ui/          # shadcn/ui components
 public/                 # Static assets
 
-
 ## 🚀 Getting Started
 
 ### Prerequisites
