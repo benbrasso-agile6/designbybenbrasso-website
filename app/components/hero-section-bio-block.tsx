@@ -13,7 +13,7 @@ export default function DescriptiveTextBlock() {
         in public and private health care,{" "}
         <strong>
           helping transform organizational objectives into informed, purposeful, and accessible user-centered
-          experiences.
+          experience.
         </strong>
       </p>
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
