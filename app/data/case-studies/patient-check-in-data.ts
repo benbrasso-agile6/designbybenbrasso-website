@@ -86,11 +86,11 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      id: "applicable-law", // Added ID for the anchor link target
-      title: "Most applicable law this work supports",
+      id: "applicable-law", // This ID is for the H2 section title
+      title: "Most applicable law this work supports", // This will be rendered as an H2
       content: [
         {
-          type: "paragraph",
+          type: "h3", // Changed to h3
           text: "Which law supports this work the most?",
         },
         {
@@ -98,7 +98,7 @@ export const patientCheckInData: CaseStudyData = {
           text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
         },
         {
-          type: "paragraph",
+          type: "h3", // Changed to h3
           text: "How is this work related to the law?",
         },
         {

@@ -76,6 +76,8 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
         )
       }
       return null
+    case "h3": // Added case for h3
+      return <h3 key={index}>{item.text}</h3>
     default:
       return null
   }
@@ -120,8 +122,20 @@ export default function CaseStudyPage({ params }: Props) {
 
         <p className="lead">{caseStudy.leadParagraph}</p>
 
+        {caseStudy.anchorLink && (
+          <p className="mt-4 mb-8">
+            <a
+              href={caseStudy.anchorLink.href}
+              className="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline"
+            >
+              {caseStudy.anchorLink.text}
+            </a>
+          </p>
+        )}
+
         {caseStudy.sections.map((section, sectionIndex) => (
-          <section key={sectionIndex}>
+          // The section.id is used for the anchor link target
+          <section key={sectionIndex} id={section.id}>
             <h2>{section.title}</h2>
             {section.content.map(renderContentItem)}
           </section>
