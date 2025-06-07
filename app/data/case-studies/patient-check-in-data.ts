@@ -81,5 +81,26 @@ export const patientCheckInData: CaseStudyData = {
         },
       ],
     },
+    {
+      title: "Most applicable law this work supports",
+      content: [
+        {
+          type: "paragraph",
+          text: "Which law supports this work the most?",
+        },
+        {
+          type: "paragraph",
+          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018 <span aria-label="(opens in a new tab)" class="text-sm">↗</span></a>',
+        },
+        {
+          type: "paragraph",
+          text: "How is this work related to the law?",
+        },
+        {
+          type: "paragraph",
+          text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) did more than expand access to community care. It also called for the VA to modernize how it delivers health care. This means using new tools—like smartphone check-in—to make it easier for veterans to access services, reduce wait times, and improve the overall experience at VA facilities.",
+        },
+      ],
+    },
   ],
 }
