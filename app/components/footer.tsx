@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="flex flex-col items-center md:flex-row md:items-center md:gap-3">
           {" "}
           {/* Aligns children: centered on mobile, start (left) on desktop */}
-          <Link href="/" className="flex items-center gap-2 group/logo">
+          <Link href="/" className="flex items-center gap-2 group/logo mb-1.5 md:mb-0">
             {" "}
-            {/* Site name link, added margin-bottom */}
+            {/* Site name link, margin bottom on small screens, none on medium+ */}
             <CompassIcon className="h-6 w-6 text-sky-600 dark:text-sky-500 group-hover/logo:opacity-80 transition-opacity" />
             <p className="text-sm font-medium group-hover/logo:text-sky-600 dark:group-hover/logo:text-sky-500 transition-colors text-center md:text-left">
               designbybenbrasso
