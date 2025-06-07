@@ -95,8 +95,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          // Ensure HTML is correctly escaped for the string, but will be rendered by dangerouslySetInnerHTML
-          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018 <span aria-label="(opens in a new tab)" class="text-sm">&#x2197;</span></a>',
+          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
         },
         {
           type: "paragraph",
