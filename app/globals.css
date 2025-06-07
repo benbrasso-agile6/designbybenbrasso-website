@@ -10,6 +10,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Custom focus-visible styles */
+  *:focus-visible {
+    outline: 3px solid #0ea5e9; /* Tailwind sky-500 */
+    outline-offset: 2px;
+    border-radius: 2px; /* Optional: slightly rounded corners for the outline */
+  }
+  .dark *:focus-visible {
+    outline: 3px solid #38bdf8; /* Tailwind sky-400 for dark mode */
+  }
+
+  /* Remove default outline if custom focus-visible is used */
+  *:focus {
+    outline: none;
+  }
+
+  /* Ensure sr-only is defined if not already part of your Tailwind setup */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 }
 
 @layer base {

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -55,6 +55,12 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.className} bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-[100] focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:bg-white focus:dark:bg-neutral-900 focus:text-sky-600 focus:dark:text-sky-500 focus:border focus:border-sky-600 focus:dark:border-sky-500 focus:rounded-lg focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <ScrollToTop />
           {children}

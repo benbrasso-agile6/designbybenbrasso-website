@@ -84,6 +84,7 @@ export default function Header() {
                   ? "text-sky-600 dark:text-sky-500"
                   : "text-black dark:text-neutral-100"
               }`}
+              aria-current={pathname === item.href && !item.isExternal ? "page" : undefined}
               {...(item.download && { download: item.download })}
               target={item.isExternal || item.download ? "_blank" : undefined}
               rel={item.isExternal || item.download ? "noopener noreferrer" : undefined}
@@ -124,6 +125,7 @@ export default function Header() {
                         ? "text-sky-600 dark:text-sky-500 font-semibold"
                         : "text-black dark:text-neutral-100"
                     }`}
+                    aria-current={pathname === item.href && !item.isExternal ? "page" : undefined}
                     onClick={() => setIsMobileMenuOpen(false)}
                     {...(item.download && { download: item.download })}
                     target={item.isExternal || item.download ? "_blank" : undefined}

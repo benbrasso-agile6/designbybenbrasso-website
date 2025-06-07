@@ -16,7 +16,7 @@ export default function ContactLayout({
   return (
     <div className="flex flex-col min-h-dvh bg-white dark:bg-neutral-950">
       <Header />
-      <main className="flex-1 py-12 md:py-16 lg:py-20 flex flex-col items-center">
+      <main id="main-content" className="flex-1 py-12 md:py-16 lg:py-20 flex flex-col items-center">
         <div className="max-w-[1000px] mx-auto px-8">{children}</div>
       </main>
       <Footer />

@@ -16,7 +16,7 @@ export default function ReadMeLayout({
   return (
     <div className="flex flex-col min-h-dvh">
       <Header />
-      <main className="flex-1 py-12 md:py-16 lg:py-20">
+      <main id="main-content" className="flex-1 py-12 md:py-16 lg:py-20">
         <div className="max-w-[1000px] mx-auto px-8">{children}</div>
       </main>
       <Footer />

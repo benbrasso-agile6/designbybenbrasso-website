@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-dvh">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <HeroSection />
         <FeaturedWorkSection />
         <ToolsIUseSection />

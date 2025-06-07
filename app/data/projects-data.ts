@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
     title: "Provider online scheduling",
     slug: "direct-online-scheduling",
     description:
-      "Designed the scheduling experience for community care referrals on VA.gov and <strong>streamlined the process from weeks to minutes to book an appointment.</strong>",
+      "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1748817338/Frame_532_b2uwxy.png",
     tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
     // Retain specific margins if needed, or they'll use defaults from ProjectCard/FeaturedWorkSection
