@@ -14,6 +14,7 @@ export interface CaseStudyContentItem {
 }
 
 export interface CaseStudySection {
+  id?: string // Optional ID for anchor linking
   title: string
   content: CaseStudyContentItem[]
 }
@@ -24,6 +25,11 @@ export interface CaseStudyData {
   metaTitle: string // Specifically for <title> tag
   metaDescription: string
   leadParagraph: string
+  anchorLink?: {
+    // Optional anchor link definition
+    text: string
+    href: string
+  }
   projectDetails: ProjectDetailItem[]
   mainImage?: {
     // Optional: if different from project card or needs specific alt/priority for case study

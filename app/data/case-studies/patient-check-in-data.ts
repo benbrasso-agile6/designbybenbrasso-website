@@ -8,6 +8,10 @@ export const patientCheckInData: CaseStudyData = {
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   leadParagraph:
     "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
+  anchorLink: {
+    text: "Most applicable law this work supports",
+    href: "#applicable-law", // This ID must match the ID of the target section
+  },
   projectDetails: [
     { label: "Client Type", value: "Government Agency (Healthcare)" },
     { label: "Role", value: ["Lead UX/UI Designer", "Accessibility Advocate"] },
@@ -82,6 +86,7 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
+      id: "applicable-law", // Added ID for the anchor link target
       title: "Most applicable law this work supports",
       content: [
         {
@@ -90,7 +95,8 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018 <span aria-label="(opens in a new tab)" class="text-sm">↗</span></a>',
+          // Ensure HTML is correctly escaped for the string, but will be rendered by dangerouslySetInnerHTML
+          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018 <span aria-label="(opens in a new tab)" class="text-sm">&#x2197;</span></a>',
         },
         {
           type: "paragraph",

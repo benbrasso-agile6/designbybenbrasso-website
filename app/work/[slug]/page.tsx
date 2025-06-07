@@ -51,7 +51,7 @@ export async function generateStaticParams() {
 const renderContentItem = (item: CaseStudyContentItem, index: number) => {
   switch (item.type) {
     case "paragraph":
-      return <p key={index}>{item.text}</p>
+      return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
     case "list":
       return (
         <ul key={index}>
