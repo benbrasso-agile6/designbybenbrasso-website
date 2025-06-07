@@ -8,6 +8,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     "Detailed case study of the AI Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   leadParagraph:
     "Revamped a complex B2B AI Scribe KPI dashboard to enhance data visualization, improve user workflow efficiency for medical scribes and administrators, and provide more actionable insights into scribe performance and documentation quality.",
+  anchorLink: {
+    text: "Learn about relevant data privacy considerations",
+    href: "#data-privacy-considerations",
+  },
   projectDetails: [
     { label: "Client Type", value: "Healthcare Technology (B2B SaaS)" },
     { label: "Role", value: ["UX Strategist", "Lead Product Designer"] },
@@ -75,6 +79,28 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
             "Improved oversight of AI scribe operations and documentation quality.",
             "Positive feedback on the clarity and usefulness of the new data visualizations.",
           ],
+        },
+      ],
+    },
+    {
+      id: "data-privacy-considerations", // Matches anchorLink.href
+      title: "Most applicable law this work supports",
+      content: [
+        {
+          type: "h3",
+          text: "Key Data Privacy and Security Regulations",
+        },
+        {
+          type: "paragraph",
+          text: 'This AI Scribe KPI Dashboard handles sensitive patient information, and its design and operation are guided by data privacy and security regulations such as HIPAA (Health Insurance Portability and Accountability Act) in the United States. <a href="https://www.hhs.gov/hipaa/for-professionals/index.html" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">Learn more about HIPAA</a>.',
+        },
+        {
+          type: "h3",
+          text: "How this work aligns with data protection principles",
+        },
+        {
+          type: "paragraph",
+          text: "The dashboard was developed with a strong emphasis on data minimization, access controls, audit trails, and de-identification techniques where appropriate to ensure that insights are generated while protecting patient privacy and complying with relevant healthcare data laws.",
         },
       ],
     },

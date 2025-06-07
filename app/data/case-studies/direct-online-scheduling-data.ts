@@ -8,6 +8,10 @@ export const directOnlineSchedulingData: CaseStudyData = {
     "Case study on designing a direct online scheduling system for healthcare providers, improving user access and booking efficiency by Ben Brasso.",
   leadParagraph:
     "This project involved a comprehensive UX design for a direct online scheduling system, focusing on enhancing user access and improving booking efficiency for community care referrals on VA.gov.",
+  anchorLink: {
+    text: "Understand the legislative background for this initiative",
+    href: "#legislative-background",
+  },
   projectDetails: [
     { label: "Client Type", value: "Government Agency (Healthcare)" },
     { label: "Role", value: ["Lead UX Designer", "User Researcher"] },
@@ -81,6 +85,28 @@ export const directOnlineSchedulingData: CaseStudyData = {
             "Decreased call volume to VA staff regarding appointment scheduling.",
             "Positive feedback on the ease of use and accessibility of the online tool.",
           ],
+        },
+      ],
+    },
+    {
+      id: "legislative-background", // Matches anchorLink.href
+      title: "Most applicable law this work supports",
+      content: [
+        {
+          type: "h3",
+          text: "Primary Legislative Driver: VA MISSION Act of 2018",
+        },
+        {
+          type: "paragraph",
+          text: 'The development of enhanced online scheduling tools for Veterans, particularly for community care, is strongly supported by the <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018</a>. This act aimed to give Veterans greater access to healthcare, including streamlining access to community care providers.',
+        },
+        {
+          type: "h3",
+          text: "How this work aligns with the MISSION Act",
+        },
+        {
+          type: "paragraph",
+          text: "This direct online scheduling system directly addresses the MISSION Act's goals by modernizing VA healthcare access, reducing administrative burdens for Veterans seeking appointments, and making it easier to utilize community care benefits. It empowers Veterans with more control over their scheduling and improves the efficiency of accessing necessary medical services.",
         },
       ],
     },
