@@ -98,7 +98,7 @@ export const directOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'The development of enhanced online scheduling tools for Veterans, particularly for community care, is strongly supported by the <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">VA MISSION Act of 2018</a>. This act aimed to give Veterans greater access to healthcare, including streamlining access to community care providers.',
+          text: 'The development of enhanced online scheduling tools for Veterans, particularly for community care, is strongly supported by the <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">VA MISSION Act of 2018</a>. This act aimed to give Veterans greater access to healthcare, including streamlining access to community care providers.',
         },
         {
           type: "h3",

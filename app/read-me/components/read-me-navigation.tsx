@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { ArrowDownIcon } from "lucide-react"
+// Removed useState, PlusIcon, MinusIcon, useMediaQuery
 
 interface NavigationSection {
   id: string
@@ -11,8 +12,8 @@ interface NavigationSection {
 interface ReadMeNavigationProps {
   sections: NavigationSection[]
   currentPagePath: string
-  navId?: string // Optional ID for the nav element itself for ARIA
-  titleId?: string // Optional ID for the h2 title for ARIA
+  navId?: string
+  titleId?: string
 }
 
 export default function ReadMeNavigation({
@@ -38,19 +39,22 @@ export default function ReadMeNavigation({
       id={navId}
       className="my-12 p-6 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-neutral-50 dark:bg-neutral-900 not-prose shadow-sm"
     >
-      <h2 id={titleId} className="text-xl font-semibold mb-4 text-neutral-800 dark:text-neutral-200">
-        On this page
-      </h2>
-      <ul className="space-y-2 columns-1 sm:columns-2">
+      <div className="flex justify-between items-center mb-4">
+        <h2 id={titleId} className="text-xl font-semibold text-neutral-800 dark:text-neutral-200 !my-0">
+          On this page
+        </h2>
+        {/* Removed toggle button */}
+      </div>
+      <ul id="readme-nav-list" className="space-y-2 columns-1 md:columns-2">
         {sections.map((section) => (
           <li key={section.id} className="break-inside-avoid">
             <a
               href={`${currentPagePath}#${section.id}`}
-              className="text-sm sm:text-base text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 hover:underline flex items-center group cursor-pointer"
+              className="text-sm sm:text-base text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 flex items-center group"
               onClick={(e) => handleSmoothScroll(e, section.id)}
             >
               {section.title}
-              <ArrowDownIcon className="ml-2 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+              <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
             </a>
           </li>
         ))}

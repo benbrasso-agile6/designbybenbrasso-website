@@ -12,16 +12,14 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
 
-  // Define base navigation items with icons for mobile
   const baseNavItems = [
     { name: "README", href: "/read-me", icon: <FileTextIcon className="h-5 w-5" /> },
     {
       name: "Resume/CV",
-      // Updated Dropbox URL with dl=1 for direct download
       href: "https://www.dropbox.com/scl/fi/shwx97aarjojfuihfjk85/Ben-Brasso-Resume-2025.pdf?rlkey=f8y8kjg2jqfxvo4xgsc5qc4fv&st=d89477ve&dl=1",
       icon: <DownloadIcon className="h-5 w-5" />,
-      download: "Ben_Brasso_Resume_2025.pdf", // Suggested download name
-      isExternal: true, // Flag for external links
+      download: "Ben_Brasso_Resume_2025.pdf",
+      isExternal: true,
     },
     { name: "Contact", href: "/contact", icon: <MailIcon className="h-5 w-5" /> },
   ]
@@ -36,16 +34,20 @@ export default function Header() {
       }
     }
     if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden" // Prevent background scroll when mobile menu is open
       document.addEventListener("mousedown", handleClickOutside)
     } else {
+      document.body.style.overflow = ""
       document.removeEventListener("mousedown", handleClickOutside)
     }
     return () => {
+      document.body.style.overflow = ""
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [isMobileMenuOpen])
 
   return (
+    // z-50 ensures header is above most other content
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-border/40 bg-white dark:bg-neutral-950">
       <div className="w-full mx-auto flex h-16 items-center justify-between px-6 relative">
         <Link href="/" className="flex items-center gap-2 group">
@@ -89,7 +91,6 @@ export default function Header() {
               target={item.isExternal || item.download ? "_blank" : undefined}
               rel={item.isExternal || item.download ? "noopener noreferrer" : undefined}
             >
-              {/* Only show icon for Resume/CV in desktop nav */}
               {item.name === "Resume/CV" && item.icon && <span className="mr-1.5">{item.icon}</span>}
               {item.name}
             </Link>
@@ -108,6 +109,7 @@ export default function Header() {
         </div>
         <AnimatePresence>
           {isMobileMenuOpen && (
+            // Mobile menu also uses z-50 to ensure it's above other content, including sticky nav
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -131,7 +133,6 @@ export default function Header() {
                     target={item.isExternal || item.download ? "_blank" : undefined}
                     rel={item.isExternal || item.download ? "noopener noreferrer" : undefined}
                   >
-                    {/* Keep icons for all items in mobile menu */}
                     {item.icon}
                     {item.name}
                   </Link>

@@ -1,24 +1,21 @@
 "use client"
 
-import { MapPinIcon } from "lucide-react" // Removed ArrowDownIcon as it's now in ReadMeNavigation
+import { MapPinIcon } from "lucide-react"
 import { readMeSectionsData } from "./read-me-data"
 import ReadMeContentSection from "./components/read-me-content-section"
 import FooterImage from "./components/footer-image"
 import YoutubeAudioPlayer from "./components/youtube-audio-player"
-import ReadMeNavigation from "./components/read-me-navigation" // Import the new component
+import ReadMeNavigation from "./components/read-me-navigation"
 import StickyReadMeNavigation from "./components/sticky-read-me-navigation"
 
 export default function ReadMePage() {
-  const youtubeVideoId = "UDVtMYqUAyw" // YouTube Video ID
+  const youtubeVideoId = "UDVtMYqUAyw"
   const currentPagePath = "/read-me"
-  const originalNavId = "readme-page-navigation" // Make sure this matches the ID in ReadMeNavigation
+  const originalNavId = "readme-page-navigation"
 
-  // Prepare the data for the navigation component
-  // The titles here are what will be displayed in the "On this page" nav.
-  // The IDs must match the IDs on the target heading elements.
   const mainContentNavSections = readMeSectionsData.map((sec) => ({
-    title: sec.title, // This is the text for the link
-    id: sec.id, // This is the target anchor ID
+    title: sec.title,
+    id: sec.id,
   }))
 
   const customNavSections = [{ title: "Navigating the nebulous", id: "navigating-the-nebulous-audio" }]
@@ -46,7 +43,6 @@ export default function ReadMePage() {
           of who I am and how I like to work. Always a work in progress.
         </p>
 
-        {/* Use the ReadMeNavigation component with the correct ID */}
         <ReadMeNavigation sections={allNavigationSections} currentPagePath={currentPagePath} navId={originalNavId} />
 
         {readMeSectionsData.map((section) => (

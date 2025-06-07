@@ -17,8 +17,8 @@ export default function DescriptiveTextBlock() {
         </strong>
       </p>
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
-        I'm a sponge for learning new skills, technology, and conquering new goals, while building environments where learning is
-        collaborative and continuous for everyone.
+        I'm a sponge for learning new skills, technology, and conquering new goals, while building environments where
+        learning is collaborative and continuous for everyone.
       </p>
       {/*
       <p className="text-lg text-neutral-500 dark:text-neutral-300 md:text-xl leading-relaxed md:leading-[2.75rem]">

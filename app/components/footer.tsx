@@ -7,12 +7,25 @@ export default function Footer() {
     <footer className="border-t border-sky-600/30 dark:border-sky-500/30 bg-white dark:bg-neutral-950">
       <div className="w-full mx-auto flex flex-col md:flex-row justify-between gap-6 py-8 md:py-6 px-6">
         {/* Left Group - Aligned Left */}
-        <div className="flex flex-col items-center text-center md:items-start md:text-left md:flex-row md:gap-2">
-          <Link href="/" className="flex items-center gap-2 group/logo">
+        <div className="flex flex-col items-center md:items-start">
+          {" "}
+          {/* Aligns children: centered on mobile, start (left) on desktop */}
+          <Link href="/" className="flex items-center gap-2 group/logo mb-1.5">
+            {" "}
+            {/* Site name link, added margin-bottom */}
             <CompassIcon className="h-6 w-6 text-sky-600 dark:text-sky-500 group-hover/logo:opacity-80 transition-opacity" />
-            <p className="text-sm font-medium group-hover/logo:text-sky-600 dark:group-hover/logo:text-sky-500 transition-colors">
+            <p className="text-sm font-medium group-hover/logo:text-sky-600 dark:group-hover/logo:text-sky-500 transition-colors text-center md:text-left">
               designbybenbrasso
             </p>
+          </Link>
+          <Link
+            href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-neutral-500 dark:text-neutral-400 hover:text-sky-600 dark:hover:text-sky-500 transition-colors text-center md:text-left underline"
+            aria-label="Repository for designbybenbrasso website on GitHub"
+          >
+            Repo for designbybenbrasso-website on GitHub
           </Link>
         </div>
 

@@ -92,7 +92,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'This AI Scribe KPI Dashboard handles sensitive patient information, and its design and operation are guided by data privacy and security regulations such as HIPAA (Health Insurance Portability and Accountability Act) in the United States. <a href="https://www.hhs.gov/hipaa/for-professionals/index.html" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline">Learn more about HIPAA</a>.',
+          text: 'This AI Scribe KPI Dashboard handles sensitive patient information, and its design and operation are guided by data privacy and security regulations such as HIPAA (Health Insurance Portability and Accountability Act) in the United States. <a href="https://www.hhs.gov/hipaa/for-professionals/index.html" target="_blank" rel="noopener noreferrer">Learn more about HIPAA</a>.',
         },
         {
           type: "h3",

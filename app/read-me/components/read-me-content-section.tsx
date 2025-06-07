@@ -60,7 +60,7 @@ const BackToTopLink = () => {
     <div className="mt-8 text-right not-prose">
       <a
         href="#readme-top"
-        className="text-sm text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 inline-flex items-center group cursor-pointer"
+        className="text-sm text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 inline-flex items-center group cursor-pointer underline"
         onClick={handleBackToTop}
       >
         Back to Top
