@@ -167,7 +167,7 @@ export default function StickyReadMeNavigation({
       ref={stickyNavRef}
       className={cn(
         "fixed z-40 print:hidden transition-opacity duration-300 ease-in-out",
-        "left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[934px]",
+        "left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[700px]",
         "top-[calc(4rem+10px)]", // This is STICKY_NAV_TOP_OFFSET (approx 74px)
         showStickyNav ? "opacity-100" : "opacity-0 pointer-events-none",
       )}
