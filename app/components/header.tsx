@@ -36,14 +36,14 @@ export default function Header() {
       }
     }
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden" // Prevent scrolling of page content when menu is open
       document.addEventListener("mousedown", handleClickOutside)
     } else {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "" // Restore scrolling
       document.removeEventListener("mousedown", handleClickOutside)
     }
     return () => {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "" // Ensure scrolling is restored on unmount
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [isMenuOpen])
@@ -100,6 +100,8 @@ export default function Header() {
 
           {/* Navigation Menu Button - for all sizes */}
           <div className="relative">
+            {" "}
+            {/* This parent div needs to be relative for desktop dropdown positioning */}
             <Button
               variant="outline"
               size="icon"
@@ -122,9 +124,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="absolute top-full bg-white dark:bg-neutral-950 border-b border-border/40 shadow-md z-50 
-                           left-0 right-0 p-6 
-                           md:left-auto md:right-0 md:mt-[22px] md:w-auto md:min-w-[250px] md:max-w-xs md:rounded-lg md:border md:shadow-xl md:p-4"
+                  className="fixed top-16 inset-x-0 bottom-0 p-6 bg-white dark:bg-neutral-950 border-t border-border/40 z-50 overflow-y-auto md:absolute md:top-full md:left-auto md:right-0 md:bottom-auto md:mt-[22px] md:w-auto md:min-w-[250px] md:max-w-xs md:rounded-lg md:border md:shadow-xl md:p-4 md:overflow-visible"
                 >
                   <nav className="grid gap-3 text-base font-medium">
                     {/* Resume/CV link for mobile dropdown only */}
