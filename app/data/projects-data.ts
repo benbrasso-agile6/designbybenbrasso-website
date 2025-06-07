@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
     slug: "patient-check-in",
     description:
       "Re-imagined the mobile patient check-in experience for VA, <strong>increasing usage 4x in 1 month, while seamlessly adding travel reimbursement.</strong>",
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1748809982/Frame_7_djaiys.png",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
   },
   {
