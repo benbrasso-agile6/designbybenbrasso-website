@@ -5,7 +5,8 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Design Contributions | Ben Brasso",
-  description: "A summary of Ben Brasso's design contributions and project work.",
+  description:
+    "Discover Ben Brasso's contributions to design systems, featuring components and patterns developed for VA.gov. Learn about his commitment to scalable and accessible user experiences.",
 }
 
 export default function DesignContributionsLayout({

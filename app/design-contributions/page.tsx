@@ -9,39 +9,12 @@ export default function DesignContributionsPage() {
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
         <h1>Design Contributions</h1>
         <p>
-          This section is currently under construction. I&apos;m excited to share more about my specific design
-          contributions and processes soon.
-        </p>
-        <p>
-          In the meantime, please feel free to explore my{" "}
-          <Link href="/read-me" className="text-sky-600 dark:text-sky-500">
-            README
-          </Link>
-          , check out my{" "}
-          <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-500">
-            Resume/CV
-          </a>
-          , or browse my featured work on the{" "}
-          <Link href="/" className="text-sky-600 dark:text-sky-500">
-            homepage
-          </Link>
-          .
+          I’m passionate about advancing the larger design community by contributing components, patterns, and research that strengthen and mature design systems. By giving back to shared systems like VA.gov’s, I aim to support scalable, accessible, and consistent user experiences—while helping teams build with greater confidence and efficiency. These are a selection of contributions I’ve made to support and grow design systems.
         </p>
       </article>
 
       <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
         <h2>VA.gov Design System</h2>
-        <p>
-          <a
-            href="https://design.va.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sky-600 dark:text-sky-500"
-          >
-            Check out the VA.gov Design System on design.va.gov
-          </a>
-          .
-        </p>
 
         <h3>Components</h3>
         <ul>
