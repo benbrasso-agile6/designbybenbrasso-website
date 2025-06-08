@@ -10,7 +10,7 @@ interface ContactHeroSectionProps {
 }
 
 export default function ContactHeroSection({
-  title = "Let's Connect",
+  title = "Let’s Connect",
   description = "Have a project in mind, a question, or just want to vibe? I'd love to hear from you.",
   imageSrc = "https://res.cloudinary.com/dpl6apspp/image/upload/IMG_2251_at7pkn.jpg",
   imageAlt = "Ben Brasso",
