@@ -62,6 +62,7 @@ export default function HeroSection() {
               height={300}
               className="rounded-full object-cover aspect-square shadow-2xl border-4 border-sky-600/20 dark:border-sky-500/20"
               priority
+              unoptimized // Add this prop
             />
           </motion.div>
         </div>
