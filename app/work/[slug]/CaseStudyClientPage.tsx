@@ -37,6 +37,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
               height={450} // Default height, can be overridden by item.height if added to type
               className="rounded-lg w-full object-cover"
               priority={item.priority}
+              unoptimized
             />
           </div>
         )
@@ -94,6 +95,7 @@ export default function CaseStudyClientPage({ params }: Props) {
             height={caseStudy.mainImage.height}
             className={caseStudy.mainImage.className || "rounded-lg my-6 w-full object-cover"}
             priority={caseStudy.mainImage.priority}
+            unoptimized
           />
         )}
 
