@@ -8,7 +8,11 @@ export default function DesignContributionsPage() {
         <h1 className="leading-normal">Design Contributions</h1>
         <p>
           I’m passionate about advancing the larger design community by contributing components, patterns, and research
-          that strengthen and mature design systems. By giving back to shared systems like VA.gov’s, I aim to support
+          that strengthen and mature design systems. 
+        </p>
+        
+        <p>
+          By giving back to shared systems like VA.gov’s, I aim to support
           scalable, accessible, and consistent user experiences—while helping teams build with greater confidence and
           efficiency. These are a selection of contributions I’ve made to support and grow design systems.
         </p>
