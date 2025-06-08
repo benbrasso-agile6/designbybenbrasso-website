@@ -4,7 +4,7 @@ export enum ProjectDetailLabelKey {
   AGENCY = "AGENCY",
   ROLE = "ROLE",
   PLATFORM = "PLATFORM",
-  TEAM_STRUCTURE = "TEAM_STRUCTURE",
+  // TEAM_STRUCTURE = "TEAM_STRUCTURE", // Removed
   CONTRACT_DURATION = "CONTRACT_DURATION",
   // Add any other standard labels you might use here
 }
@@ -15,6 +15,6 @@ export const projectDetailLabelMap: Record<ProjectDetailLabelKey, string> = {
   [ProjectDetailLabelKey.AGENCY]: "Agency",
   [ProjectDetailLabelKey.ROLE]: "Role",
   [ProjectDetailLabelKey.PLATFORM]: "Platform",
-  [ProjectDetailLabelKey.TEAM_STRUCTURE]: "Team structure",
+  // [ProjectDetailLabelKey.TEAM_STRUCTURE]: "Team structure", // Removed
   [ProjectDetailLabelKey.CONTRACT_DURATION]: "Time on contract",
 }

@@ -19,11 +19,6 @@ export const patientCheckInData: CaseStudyData = {
     },
     { label: ProjectDetailLabelKey.PLATFORM, value: "Mobile web" },
     {
-      label: ProjectDetailLabelKey.TEAM_STRUCTURE,
-      value: "PM, DM, 5 ENG, 4 UX",
-      valueAriaLabel: "Program manager, delivery manager, five engineers, four user experience designers",
-    },
-    {
       label: ProjectDetailLabelKey.CONTRACT_DURATION,
       value: "2 YRS 8 MOS",
       valueAriaLabel: "Two years and eight months",

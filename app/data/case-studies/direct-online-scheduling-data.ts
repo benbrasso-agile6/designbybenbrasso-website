@@ -18,7 +18,6 @@ export const directOnlineSchedulingData: CaseStudyData = {
     { label: ProjectDetailLabelKey.AGENCY, value: "Placeholder Agency Name" },
     { label: ProjectDetailLabelKey.ROLE, value: ["Lead UX Designer", "User Researcher"] },
     { label: ProjectDetailLabelKey.PLATFORM, value: "Web Application (VA.gov)" },
-    { label: ProjectDetailLabelKey.TEAM_STRUCTURE, value: "Multi-disciplinary Government & Contractor Team" },
     { label: ProjectDetailLabelKey.CONTRACT_DURATION, value: "Ongoing (Multiple Phases)" },
   ],
   mainImage: {

@@ -18,7 +18,6 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     { label: ProjectDetailLabelKey.AGENCY, value: "Placeholder Agency Name" },
     { label: ProjectDetailLabelKey.ROLE, value: ["UX Strategist", "Lead Product Designer"] },
     { label: ProjectDetailLabelKey.PLATFORM, value: "Web Application (Desktop)" },
-    { label: ProjectDetailLabelKey.TEAM_STRUCTURE, value: "Cross-functional Agile Team" },
     { label: ProjectDetailLabelKey.CONTRACT_DURATION, value: "4 Months" },
   ],
   mainImage: {
