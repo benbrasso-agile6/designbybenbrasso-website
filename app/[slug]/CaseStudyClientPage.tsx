@@ -5,11 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-import ProjectDetailsTable from "../components/project-details-table"
-import { getCaseStudyData } from "@/app/data/case-studies-data"
-import type { CaseStudyContentItem } from "@/app/data/case-study-types"
+import ProjectDetailsTable from "@/app/components/project-details-table" // Updated import path
+import { getCaseStudyData } from "@/app/data/case-studies-data" // Ensure this path is correct
+import type { CaseStudyContentItem } from "@/app/data/case-study-types" // Ensure this path is correct
 import type React from "react"
-import { useMediaQuery } from "../../read-me/hooks/use-media-query" // Adjusted import path
+import { useMediaQuery } from "../read-me/hooks/use-media-query" // Updated import path
 
 type Props = {
   params: { slug: string }
@@ -59,7 +59,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScr
           top: "9.1%",
           left: "6%",
           width: "88%",
-          height: "74%", // Reduced height further from 75.5% to 74%
+          height: "74%",
           borderRadius: "16px",
         }
         const currentStyle = isSmallScreen ? smallScreenStyle : largeScreenStyle
@@ -95,7 +95,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScr
 export default function CaseStudyClientPage({ params }: Props) {
   const slug = params.slug
   const caseStudy = getCaseStudyData(slug)
-  const isSmallScreen = useMediaQuery("(max-width: 1023px)") // Screens smaller than lg (1024px)
+  const isSmallScreen = useMediaQuery("(max-width: 1023px)")
 
   if (!caseStudy) {
     notFound()
@@ -160,7 +160,12 @@ export default function CaseStudyClientPage({ params }: Props) {
         {caseStudy.sections.map((section, sectionIndex) => (
           <section key={sectionIndex} id={section.id}>
             <h2>{section.title}</h2>
-            {section.content.map((contentItem) => renderContentItem(contentItem, sectionIndex, isSmallScreen))}
+            {section.content.map(
+              (
+                contentItem,
+                itemIndex, // Added itemIndex for unique key
+              ) => renderContentItem(contentItem, itemIndex, isSmallScreen),
+            )}
           </section>
         ))}
 
