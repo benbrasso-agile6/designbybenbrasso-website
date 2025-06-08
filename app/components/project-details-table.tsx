@@ -1,15 +1,8 @@
 import { projectDetailLabelMap } from "@/app/data/project-detail-labels"
-import type { ProjectDetailItem } from "@/app/data/case-study-types" // Ensure this type is imported or defined if not already
-
-// Interface ProjectDetail was previously defined here, now it uses ProjectDetailItem from case-study-types
-// interface ProjectDetail {
-//   label: ProjectDetailLabelKey
-//   value: string | string[]
-//   valueAriaLabel?: string | string[] // Added
-// }
+import type { ProjectDetailItem } from "@/app/data/case-study-types"
 
 interface ProjectDetailsTableProps {
-  details: ProjectDetailItem[] // Use the imported type
+  details: ProjectDetailItem[]
 }
 
 export default function ProjectDetailsTable({ details }: ProjectDetailsTableProps) {
@@ -18,11 +11,13 @@ export default function ProjectDetailsTable({ details }: ProjectDetailsTableProp
   }
 
   return (
-    <div className="my-8 md:my-12 space-y-6">
+    <div className="my-8 md:my-12 space-y-3">
+      {" "}
+      {/* Changed to space-y-3 for smaller spacing */}
       {details.map((detail, index) => (
         <div
-          key={`${projectDetailLabelMap[detail.label]}-${index}`} // More robust key
-          className="flex flex-col sm:flex-row sm:items-start sm:justify-between border-b border-neutral-200 dark:border-neutral-700 pb-6"
+          key={`${projectDetailLabelMap[detail.label]}-${index}`}
+          className="flex flex-col sm:flex-row sm:items-start sm:justify-between border-b border-neutral-200 dark:border-neutral-700 pb-3" // Changed to pb-3 for smaller padding
         >
           <div className="w-full sm:w-1/3 mb-2 sm:mb-0">
             <h3 className="text-sm font-semibold uppercase text-neutral-500 dark:text-neutral-400 tracking-wider">
