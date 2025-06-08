@@ -9,14 +9,13 @@ export const patientCheckInData: CaseStudyData = {
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   leadParagraph:
     "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
-projectDetails: [
+  projectDetails: [
     { label: ProjectDetailLabelKey.CLIENT, value: "U.S. Department of Veteran Affairs" },
     { label: ProjectDetailLabelKey.AGENCY, value: "Office of the CTO" },
     {
       label: ProjectDetailLabelKey.ROLE,
       value: ["UX Lead"],
-      // Example if Role needed an aria-label for its array items:
-      // valueAriaLabel: ["User Experience Lead"]
+      valueAriaLabel: ["User Experience Lead"],
     },
     { label: ProjectDetailLabelKey.PLATFORM, value: "Mobile web" },
     {
@@ -40,7 +39,7 @@ projectDetails: [
       content: [
         {
           type: "paragraph",
-          text: "Traditional patient check-in processes at VA medical centers were often paper-based, leading to long wait times and potential data entry errors. The goal was to create a mobile application that would allow Veterans to check-in for appointments quickly and easily, verify their information, and even manage travel reimbursement claims, all while adhering to strict accessibility standards.",
+          text: '<a href="https://www.va.gov/vhapublications/ViewPublication.asp?pub_ID=11628" target="_blank" rel="noopener noreferrer">VHA Directive 1604</a>, titled Data Entry Requirements for Administrative Data, emphasizes the importance of consistently and accurately entering administrative data into systems like VistA, VHA Enrollment System (VES), and Oracle Cerner Electronic Health Record (EHR). This directive underscores the necessity of maintaining up-to-date patient information to ensure appropriate medical care and services.',
         },
       ],
     },
