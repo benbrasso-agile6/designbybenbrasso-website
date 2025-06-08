@@ -39,16 +39,22 @@ const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScr
     case "image":
       if (item.src && item.alt) {
         return (
-          <div key={index} className={`my-6 flex justify-center ${item.className || ""}`}>
-            <Image
-              src={item.src || "/placeholder.svg"}
-              alt={item.alt}
-              width={item.width || 800} // Use specified width or default
-              height={item.height || 450} // Use specified height or default
-              className="rounded-lg object-cover" // Removed w-full
-              priority={item.priority}
-              unoptimized
-            />
+          <div key={index} className="my-6 flex justify-center">
+            {" "}
+            {/* Outer div for centering */}
+            <div className={item.className || ""}>
+              {" "}
+              {/* Inner div that gets max-width from item.className */}
+              <Image
+                src={item.src || "/placeholder.svg"}
+                alt={item.alt}
+                width={item.width || 800}
+                height={item.height || 450}
+                className="rounded-lg object-cover w-full h-auto" // Image fills its parent
+                priority={item.priority}
+                unoptimized
+              />
+            </div>
           </div>
         )
       }
