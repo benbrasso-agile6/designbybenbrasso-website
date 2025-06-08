@@ -4,13 +4,17 @@ export interface ProjectDetailItem {
 }
 
 export interface CaseStudyContentItem {
-  type: "paragraph" | "list" | "image" | "h3" // Added "h3"
+  type: "paragraph" | "list" | "image" | "h3" | "videoDemo" // Added "videoDemo"
   text?: string // For paragraph and h3
   items?: string[] // For list
   src?: string // For image
   alt?: string // For image
   priority?: boolean // For image
   className?: string // Optional className for images or other elements
+  // Props for videoDemo
+  videoUrl?: string
+  wrapperImageUrl?: string
+  altText?: string // Alt text for the wrapper image
 }
 
 export interface CaseStudySection {

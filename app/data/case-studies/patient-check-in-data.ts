@@ -37,6 +37,17 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
+      title: "Interactive Demo",
+      content: [
+        {
+          type: "videoDemo",
+          videoUrl: "/videos/patient-check-in-demo.mp4",
+          wrapperImageUrl: "/images/simple-tablet-wrapper.png", // Updated to the new simple tablet wrapper
+          altText: "Tablet device frame showing patient check-in application demo",
+        },
+      ],
+    },
+    {
       title: "My Role & Process",
       content: [
         { type: "paragraph", text: "I led the UX/UI design efforts, which involved:" },
@@ -86,11 +97,11 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      id: "applicable-law", // This ID is for the H2 section title
-      title: "Most applicable law this work supports", // This will be rendered as an H2
+      id: "applicable-law",
+      title: "Most applicable law this work supports",
       content: [
         {
-          type: "h3", // Changed to h3
+          type: "h3",
           text: "Which law supports this work the most?",
         },
         {
@@ -98,7 +109,7 @@ export const patientCheckInData: CaseStudyData = {
           text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
         },
         {
-          type: "h3", // Changed to h3
+          type: "h3",
           text: "How is this work related to the law?",
         },
         {
