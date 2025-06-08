@@ -131,7 +131,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[900px]",
+          className: "max-w-5xl", // Increased from max-w-[900px]
         },
       ],
     },
