@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-sky-600/30 dark:border-sky-500/30 bg-white dark:bg-neutral-950">
       <div className="w-full mx-auto flex flex-col md:flex-row justify-between gap-6 py-8 md:py-6 px-6">
         {/* Left Group - Aligned Left */}
-        <div className="flex flex-col items-center md:flex-row md:items-center md:gap-3">
+        <div className="flex flex-col items-center md:flex-row md:items-center md:gap-5">
           {" "}
           {/* Aligns children: centered on mobile, start (left) on desktop */}
           <Link href="/" className="flex items-center gap-2 group/logo mb-1.5 md:mb-0">
@@ -19,7 +19,8 @@ export default function Footer() {
             </p>
           </Link>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center md:text-left">
-            Built using v0 for rapid prototyping, extended with custom components.{" "}
+            Built using v0 for rapid prototyping, extended with custom components.
+            <br />{" "}
             <Link
               href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
               target="_blank"

@@ -2,7 +2,6 @@ import Header from "./components/header"
 import HeroSection from "./components/hero-section"
 import FeaturedWorkSection from "./components/featured-work-section"
 import ToolsIUseSection from "./components/tools-i-use"
-import AboutSection from "./components/about-section"
 import Footer from "./components/footer"
 
 export default function HomePage() {
@@ -13,7 +12,6 @@ export default function HomePage() {
         <HeroSection />
         <FeaturedWorkSection />
         <ToolsIUseSection />
-        <AboutSection />
       </main>
       <Footer />
     </div>
