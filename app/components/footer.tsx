@@ -25,7 +25,7 @@ export default function Footer() {
             className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sky-600 dark:hover:text-sky-500 transition-colors text-center md:text-left underline"
             aria-label="Repository for designbybenbrasso website on GitHub"
           >
-            Repo for designbybenbrasso-website on GitHub
+            Repo for designbybenbrasso on GitHub website
           </Link>
         </div>
 
