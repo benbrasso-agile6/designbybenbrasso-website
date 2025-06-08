@@ -41,6 +41,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ben Brasso | Full-Stack UX Product Design Lead",
+    description:
+      "Design Portfolio for Ben Brasso, Full-Stack UX Product Design Lead, showcasing projects and expertise in user experience, product strategy, AI, and delivery.",
+    images: ["https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg"],
+  },
   generator: "v0.dev",
 }
 
