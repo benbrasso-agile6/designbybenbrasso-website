@@ -18,6 +18,7 @@ export const patientCheckInData: CaseStudyData = {
     { label: "Timeline", value: "8 Months" },
     { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
   ],
+{/* 
   mainImage: {
     src: "/placeholder.svg?width=800&height=450",
     alt: "Mobile Patient Check-in project showcase",
@@ -26,6 +27,7 @@ export const patientCheckInData: CaseStudyData = {
     priority: true,
     className: "rounded-lg my-6 w-full object-cover",
   },
+*/}
   sections: [
     {
       title: "The Challenge",
