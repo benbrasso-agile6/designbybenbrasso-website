@@ -11,7 +11,9 @@ export default function ProjectDetailsTable({ details }: ProjectDetailsTableProp
   }
 
   return (
-    <div className="mt-[10px] mb-[10px] border-y border-neutral-200 dark:border-neutral-700">
+    <div className="mt-[10px] mb-[10px]">
+      {" "}
+      {/* Removed border-y from here */}
       {details.map((detail, index) => (
         <div
           key={`${projectDetailLabelMap[detail.label]}-${index}`}

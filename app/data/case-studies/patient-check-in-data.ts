@@ -8,7 +8,7 @@ export const patientCheckInData: CaseStudyData = {
   metaDescription:
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   leadParagraph:
-    "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
+    "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for everyone, and creating a seamless pre-appointment experience on the VA.gov platform.",
   projectDetails: [
     { label: ProjectDetailLabelKey.CLIENT, value: "U.S. Department of Veteran Affairs" },
     { label: ProjectDetailLabelKey.AGENCY, value: "Office of the CTO" },
@@ -24,10 +24,12 @@ export const patientCheckInData: CaseStudyData = {
       valueAriaLabel: "Two years and eight months",
     },
   ],
+{/* 
   anchorLink: {
     text: "Most applicable law this work supports",
     href: "#applicable-law",
   },
+*/}
   sections: [
     {
       title: "The Challenge",
@@ -78,7 +80,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1152,
           height: 700,
           priority: false,
-          className: "max-w-[768px]",
+          className: "max-w-[700px]",
         },
         {
           type: "paragraph",
@@ -114,7 +116,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[850px]", // Increased size
+          className: "max-w-[900px]", // Increased size
         },
         {
           type: "paragraph",
@@ -127,7 +129,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[850px]", // Increased size
+          className: "max-w-[900px]", // Increased size
         },
       ],
     },

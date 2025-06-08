@@ -152,6 +152,22 @@ export default function CaseStudyClientPage({ params }: Props) {
 
         <ProjectDetailsTable details={caseStudy.projectDetails} />
 
+        {slug === "patient-check-in" && (
+          <div className="my-6">
+            <p>
+              Check out the{" "}
+              <a
+                href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Patient Check-in project in the va.gov-team repo on GitHub
+              </a>
+              .
+            </p>
+          </div>
+        )}
+
         {caseStudy.anchorLink && (
           <div className="mt-4 mb-8 not-prose">
             <a
