@@ -32,7 +32,7 @@ export const patientCheckInData: CaseStudyData = {
   */
   sections: [
     {
-      title: "The challenge", // Updated to sentence case
+      title: "The challenge",
       content: [
         {
           type: "paragraph",
@@ -49,7 +49,7 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      title: "Action", // Already sentence case
+      title: "Action",
       content: [
         {
           type: "paragraph",
@@ -67,7 +67,7 @@ export const patientCheckInData: CaseStudyData = {
           type: "videoDemo",
           videoUrl: "/videos/patient-check-in-demo.mp4",
           wrapperImageUrl: "/images/simple-tablet-wrapper.png",
-          altText: "Tablet device frame showing patient check-in application demo",
+          altText: "Tablet device frame showing patient-check-in application demo",
         },
         {
           type: "paragraph",
@@ -93,7 +93,7 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      title: "Results and impact", // Updated to sentence case and "and"
+      title: "Results and impact",
       content: [
         {
           type: "paragraph",
@@ -109,6 +109,7 @@ export const patientCheckInData: CaseStudyData = {
           type: "paragraph",
           text: "And while eCheck-in (also known as PCI) accounted for far fewer travel reimbursement claims compared to other modalities during its pilot, ~96% of its claims were paid or were still in review with travel assistants during June 26 - July 31, 2023.",
         },
+        /*
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749415375/c5a8813d-ccee-49f6-af22-7780d73842f3_oryro5.png",
@@ -118,6 +119,7 @@ export const patientCheckInData: CaseStudyData = {
           priority: false,
           className: "max-w-[900px]",
         },
+        */
         {
           type: "paragraph",
           text: "But conducting continuous generative research to understand how value could be injected into eCheck-in, while also keeping the process of checking in simple and transactional, really, paid dividends to Veterans and increasing adoption for VHA overtime.",
@@ -135,7 +137,7 @@ export const patientCheckInData: CaseStudyData = {
     },
     {
       id: "applicable-law",
-      title: "Most applicable law this work supports", // Already sentence case
+      title: "Most applicable law this work supports",
       content: [
         {
           type: "h3",

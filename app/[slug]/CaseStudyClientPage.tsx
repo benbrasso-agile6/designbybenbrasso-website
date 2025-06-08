@@ -1,10 +1,8 @@
 "use client"
 
 import { notFound } from "next/navigation"
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
+import { ArrowDownIcon } from "lucide-react"
 import ProjectDetailsTable from "@/app/components/project-details-table"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
@@ -188,6 +186,7 @@ export default function CaseStudyClientPage({ params }: Props) {
           </section>
         ))}
 
+        {/*
         <div className="mt-12 print:hidden">
           <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
             <Link href="/#work">
@@ -196,6 +195,7 @@ export default function CaseStudyClientPage({ params }: Props) {
             </Link>
           </Button>
         </div>
+        */}
       </article>
     </>
   )
