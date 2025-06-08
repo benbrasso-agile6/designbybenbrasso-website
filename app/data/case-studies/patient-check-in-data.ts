@@ -75,8 +75,10 @@ export const patientCheckInData: CaseStudyData = {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749414600/Frame_599_znqsfn.png",
           alt: "Low Risk One Time Authorization (LoROTA) flow diagram for VA.gov eCheck-in",
+          width: 1152,
+          height: 700,
           priority: false,
-          className: "my-6 md:my-8",
+          className: "max-w-[768px]",
         },
         {
           type: "paragraph",
@@ -88,57 +90,57 @@ export const patientCheckInData: CaseStudyData = {
         },
       ],
     },
+    // {
+    //   title: "My Role & Process",
+    //   content: [
+    //     { type: "paragraph", text: "I led the UX/UI design efforts, which involved:" },
+    //     {
+    //       type: "list",
+    //       items: [
+    //         "User Research & Discovery: Conducted on-site observations, interviews with Veterans and clinic staff, and analyzed existing check-in workflows.",
+    //         "Information Architecture & User Flows: Designed a clear and logical structure for the app, focusing on minimal steps and intuitive navigation.",
+    //         "Wireframing & Prototyping: Created detailed wireframes and interactive prototypes in Figma, iterating based on user feedback and stakeholder reviews.",
+    //         "UI Design & Accessibility: Developed a clean, modern visual identity aligned with the VA.gov design system, ensuring WCAG AA compliance throughout.",
+    //         "Accessibility Testing: Collaborated with accessibility specialists and conducted testing with Veterans using assistive technologies.",
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Key Features & Solutions",
+    //   content: [
+    //     {
+    //       type: "list",
+    //       items: [
+    //         "Simplified Check-in: One-tap check-in for confirmed appointments.",
+    //         "Information Verification: Easy review and update of personal and insurance information.",
+    //         "Travel Reimbursement Integration: Seamless process to file for travel pay benefits during check-in.",
+    //         "Appointment Reminders & Details: Clear display of upcoming appointment information.",
+    //         "Accessibility First: Designed with large tap targets, adjustable font sizes, high contrast options, and full screen reader compatibility.",
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Results & Impact", // This is the original "Results & Impact" section being commented out
+    //   content: [
+    //     {
+    //       type: "paragraph",
+    //       text: "The mobile patient check-in app significantly modernized the VA appointment experience:",
+    //     },
+    //     {
+    //       type: "list",
+    //       items: [
+    //         "Increased usage by 4x within the first month of pilot launch.",
+    //         "Drastic reduction in check-in times and clinic waiting room congestion.",
+    //         "Improved data accuracy due to digital verification.",
+    //         "Highly positive feedback from Veterans, particularly regarding ease of use and the integrated travel reimbursement feature.",
+    //       ],
+    //     },
+    //   ],
+    // },
     {
-      title: "My Role & Process",
-      content: [
-        { type: "paragraph", text: "I led the UX/UI design efforts, which involved:" },
-        {
-          type: "list",
-          items: [
-            "User Research & Discovery: Conducted on-site observations, interviews with Veterans and clinic staff, and analyzed existing check-in workflows.",
-            "Information Architecture & User Flows: Designed a clear and logical structure for the app, focusing on minimal steps and intuitive navigation.",
-            "Wireframing & Prototyping: Created detailed wireframes and interactive prototypes in Figma, iterating based on user feedback and stakeholder reviews.",
-            "UI Design & Accessibility: Developed a clean, modern visual identity aligned with the VA.gov design system, ensuring WCAG AA compliance throughout.",
-            "Accessibility Testing: Collaborated with accessibility specialists and conducted testing with Veterans using assistive technologies.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Key Features & Solutions",
-      content: [
-        {
-          type: "list",
-          items: [
-            "Simplified Check-in: One-tap check-in for confirmed appointments.",
-            "Information Verification: Easy review and update of personal and insurance information.",
-            "Travel Reimbursement Integration: Seamless process to file for travel pay benefits during check-in.",
-            "Appointment Reminders & Details: Clear display of upcoming appointment information.",
-            "Accessibility First: Designed with large tap targets, adjustable font sizes, high contrast options, and full screen reader compatibility.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Results & Impact",
-      content: [
-        {
-          type: "paragraph",
-          text: "The mobile patient check-in app significantly modernized the VA appointment experience:",
-        },
-        {
-          type: "list",
-          items: [
-            "Increased usage by 4x within the first month of pilot launch.",
-            "Drastic reduction in check-in times and clinic waiting room congestion.",
-            "Improved data accuracy due to digital verification.",
-            "Highly positive feedback from Veterans, particularly regarding ease of use and the integrated travel reimbursement feature.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Success", // New Section
+      title: "Results & Impact", // Renamed from "Success"
       content: [
         {
           type: "paragraph",
@@ -148,7 +150,7 @@ export const patientCheckInData: CaseStudyData = {
           type: "paragraph",
           text: "In August 2022, 63,890 minutes of staff time was saved (i.e., ~2 minutes avg. for in-person check-ins) that could be redirected to other critical patient tracking responsibilities.",
           className:
-            "bg-sky-50 dark:bg-sky-900/30 p-4 rounded-md border border-sky-200 dark:border-sky-700 my-6 text-base md:text-lg font-medium", // Visual emphasis styling
+            "bg-sky-50 dark:bg-sky-900/30 p-4 rounded-md border border-sky-200 dark:border-sky-700 my-6 text-base md:text-lg font-medium",
         },
         {
           type: "paragraph",
@@ -158,8 +160,10 @@ export const patientCheckInData: CaseStudyData = {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749415375/c5a8813d-ccee-49f6-af22-7780d73842f3_oryro5.png",
           alt: "Chart showing eCheck-in travel reimbursement claim status: Paid, In Review, Denied.",
+          width: 1024,
+          height: 576,
           priority: false,
-          className: "my-6 md:my-8",
+          className: "max-w-[700px]",
         },
         {
           type: "paragraph",
@@ -169,8 +173,10 @@ export const patientCheckInData: CaseStudyData = {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749415424/206138d1-60b5-41ab-8318-eca208bc8514_zpgs8h.png",
           alt: "Chart showing increased adoption of eCheck-in over time.",
+          width: 1024,
+          height: 576,
           priority: false,
-          className: "my-6 md:my-8",
+          className: "max-w-[700px]",
         },
       ],
     },

@@ -5,11 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-import ProjectDetailsTable from "@/app/components/project-details-table" // Updated import path
-import { getCaseStudyData } from "@/app/data/case-studies-data" // Ensure this path is correct
-import type { CaseStudyContentItem } from "@/app/data/case-study-types" // Ensure this path is correct
+import ProjectDetailsTable from "@/app/components/project-details-table"
+import { getCaseStudyData } from "@/app/data/case-studies-data"
+import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import type React from "react"
-import { useMediaQuery } from "../read-me/hooks/use-media-query" // Updated import path
+import { useMediaQuery } from "../read-me/hooks/use-media-query"
 
 type Props = {
   params: { slug: string }
@@ -18,6 +18,15 @@ type Props = {
 const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScreen: boolean) => {
   switch (item.type) {
     case "paragraph":
+      // Apply specific className for emphasized paragraphs
+      if (item.className?.includes("bg-sky-50")) {
+        // Check for a unique part of the emphasis class
+        return (
+          <div key={index} className={item.className}>
+            <p dangerouslySetInnerHTML={{ __html: item.text || "" }} />
+          </div>
+        )
+      }
       return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
     case "list":
       return (
@@ -30,13 +39,13 @@ const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScr
     case "image":
       if (item.src && item.alt) {
         return (
-          <div key={index} className={`my-6 ${item.className || ""}`}>
+          <div key={index} className={`my-6 flex justify-center ${item.className || ""}`}>
             <Image
               src={item.src || "/placeholder.svg"}
               alt={item.alt}
-              width={800}
-              height={450}
-              className="rounded-lg w-full object-cover"
+              width={item.width || 800} // Use specified width or default
+              height={item.height || 450} // Use specified height or default
+              className="rounded-lg object-cover" // Removed w-full
               priority={item.priority}
               unoptimized
             />
@@ -149,12 +158,7 @@ export default function CaseStudyClientPage({ params }: Props) {
         {caseStudy.sections.map((section, sectionIndex) => (
           <section key={sectionIndex} id={section.id}>
             <h2>{section.title}</h2>
-            {section.content.map(
-              (
-                contentItem,
-                itemIndex, // Added itemIndex for unique key
-              ) => renderContentItem(contentItem, itemIndex, isSmallScreen),
-            )}
+            {section.content.map((contentItem, itemIndex) => renderContentItem(contentItem, itemIndex, isSmallScreen))}
           </section>
         ))}
 

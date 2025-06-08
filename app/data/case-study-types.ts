@@ -12,6 +12,8 @@ export interface CaseStudyContentItem {
   items?: string[]
   src?: string
   alt?: string
+  width?: number // Added for image
+  height?: number // Added for image
   priority?: boolean
   className?: string
   videoUrl?: string
