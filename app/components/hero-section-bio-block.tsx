@@ -4,7 +4,7 @@ export default function DescriptiveTextBlock() {
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
         Crafting intuitive and impactful digital experiences.{" "}
         <strong>
-          I focus on human-centered design to solve complex problems and deliver elegant solutions bringing constituents
+          I focus on human-centered design, with an AI-first mindset, to solve complex problems and deliver elegant solutions bringing constituents
           along for the ride.
         </strong>
       </p>
