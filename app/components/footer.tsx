@@ -18,15 +18,18 @@ export default function Footer() {
               designbybenbrasso
             </p>
           </Link>
-          <Link
-            href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sky-600 dark:hover:text-sky-500 transition-colors text-center md:text-left underline"
-            aria-label="Repository for designbybenbrasso website on GitHub"
-          >
-            Repo for designbybenbrasso on GitHub website
-          </Link>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center md:text-left">
+            Built using v0 for rapid prototyping, extended with custom components.{" "}
+            <Link
+              href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-600 dark:hover:text-sky-500 transition-colors underline"
+              aria-label="Repository for designbybenbrasso website on GitHub"
+            >
+              Check out the code on GitHub.
+            </Link>
+          </p>
         </div>
 
         {/* Right Group - Aligned Right */}
