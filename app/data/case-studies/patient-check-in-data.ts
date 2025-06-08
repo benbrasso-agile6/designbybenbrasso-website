@@ -1,4 +1,5 @@
 import type { CaseStudyData } from "../case-study-types"
+import { ProjectDetailLabelKey } from "../project-detail-labels"
 
 export const patientCheckInData: CaseStudyData = {
   slug: "patient-check-in",
@@ -10,24 +11,29 @@ export const patientCheckInData: CaseStudyData = {
     "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
   anchorLink: {
     text: "Most applicable law this work supports",
-    href: "#applicable-law", // This ID must match the ID of the target section
+    href: "#applicable-law",
   },
   projectDetails: [
-    { label: "Client Type", value: "Government Agency (Healthcare)" },
-    { label: "Role", value: ["Lead UX/UI Designer", "Accessibility Advocate"] },
-    { label: "Timeline", value: "8 Months" },
-    { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
+    { label: ProjectDetailLabelKey.CLIENT, value: "U.S. Department of Veteran Affairs" },
+    { label: ProjectDetailLabelKey.AGENCY, value: "Office of the CTO" },
+    {
+      label: ProjectDetailLabelKey.ROLE,
+      value: ["UX Lead"],
+      // Example if Role needed an aria-label for its array items:
+      // valueAriaLabel: ["User Experience Lead"]
+    },
+    { label: ProjectDetailLabelKey.PLATFORM, value: "Mobile web" },
+    {
+      label: ProjectDetailLabelKey.TEAM_STRUCTURE,
+      value: "PM, DM, 5 ENG, 4 UX",
+      valueAriaLabel: "Program manager, delivery manager, five engineers, four user experience designers",
+    },
+    {
+      label: ProjectDetailLabelKey.CONTRACT_DURATION,
+      value: "2 YRS 8 MOS",
+      valueAriaLabel: "Two years and eight months",
+    },
   ],
-{/* 
-  mainImage: {
-    src: "/placeholder.svg?width=800&height=450",
-    alt: "Mobile Patient Check-in project showcase",
-    width: 800,
-    height: 450,
-    priority: true,
-    className: "rounded-lg my-6 w-full object-cover",
-  },
-*/}
   sections: [
     {
       title: "The Challenge",
@@ -44,7 +50,7 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "videoDemo",
           videoUrl: "/videos/patient-check-in-demo.mp4",
-          wrapperImageUrl: "/images/simple-tablet-wrapper.png", // Updated to the new simple tablet wrapper
+          wrapperImageUrl: "/images/simple-tablet-wrapper.png",
           altText: "Tablet device frame showing patient check-in application demo",
         },
       ],
