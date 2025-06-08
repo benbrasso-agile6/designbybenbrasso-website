@@ -32,6 +32,7 @@ export default function FooterImage({ src, alt, imgWidth, imgHeight }: FooterIma
         className="w-full h-auto object-cover"
         priority={false}
         onError={handleImageError}
+        unoptimized
       />
     </div>
   )
