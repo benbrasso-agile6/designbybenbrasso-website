@@ -41,6 +41,14 @@ export const patientCheckInData: CaseStudyData = {
           type: "paragraph",
           text: '<a href="https://www.va.gov/vhapublications/ViewPublication.asp?pub_ID=11628" target="_blank" rel="noopener noreferrer">VHA Directive 1604</a>, titled Data Entry Requirements for Administrative Data, emphasizes the importance of consistently and accurately entering administrative data into systems like VistA, VHA Enrollment System (VES), and Oracle Cerner Electronic Health Record (EHR). This directive underscores the necessity of maintaining up-to-date patient information to ensure appropriate medical care and services.',
         },
+        {
+          type: "paragraph",
+          text: "With an expiring kiosk contract that enabled Veterans to check in to their appointments at VA facilities, the Veteran Health Administration (VHA) needed to find a new check-in solution while adhering to CDC's isolation guidelines during the height of the COVID-19 pandemic.",
+        },
+       {
+          type: "paragraph",
+          text: "As a result, VA needed a digital modality to support VHA Directive 1604 and replace the kiosks from their expiring contract, while also meeting VA's Integrated Veteran Care (IVC) business needs to reduce waiting lines at clinics and reduce staff administrative workload.",
+        },
       ],
     },
     {
