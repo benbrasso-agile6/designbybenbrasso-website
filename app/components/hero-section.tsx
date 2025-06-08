@@ -27,15 +27,15 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
                 className="inline-block"
               >
-                My name is
-              </motion.span>{" "}
+                {"I’m\u00A0"}
+              </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
                 className="text-sky-600 dark:text-sky-500 inline-block"
               >
-                Ben
+                Ben Brasso,
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 className="inline-block"
               >
                 {" "}
-                and I’m a navigator of the nebulous. 🧭
+                UX designer, and a navigator of the nebulous. 🧭
               </motion.span>
             </h1>
           </div>
