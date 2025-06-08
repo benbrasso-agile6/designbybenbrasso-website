@@ -1,8 +1,10 @@
 "use client"
 
 import { notFound } from "next/navigation"
+import Link from "next/link"
 import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
 import ProjectDetailsTable from "@/app/components/project-details-table"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
@@ -16,9 +18,7 @@ type Props = {
 const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScreen: boolean) => {
   switch (item.type) {
     case "paragraph":
-      // Apply specific className for emphasized paragraphs
       if (item.className?.includes("bg-sky-50")) {
-        // Check for a unique part of the emphasis class
         return (
           <div key={index} className={item.className}>
             <p dangerouslySetInnerHTML={{ __html: item.text || "" }} />
@@ -38,17 +38,13 @@ const renderContentItem = (item: CaseStudyContentItem, index: number, isSmallScr
       if (item.src && item.alt) {
         return (
           <div key={index} className="my-6 flex justify-center">
-            {" "}
-            {/* Outer div for centering */}
             <div className={item.className || ""}>
-              {" "}
-              {/* Inner div that gets max-width from item.className */}
               <Image
                 src={item.src || "/placeholder.svg"}
                 alt={item.alt}
                 width={item.width || 800}
                 height={item.height || 450}
-                className="rounded-lg object-cover w-full h-auto" // Image fills its parent
+                className="rounded-lg object-cover w-full h-auto"
                 priority={item.priority}
                 unoptimized
               />
@@ -127,6 +123,20 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   return (
     <>
+      <div className="mb-8 print:hidden not-prose">
+        <Button
+          asChild
+          variant="outline"
+          className="text-sky-600 border-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:text-sky-500 dark:border-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
+        >
+          <Link href="/#work" scroll={false}>
+            {" "}
+            {/* Added scroll={false} */}
+            <ArrowLeftIcon className="mr-2 h-4 w-4" />
+            Back to my work
+          </Link>
+        </Button>
+      </div>
       <article
         className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert 
                    prose-a:text-sky-600 dark:prose-a:text-sky-500 
