@@ -9,11 +9,7 @@ export const patientCheckInData: CaseStudyData = {
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   leadParagraph:
     "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
-  anchorLink: {
-    text: "Most applicable law this work supports",
-    href: "#applicable-law",
-  },
-  projectDetails: [
+projectDetails: [
     { label: ProjectDetailLabelKey.CLIENT, value: "U.S. Department of Veteran Affairs" },
     { label: ProjectDetailLabelKey.AGENCY, value: "Office of the CTO" },
     {
@@ -34,6 +30,10 @@ export const patientCheckInData: CaseStudyData = {
       valueAriaLabel: "Two years and eight months",
     },
   ],
+  anchorLink: {
+    text: "Most applicable law this work supports",
+    href: "#applicable-law",
+  },
   sections: [
     {
       title: "The Challenge",

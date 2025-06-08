@@ -125,8 +125,6 @@ export default function CaseStudyClientPage({ params }: Props) {
         </Link>
       </Button>
 
-      <ProjectDetailsTable details={caseStudy.projectDetails} />
-
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
         <h1>{caseStudy.pageTitle}</h1>
 
@@ -143,6 +141,8 @@ export default function CaseStudyClientPage({ params }: Props) {
         )}
 
         <p className="lead">{caseStudy.leadParagraph}</p>
+
+        <ProjectDetailsTable details={caseStudy.projectDetails} />
 
         {caseStudy.anchorLink && (
           <div className="mt-4 mb-8 not-prose">
