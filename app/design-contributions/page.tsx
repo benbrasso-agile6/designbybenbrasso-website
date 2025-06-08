@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function DesignContributionsPage() {
   const resumeUrl =
     "https://www.dropbox.com/scl/fi/shwx97aarjojfuihfjk85/Ben-Brasso-Resume-2025.pdf?rlkey=f8y8kjg2jqfxvo4xgsc5qc4fv&st=d89477ve&dl=1"
@@ -7,9 +5,12 @@ export default function DesignContributionsPage() {
   return (
     <>
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
-        <h1>Design Contributions</h1>
+        <h1 className="leading-normal">Design Contributions</h1>
         <p>
-          I’m passionate about advancing the larger design community by contributing components, patterns, and research that strengthen and mature design systems. By giving back to shared systems like VA.gov’s, I aim to support scalable, accessible, and consistent user experiences—while helping teams build with greater confidence and efficiency. These are a selection of contributions I’ve made to support and grow design systems.
+          I’m passionate about advancing the larger design community by contributing components, patterns, and research
+          that strengthen and mature design systems. By giving back to shared systems like VA.gov’s, I aim to support
+          scalable, accessible, and consistent user experiences—while helping teams build with greater confidence and
+          efficiency. These are a selection of contributions I’ve made to support and grow design systems.
         </p>
       </article>
 

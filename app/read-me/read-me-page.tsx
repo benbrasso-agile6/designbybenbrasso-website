@@ -30,7 +30,7 @@ export default function ReadMePage() {
         originalNavId={originalNavId}
       />
       <article id="readme-top" className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-        <h1>
+        <h1 className="leading-normal">
           Ben Brasso's <span className="uppercase">ReadMe</span>
         </h1>
         <p className="lead !mb-0 text-neutral-700 dark:text-neutral-300">bras • soh</p>
