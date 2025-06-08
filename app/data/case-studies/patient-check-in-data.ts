@@ -114,7 +114,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[700px]",
+          className: "max-w-[850px]", // Increased size
         },
         {
           type: "paragraph",
@@ -127,7 +127,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[700px]",
+          className: "max-w-[850px]", // Increased size
         },
       ],
     },

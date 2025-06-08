@@ -129,7 +129,11 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   return (
     <>
-      <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
+      <article
+        className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert 
+                   prose-a:text-sky-600 dark:prose-a:text-sky-500 
+                   hover:prose-a:text-sky-700 dark:hover:prose-a:text-sky-600"
+      >
         <h1>{caseStudy.pageTitle}</h1>
 
         {caseStudy.mainImage && (
