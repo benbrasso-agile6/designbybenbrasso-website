@@ -68,39 +68,32 @@ public/                 # Static assets
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/YOUR_USERNAME/designbybenbrasso-portfolio.git
-cd designbybenbrasso-portfolio
-\`\`\`
+
+<pre><code>bash git clone https://github.com/YOUR_USERNAME/designbybenbrasso-portfolio.git cd designbybenbrasso-portfolio</code></pre>
 
 2. Install dependencies:
-\`\`\`bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-\`\`\`
+
+<pre><code>bash npm install</code></pre>
+or
+<pre><code>yarn install</code></pre>
+or
+<pre><code>pnpm install</code></pre>
 
 3. Set up environment variables:
-\`\`\`bash
-cp .env.example .env.local
-\`\`\`
+
+<pre><code>bash cp .env.example .env.local</code></pre>
 
 Add your environment variables:
-\`\`\`
-RESEND_API_KEY=your_resend_api_key
-# Add other environment variables as needed
-\`\`\`
+
+<pre><code>RESEND_API_KEY=your_resend_api_key</code></pre>
 
 4. Run the development server:
-\`\`\`bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-\`\`\`
+
+<pre><code>bash npm run dev</code></pre>
+or
+<pre><code>yarn dev</code></pre>
+or
+<pre><code>pnpm dev</code></pre>
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -142,10 +135,9 @@ The contact form uses Resend for email delivery. To set it up:
 
 ### Manual Deployment
 
-\`\`\`bash
-npm run build
-npm run start
-\`\`\`
+<pre><code>bash npm run build</code></pre>
+
+<pre><code>npm run start</code></pre>
 
 ## 📱 Features
 
@@ -177,7 +169,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Portfolio: [benbrasso.com](https://www.benbrasso.com)
 - LinkedIn: [linkedin.com/in/benbrasso](https://linkedin.com/in/benbrasso)
 - GitHub: [github.com/benbrasso-agile6](https://github.com/benbrasso-agile6)
-- Email: benbrasso@gmail.com
+- Email: `benbrasso [at] gmail [dot] com`
 
 ---
 
@@ -192,6 +184,6 @@ Built with ❤️ using Next.js 15 and deployed on Vercel.
 - **Repository Access Policy**: Forking, copying, or mirroring this repository is **not permitted without prior written consent**.
 
 This repository is intended for viewing and reference only.  
-For licensing requests, please [contact me](mailto:benbrasso@gmail.com).
+For licensing requests, please contact me at `benbrasso [at] gmail [dot] com`.
 
 © 2025 Ben Brasso. All rights reserved.
