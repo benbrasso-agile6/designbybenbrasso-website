@@ -150,8 +150,6 @@ export default function CaseStudyClientPage({ params }: Props) {
 
         <p className="lead">{caseStudy.leadParagraph}</p>
 
-        <ProjectDetailsTable details={caseStudy.projectDetails} />
-
         {slug === "patient-check-in" && (
           <div className="my-6">
             <p>
@@ -167,6 +165,8 @@ export default function CaseStudyClientPage({ params }: Props) {
             </p>
           </div>
         )}
+
+        <ProjectDetailsTable details={caseStudy.projectDetails} />
 
         {caseStudy.anchorLink && (
           <div className="mt-4 mb-8 not-prose">

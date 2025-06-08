@@ -24,15 +24,15 @@ export const patientCheckInData: CaseStudyData = {
       valueAriaLabel: "Two years and eight months",
     },
   ],
-{/* 
+  /* 
   anchorLink: {
     text: "Most applicable law this work supports",
     href: "#applicable-law",
   },
-*/}
+  */
   sections: [
     {
-      title: "The Challenge",
+      title: "The challenge", // Updated to sentence case
       content: [
         {
           type: "paragraph",
@@ -49,7 +49,7 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      title: "Action",
+      title: "Action", // Already sentence case
       content: [
         {
           type: "paragraph",
@@ -93,7 +93,7 @@ export const patientCheckInData: CaseStudyData = {
       ],
     },
     {
-      title: "Results & Impact", // Renamed from "Success"
+      title: "Results and impact", // Updated to sentence case and "and"
       content: [
         {
           type: "paragraph",
@@ -103,7 +103,7 @@ export const patientCheckInData: CaseStudyData = {
           type: "paragraph",
           text: "<strong>In August 2022, 63,890 minutes of staff time was saved (i.e., ~2 minutes avg. for in-person check-ins) that could be redirected to other critical patient tracking responsibilities.</strong>",
           className:
-            "bg-sky-50 dark:bg-sky-900/30 p-6 rounded-lg border border-sky-200 dark:border-sky-700 my-6 text-base md:text-lg font-medium shadow-lg",
+            "bg-sky-50 dark:bg-sky-900/30 p-6 rounded-lg border border-sky-200 dark:border-sky-700 my-8 text-base md:text-lg font-medium shadow-lg",
         },
         {
           type: "paragraph",
@@ -116,7 +116,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[900px]", // Increased size
+          className: "max-w-[900px]",
         },
         {
           type: "paragraph",
@@ -129,13 +129,13 @@ export const patientCheckInData: CaseStudyData = {
           width: 1024,
           height: 576,
           priority: false,
-          className: "max-w-[900px]", // Increased size
+          className: "max-w-[900px]",
         },
       ],
     },
     {
       id: "applicable-law",
-      title: "Most applicable law this work supports",
+      title: "Most applicable law this work supports", // Already sentence case
       content: [
         {
           type: "h3",
