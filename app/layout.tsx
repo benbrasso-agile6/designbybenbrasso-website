@@ -13,8 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Ben Brasso | Full-Stack UX Product Design Portfolio",
-  description:
-    "Design Portfolio for Ben Brasso, Full-Stack UX Product Design Lead, showcasing projects and expertise in user experience, product strategy, AI, and delivery. Specializing in health care design, research, accessibility, content design, and human-centered design methodologies.",
+  description: "UX design portfolio and website for Ben Brasso, a Full-Stack UX Product Design Lead.",
   robots: {
     index: false,
     follow: false,
@@ -30,8 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Ben Brasso | Full-Stack UX Product Design Lead", // This will be the og:title
-    description:
-      "Design Portfolio for Ben Brasso, Full-Stack UX Product Design Lead, showcasing projects and expertise in user experience, product strategy, AI, and delivery. Specializing in health care design, research, accessibility, content design, and human-centered design methodologies.",
+    description: "UX design portfolio and website for Ben Brasso, a Full-Stack UX Product Design Lead.",
     images: [
       {
         url: "https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg",
@@ -44,8 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ben Brasso | Full-Stack UX Product Design Lead",
-    description:
-      "Design Portfolio for Ben Brasso, Full-Stack UX Product Design Lead, showcasing projects and expertise in user experience, product strategy, AI, and delivery.",
+    description: "UX design portfolio and website for Ben Brasso, a Full-Stack UX Product Design Lead.",
     images: ["https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg"],
   },
   generator: "v0.dev",
