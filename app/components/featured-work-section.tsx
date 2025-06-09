@@ -15,13 +15,14 @@ export default function FeaturedWorkSection() {
         </div>
         <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
           {projectsData.map((project) => {
-            let specificImageMarginTopClass = "mt-6"
-            let specificFooterPaddingTopClass = "pt-6"
+            let specificImageMarginTopClass = "mt-6" // Default for image margin
+            let specificFooterPaddingTopClass = "pt-6" // Default for footer padding
 
             if (project.slug === "direct-online-scheduling") {
-              specificImageMarginTopClass = "mt-3"
-              specificFooterPaddingTopClass = "pt-3"
+              specificImageMarginTopClass = "mt-3" // Smaller margin above image
+              specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
+            // You can add else if blocks here for other specific cards if needed
 
             return (
               <ProjectCard
@@ -30,10 +31,10 @@ export default function FeaturedWorkSection() {
                 description={project.description}
                 imageUrl={project.imageUrl}
                 tags={project.tags}
-                projectUrl={`/${project.slug}`} // Updated projectUrl
+                projectUrl={`/work/${project.slug}`}
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
-                footerPaddingTopClass={specificFooterPaddingTopClass}
+                footerPaddingTopClass={specificFooterPaddingTopClass} // Pass the new prop
               />
             )
           })}

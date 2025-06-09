@@ -1,5 +1,4 @@
 import type { CaseStudyData } from "../case-study-types"
-import { ProjectDetailLabelKey } from "../project-detail-labels"
 
 export const directOnlineSchedulingData: CaseStudyData = {
   slug: "direct-online-scheduling",
@@ -14,11 +13,10 @@ export const directOnlineSchedulingData: CaseStudyData = {
     href: "#legislative-background",
   },
   projectDetails: [
-    { label: ProjectDetailLabelKey.CLIENT, value: "Government Agency (Healthcare)" },
-    { label: ProjectDetailLabelKey.AGENCY, value: "Placeholder Agency Name" },
-    { label: ProjectDetailLabelKey.ROLE, value: ["Lead UX Designer", "User Researcher"] },
-    { label: ProjectDetailLabelKey.PLATFORM, value: "Web Application (VA.gov)" },
-    { label: ProjectDetailLabelKey.CONTRACT_DURATION, value: "Ongoing (Multiple Phases)" },
+    { label: "Client Type", value: "Government Agency (Healthcare)" },
+    { label: "Role", value: ["Lead UX Designer", "User Researcher"] },
+    { label: "Timeline", value: "Ongoing (Multiple Phases)" },
+    { label: "Tools", value: ["Figma", "Optimal Workshop", "VA.gov Design System", "GitHub"] },
   ],
   mainImage: {
     src: "/placeholder.svg?width=800&height=450",

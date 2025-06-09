@@ -1,5 +1,4 @@
 import type { CaseStudyData } from "../case-study-types"
-import { ProjectDetailLabelKey } from "../project-detail-labels"
 
 export const aiScribeKpiDashboardData: CaseStudyData = {
   slug: "ai-scribe-kpi-dashboard",
@@ -14,11 +13,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     href: "#data-privacy-considerations",
   },
   projectDetails: [
-    { label: ProjectDetailLabelKey.CLIENT, value: "Healthcare Technology (B2B SaaS)" },
-    { label: ProjectDetailLabelKey.AGENCY, value: "Placeholder Agency Name" },
-    { label: ProjectDetailLabelKey.ROLE, value: ["UX Strategist", "Lead Product Designer"] },
-    { label: ProjectDetailLabelKey.PLATFORM, value: "Web Application (Desktop)" },
-    { label: ProjectDetailLabelKey.CONTRACT_DURATION, value: "4 Months" },
+    { label: "Client Type", value: "Healthcare Technology (B2B SaaS)" },
+    { label: "Role", value: ["UX Strategist", "Lead Product Designer"] },
+    { label: "Timeline", value: "4 Months" },
+    { label: "Tools", value: ["Figma", "Miro", "UserTesting.com", "Amplitude"] },
   ],
   mainImage: {
     src: "/placeholder.svg?width=800&height=450",
