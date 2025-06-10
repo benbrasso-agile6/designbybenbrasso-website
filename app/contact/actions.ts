@@ -12,7 +12,6 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>
 
-const resend = new Resend(process.env.RESEND_API_KEY)
 const recipientEmail = "benbrasso@gmail.com"
 
 export async function sendContactEmail(data: FormData): Promise<{ success: boolean; message?: string }> {
@@ -30,6 +29,8 @@ export async function sendContactEmail(data: FormData): Promise<{ success: boole
 
   const { name, email, message } = validatedFields.data
 
+  const resend = new Resend(process.env.RESEND_API_KEY) // Moved here
+
   try {
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
@@ -37,12 +38,12 @@ export async function sendContactEmail(data: FormData): Promise<{ success: boole
       subject: "New Contact Form Submission",
       reply_to: email,
       html: `
-        <h1>New Contact Form Submission</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
+      <h1>New Contact Form Submission</h1>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, "<br>")}</p>
+    `,
     })
 
     if (emailError) {
