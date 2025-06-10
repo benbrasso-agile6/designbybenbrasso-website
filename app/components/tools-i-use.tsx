@@ -20,6 +20,7 @@ import {
   LightbulbIcon,
   SearchIcon,
   SmileIcon,
+  WorkflowIcon,
 } from "lucide-react"
 import type React from "react"
 import { motion } from "framer-motion"
@@ -41,6 +42,7 @@ export default function ToolsIUseSection() {
     { icon: BrainCircuitIcon, text: "ChatGPT" },
     { icon: SparklesIcon, text: "Google Gemini" },
     { icon: CodepenIcon, text: "CodePen" },
+    { icon: WorkflowIcon, text: "Mermaid" },
     { icon: LibraryIcon, text: "U.S. Web Design System" },
     { icon: LayoutDashboardIcon, text: "Mural" },
     { icon: BrainCircuitIcon, text: "VA GPT (Beta)" },
