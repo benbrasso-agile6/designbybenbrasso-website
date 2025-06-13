@@ -5,10 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-import ProjectDetailsTable from "../components/project-details-table"
+// import ProjectDetailsTable from "../components/project-details-table" // Commented out
+import ProjectOverviewBanner from "../components/project-overview-banner" // Added import
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import type React from "react" // Add React for MouseEvent type
+import type React from "react"
 
 type Props = {
   params: { slug: string }
@@ -33,8 +34,8 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
             <Image
               src={item.src || "/placeholder.svg"}
               alt={item.alt}
-              width={800} // Default width, can be overridden by item.width if added to type
-              height={450} // Default height, can be overridden by item.height if added to type
+              width={800}
+              height={450}
               className="rounded-lg w-full object-cover"
               priority={item.priority}
               unoptimized
@@ -43,7 +44,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
         )
       }
       return null
-    case "h3": // Added case for h3
+    case "h3":
       return <h3 key={index}>{item.text}</h3>
     default:
       return null
@@ -60,7 +61,7 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
-    const targetElement = document.getElementById(targetId.substring(1)) // Remove '#' from targetId
+    const targetElement = document.getElementById(targetId.substring(1))
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
@@ -81,9 +82,8 @@ export default function CaseStudyClientPage({ params }: Props) {
           Back to All Projects
         </Link>
       </Button>
-
-      <ProjectDetailsTable details={caseStudy.projectDetails} />
-
+      {/* <ProjectDetailsTable details={caseStudy.projectDetails} /> */} {/* Commented out */}
+      {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
         <h1>{caseStudy.pageTitle}</h1>
 
@@ -99,28 +99,27 @@ export default function CaseStudyClientPage({ params }: Props) {
           />
         )}
 
-        <p className="lead">{caseStudy.leadParagraph}</p>
+        {/* Removed leadParagraph rendering as it's now part of the banner or main content */}
+        {/* {caseStudy.leadParagraph && <p className="lead">{caseStudy.leadParagraph}</p>} */}
 
-        {/* Updated anchor link rendering */}
-        {caseStudy.anchorLink && (
-          <div className="mt-4 mb-8 not-prose">
-            {" "}
-            {/* Added not-prose to allow custom flex styling */}
-            <a
-              href={caseStudy.anchorLink.href}
-              onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
-              className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
-            >
-              {caseStudy.anchorLink.text}
-              <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-            </a>
-          </div>
-        )}
+        {caseStudy.anchorLink &&
+          !caseStudy.projectOverviewBanner && ( // Conditionally render anchor if no banner
+            <div className="mt-4 mb-8 not-prose">
+              <a
+                href={caseStudy.anchorLink.href}
+                onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
+                className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
+              >
+                {caseStudy.anchorLink.text}
+                <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+              </a>
+            </div>
+          )}
 
         {caseStudy.sections.map((section, sectionIndex) => (
-          <section key={sectionIndex} id={section.id}>
+          <section key={sectionIndex} id={section.id || `section-${sectionIndex}`}>
             {" "}
-            {/* Ensure section.id is correctly passed if it exists */}
+            {/* Added fallback id */}
             <h2>{section.title}</h2>
             {section.content.map(renderContentItem)}
           </section>

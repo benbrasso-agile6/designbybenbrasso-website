@@ -6,7 +6,15 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   metaTitle: "Case Study: AI Scribe KPI Dashboard | Ben Brasso",
   metaDescription:
     "Detailed case study of the AI Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
+  projectOverviewBanner: {
+    description:
+      "This project aimed to enhance data visualization and user workflow efficiency for an AI Scribe KPI dashboard.",
+    skills: "Key skills included UX Strategy, Lead Product Design, Data Visualization, and User Research.",
+    tools: "Primary tools used were Figma, Miro, UserTesting.com, and Amplitude.",
+    date: "The project was actively developed over a 4-month period in early 2024.",
+  },
   projectDetails: [
+    // This data will be effectively replaced by the banner but kept for now
     { label: "Client Type", value: "Healthcare Technology (B2B SaaS)" },
     { label: "Role", value: ["UX Strategist", "Lead Product Designer"] },
     { label: "Timeline", value: "4 Months" },
@@ -61,7 +69,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       ],
     },
     {
-      title: "Key Outcomes", // Changed to "Key Outcomes" for title case consistency
+      title: "Key Outcomes",
       content: [
         {
           type: "paragraph",
