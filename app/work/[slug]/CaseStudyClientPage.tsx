@@ -5,8 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-// import ProjectDetailsTable from "../components/project-details-table" // Commented out
-import ProjectOverviewBanner from "../components/project-overview-banner" // Added import
+import ProjectOverviewBanner from "../components/project-overview-banner"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import type React from "react"
@@ -29,6 +28,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
       )
     case "image":
       if (item.src && item.alt) {
+        // This image rendering is for images within sections, not the main project image
         return (
           <div key={index} className={`my-6 ${item.className || ""}`}>
             <Image
@@ -82,59 +82,68 @@ export default function CaseStudyClientPage({ params }: Props) {
           Back to All Projects
         </Link>
       </Button>
-      {/* <ProjectDetailsTable details={caseStudy.projectDetails} /> */} {/* Commented out */}
-      <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-        <h1>{caseStudy.pageTitle}</h1>
 
+      {/* Page Title - Placed above the parallax/sticky section */}
+      <h1 className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mb-6">
+        {caseStudy.pageTitle}
+      </h1>
+
+      <div className="relative">
+        {/* Sticky Main Project Image */}
         {caseStudy.mainImage && (
-          <Image
-            src={caseStudy.mainImage.src || "/placeholder.svg"}
-            alt={caseStudy.mainImage.alt}
-            width={caseStudy.mainImage.width}
-            height={caseStudy.mainImage.height}
-            className={caseStudy.mainImage.className || "rounded-lg my-6 w-full object-cover"}
-            priority={caseStudy.mainImage.priority}
-            unoptimized
-          />
+          <div className="sticky top-16 z-0">
+            {" "}
+            {/* top-16 assumes header height of 4rem (64px) */}
+            <Image
+              src={caseStudy.mainImage.src || "/placeholder.svg"}
+              alt={caseStudy.mainImage.alt}
+              width={caseStudy.mainImage.width}
+              height={caseStudy.mainImage.height}
+              // Remove my-6 from className if present in data, ensure it's just layout classes
+              className="rounded-lg w-full object-cover"
+              priority={caseStudy.mainImage.priority}
+              unoptimized
+            />
+          </div>
         )}
 
-        {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+        {/* Content that scrolls over the sticky image */}
+        <div className="relative z-10">
+          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
 
-        {/* Removed leadParagraph rendering as it's now part of the banner or main content */}
-        {/* {caseStudy.leadParagraph && <p className="lead">{caseStudy.leadParagraph}</p>} */}
+          <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
+            {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
+              <div className="mt-4 mb-8 not-prose">
+                <a
+                  href={caseStudy.anchorLink.href}
+                  onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
+                  className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
+                >
+                  {caseStudy.anchorLink.text}
+                  <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                </a>
+              </div>
+            )}
 
-        {caseStudy.anchorLink &&
-          !caseStudy.projectOverviewBanner && ( // Conditionally render anchor if no banner
-            <div className="mt-4 mb-8 not-prose">
-              <a
-                href={caseStudy.anchorLink.href}
-                onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
-                className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
-              >
-                {caseStudy.anchorLink.text}
-                <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-              </a>
-            </div>
-          )}
-
-        {caseStudy.sections.map((section, sectionIndex) => (
-          <section key={sectionIndex} id={section.id || `section-${sectionIndex}`}>
-            {" "}
-            {/* Added fallback id */}
-            <h2>{section.title}</h2>
-            {section.content.map(renderContentItem)}
-          </section>
-        ))}
-
-        <div className="mt-12 print:hidden">
-          <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
-            <Link href="/#work">
-              <ArrowLeftIcon className="mr-2 h-4 w-4" />
-              See Other Projects
-            </Link>
-          </Button>
+            {caseStudy.sections.map((section, sectionIndex) => (
+              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`}>
+                <h2>{section.title}</h2>
+                {section.content.map(renderContentItem)}
+              </section>
+            ))}
+          </article>
         </div>
-      </article>
+      </div>
+
+      {/* "See Other Projects" Button - Placed after the parallax container */}
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mt-12 print:hidden">
+        <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
+          <Link href="/#work">
+            <ArrowLeftIcon className="mr-2 h-4 w-4" />
+            See Other Projects
+          </Link>
+        </Button>
+      </div>
     </>
   )
 }
