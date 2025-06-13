@@ -7,11 +7,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   metaDescription:
     "Detailed case study of the AI Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   leadParagraph:
-    "Revamped a complex B2B AI Scribe KPI dashboard to enhance data visualization, improve user workflow efficiency for medical scribes and administrators, and provide more actionable insights into scribe performance and documentation quality.",
-  anchorLink: {
-    text: "Learn about relevant data privacy considerations",
-    href: "#data-privacy-considerations",
-  },
+    "This case study explores the challenge of understanding and preparing for the VA's AI Scribe pilot program, aimed at reducing provider burnout by leveraging AI for clinical documentation.",
   projectDetails: [
     { label: "Client Type", value: "Healthcare Technology (B2B SaaS)" },
     { label: "Role", value: ["UX Strategist", "Lead Product Designer"] },
@@ -28,79 +24,41 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   },
   sections: [
     {
-      title: "The Challenge",
+      title: "Background",
       content: [
         {
           type: "paragraph",
-          text: "The existing dashboard for AI scribe performance was data-rich but suffered from information overload and a lack of clear hierarchy. Users found it difficult to quickly identify key performance indicators, track documentation accuracy, and perform essential administrative tasks, leading to underutilization of the platform’s capabilities.",
-        },
-      ],
-    },
-    {
-      title: "My Role & Process",
-      content: [
-        { type: "paragraph", text: "As the UX strategist and designer, my responsibilities included:" },
-        {
-          type: "list",
-          items: [
-            "Data Analysis & User Feedback: Analyzed usage data and collected feedback from existing clients to understand their primary goals and pain points.",
-            "Workflow Optimization: Mapped out existing user workflows and identified areas for improvement and simplification.",
-            "Information Prioritization: Worked with product managers to define key performance indicators (KPIs) and prioritize information display.",
-            "Data Visualization Design: Explored various charting and data visualization techniques to present complex data in an understandable and actionable manner.",
-            "Iterative Design & Prototyping: Created wireframes and interactive prototypes, iterating based on stakeholder and user feedback.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Key Features & Solutions",
-      content: [
-        {
-          type: "list",
-          items: [
-            "Customizable Dashboard Widgets: Allowed users to personalize their dashboard view by selecting and arranging relevant data widgets.",
-            "Improved Data Visualization: Implemented clearer charts, graphs, and data tables with better labeling and context.",
-            "Actionable Insights: Highlighted key trends, anomalies, and provided contextual recommendations.",
-            "Streamlined Reporting: Simplified the process for generating and exporting custom reports.",
-            "Scribe Performance Metrics: Clear visualization of individual and team scribe efficiency and accuracy.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Results & Impact",
-      content: [
-        { type: "paragraph", text: "The optimized dashboard resulted in:" },
-        {
-          type: "list",
-          items: [
-            "30% increase in user engagement with key dashboard features.",
-            "Significant reduction in time taken to complete common tasks.",
-            "Improved oversight of AI scribe operations and documentation quality.",
-            "Positive feedback on the clarity and usefulness of the new data visualizations.",
-          ],
-        },
-      ],
-    },
-    {
-      id: "data-privacy-considerations", // Matches anchorLink.href
-      title: "Most applicable law this work supports",
-      content: [
-        {
-          type: "h3",
-          text: "Key Data Privacy and Security Regulations",
+          text: 'On March 13, 2024, <a href="https://news.va.gov/press-room/va-artificial-intelligence-tech-sprint-competition-finalists/" target="_blank" rel="noopener noreferrer">VA announced in a press release that it selected its finalists in their AI Tech Sprint to reduce health care provider burnout</a>.',
         },
         {
           type: "paragraph",
-          text: 'This AI Scribe KPI Dashboard handles sensitive patient information, and its design and operation are guided by data privacy and security regulations such as HIPAA (Health Insurance Portability and Accountability Act) in the United States. <a href="https://www.hhs.gov/hipaa/for-professionals/index.html" target="_blank" rel="noopener noreferrer">Learn more about HIPAA</a>.',
-        },
-        {
-          type: "h3",
-          text: "How this work aligns with data protection principles",
+          text: "Reducing burnout among providers and care support staff has been a top priority for VA and executive orders from multiple White House administrations.",
         },
         {
           type: "paragraph",
-          text: "The dashboard was developed with a strong emphasis on data minimization, access controls, audit trails, and de-identification techniques where appropriate to ensure that insights are generated while protecting patient privacy and complying with relevant healthcare data laws.",
+          text: 'The amount of administrative work for providers often shifted into "pajama time" and cited as one of the number one causes of burnout.',
+        },
+        {
+          type: "paragraph",
+          text: 'In <a href="https://department.va.gov/ai/ai-use-case-inventory/" target="_blank" rel="noopener noreferrer">VA\'s AI Use Case Inventory</a>, last updated as of December 2024, use case VA-708 Ambient AI Scribe\'s purpose is to transcribe and summarize recorded clinical encounters using AI and to produce written summaries for humans to later review, edit, and enter into patient records.',
+        },
+      ],
+    },
+    {
+      title: "Challenge",
+      content: [
+        {
+          type: "paragraph",
+          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's NAII, Office of Information and Technology, and Veterans Health Administration?",
+        },
+      ],
+    },
+    {
+      title: "Action",
+      content: [
+        {
+          type: "paragraph",
+          text: "TBD Key outcomes",
         },
       ],
     },
