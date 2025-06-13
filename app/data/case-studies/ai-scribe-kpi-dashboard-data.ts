@@ -21,9 +21,9 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     { label: "Tools", value: ["Figma", "Miro", "UserTesting.com", "Amplitude"] },
   ],
   mainImage: {
-    src: "/placeholder.svg?width=800&height=450",
-    alt: "AI Scribe KPI Dashboard project showcase",
-    width: 800,
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/CleanShot_2025-06-13_at_15.38.32_jkb9y3.gif",
+    alt: "AI Scribe KPI Dashboard project showcase GIF", // Updated alt slightly for clarity
+    width: 800, // Keeping original dimensions, object-cover will handle aspect ratio
     height: 450,
     priority: true,
     className: "rounded-lg my-6 w-full object-cover",
