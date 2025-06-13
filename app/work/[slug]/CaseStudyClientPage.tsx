@@ -99,8 +99,7 @@ export default function CaseStudyClientPage({ params }: Props) {
               alt={caseStudy.mainImage.alt}
               width={caseStudy.mainImage.width}
               height={caseStudy.mainImage.height}
-              // Remove my-6 from className if present in data, ensure it's just layout classes
-              className="rounded-lg w-full object-cover"
+              className="rounded-lg w-full object-cover border border-neutral-200 dark:border-neutral-700"
               priority={caseStudy.mainImage.priority}
               unoptimized
             />
