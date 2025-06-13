@@ -83,7 +83,6 @@ export default function CaseStudyClientPage({ params }: Props) {
         </Link>
       </Button>
       {/* <ProjectDetailsTable details={caseStudy.projectDetails} /> */} {/* Commented out */}
-      {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
         <h1>{caseStudy.pageTitle}</h1>
 
@@ -98,6 +97,8 @@ export default function CaseStudyClientPage({ params }: Props) {
             unoptimized
           />
         )}
+
+        {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
 
         {/* Removed leadParagraph rendering as it's now part of the banner or main content */}
         {/* {caseStudy.leadParagraph && <p className="lead">{caseStudy.leadParagraph}</p>} */}
