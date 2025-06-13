@@ -108,7 +108,7 @@ export default function CaseStudyClientPage({ params }: Props) {
         )}
 
         {/* Content that scrolls over the sticky image */}
-        <div className="relative z-10">
+        <div className="relative z-10 bg-background">
           {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
