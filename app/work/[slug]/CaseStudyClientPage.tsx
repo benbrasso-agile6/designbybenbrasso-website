@@ -84,7 +84,7 @@ export default function CaseStudyClientPage({ params }: Props) {
       </Button>
 
       {/* Page Title - Placed above the parallax/sticky section */}
-      <h1 className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mb-6 leading-normal">
+      <h1 className="text-4xl font-bold leading-normal text-neutral-900 dark:text-neutral-100 mb-6">
         {caseStudy.pageTitle}
       </h1>
 
