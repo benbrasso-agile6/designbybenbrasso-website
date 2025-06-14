@@ -12,7 +12,7 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[1fr_auto] lg:gap-16 items-start">
           {/* Text content - will appear below avatar on small screens due to flex-col-reverse */}
           <div className="space-y-6 text-left">
-            <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl xl:text-6xl leading-[1.4] sm:leading-[1.3] md:leading-[1.2] xl:leading-[1.2]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-semibold leading-snug sm:leading-snug md:leading-tight xl:leading-tight">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
