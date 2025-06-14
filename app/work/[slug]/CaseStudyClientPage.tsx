@@ -90,7 +90,8 @@ export default function CaseStudyClientPage({ params }: Props) {
         <h1 className="leading-normal">{caseStudy.pageTitle}</h1>
       </article>
 
-      <div className="relative">
+      {/* Added mt-8 here to increase space below H1 */}
+      <div className="relative mt-8">
         {/* Sticky Main Project Image */}
         {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
