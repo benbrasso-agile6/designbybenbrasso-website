@@ -53,6 +53,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "brand-peach": {
+          DEFAULT: "#FFEADD", // A soft, light peach
+          text: "#A66A53", // A darker, muted peach for text or accents
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
