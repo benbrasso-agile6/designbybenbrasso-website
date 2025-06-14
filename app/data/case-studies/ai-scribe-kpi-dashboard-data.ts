@@ -10,7 +10,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     description:
       "This project aimed to enhance data visualization and user workflow efficiency for an AI Scribe KPI dashboard.",
     skills: "Key skills included UX Strategy, Lead Product Design, Data Visualization, and User Research.",
-    tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta)",
+    tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta), GitHub",
     date: "The project was actively developed over a 4-month period in early 2024.",
   },
   projectDetails: [
