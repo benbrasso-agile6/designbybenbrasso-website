@@ -12,7 +12,12 @@ export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBan
   const { description, skills, tools, date } = bannerData
 
   return (
-    <div className="my-12 pt-4 pb-6 px-6 md:pt-6 md:pb-8 md:px-8 bg-brand-peach dark:bg-sky-900 rounded-lg">
+    <div
+      className="my-12 pt-4 pb-6 px-6 md:pt-6 md:pb-8 md:px-8 
+                 bg-gradient-to-b from-white to-brand-peach 
+                 dark:from-neutral-950 dark:to-sky-900 
+                 rounded-lg"
+    >
       <h2 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h2>
       <p className="text-neutral-700 dark:text-sky-100 mb-6 text-base md:text-lg">{description}</p>
 
