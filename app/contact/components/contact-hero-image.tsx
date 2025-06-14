@@ -40,9 +40,8 @@ export default function ContactHeroImage({
           alt={alt}
           width={width}
           height={height}
-          className={`object-cover shadow-2xl border-4 border-sky-600/20 dark:border-sky-500/20 ${className}`}
-          style={{ borderRadius: "100px" }}
-          priority
+          className={`object-cover shadow-2xl border-4 border-sky-600/20 dark:border-sky-500/20 rounded-[100px] ${className}`}
+          // priority prop has been removed
           unoptimized
         />
       </div>
