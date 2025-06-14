@@ -39,7 +39,9 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 }
 
 export async function generateStaticParams() {
-  return getAllCaseStudySlugs()
+  const slugs = getAllCaseStudySlugs()
+  console.log("Slugs being generated for /work pages:", slugs)
+  return slugs
 }
 
 export default function CaseStudyPage({ params }: Props) {
