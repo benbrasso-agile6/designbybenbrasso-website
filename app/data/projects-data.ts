@@ -11,7 +11,7 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: "AI scribe pilot KPI dashboard",
+    title: "Ambient scribe pilot KPI dashboard",
     slug: "ai-scribe-kpi-dashboard",
     description:
       "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the U.S. VA Digital Health Office's AI investments.</strong>",
