@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-import ProjectOverviewBanner from "../components/project-overview-banner"
+import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import type React from "react"
@@ -73,17 +73,17 @@ export default function CaseStudyClientPage({ params }: Props) {
   return (
     <>
       {/*
-      <Button
-        asChild
-        variant="outline"
-        className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
-      >
-        <Link href="/#work">
-          <ArrowLeftIcon className="mr-2 h-4 w-4" />
-          Back to All Projects
-        </Link>
-      </Button>
-      */}
+  <Button
+    asChild
+    variant="outline"
+    className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
+  >
+    <Link href="/#work">
+      <ArrowLeftIcon className="mr-2 h-4 w-4" />
+      Back to All Projects
+    </Link>
+  </Button>
+  */}
 
       {/* Page Title - Wrapped in article with prose classes for consistent H1 styling */}
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
