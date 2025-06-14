@@ -20,18 +20,18 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ben Brasso's GitHub Profile"
-              className="rounded-full bg-neutral-100 dark:bg-neutral-800 p-2 group transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700"
+              className="rounded-full bg-neutral-800 dark:bg-neutral-900 p-2 group transition-colors hover:bg-neutral-700"
             >
-              <GithubIcon className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-sky-600 dark:group-hover:text-sky-500 transition-colors" />
+              <GithubIcon className="h-5 w-5 text-neutral-100 group-hover:text-sky-500 transition-colors" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/benbrasso/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ben Brasso's LinkedIn Profile"
-              className="rounded-full bg-neutral-100 dark:bg-neutral-800 p-2 group transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700"
+              className="rounded-full bg-neutral-800 dark:bg-neutral-900 p-2 group transition-colors hover:bg-neutral-700"
             >
-              <LinkedinIcon className="h-5 w-5 text-neutral-700 dark:text-neutral-300 group-hover:text-sky-600 dark:group-hover:text-sky-500 transition-colors" />
+              <LinkedinIcon className="h-5 w-5 text-neutral-100 group-hover:text-sky-500 transition-colors" />
             </Link>
           </div>
         </div>
