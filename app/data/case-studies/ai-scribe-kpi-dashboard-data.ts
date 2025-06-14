@@ -2,10 +2,10 @@ import type { CaseStudyData } from "../case-study-types"
 
 export const aiScribeKpiDashboardData: CaseStudyData = {
   slug: "ai-scribe-kpi-dashboard",
-  pageTitle: "AI Scribe Pilot KPI Dashboard",
-  metaTitle: "Case Study: AI Scribe KPI Dashboard | Ben Brasso",
+  pageTitle: "Ambient Scribe Pilot KPI Dashboard",
+  metaTitle: "Case Study: Ambient Scribe KPI Dashboard | Ben Brasso",
   metaDescription:
-    "Detailed case study of the AI Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
+    "Detailed case study of the Ambient Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   projectOverviewBanner: {
     description:
       "This project aimed to enhance data visualization and user workflow efficiency for an AI Scribe KPI dashboard.",
@@ -22,7 +22,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   ],
   mainImage: {
     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/CleanShot_2025-06-13_at_15.38.32_jkb9y3.gif",
-    alt: "AI Scribe KPI Dashboard project showcase GIF", // Updated alt slightly for clarity
+    alt: "Ambient Scribe KPI Dashboard project showcase GIF", // Updated alt slightly for clarity
     width: 800, // Keeping original dimensions, object-cover will handle aspect ratio
     height: 450,
     priority: true,
