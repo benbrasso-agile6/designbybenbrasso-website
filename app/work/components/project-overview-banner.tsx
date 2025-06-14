@@ -15,8 +15,8 @@ export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBan
     <div
       className="my-12 pt-4 pb-6 px-6 md:pt-6 md:pb-8 md:px-8 
                  bg-gradient-to-b 
-                 from-white via-brand-peach via-[15%] to-brand-peach
-                 dark:from-neutral-950 dark:via-sky-900 dark:via-[15%] dark:to-sky-900
+                 from-brand-peach via-brand-peach via-[85%] to-white
+                 dark:from-sky-900 dark:via-sky-900 dark:via-[85%] dark:to-neutral-950
                  rounded-lg"
     >
       <h2 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h2>
