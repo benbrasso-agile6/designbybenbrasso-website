@@ -14,7 +14,7 @@ export const projectsData: Project[] = [
     title: "Ambient scribe pilot KPI dashboard",
     slug: "ai-scribe-kpi-dashboard",
     description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the U.S. Veteran Affairs Digital Health Office's AI investments.</strong>",
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the U.S. Veteran Affairs Digital Health Office’s AI investments.</strong>",
     imageUrl:
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
