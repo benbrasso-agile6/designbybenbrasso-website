@@ -72,6 +72,7 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   return (
     <>
+      {/*
       <Button
         asChild
         variant="outline"
@@ -82,13 +83,15 @@ export default function CaseStudyClientPage({ params }: Props) {
           Back to All Projects
         </Link>
       </Button>
+      */}
 
-      {/* Page Title - Placed above the parallax/sticky section */}
-      <h1 className="text-4xl font-bold leading-normal text-neutral-900 dark:text-neutral-100 mb-6">
-        {caseStudy.pageTitle}
-      </h1>
+      {/* Page Title - Wrapped in article with prose classes for consistent H1 styling */}
+      <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
+        <h1 className="leading-normal">{caseStudy.pageTitle}</h1>
+      </article>
 
-      <div className="relative">
+      {/* Added mt-8 here to increase space below H1 */}
+      <div className="relative mt-8">
         {/* Sticky Main Project Image */}
         {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
