@@ -44,7 +44,7 @@ export default function HeroSection() {
                 className="inline-block"
               >
                 {" "}
-                UX designer, and navigator of the nebulous. 🧭
+                UX product designer, and navigator of the nebulous. 🧭
               </motion.span>
             </h1>
           </div>
