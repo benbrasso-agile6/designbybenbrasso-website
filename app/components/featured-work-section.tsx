@@ -31,7 +31,7 @@ export default function FeaturedWorkSection() {
                 description={project.description}
                 imageUrl={project.imageUrl}
                 tags={project.tags}
-                projectUrl={`/${project.slug}`}
+                projectUrl={`/project/${project.slug}`}
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
                 footerPaddingTopClass={specificFooterPaddingTopClass} // Pass the new prop

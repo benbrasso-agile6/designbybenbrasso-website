@@ -1,5 +1,5 @@
 // app/read-me/page.tsx
-// Restore the original content to render the actual Read Me page
+// Ensure this file is restored to its full, correct version
 import ReadMePageContent from "./read-me-page"
 
 export default function ReadMeRoute() {
