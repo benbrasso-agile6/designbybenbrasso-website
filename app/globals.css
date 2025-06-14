@@ -119,6 +119,15 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom prose link colors */
+  .prose-neutral a {
+    @apply text-sky-600 underline hover:text-sky-700;
+  }
+
+  .prose-invert a {
+    @apply text-sky-500 underline hover:text-sky-400;
+  }
 }
 
 /* Smooth scrolling for anchor links */

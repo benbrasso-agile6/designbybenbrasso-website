@@ -19,12 +19,20 @@ export interface CaseStudySection {
   content: CaseStudyContentItem[]
 }
 
+export interface ProjectOverviewBannerData {
+  description: string
+  skills: string
+  tools: string
+  date: string
+}
+
 export interface CaseStudyData {
   slug: string
   pageTitle: string // For H1 and potentially <title>
   metaTitle: string // Specifically for <title> tag
   metaDescription: string
-  leadParagraph: string
+  leadParagraph?: string // Made optional as it might be replaced by banner
+  projectOverviewBanner?: ProjectOverviewBannerData // New banner data
   anchorLink?: {
     // Optional anchor link definition
     text: string

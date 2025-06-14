@@ -11,21 +11,21 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "Ambient scribe pilot KPI dashboard",
+    slug: "ai-scribe-kpi-dashboard",
+    description:
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the U.S. VA Digital Health Office's AI investments.</strong>",
+    imageUrl:
+      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
+    tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
+  },
+  {
     title: "Mobile patient check-in",
     slug: "patient-check-in",
     description:
       "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in 1 month, while adding travel reimbursement.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
-  },
-  {
-    title: "AI scribe pilot KPI dashboard",
-    slug: "ai-scribe-kpi-dashboard",
-    description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office's AI investments.</strong>",
-    imageUrl:
-      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
-    tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
   },
   {
     title: "Provider online scheduling",
