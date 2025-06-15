@@ -94,8 +94,16 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
+        {
           type: "paragraph",
           text: "We still had some ideas about how ambient scribe could be integrated into the care experience and EHR now in order to solve for other pain points and opportunities that we uncovered. For example:",
+        },
+        {
+          type: "list",
+          items: [
+            "How might AI dictation and scribe tools support documentation during the preliminary assessment and exam with EHR note templates to reduce downstream redundant workload after hours? (Versus, simply, being used for dictation and transcription after hours.)",
+            "How might AI dictation and scribe tools integrate into encounter note templates to accelerate downstream AI actions for creating RTC plans, consults, and orders to lighten post visit documentation?",
+          ],
         },
       ],
     },
