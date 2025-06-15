@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
 
@@ -8,6 +10,8 @@ interface ProjectCardProps {
   description: string
   imageUrl: string
   tags: string[]
+  slug?: string
+  hasCaseStudy?: boolean
   projectUrl?: string
   caseStudyStatusText?: string
   imageMarginTopClass?: string
@@ -18,6 +22,9 @@ export default function ProjectCard({
   title,
   description,
   imageUrl,
+  tags,
+  slug,
+  hasCaseStudy,
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
@@ -47,9 +54,15 @@ export default function ProjectCard({
       <CardContent className="px-8 py-0 mt-0" />
 
       <CardFooter className={`px-8 pb-8 ${footerPaddingTopClass}`}>
-        <p className="text-base text-neutral-500 dark:text-neutral-400">
-          {caseStudyStatusText || DEFAULT_CASE_STUDY_STATUS_TEXT}
-        </p>
+        {hasCaseStudy && slug ? (
+          <Link href={`/project/${slug}`} passHref>
+            <Button>Review case study</Button>
+          </Link>
+        ) : (
+          <p className="text-base text-neutral-500 dark:text-neutral-400">
+            {caseStudyStatusText || DEFAULT_CASE_STUDY_STATUS_TEXT}
+          </p>
+        )}
       </CardFooter>
     </Card>
   )

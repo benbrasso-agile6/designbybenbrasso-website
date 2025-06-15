@@ -4,6 +4,7 @@ export interface Project {
   description: string
   imageUrl: string
   tags: string[]
+  hasCaseStudy?: boolean
   caseStudyStatusText?: string
   imageMarginTopClass?: string // Retaining this from previous changes
   footerPaddingTopClass?: string // Retaining this from previous changes
@@ -18,6 +19,7 @@ export const projectsData: Project[] = [
     imageUrl:
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
+    hasCaseStudy: true,
   },
   {
     title: "Mobile patient check-in",
