@@ -122,6 +122,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           className: "rounded-lg mt-12 mb-6 w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
         },
         {
+          type: "paragraph",
+          text: "It served as a foundational tool for aligning cross-functional teams on understanding pain points and where to focus improving efficiencies based on the needs of both Veterans and care providers.",
+        },
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750024750/Frame_5_hdqh1s.png",
           alt: "Ambient Scribe KPI Dashboard project showcase",
