@@ -138,6 +138,7 @@ export default function CaseStudyClientPage({ params }: Props) {
       </div>
 
       {/* "See Other Projects" Button - Placed after the parallax container */}
+      {/*
       <div className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mt-12 print:hidden">
         <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
           <Link href="/#work">
@@ -146,6 +147,7 @@ export default function CaseStudyClientPage({ params }: Props) {
           </Link>
         </Button>
       </div>
+      */}
     </>
   )
 }
