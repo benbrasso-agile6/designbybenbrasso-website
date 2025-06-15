@@ -137,6 +137,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
+        {
+          type: "paragraph",
+          text: "Review the interactive prototype for the Ambient Scribe Pilot Insights Report",
+        },
       ],
     },
     {
