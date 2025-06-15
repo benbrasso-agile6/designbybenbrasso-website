@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
+import Link from "next/link" // Added import
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button" // Added import
 
 const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
 
@@ -10,9 +10,9 @@ interface ProjectCardProps {
   description: string
   imageUrl: string
   tags: string[]
-  slug?: string
-  hasCaseStudy?: boolean
-  projectUrl?: string
+  slug?: string // Added this prop
+  hasCaseStudy?: boolean // Added this prop
+  projectUrl?: string // This was already here, can be removed if not used elsewhere by card
   caseStudyStatusText?: string
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
@@ -22,9 +22,10 @@ export default function ProjectCard({
   title,
   description,
   imageUrl,
-  tags,
+  tags, // Added tags to destructuring
   slug,
   hasCaseStudy,
+  // projectUrl, // This prop is not used in the card's link logic now
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
@@ -45,7 +46,7 @@ export default function ProjectCard({
               width={890}
               height={500}
               className="object-contain w-full h-full transition-transform duration-300"
-              unoptimized // Added this prop
+              unoptimized
             />
           </div>
         </div>

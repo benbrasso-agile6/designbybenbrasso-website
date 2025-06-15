@@ -4,10 +4,10 @@ export interface Project {
   description: string
   imageUrl: string
   tags: string[]
-  hasCaseStudy?: boolean
+  hasCaseStudy?: boolean // Added this line
   caseStudyStatusText?: string
-  imageMarginTopClass?: string // Retaining this from previous changes
-  footerPaddingTopClass?: string // Retaining this from previous changes
+  imageMarginTopClass?: string
+  footerPaddingTopClass?: string
 }
 
 export const projectsData: Project[] = [
@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
     imageUrl:
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
-    hasCaseStudy: true,
+    hasCaseStudy: true, // Added this line
   },
   {
     title: "Mobile patient check-in",
@@ -36,6 +36,5 @@ export const projectsData: Project[] = [
       "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
     tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
-    // Retain specific margins if needed, or they'll use defaults from ProjectCard/FeaturedWorkSection
   },
 ]

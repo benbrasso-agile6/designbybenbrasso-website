@@ -1,38 +1,44 @@
-import ProjectCard from "./project-card"
 import { projectsData } from "@/app/data/projects-data"
+import ProjectCard from "./project-card"
 
 export default function FeaturedWorkSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-neutral-950">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-neutral-800 dark:text-neutral-200">
-              Featured Work
-            </h2>
-            <p className="max-w-[900px] text-neutral-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-neutral-400">
-              A selection of my projects that demonstrate my skills in user experience design, product strategy, and
-              front-end development.
-            </p>
-          </div>
+    <section id="work" className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900">
+      <div className="max-w-[1000px] mx-auto">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 px-8">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
+            My <span className="text-sky-600 dark:text-sky-500">work</span>
+          </h2>
+          <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            A selection of projects that showcase my skills in UX design, product strategy, user research, and using AI.
+          </p>
         </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-12 py-12 lg:grid-cols-1">
-          <div className="grid grid-cols-1 gap-12">
-            {projectsData.map((project, index) => (
+        <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
+          {projectsData.map((project) => {
+            let specificImageMarginTopClass = "mt-6" // Default for image margin
+            let specificFooterPaddingTopClass = "pt-6" // Default for footer padding
+
+            if (project.slug === "direct-online-scheduling") {
+              specificImageMarginTopClass = "mt-3" // Smaller margin above image
+              specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
+            }
+
+            return (
               <ProjectCard
-                key={index}
+                key={project.title}
                 title={project.title}
                 description={project.description}
                 imageUrl={project.imageUrl}
                 tags={project.tags}
-                slug={project.slug}
-                hasCaseStudy={project.hasCaseStudy}
+                slug={project.slug} // Added this prop
+                hasCaseStudy={project.hasCaseStudy} // Added this prop
+                // projectUrl={`/project/${project.slug}`} // Kept for now, but button uses slug
                 caseStudyStatusText={project.caseStudyStatusText}
-                imageMarginTopClass={project.imageMarginTopClass}
-                footerPaddingTopClass={project.footerPaddingTopClass}
+                imageMarginTopClass={specificImageMarginTopClass}
+                footerPaddingTopClass={specificFooterPaddingTopClass}
               />
-            ))}
-          </div>
+            )
+          })}
         </div>
       </div>
     </section>
