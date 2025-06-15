@@ -22,7 +22,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   ],
   mainImage: {
     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/CleanShot_2025-06-13_at_15.38.32_jkb9y3.gif",
-    alt: "Ambient Scribe KPI Dashboard project showcase GIF", // Updated alt slightly for clarity
+    alt: "Ambient Scribe KPI Dashboard project showcase", // Updated alt slightly for clarity
     width: 800, // Keeping original dimensions, object-cover will handle aspect ratio
     height: 450,
     priority: true,
@@ -120,6 +120,14 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750024750/Frame_5_hdqh1s.png",
+          alt: "Care encounter workflow analysis diagram",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
       ],
     },
