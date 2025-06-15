@@ -1,14 +1,13 @@
 "use client"
 
 import { notFound } from "next/navigation"
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
+import { ArrowDownIcon } from "lucide-react"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import type React from "react"
+import BackToHomeLink from "@/app/components/back-to-home-link"
 
 type Props = {
   params: { slug: string }
@@ -72,6 +71,9 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   return (
     <>
+      <div className="mb-8 print:hidden">
+        <BackToHomeLink />
+      </div>
       {/*
   <Button
     asChild
@@ -148,6 +150,9 @@ export default function CaseStudyClientPage({ params }: Props) {
         </Button>
       </div>
       */}
+      <div className="mt-12 print:hidden">
+        <BackToHomeLink />
+      </div>
     </>
   )
 }
