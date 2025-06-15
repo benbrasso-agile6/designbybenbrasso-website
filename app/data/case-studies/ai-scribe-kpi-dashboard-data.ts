@@ -94,6 +94,9 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
+          type: "paragraph",
+          text: "We still had some ideas about how ambient scribe could be integrated into the care experience and EHR now in order to solve for other pain points and opportunities that we uncovered. For example:",
+        },
       ],
     },
     {
