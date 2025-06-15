@@ -139,7 +139,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Review the interactive prototype for the Ambient Scribe Pilot Insights Report',
+          text: '<a href="https://ai-scribe-pilot-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">Review the interactive prototype for the Ambient Scribe Pilot Insights Report</a>',
         },
       ],
     },
