@@ -64,7 +64,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={isPending}
-          className="w-full bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white text-base py-3"
+          className="w-full bg-sky-800 hover:bg-sky-900 text-white dark:bg-sky-700 dark:hover:bg-sky-800 text-base py-3"
         >
           {isPending ? (
             <>

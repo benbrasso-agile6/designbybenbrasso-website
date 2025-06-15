@@ -1,14 +1,13 @@
 "use client"
 
 import { notFound } from "next/navigation"
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowLeftIcon, ArrowDownIcon } from "lucide-react"
-import ProjectOverviewBanner from "../components/project-overview-banner"
+import { ArrowDownIcon } from "lucide-react"
+import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import { getCaseStudyData } from "@/app/data/case-studies-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import type React from "react"
+import BackToHomeLink from "@/app/components/back-to-home-link"
 
 type Props = {
   params: { slug: string }
@@ -22,7 +21,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
       return (
         <ul key={index}>
           {item.items?.map((li, liIndex) => (
-            <li key={liIndex}>{li}</li>
+            <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
           ))}
         </ul>
       )
@@ -72,18 +71,21 @@ export default function CaseStudyClientPage({ params }: Props) {
 
   return (
     <>
+      <div className="mb-8 print:hidden">
+        <BackToHomeLink />
+      </div>
       {/*
-      <Button
-        asChild
-        variant="outline"
-        className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
-      >
-        <Link href="/#work">
-          <ArrowLeftIcon className="mr-2 h-4 w-4" />
-          Back to All Projects
-        </Link>
-      </Button>
-      */}
+  <Button
+    asChild
+    variant="outline"
+    className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
+  >
+    <Link href="/#work">
+      <ArrowLeftIcon className="mr-2 h-4 w-4" />
+      Back to All Projects
+    </Link>
+  </Button>
+  */}
 
       {/* Page Title - Wrapped in article with prose classes for consistent H1 styling */}
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
@@ -138,6 +140,7 @@ export default function CaseStudyClientPage({ params }: Props) {
       </div>
 
       {/* "See Other Projects" Button - Placed after the parallax container */}
+      {/*
       <div className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mt-12 print:hidden">
         <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
           <Link href="/#work">
@@ -145,6 +148,10 @@ export default function CaseStudyClientPage({ params }: Props) {
             See Other Projects
           </Link>
         </Button>
+      </div>
+      */}
+      <div className="mt-12 print:hidden">
+        <BackToHomeLink />
       </div>
     </>
   )

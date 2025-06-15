@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link" // Added import
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button" // Added import
 
 const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
 
@@ -8,7 +10,9 @@ interface ProjectCardProps {
   description: string
   imageUrl: string
   tags: string[]
-  projectUrl?: string
+  slug?: string // Added this prop
+  hasCaseStudy?: boolean // Added this prop
+  projectUrl?: string // This was already here, can be removed if not used elsewhere by card
   caseStudyStatusText?: string
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
@@ -18,6 +22,10 @@ export default function ProjectCard({
   title,
   description,
   imageUrl,
+  tags, // Added tags to destructuring
+  slug,
+  hasCaseStudy,
+  // projectUrl, // This prop is not used in the card's link logic now
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
@@ -38,7 +46,7 @@ export default function ProjectCard({
               width={890}
               height={500}
               className="object-contain w-full h-full transition-transform duration-300"
-              unoptimized // Added this prop
+              unoptimized
             />
           </div>
         </div>
@@ -47,9 +55,17 @@ export default function ProjectCard({
       <CardContent className="px-8 py-0 mt-0" />
 
       <CardFooter className={`px-8 pb-8 ${footerPaddingTopClass}`}>
-        <p className="text-base text-neutral-500 dark:text-neutral-400">
-          {caseStudyStatusText || DEFAULT_CASE_STUDY_STATUS_TEXT}
-        </p>
+        {hasCaseStudy && slug ? (
+          <Link href={`/project/${slug}`} passHref>
+            <Button className="bg-sky-800 hover:bg-sky-900 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
+              Review case study
+            </Button>
+          </Link>
+        ) : (
+          <p className="text-base text-neutral-500 dark:text-neutral-400">
+            {caseStudyStatusText || DEFAULT_CASE_STUDY_STATUS_TEXT}
+          </p>
+        )}
       </CardFooter>
     </Card>
   )

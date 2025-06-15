@@ -22,7 +22,6 @@ export default function FeaturedWorkSection() {
               specificImageMarginTopClass = "mt-3" // Smaller margin above image
               specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
-            // You can add else if blocks here for other specific cards if needed
 
             return (
               <ProjectCard
@@ -31,10 +30,12 @@ export default function FeaturedWorkSection() {
                 description={project.description}
                 imageUrl={project.imageUrl}
                 tags={project.tags}
-                projectUrl={`/work/${project.slug}`}
+                slug={project.slug} // Added this prop
+                hasCaseStudy={project.hasCaseStudy} // Added this prop
+                // projectUrl={`/project/${project.slug}`} // Kept for now, but button uses slug
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
-                footerPaddingTopClass={specificFooterPaddingTopClass} // Pass the new prop
+                footerPaddingTopClass={specificFooterPaddingTopClass}
               />
             )
           })}
