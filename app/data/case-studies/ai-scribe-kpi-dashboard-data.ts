@@ -113,6 +113,14 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           type: "paragraph",
           text: "It served as a foundational tool for aligning cross-functional teams on understanding pain points and where to focus improving efficiencies based on the needs of both Veterans and care providers.",
         },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750022654/CleanShot_2025-06-15_at_17.20.29_e3a1du.gif",
+          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
       ],
     },
     {
