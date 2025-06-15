@@ -57,7 +57,7 @@ export default function ProjectCard({
       <CardFooter className={`px-8 pb-8 ${footerPaddingTopClass}`}>
         {hasCaseStudy && slug ? (
           <Link href={`/project/${slug}`} passHref>
-            <Button variant="secondary">Review case study</Button>
+            <Button>Review case study</Button>
           </Link>
         ) : (
           <p className="text-base text-neutral-500 dark:text-neutral-400">
