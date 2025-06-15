@@ -111,7 +111,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Once we understood how much and where providers experience the most friction during care encounters, we created a service blueprint to map out the end-to-end service experience, including all user interactions, staff processes, touchpoints, and supporting systems that support delivering care.",
+          text: "It served as a foundational tool for aligning cross-functional teams on understanding pain points and where to focus improving efficiencies based on the needs of both Veterans and care providers.",
         },
       ],
     },
