@@ -68,7 +68,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Using a task analysis method to uncover a detailed view of the clinician workflow—including a calculation of perceived burden using NASA TLX—not only did we identify where and how much administrative burden is felt, but we also created a reusable research method for measuring burnout across other applications and care settings.",
+          text: 'Using a task analysis method to uncover a detailed view of the clinician workflow—including a calculation of perceived burden using <a href="https://humansystems.arc.nasa.gov/groups/TLX/downloads/HFES_2006_Paper.pdf" target="_blank" rel="noopener noreferrer">NASA TLX</a>—not only did we identify where and how much administrative burden is felt, but we also created a reusable research method for measuring burnout across other applications and care settings.',
         },
         {
           type: "paragraph",
