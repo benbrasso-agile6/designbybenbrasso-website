@@ -124,7 +124,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750024750/Frame_5_hdqh1s.png",
-          alt: "Care encounter workflow analysis diagram",
+          alt: "Ambient Scribe KPI Dashboard project showcase",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
