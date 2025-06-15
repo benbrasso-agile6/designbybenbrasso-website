@@ -64,7 +64,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "We needed a clear and detailed understanding of where administrative burden is in the care encounter today at VA, so that we could cumulatively measure the impact of the ambient scribe pilot to be able to deliver better health outcomes to Veterans.",
+          text: "<strong>We needed a clear and detailed understanding of where administrative burden is felt in the care encounter experience today at VA,</strong> so that we could cumulatively measure the impact of the ambient scribe pilot to be able to deliver better health outcomes to Veterans.",
         },
         {
           type: "paragraph",

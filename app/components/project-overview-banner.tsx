@@ -5,32 +5,48 @@ interface ProjectOverviewBannerProps {
 }
 
 export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBannerProps) {
+  if (!bannerData) {
+    return null
+  }
+
+  const { description, skills, tools, date } = bannerData
+
   return (
-    <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-900 mb-8 pb-8 md:pb-12">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 dark:from-blue-400/10 dark:to-purple-400/10" />
-      <div className="relative px-6 pt-8 md:px-8 md:pt-10">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="md:col-span-2 lg:col-span-2">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Project Overview</h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{bannerData.description}</p>
-          </div>
+    <div
+      className="my-12 pt-4 pb-8 px-6 md:pt-6 md:pb-12 md:px-8 
+                 bg-gradient-to-b 
+                 from-brand-peach via-brand-peach via-[85%] to-white
+                 dark:from-sky-900 dark:via-sky-900 dark:via-[85%] dark:to-neutral-950
+                 rounded-lg"
+    >
+      <h2 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h2>
+      {/* Description font size reduced */}
+      <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">{description}</p>
 
-          <div>
-            <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 uppercase tracking-wide">
-              Skills
-            </h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{bannerData.skills}</p>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 uppercase tracking-wide">Tools</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{bannerData.tools}</p>
-
-            <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 mt-4 uppercase tracking-wide">
-              Date
-            </h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">{bannerData.date}</p>
-          </div>
+      <div className="space-y-4 border-t border-brand-peach-text/30 dark:border-sky-800 pt-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline">
+          {/* Label font size reduced */}
+          <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
+            Skills
+          </h3>
+          {/* Value font size reduced */}
+          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{skills}</p>
+        </div>
+        <div className="flex flex-col sm:flex-row sm:items-baseline">
+          {/* Label font size reduced */}
+          <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
+            Tools
+          </h3>
+          {/* Value font size reduced */}
+          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{tools}</p>
+        </div>
+        <div className="flex flex-col sm:flex-row sm:items-baseline">
+          {/* Label font size reduced */}
+          <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
+            Date
+          </h3>
+          {/* Value font size reduced */}
+          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{date}</p>
         </div>
       </div>
     </div>
