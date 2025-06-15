@@ -13,7 +13,7 @@ export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBan
 
   return (
     <div
-      className="my-12 pt-4 pb-6 px-6 md:pt-6 md:pb-8 md:px-8 
+      className="my-12 pt-4 pb-8 px-6 md:pt-6 md:pb-12 md:px-8 
                  bg-gradient-to-b 
                  from-brand-peach via-brand-peach via-[85%] to-white
                  dark:from-sky-900 dark:via-sky-900 dark:via-[85%] dark:to-neutral-950
