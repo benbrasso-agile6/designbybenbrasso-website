@@ -8,7 +8,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     "Detailed case study of the Ambient Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   projectOverviewBanner: {
     description:
-      "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot plan and visualize a concept for measuring and reporting outcomes to product leadership.",
+      "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot and visualize a concept for measuring and reporting outcomes to product and DHO leadership.",
     skills: "Human-centered design, UX research lead, service design, AI-powered prototyping",
     tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta), GitHub",
     date: "February - May 2025",
@@ -55,7 +55,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's National AI Institute, Office of Information and Technology, and Veterans Health Administration?",
+          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's National AI Institute (NAII), Office of Information and Technology, and Veterans Health Administration?",
         },
       ],
     },
