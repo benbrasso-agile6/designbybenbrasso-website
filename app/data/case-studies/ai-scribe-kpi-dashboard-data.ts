@@ -83,6 +83,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           text: "We conducted semi-structured interviews with primary care providers, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load during care encounters.",
         },
         {
+          type: "paragraph",
+          text: "Our task analysis method and resulting analysis asserted that <strong>administrative burden increases overtime, like compounding interest.</strong>",
+        },
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750018632/Frame_3_kjzwyo.png",
           alt: "Detailed care encounter workflow with NASA-TLX burden scores for each phase",
