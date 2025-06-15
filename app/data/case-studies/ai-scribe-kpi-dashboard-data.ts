@@ -71,13 +71,21 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           text: 'Using a task analysis method to uncover a detailed view of the clinician workflow—including a calculation of perceived burden using <a href="https://humansystems.arc.nasa.gov/groups/TLX/downloads/HFES_2006_Paper.pdf" target="_blank" rel="noopener noreferrer">NASA TLX</a>—not only did we identify where and how much administrative burden is felt, but we also created a reusable research method for measuring burnout across other applications and care settings.',
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750017016/Frame_2_hq2z2p.png",
+          alt: "Care encounter workflow analysis diagram",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },
+        {
           type: "paragraph",
           text: "We conducted semi-structured interviews with primary care providers, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load during care encounters.",
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750017016/Frame_2_hq2z2p.png",
-          alt: "Care encounter workflow analysis diagram",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750018632/Frame_3_kjzwyo.png",
+          alt: "Detailed care encounter workflow with NASA-TLX burden scores for each phase",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
