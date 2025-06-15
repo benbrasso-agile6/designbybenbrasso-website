@@ -64,7 +64,15 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "TBD",
+          text: "We needed a clear and detailed understanding of where administrative burden is in the care encounter today at VA, so that we could cumulatively measure the impact of the ambient scribe pilot to be able to deliver better health outcomes to Veterans.",
+        },
+        {
+          type: "paragraph",
+          text: "Using a task analysis method to uncover a detailed view of the clinician workflow—including a calculation of perceived burden using NASA TLX—not only did we identify where and how much administrative burden is felt, but we also created a reusable research method for measuring burnout across other applications and care settings.",
+        },
+        {
+          type: "paragraph",
+          text: "We conducted semi-structured interviews with users, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load required during care encounters.",
         },
       ],
     },
