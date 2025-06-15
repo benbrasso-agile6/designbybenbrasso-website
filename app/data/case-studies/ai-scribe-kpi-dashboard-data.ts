@@ -72,7 +72,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "We conducted semi-structured interviews with primary care providers, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load required during care encounters.",
+          text: "We conducted semi-structured interviews with primary care providers, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load during care encounters.",
         },
       ],
     },
