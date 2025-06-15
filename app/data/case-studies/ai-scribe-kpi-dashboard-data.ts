@@ -80,7 +80,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           alt: "Care encounter workflow analysis diagram",
           width: 800,
           height: 450,
-          className: "rounded-lg my-6 w-full object-cover",
+          className: "rounded-lg mt-8 mb-6 w-full object-cover",
         },
       ],
     },
