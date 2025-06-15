@@ -105,6 +105,14 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
             "How might AI dictation and scribe tools integrate into encounter note templates to accelerate downstream AI actions for creating RTC plans, consults, and orders to lighten post visit documentation?",
           ],
         },
+        {
+          type: "paragraph",
+          text: "Once we understood how much and where providers experience the most friction during care encounters, we created a service blueprint to map out the end-to-end service experience, including all user interactions, staff processes, touchpoints, and supporting systems that support delivering care.",
+        },
+        {
+          type: "paragraph",
+          text: "Once we understood how much and where providers experience the most friction during care encounters, we created a service blueprint to map out the end-to-end service experience, including all user interactions, staff processes, touchpoints, and supporting systems that support delivering care.",
+        },
       ],
     },
     {
