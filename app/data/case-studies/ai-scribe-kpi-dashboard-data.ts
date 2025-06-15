@@ -74,6 +74,14 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           type: "paragraph",
           text: "We conducted semi-structured interviews with primary care providers, workstream leadership, and health informaticists and analyzed existing research findings, employee survey results, and clinician workflows to help us understand task work and task load during care encounters.",
         },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750017016/Frame_2_hq2z2p.png",
+          alt: "Care encounter workflow analysis diagram",
+          width: 800,
+          height: 450,
+          className: "rounded-lg my-6 w-full object-cover",
+        },
       ],
     },
     {
@@ -84,7 +92,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           items: [
             "<strong>Created a method for quantitative capture of understanding where and how much administrative burden</strong> is felt during the care encounter.",
             "<strong>Created a baseline administrative burden score, using the NASA-TLX,</strong> for each phase of the care encounter to validate with ~20 primary care clinics across two VA health care systems before the pilot begins to measure and understand if and where burden shifted with ambient scribe.",
-            "<strong>Identified the insight that administrative burden increases, like compounding interest,</strong> as care encounters are completed, resulting in burden felt later or after hours—sometimes carrying over into the next day—through conducting task analysis with users, workstream leadership, and health informaticists.", 
+            "<strong>Identified the insight that administrative burden increases, like compounding interest,</strong> as care encounters are completed, resulting in burden felt later or after hours—sometimes carrying over into the next day—through conducting task analysis with users, workstream leadership, and health informaticists.",
             "<strong>Shared research readouts to DHO leadership that identified opportunities for improvement in the existing care encounter experience</strong> where ambient scribe and predictive AI modeling can impact care delivery, reduce administrative burnout, increase Veteran satisfaction, and improve health outcomes.",
             '<strong>Developed a <a href="https://ai-scribe-pilot-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">proof of concept KPI dashboard</a>, using AI-powered prototyping, to be used to inform Power BI dashboards and presenting outcomes</strong> during the pilot to DHO leadership to make informed decisions on product preference, clinician workflows, accuracy and safety, and onboarding additional VA health care systems.',
           ],
