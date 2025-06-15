@@ -107,7 +107,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Once we understood how much and where providers experience the most friction during care encounters, we created a service blueprint to map out the end-to-end service experience, including all user interactions, staff processes, touchpoints, and supporting systems that support delivering care.",
+          text: "Once we understood how much and where providers experience the most friction during care encounters, we <strong>created a service blueprint to map out the end-to-end service experience, including all user interactions, staff processes, touchpoints, and supporting systems that support delivering care.</strong>",
         },
         {
           type: "paragraph",
