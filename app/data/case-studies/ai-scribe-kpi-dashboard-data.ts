@@ -77,7 +77,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
             "Created a method for quantitative capture of understanding where and how much administrative burden is felt during the care encounter.",
             "Created a baseline administrative burden score, using the NASA-TLX, for each phase of the care encounter to validate with ~20 primary care clinics across two VA health care systems in order to measure and understand if and where burden shifted with ambient scribe.",
             "Shared research readouts to DHO leadership that identified opportunities for improvement in the existing care encounter experience where ambient scribe and predictive AI modeling can impact care delivery, reduce administrative burnout, increase Veteran satisfaction, and improve health outcomes.",
-            "Developed a proof of concept, using AI-powered prototyping, to be used to inform Power BI dashboards and presenting outcomes during the pilot to DHO leadership to make informed decisions on product preference, clinician workflows, accuracy and safety, and onboarding additional VA health care systems.",
+            "Developed a <a href="https://ai-scribe-pilot-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">KPI dashboard proof of concept</a>, using AI-powered prototyping, for reporting and presenting outcomes during the pilot to DHO leadership to make informed decisions on product preference, clinician workflows, accuracy and safety, and onboarding additional VA health care systems.",
           ],
         },
       ],
