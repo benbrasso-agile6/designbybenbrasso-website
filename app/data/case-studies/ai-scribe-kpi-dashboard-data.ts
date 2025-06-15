@@ -55,7 +55,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's NAII, Office of Information and Technology, and Veterans Health Administration?",
+          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's National AI Institute, Office of Information and Technology, and Veterans Health Administration?",
         },
       ],
     },
