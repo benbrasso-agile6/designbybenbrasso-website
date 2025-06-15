@@ -139,7 +139,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Review the interactive prototype for the Ambient Scribe Pilot Insights Report",
+          text: 'Review the interactive prototype for the Ambient Scribe Pilot Insights Report',
         },
       ],
     },
