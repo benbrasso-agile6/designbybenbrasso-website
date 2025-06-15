@@ -22,7 +22,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
       return (
         <ul key={index}>
           {item.items?.map((li, liIndex) => (
-            <li key={liIndex}>{li}</li>
+            <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
           ))}
         </ul>
       )
