@@ -123,7 +123,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "And, lastly, together with our learned knowledge about the end-to-end care encounter service experience and VA's desired outcomes for the upcoming ambient scribe pilot, we created a proof of concept—using AI-powered v0 by Vercel—for measuring and reporting outcomes to product leadership. We identified key performance indicators for leadership to focus on, including provider satisfaction, time or perceived time in the EHR, burnout score, quality of note to edited note, and adoption rate.",
+          text: "And, lastly, together with our learned knowledge about the end-to-end care encounter service experience and VA's desired outcomes for the upcoming ambient scribe pilot, we created a proof of concept—using AI-powered v0 by Vercel—for measuring and reporting outcomes to product and DHO leadership. We identified key performance indicators for leadership to focus on, including provider satisfaction, time or perceived time in the EHR, burnout score, quality of note to edited note, and adoption rate.",
         },
         {
           type: "image",
