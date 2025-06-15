@@ -46,7 +46,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'In <a href="https://department.va.gov/ai/ai-use-case-inventory/" target="_blank" rel="noopener noreferrer">VA\’s AI Use Case Inventory</a>, last updated as of December 2024, use case VA-708 Ambient AI Scribe\'s purpose is to transcribe and summarize recorded clinical encounters using AI and to produce written summaries for humans to later review, edit, and enter into patient records.',
+          text: 'In <a href="https://department.va.gov/ai/ai-use-case-inventory/" target="_blank" rel="noopener noreferrer">VA\'s AI Use Case Inventory</a>, last updated as of December 2024, use case VA-708 Ambient AI Scribe\'s purpose is to transcribe and summarize recorded clinical encounters using AI and to produce written summaries for humans to later review, edit, and enter into patient records.',
         },
       ],
     },
@@ -55,7 +55,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA’s NAII, Office of Information and Technology, and Veterans Health Administration?",
+          text: "As a human-centered designer and researcher within VA's Digital Health Office (DHO), how might we quickly understand and communicate the existing care delivery ecosystem and prepare for measuring outcomes of the AI Scribe pilot to inform investments, strategic planning, site readiness, application integration, clinical workflows, and success measurement across a consortium of VA offices, including DHO, VA's NAII, Office of Information and Technology, and Veterans Health Administration?",
         },
       ],
     },
@@ -72,8 +72,13 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
       title: "Key Outcomes",
       content: [
         {
-          type: "paragraph",
-          text: "TBD",
+          type: "list",
+          items: [
+            "Created a method for quantitative capture of understanding where and how much administrative burden is felt during the care encounter.",
+            "Created a baseline administrative burden score, using the NASA-TLX, for each phase of the care encounter to validate with ~20 primary care clinics across two VA health care systems in order to measure and understand if and where burden shifted with ambient scribe.",
+            "Shared research readouts to DHO leadership that identified opportunities for improvement in the existing care encounter experience where ambient scribe and predictive AI modeling can impact care delivery, reduce administrative burnout, increase Veteran satisfaction, and improve health outcomes.",
+            "Developed a proof of concept, using AI-powered prototyping, to be used to inform Power BI dashboards and presenting outcomes during the pilot to DHO leadership to make informed decisions on product preference, clinician workflows, accuracy and safety, and onboarding additional VA health care systems.",
+          ],
         },
       ],
     },
