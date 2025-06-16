@@ -10,6 +10,8 @@ export interface Project {
   footerPaddingTopClass?: string
 }
 
+export const dynamic = 'force-static';
+
 export const projectsData: Project[] = [
   {
     title: "Ambient scribe pilot KPI dashboard",

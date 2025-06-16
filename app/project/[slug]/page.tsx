@@ -10,6 +10,8 @@ type Props = {
 // and 404 for any other slug if this dynamic route is matched.
 export const dynamicParams = false
 
+export const dynamic = 'force-static';
+
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const slug = params.slug
   const caseStudy = getCaseStudyData(slug)
