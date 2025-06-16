@@ -187,9 +187,6 @@ importers:
         specifier: ^5
         version: 5.0.2
 
-buildScripts:
-  sharp: true
-
 packages:
 
   '@alloc/quick-lru@5.2.0':
