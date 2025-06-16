@@ -4,17 +4,19 @@ import { directOnlineSchedulingData } from "./case-studies/direct-online-schedul
 import { patientCheckInData } from "./case-studies/patient-check-in-data"
 
 // Ensure all imported data files are used here
-const allCaseStudies: CaseStudyData[] = [
-  aiScribeKpiDashboardData,
-  directOnlineSchedulingData,
-  patientCheckInData,
-  // Add other imported case study data here
-]
+const allCaseStudies: CaseStudyData[] = [aiScribeKpiDashboardData, directOnlineSchedulingData, patientCheckInData]
 
 export function getCaseStudyData(slug: string): CaseStudyData | undefined {
+  console.log("Looking for case study with slug:", slug)
+  console.log(
+    "Available case studies:",
+    allCaseStudies.map((study) => study.slug),
+  )
   return allCaseStudies.find((study) => study.slug === slug)
 }
 
 export function getAllCaseStudySlugs(): { slug: string }[] {
-  return allCaseStudies.map((study) => ({ slug: study.slug }))
+  const slugs = allCaseStudies.map((study) => ({ slug: study.slug }))
+  console.log("Generated static params:", slugs)
+  return slugs
 }
