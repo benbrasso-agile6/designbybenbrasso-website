@@ -128,6 +128,19 @@ body {
   .prose-invert a {
     @apply text-sky-500 underline hover:text-sky-400;
   }
+
+  /* Custom bullet colors for prose content */
+  .prose-neutral ul.list-disc > li::marker,
+  .prose-neutral ol > li::marker {
+    /* Added ol for ordered lists too, just in case */
+    color: #000000; /* Black for light mode */
+  }
+
+  .dark .prose-invert ul.list-disc > li::marker,
+  .dark .prose-invert ol > li::marker {
+    /* Added ol for ordered lists too */
+    color: #262626; /* Equivalent to neutral-800 for dark mode */
+  }
 }
 
 /* Smooth scrolling for anchor links */
