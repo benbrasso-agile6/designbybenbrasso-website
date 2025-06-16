@@ -1,7 +1,5 @@
 import type { CaseStudyData } from "../case-study-types"
 
-export const dynamic = 'force-static'; // optional, forces static generation
-
 export const aiScribeKpiDashboardData: CaseStudyData = {
   slug: "ai-scribe-kpi-dashboard",
   pageTitle: "Ambient Scribe Pilot KPI Dashboard",
