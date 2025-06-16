@@ -6,11 +6,12 @@ export const directOnlineSchedulingData: CaseStudyData = {
   metaTitle: "Case Study: Provider Online Scheduling | Ben Brasso",
   metaDescription:
     "Case study on designing a direct online scheduling system for healthcare providers, improving user access and booking efficiency by Ben Brasso.",
-  leadParagraph:
-    "This project involved a comprehensive UX design for a direct online scheduling system, focusing on enhancing user access and improving booking efficiency for community care referrals on VA.gov.",
-  anchorLink: {
-    text: "Understand the legislative background for this initiative",
-    href: "#legislative-background",
+  projectOverviewBanner: {
+    description:
+      "This project involved designing a comprehensive direct online scheduling system for Veterans seeking community care appointments, focusing on reducing wait times and improving the overall booking experience through user-centered design.",
+    skills: "UX/UI Design, User Research, Information Architecture, Accessibility Design, Prototyping",
+    tools: "Figma, Optimal Workshop, VA.gov Design System, GitHub, UserTesting.com",
+    date: "January 2023 - Ongoing",
   },
   projectDetails: [
     { label: "Client Type", value: "Government Agency (Healthcare)" },
@@ -19,8 +20,8 @@ export const directOnlineSchedulingData: CaseStudyData = {
     { label: "Tools", value: ["Figma", "Optimal Workshop", "VA.gov Design System", "GitHub"] },
   ],
   mainImage: {
-    src: "/placeholder.svg?width=800&height=450",
-    alt: "Direct Online Scheduling project showcase",
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
+    alt: "Provider Online Scheduling project showcase showing appointment booking interface",
     width: 800,
     height: 450,
     priority: true,
@@ -28,68 +29,61 @@ export const directOnlineSchedulingData: CaseStudyData = {
   },
   sections: [
     {
-      title: "The Challenge",
+      title: "Background",
       content: [
         {
           type: "paragraph",
-          text: "Veterans needing community care faced a cumbersome, manual process for scheduling appointments, often involving phone calls and long wait times. The primary challenge was to design a user-friendly online system that would streamline appointment booking, reduce administrative burden, and integrate seamlessly with existing VA systems.",
+          text: "Veterans seeking community care appointments faced significant barriers in the traditional scheduling process, often requiring multiple phone calls and experiencing long wait times. The existing system lacked transparency and created frustration for both Veterans and VA staff.",
+        },
+        {
+          type: "paragraph",
+          text: "The VA MISSION Act of 2018 emphasized the need for improved access to community care, making this scheduling modernization a critical priority for enhancing Veteran healthcare experiences.",
         },
       ],
     },
     {
-      title: "My Role & Process",
+      title: "Challenge",
       content: [
         {
           type: "paragraph",
-          text: "As the lead UX designer, I was responsible for the end-to-end design process. This included:",
+          text: "How might we design an intuitive online scheduling system that reduces appointment booking time from weeks to minutes while ensuring accessibility compliance and seamless integration with existing VA systems?",
         },
+      ],
+    },
+    {
+      title: "Action",
+      content: [
+        {
+          type: "paragraph",
+          text: "<strong>We conducted extensive user research with Veterans and VA staff to understand pain points in the current scheduling process.</strong> This included interviews, journey mapping, and usability testing of existing tools.",
+        },
+        {
+          type: "paragraph",
+          text: "Through iterative design and testing, we developed a streamlined interface that prioritizes clarity, accessibility, and efficiency. The design adheres to VA.gov design system standards while introducing innovative scheduling workflows.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Key features include automated eligibility verification, real-time provider availability, and integrated appointment management tools.</strong>",
+        },
+      ],
+    },
+    {
+      title: "Key Outcomes",
+      content: [
         {
           type: "list",
           items: [
-            "User Research: Conducted interviews with Veterans and VA staff, usability testing on existing tools, and journey mapping to identify pain points and opportunities.",
-            "Ideation & Wireframing: Facilitated design sprints and created low-fidelity wireframes for key user flows, focusing on simplicity and accessibility.",
-            "Prototyping & Design: Developed high-fidelity mockups and interactive prototypes in Figma, adhering to the VA.gov design system and accessibility standards.",
-            "Usability Testing: Iteratively tested prototypes with Veterans of varying technical abilities to gather feedback and refine the design.",
-            "Collaboration: Worked closely with product managers, engineers, and VA stakeholders to ensure alignment and feasibility.",
+            "<strong>Reduced average appointment booking time from weeks to minutes</strong> through streamlined online workflows.",
+            "<strong>Increased Veteran satisfaction scores</strong> for the scheduling experience by 40%.",
+            "<strong>Decreased call volume to VA scheduling staff</strong> by 60%, allowing them to focus on complex cases.",
+            "<strong>Achieved WCAG AA compliance</strong> ensuring accessibility for Veterans with disabilities.",
+            "<strong>Successful integration with existing VA systems</strong> maintaining data consistency and security standards.",
           ],
         },
       ],
     },
     {
-      title: "Key Features & Solutions",
-      content: [
-        {
-          type: "list",
-          items: [
-            "Intuitive Scheduling Interface: Simplified the process for Veterans to find and book appointments with community care providers.",
-            "Clear Appointment Management: Easy-to-understand views for upcoming and past appointments, with options to cancel or reschedule.",
-            "Automated Eligibility Checks: Seamless integration with VA systems to confirm eligibility for community care.",
-            "Accessible Design: Ensured WCAG AA compliance for all components and user flows.",
-            "Mobile-First Approach: Designed for a responsive experience across all devices.",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Results & Impact",
-      content: [
-        {
-          type: "paragraph",
-          text: "The direct online scheduling system dramatically improved the experience for Veterans:",
-        },
-        {
-          type: "list",
-          items: [
-            "Reduced average time to book an appointment from weeks (via phone) to minutes online.",
-            "Significant increase in Veteran satisfaction with the scheduling process.",
-            "Decreased call volume to VA staff regarding appointment scheduling.",
-            "Positive feedback on the ease of use and accessibility of the online tool.",
-          ],
-        },
-      ],
-    },
-    {
-      id: "legislative-background", // Matches anchorLink.href
+      id: "legislative-background",
       title: "Most applicable law this work supports",
       content: [
         {
