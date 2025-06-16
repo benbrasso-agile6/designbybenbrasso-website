@@ -1,5 +1,7 @@
 import type { CaseStudyData } from "../case-study-types"
 
+export const dynamic = 'force-static';
+
 export const directOnlineSchedulingData: CaseStudyData = {
   slug: "direct-online-scheduling",
   pageTitle: "Provider Online Scheduling",

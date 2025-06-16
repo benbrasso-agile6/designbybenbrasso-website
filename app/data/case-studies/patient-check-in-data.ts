@@ -1,5 +1,7 @@
 import type { CaseStudyData } from "../case-study-types"
 
+export const dynamic = 'force-static';
+
 export const patientCheckInData: CaseStudyData = {
   slug: "patient-check-in",
   pageTitle: "Mobile Patient Check-in",
