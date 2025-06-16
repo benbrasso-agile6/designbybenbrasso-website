@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
       "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in 1 month, while adding travel reimbursement.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
-    hasCaseStudy: true,
+    hasCaseStudy: false,
     projectUrl: "/project/patient-check-in",
   },
   {
@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
       "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
     tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
-    hasCaseStudy: true,
+    hasCaseStudy: false,
     projectUrl: "/project/direct-online-scheduling",
   },
 ]
