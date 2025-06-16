@@ -52,13 +52,9 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
 
 export default function CaseStudyClientPage({ params }: Props) {
   const slug = params.slug
-  console.log("CaseStudyClientPage: Looking for slug:", slug)
-
   const caseStudy = getCaseStudyData(slug)
-  console.log("CaseStudyClientPage: Found case study:", caseStudy ? caseStudy.pageTitle : "NOT FOUND")
 
   if (!caseStudy) {
-    console.log("CaseStudyClientPage: Case study not found, calling notFound()")
     notFound()
   }
 
@@ -78,6 +74,18 @@ export default function CaseStudyClientPage({ params }: Props) {
       <div className="mb-8 print:hidden">
         <BackToHomeLink />
       </div>
+      {/*
+  <Button
+    asChild
+    variant="outline"
+    className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
+  >
+    <Link href="/#work">
+      <ArrowLeftIcon className="mr-2 h-4 w-4" />
+      Back to All Projects
+    </Link>
+  </Button>
+  */}
 
       {/* Page Title - Wrapped in article with prose classes for consistent H1 styling */}
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
@@ -131,6 +139,17 @@ export default function CaseStudyClientPage({ params }: Props) {
         </div>
       </div>
 
+      {/* "See Other Projects" Button - Placed after the parallax container */}
+      {/*
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert mt-12 print:hidden">
+        <Button asChild className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white">
+          <Link href="/#work">
+            <ArrowLeftIcon className="mr-2 h-4 w-4" />
+            See Other Projects
+          </Link>
+        </Button>
+      </div>
+      */}
       <div className="mt-12 print:hidden">
         <BackToHomeLink />
       </div>

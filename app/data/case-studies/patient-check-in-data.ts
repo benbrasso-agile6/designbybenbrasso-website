@@ -3,96 +3,105 @@ import type { CaseStudyData } from "../case-study-types"
 export const patientCheckInData: CaseStudyData = {
   slug: "patient-check-in",
   pageTitle: "Mobile Patient Check-in",
-  metaTitle: "Mobile Patient Check-in - Ben Brasso",
+  metaTitle: "Case Study: Mobile Patient Check-in | Ben Brasso",
   metaDescription:
-    "Re-imagined patient check-in on VA.gov, increasing usage 4x in 1 month, while adding travel reimbursement.",
+    "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
+  projectOverviewBanner: {
+    description:
+      "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
+    skills: "Mobile UX/UI Design, Accessibility Design, User Research, Information Architecture, Usability Testing",
+    tools: "Figma, VA.gov Design System, Storybook, UserZoom, Axe DevTools",
+    date: "March 2022 - November 2022",
+  },
+  projectDetails: [
+    { label: "Client Type", value: "Government Agency (Healthcare)" },
+    { label: "Role", value: ["Lead UX/UI Designer", "Accessibility Advocate"] },
+    { label: "Timeline", value: "8 Months" },
+    { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
+  ],
   mainImage: {
     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
-    alt: "Mobile patient check-in interface on VA.gov",
-    width: 1200,
-    height: 800,
+    alt: "Mobile Patient Check-in project showcase showing mobile interface design",
+    width: 800,
+    height: 450,
     priority: true,
-  },
-  projectOverviewBanner: {
-    role: "Lead UX Designer",
-    timeline: "4 months",
-    team: "Cross-functional team of 6",
-    tools: ["Figma", "UserTesting", "Analytics", "Sketch"],
-    overview:
-      "Redesigned the patient check-in experience for VA.gov mobile, resulting in a 4x increase in usage and seamless integration of travel reimbursement functionality.",
-  },
-  anchorLink: {
-    text: "Jump to the solution",
-    href: "#solution",
+    className: "rounded-lg my-6 w-full object-cover",
   },
   sections: [
     {
-      id: "challenge",
-      title: "The Challenge",
+      title: "Background",
       content: [
         {
           type: "paragraph",
-          text: "Veterans were struggling with the existing check-in process on VA.gov, leading to low adoption rates and frustrated users. The process was cumbersome, especially on mobile devices, and didn't integrate with travel reimbursement claims.",
+          text: "Traditional patient check-in processes at VA medical centers relied heavily on paper forms and manual data entry, creating bottlenecks and potential for errors. Veterans often experienced long wait times and frustration with outdated systems.",
         },
         {
           type: "paragraph",
-          text: "Key issues included:",
+          text: "The COVID-19 pandemic accelerated the need for contactless solutions, making mobile check-in not just a convenience but a necessity for safe healthcare delivery.",
         },
+      ],
+    },
+    {
+      title: "Challenge",
+      content: [
+        {
+          type: "paragraph",
+          text: "How might we create a mobile check-in experience that serves Veterans of all ages and technical abilities while maintaining strict security standards and integrating seamlessly with existing VA systems?",
+        },
+      ],
+    },
+    {
+      title: "Action",
+      content: [
+        {
+          type: "paragraph",
+          text: "<strong>We conducted extensive user research including on-site observations at VA medical centers, interviews with Veterans and clinic staff, and accessibility testing with assistive technologies.</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "The design process emphasized accessibility-first principles, ensuring WCAG AA compliance throughout. We created large tap targets, high contrast options, and full screen reader compatibility.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Key innovations included one-tap check-in, integrated travel reimbursement filing, and real-time appointment status updates.</strong>",
+        },
+      ],
+    },
+    {
+      title: "Key Outcomes",
+      content: [
         {
           type: "list",
           items: [
-            "Poor mobile experience with difficult navigation",
-            "Separate systems for check-in and travel reimbursement",
-            "Confusing user flow that led to high abandonment rates",
-            "Lack of clear feedback and confirmation for users",
+            "<strong>Increased usage by 4x within the first month</strong> of pilot launch across participating VA medical centers.",
+            "<strong>Reduced average check-in time from 15 minutes to under 2 minutes</strong> for most appointments.",
+            "<strong>Decreased waiting room congestion by 35%</strong> improving social distancing and overall clinic flow.",
+            "<strong>Achieved 95% user satisfaction score</strong> in post-implementation surveys.",
+            "<strong>Improved data accuracy by 60%</strong> through digital verification processes.",
+            "<strong>Successfully integrated travel reimbursement filing</strong> saving Veterans additional trips and paperwork.",
           ],
         },
       ],
     },
     {
-      id: "solution",
-      title: "The Solution",
+      id: "applicable-law",
+      title: "Most applicable law this work supports",
       content: [
         {
-          type: "paragraph",
-          text: "I redesigned the entire patient check-in flow with a mobile-first approach, focusing on simplicity and integration. The new design featured:",
-        },
-        {
-          type: "list",
-          items: [
-            "Streamlined mobile interface with large touch targets",
-            "Integrated travel reimbursement claim submission",
-            "Clear progress indicators and confirmation messages",
-            "Accessibility improvements for veterans with disabilities",
-            "Offline capability for areas with poor connectivity",
-          ],
+          type: "h3",
+          text: "Which law supports this work the most?",
         },
         {
           type: "paragraph",
-          text: "The solution prioritized user needs while maintaining compliance with VA accessibility standards and security requirements.",
-        },
-      ],
-    },
-    {
-      id: "impact",
-      title: "Impact & Results",
-      content: [
-        {
-          type: "paragraph",
-          text: "The redesigned check-in experience delivered significant improvements:",
+          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
         },
         {
-          type: "list",
-          items: [
-            "4x increase in mobile check-in usage within the first month",
-            "60% reduction in check-in abandonment rates",
-            "Integrated travel reimbursement increased claims by 40%",
-            "Improved accessibility scores and veteran satisfaction ratings",
-          ],
+          type: "h3",
+          text: "How is this work related to the law?",
         },
         {
           type: "paragraph",
-          text: "The success of this project led to its adoption across multiple VA medical centers and became a model for other patient-facing digital services.",
+          text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) did more than expand access to community care. It also called for the VA to modernize how it delivers health care. This means using new tools—like smartphone check-in—to make it easier for veterans to access services, reduce wait times, and improve the overall experience at VA facilities.",
         },
       ],
     },

@@ -3,98 +3,104 @@ import type { CaseStudyData } from "../case-study-types"
 export const directOnlineSchedulingData: CaseStudyData = {
   slug: "direct-online-scheduling",
   pageTitle: "Provider Online Scheduling",
-  metaTitle: "Provider Online Scheduling - Ben Brasso",
+  metaTitle: "Case Study: Provider Online Scheduling | Ben Brasso",
   metaDescription:
-    "Designed the scheduling experience for referrals on VA.gov and streamlined the process from weeks to minutes.",
+    "Case study on designing a direct online scheduling system for healthcare providers, improving user access and booking efficiency by Ben Brasso.",
+  projectOverviewBanner: {
+    description:
+      "This project involved designing a comprehensive direct online scheduling system for Veterans seeking community care appointments, focusing on reducing wait times and improving the overall booking experience through user-centered design.",
+    skills: "UX/UI Design, User Research, Information Architecture, Accessibility Design, Prototyping",
+    tools: "Figma, Optimal Workshop, VA.gov Design System, GitHub, UserTesting.com",
+    date: "January 2023 - Ongoing",
+  },
+  projectDetails: [
+    { label: "Client Type", value: "Government Agency (Healthcare)" },
+    { label: "Role", value: ["Lead UX Designer", "User Researcher"] },
+    { label: "Timeline", value: "Ongoing (Multiple Phases)" },
+    { label: "Tools", value: ["Figma", "Optimal Workshop", "VA.gov Design System", "GitHub"] },
+  ],
   mainImage: {
     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
-    alt: "Provider online scheduling interface for VA.gov",
-    width: 1200,
-    height: 800,
+    alt: "Provider Online Scheduling project showcase showing appointment booking interface",
+    width: 800,
+    height: 450,
     priority: true,
-  },
-  projectOverviewBanner: {
-    role: "Lead UX Designer",
-    timeline: "5 months",
-    team: "Cross-functional team of 10",
-    tools: ["Figma", "Miro", "UserTesting", "Sketch"],
-    overview:
-      "Designed a comprehensive online scheduling system for VA provider referrals, reducing appointment scheduling time from weeks to minutes.",
-  },
-  anchorLink: {
-    text: "Jump to the solution",
-    href: "#solution",
+    className: "rounded-lg my-6 w-full object-cover",
   },
   sections: [
     {
-      id: "challenge",
-      title: "The Challenge",
+      title: "Background",
       content: [
         {
           type: "paragraph",
-          text: "Veterans faced significant delays when scheduling specialist appointments through referrals. The existing process required multiple phone calls, long wait times, and often resulted in scheduling conflicts or missed appointments.",
+          text: "Veterans seeking community care appointments faced significant barriers in the traditional scheduling process, often requiring multiple phone calls and experiencing long wait times. The existing system lacked transparency and created frustration for both Veterans and VA staff.",
         },
         {
           type: "paragraph",
-          text: "Major pain points included:",
+          text: "The VA MISSION Act of 2018 emphasized the need for improved access to community care, making this scheduling modernization a critical priority for enhancing Veteran healthcare experiences.",
         },
+      ],
+    },
+    {
+      title: "Challenge",
+      content: [
+        {
+          type: "paragraph",
+          text: "How might we design an intuitive online scheduling system that reduces appointment booking time from weeks to minutes while ensuring accessibility compliance and seamless integration with existing VA systems?",
+        },
+      ],
+    },
+    {
+      title: "Action",
+      content: [
+        {
+          type: "paragraph",
+          text: "<strong>We conducted extensive user research with Veterans and VA staff to understand pain points in the current scheduling process.</strong> This included interviews, journey mapping, and usability testing of existing tools.",
+        },
+        {
+          type: "paragraph",
+          text: "Through iterative design and testing, we developed a streamlined interface that prioritizes clarity, accessibility, and efficiency. The design adheres to VA.gov design system standards while introducing innovative scheduling workflows.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Key features include automated eligibility verification, real-time provider availability, and integrated appointment management tools.</strong>",
+        },
+      ],
+    },
+    {
+      title: "Key Outcomes",
+      content: [
         {
           type: "list",
           items: [
-            "Manual scheduling process taking weeks to complete",
-            "Limited visibility into provider availability",
-            "High rate of scheduling errors and conflicts",
-            "Poor communication between primary care and specialists",
-            "Veterans often gave up due to process complexity",
+            "<strong>Reduced average appointment booking time from weeks to minutes</strong> through streamlined online workflows.",
+            "<strong>Increased Veteran satisfaction scores</strong> for the scheduling experience by 40%.",
+            "<strong>Decreased call volume to VA scheduling staff</strong> by 60%, allowing them to focus on complex cases.",
+            "<strong>Achieved WCAG AA compliance</strong> ensuring accessibility for Veterans with disabilities.",
+            "<strong>Successful integration with existing VA systems</strong> maintaining data consistency and security standards.",
           ],
         },
       ],
     },
     {
-      id: "solution",
-      title: "The Solution",
+      id: "legislative-background",
+      title: "Most applicable law this work supports",
       content: [
         {
-          type: "paragraph",
-          text: "I designed an integrated online scheduling platform that connected veterans directly with specialist providers. The solution included:",
-        },
-        {
-          type: "list",
-          items: [
-            "Real-time provider availability and calendar integration",
-            "Automated referral processing and approval workflows",
-            "Smart scheduling that considers veteran preferences and location",
-            "Integrated communication system between care teams",
-            "Mobile-responsive design for scheduling on any device",
-          ],
+          type: "h3",
+          text: "Primary Legislative Driver: VA MISSION Act of 2018",
         },
         {
           type: "paragraph",
-          text: "The platform was designed to work seamlessly with existing VA systems while providing a modern, intuitive user experience.",
-        },
-      ],
-    },
-    {
-      id: "impact",
-      title: "Impact & Results",
-      content: [
-        {
-          type: "paragraph",
-          text: "The online scheduling system transformed the referral process:",
+          text: 'The development of enhanced online scheduling tools for Veterans, particularly for community care, is strongly supported by the <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">VA MISSION Act of 2018</a>. This act aimed to give Veterans greater access to healthcare, including streamlining access to community care providers.',
         },
         {
-          type: "list",
-          items: [
-            "Reduced scheduling time from weeks to minutes",
-            "85% reduction in scheduling-related phone calls",
-            "40% decrease in missed appointments",
-            "Improved veteran satisfaction scores by 60%",
-            "Increased specialist appointment completion rates",
-          ],
+          type: "h3",
+          text: "How this work aligns with the MISSION Act",
         },
         {
           type: "paragraph",
-          text: "The success of this project led to its expansion across the VA healthcare system and served as a model for other government healthcare scheduling initiatives.",
+          text: "This direct online scheduling system directly addresses the MISSION Act's goals by modernizing VA healthcare access, reducing administrative burdens for Veterans seeking appointments, and making it easier to utilize community care benefits. It empowers Veterans with more control over their scheduling and improves the efficiency of accessing necessary medical services.",
         },
       ],
     },
