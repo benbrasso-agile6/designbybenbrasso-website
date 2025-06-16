@@ -24,14 +24,17 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
       )
     case "image":
       if (item.src && item.alt) {
+        // REFACTORED LOGIC:
+        // The outer div is now only for block layout (if needed), ensuring no vertical margin.
+        // All styling (border, rounded corners) is applied directly to the Image component.
         return (
-          <div key={index} className={`my-6 ${item.className || ""}`}>
+          <div key={index} className="my-0">
             <Image
               src={item.src || "/placeholder.svg"}
               alt={item.alt}
               width={item.width || 800}
               height={item.height || 450}
-              className="rounded-lg w-full object-cover"
+              className={item.className || "rounded-lg w-full object-cover"} // Apply className from data directly to the image
               priority={item.priority}
               unoptimized
             />
@@ -72,7 +75,6 @@ export default function AiScribeKpiDashboardClientPage() {
         {caseStudy.pageTitle}
       </h1>
 
-      {/* Increased top margin here from mt-8 to mt-12 */}
       <div className="relative mt-12">
         {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">

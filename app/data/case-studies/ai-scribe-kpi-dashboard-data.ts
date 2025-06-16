@@ -119,7 +119,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           alt: "Service blueprint mapping the end-to-end care encounter experience",
           width: 800,
           height: 450,
-          className: "rounded-lg mt-12 mb-10 w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
         },
         {
           type: "paragraph",
