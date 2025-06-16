@@ -23,6 +23,7 @@ export default function FeaturedWorkSection() {
               specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
 
+            // Ensure all project properties are spread or explicitly passed
             return (
               <ProjectCard
                 key={project.title}
@@ -30,12 +31,12 @@ export default function FeaturedWorkSection() {
                 description={project.description}
                 imageUrl={project.imageUrl}
                 tags={project.tags}
-                slug={project.slug} // Added this prop
-                hasCaseStudy={project.hasCaseStudy} // Added this prop
-                // projectUrl={`/project/${project.slug}`} // Kept for now, but button uses slug
+                slug={project.slug}
+                hasCaseStudy={project.hasCaseStudy}
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
                 footerPaddingTopClass={specificFooterPaddingTopClass}
+                caseStudyUrlOverride={project.caseStudyUrlOverride} // Explicitly pass the prop
               />
             )
           })}

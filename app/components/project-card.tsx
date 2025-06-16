@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Link from "next/link" // Added import
+import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button" // Added import
+import { Button } from "@/components/ui/button"
 
 const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
 
@@ -10,26 +10,35 @@ interface ProjectCardProps {
   description: string
   imageUrl: string
   tags: string[]
-  slug?: string // Added this prop
-  hasCaseStudy?: boolean // Added this prop
-  projectUrl?: string // This was already here, can be removed if not used elsewhere by card
+  slug?: string
+  hasCaseStudy?: boolean
+  projectUrl?: string
   caseStudyStatusText?: string
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
+  caseStudyUrlOverride?: string // Ensure this prop is defined
 }
 
 export default function ProjectCard({
   title,
   description,
   imageUrl,
-  tags, // Added tags to destructuring
+  tags,
   slug,
   hasCaseStudy,
-  // projectUrl, // This prop is not used in the card's link logic now
+  caseStudyUrlOverride, // Ensure this is destructured
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
 }: ProjectCardProps) {
+  // For debugging: Check if caseStudyUrlOverride is received for the specific card
+  if (title === "Ambient scribe KPI dashboard") {
+    console.log("ProjectCard - Ambient Scribe KPI Dashboard - caseStudyUrlOverride:", caseStudyUrlOverride)
+    console.log("ProjectCard - Ambient Scribe KPI Dashboard - slug:", slug)
+  }
+
+  const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
+
   return (
     <Card className="overflow-hidden w-full max-w-5xl flex flex-col group bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 min-h-[auto] md:min-h-[720px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
       <CardHeader className="pt-10 px-8 pb-0">
@@ -55,8 +64,8 @@ export default function ProjectCard({
       <CardContent className="px-8 py-0 mt-0" />
 
       <CardFooter className={`px-8 pb-8 ${footerPaddingTopClass}`}>
-        {hasCaseStudy && slug ? (
-          <Link href={`/project/${slug}`} passHref>
+        {hasCaseStudy && (slug || caseStudyUrlOverride) ? (
+          <Link href={linkHref} passHref>
             <Button className="bg-sky-800 hover:bg-sky-900 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
               Review case study
             </Button>
