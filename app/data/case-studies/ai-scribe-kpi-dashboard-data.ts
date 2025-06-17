@@ -9,7 +9,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot plan and visualize a concept for measuring and reporting outcomes to product leadership.",
-    skills: "Human-centered design, UX research lead, service design, AI-powered prototyping",
+    skills: "Human-centered design, UX research, service design, AI-powered prototyping",
     tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta), GitHub",
     date: "February - May 2025",
   },
