@@ -90,7 +90,7 @@ export default function AiScribeKpiDashboardClientPage() {
           </div>
         )}
 
-        <div className="relative z-10 bg-background dark:bg-neutral-950">
+        <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
           {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
