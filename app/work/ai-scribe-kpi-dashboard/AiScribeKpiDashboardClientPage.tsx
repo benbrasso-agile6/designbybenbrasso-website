@@ -7,6 +7,7 @@ import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
+import { useEffect } from "react"
 
 const caseStudy = aiScribeKpiDashboardData
 
@@ -64,6 +65,30 @@ export default function AiScribeKpiDashboardClientPage() {
       })
     }
   }
+
+  // Ensure page starts at top - robust solution for mobile Safari
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }
+
+    // Immediate attempt
+    scrollToTop()
+
+    // Delayed attempt using requestAnimationFrame
+    requestAnimationFrame(() => {
+      scrollToTop()
+    })
+
+    // Additional delayed attempt for Safari
+    const timer = setTimeout(() => {
+      scrollToTop()
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
