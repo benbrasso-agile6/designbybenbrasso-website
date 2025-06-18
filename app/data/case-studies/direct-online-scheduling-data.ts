@@ -3,7 +3,7 @@ import type { CaseStudyData } from "../case-study-types"
 export const directOnlineSchedulingData: CaseStudyData = {
   slug: "direct-online-scheduling",
   pageTitle: "Provider Online Scheduling",
-  metaTitle: "Case Study: Provider Online Scheduling | Ben Brasso",
+  metaTitle: "Provider Online Scheduling | Work | designbybenbrasso",
   metaDescription:
     "Case study on designing a direct online scheduling system for healthcare providers, improving user access and booking efficiency by Ben Brasso.",
   projectOverviewBanner: {

@@ -3,7 +3,7 @@ import type { CaseStudyData } from "../case-study-types"
 export const patientCheckInData: CaseStudyData = {
   slug: "patient-check-in",
   pageTitle: "Mobile Patient Check-in",
-  metaTitle: "Case Study: Mobile Patient Check-in | Ben Brasso",
+  metaTitle: "Mobile Patient Check-in | Work | designbybenbrasso",
   metaDescription:
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   projectOverviewBanner: {

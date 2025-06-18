@@ -3,7 +3,7 @@ import type { CaseStudyData } from "../case-study-types"
 export const aiScribeKpiDashboardData: CaseStudyData = {
   slug: "ai-scribe-kpi-dashboard",
   pageTitle: "Ambient Scribe Pilot KPI Dashboard",
-  metaTitle: "Case Study: Ambient Scribe KPI Dashboard | Ben Brasso",
+  metaTitle: "Ambient Scribe KPI Dashboard | Work | designbybenbrasso",
   metaDescription:
     "Detailed case study of the Ambient Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   projectOverviewBanner: {
