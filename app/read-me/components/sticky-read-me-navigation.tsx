@@ -35,6 +35,7 @@ export default function StickyReadMeNavigation({
   const prevUserActiveRef = useRef<boolean>()
   const prevIsPastContentEndTriggerRef = useRef<boolean>()
   const contentEndTriggerElementRef = useRef<HTMLElement | null>(null)
+  const prevScrollYRef = useRef<number>(0)
 
   useEffect(() => {
     const originalNavElement = document.getElementById(originalNavId)
@@ -49,6 +50,15 @@ export default function StickyReadMeNavigation({
   }, [originalNavId])
 
   const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY
+
+    // Auto-close expanded menu when user scrolls
+    if (isExpanded && Math.abs(currentScrollY - prevScrollYRef.current) > 10) {
+      setIsExpanded(false)
+    }
+
+    prevScrollYRef.current = currentScrollY
+
     // Original nav visibility
     if (originalNavInfo) {
       const shouldBeBaseVisible = window.scrollY > originalNavInfo.top + originalNavInfo.height
@@ -79,7 +89,7 @@ export default function StickyReadMeNavigation({
     } else {
       setIsPastContentEndTrigger((currentVal) => (currentVal === false ? currentVal : false))
     }
-  }, [originalNavInfo, isBaseVisible])
+  }, [originalNavInfo, isBaseVisible, isExpanded])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true })
@@ -98,6 +108,8 @@ export default function StickyReadMeNavigation({
     } else {
       setIsPastContentEndTrigger(false)
     }
+
+    prevScrollYRef.current = window.scrollY
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
