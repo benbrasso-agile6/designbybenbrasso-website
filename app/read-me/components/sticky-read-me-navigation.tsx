@@ -31,6 +31,7 @@ export default function StickyReadMeNavigation({
 
   const [originalNavInfo, setOriginalNavInfo] = useState<{ top: number; height: number } | null>(null)
   const inactivityTimerRef = useRef<NodeJS.Timeout | null>(null)
+  const autoCloseTimerRef = useRef<NodeJS.Timeout | null>(null)
   const stickyNavRef = useRef<HTMLDivElement>(null)
   const prevUserActiveRef = useRef<boolean>()
   const prevIsPastContentEndTriggerRef = useRef<boolean>()
@@ -52,9 +53,17 @@ export default function StickyReadMeNavigation({
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY
 
-    // Auto-close expanded menu when user scrolls
+    // Auto-close expanded menu when user scrolls (with delay and animation)
     if (isExpanded && Math.abs(currentScrollY - prevScrollYRef.current) > 10) {
-      setIsExpanded(false)
+      // Clear any existing auto-close timer
+      if (autoCloseTimerRef.current) {
+        clearTimeout(autoCloseTimerRef.current)
+      }
+
+      // Set a new timer to close the menu after a delay
+      autoCloseTimerRef.current = setTimeout(() => {
+        setIsExpanded(false)
+      }, 250) // 250ms delay for smoother UX
     }
 
     prevScrollYRef.current = currentScrollY
@@ -116,6 +125,9 @@ export default function StickyReadMeNavigation({
       if (inactivityTimerRef.current) {
         clearTimeout(inactivityTimerRef.current)
       }
+      if (autoCloseTimerRef.current) {
+        clearTimeout(autoCloseTimerRef.current)
+      }
     }
   }, [handleScroll, originalNavInfo])
 
@@ -143,6 +155,12 @@ export default function StickyReadMeNavigation({
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
+
+    // Clear auto-close timer when user clicks a menu item
+    if (autoCloseTimerRef.current) {
+      clearTimeout(autoCloseTimerRef.current)
+    }
+
     const target = document.getElementById(targetId)
     if (target) {
       const headerHeight = 64
@@ -165,6 +183,11 @@ export default function StickyReadMeNavigation({
   }
 
   const toggleExpanded = () => {
+    // Clear auto-close timer when manually toggling
+    if (autoCloseTimerRef.current) {
+      clearTimeout(autoCloseTimerRef.current)
+    }
+
     setIsExpanded(!isExpanded)
     setIsUserActive(true)
     if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current)
@@ -190,6 +213,7 @@ export default function StickyReadMeNavigation({
           "bg-neutral-100/90 dark:bg-neutral-800/90",
           "border border-neutral-300 dark:border-neutral-700",
           "rounded-xl shadow-xl",
+          "overflow-hidden", // Ensure smooth height transitions
         )}
       >
         <button
@@ -209,32 +233,33 @@ export default function StickyReadMeNavigation({
           <span>On this page</span>
           <ExpandIcon className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
         </button>
-        {isExpanded && (
-          <ul
-            id="sticky-nav-list"
-            className={cn(
-              "py-2 px-2 max-h-[calc(100vh-200px)] overflow-y-auto",
-              "bg-neutral-100/90 dark:bg-neutral-800/90 rounded-b-xl",
-            )}
-          >
-            {sections.map((section) => (
-              <li key={section.id}>
-                <a
-                  href={`${currentPagePath}#${section.id}`}
-                  onClick={(e) => handleSmoothScroll(e, section.id)}
-                  className={cn(
-                    "block px-3 py-2 text-sm rounded-md",
-                    "text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400",
-                    "hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70",
-                    "focus-visible:outline-none focus-visible:bg-neutral-200/70 dark:focus-visible:bg-neutral-700/70",
-                  )}
-                >
-                  {section.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
+        <ul
+          id="sticky-nav-list"
+          className={cn(
+            "bg-neutral-100/90 dark:bg-neutral-800/90 rounded-b-xl",
+            "transition-all duration-300 ease-in-out", // Smooth animation
+            isExpanded
+              ? "opacity-100 max-h-[calc(100vh-200px)] overflow-y-auto py-2 px-2"
+              : "opacity-0 max-h-0 overflow-hidden pointer-events-none",
+          )}
+        >
+          {sections.map((section) => (
+            <li key={section.id}>
+              <a
+                href={`${currentPagePath}#${section.id}`}
+                onClick={(e) => handleSmoothScroll(e, section.id)}
+                className={cn(
+                  "block px-3 py-2 text-sm rounded-md",
+                  "text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400",
+                  "hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70",
+                  "focus-visible:outline-none focus-visible:bg-neutral-200/70 dark:focus-visible:bg-neutral-700/70",
+                )}
+              >
+                {section.title}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
