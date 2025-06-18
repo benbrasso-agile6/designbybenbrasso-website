@@ -8,7 +8,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
     "Detailed case study of the Ambient Scribe KPI Dashboard project, focusing on data visualization and UX strategy by Ben Brasso.",
   projectOverviewBanner: {
     description:
-      "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot plan and visualize a concept for measuring and reporting outcomes to product leadership.",
+      "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot plan and visualize a concept for measuring and reporting outcomes to executive leadership.",
     skills: "Human-centered design, UX research and synthesis, service design, AI-powered prototyping",
     tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta), GitHub",
     date: "February - May 2025",
