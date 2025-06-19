@@ -67,7 +67,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750018632/Frame_3_kjzwyo.png",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750374324/Frame_6_uwjugt.png",
           alt: "Detailed care encounter workflow with NASA-TLX burden scores for each phase",
           width: 800,
           height: 450,
