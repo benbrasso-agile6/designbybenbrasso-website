@@ -10,7 +10,7 @@ export default function FeaturedWorkSection() {
             My <span className="text-sky-600 dark:text-sky-500">work</span>
           </h2>
           <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A selection of projects that showcase my skills in UX design, product strategy, user research, and using AI.
+            A selection of projects—not always completed in a linear process—that showcase my skills in UX design, product strategy, user research, and using AI.
           </p>
         </div>
         <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
