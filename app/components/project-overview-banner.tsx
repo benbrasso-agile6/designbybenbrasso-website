@@ -37,9 +37,9 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
             href={githubLink.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-neutral-700 dark:text-neutral-300 underline hover:text-neutral-800 dark:hover:text-neutral-200 focus:text-neutral-800 dark:focus:text-neutral-200 focus:outline-none group transition-colors"
+            className="inline-flex items-center text-neutral-700 dark:text-neutral-300 underline hover:text-brand-peach-text dark:hover:text-white focus:text-brand-peach-text dark:focus:text-white focus:outline-none group transition-colors"
           >
-            <GithubIcon className="h-4 w-4 mr-2 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors" />
+            <GithubIcon className="h-4 w-4 mr-2 text-neutral-600 dark:text-neutral-400 group-hover:text-brand-peach-text dark:group-hover:text-white transition-colors" />
             {githubLink.text}
           </Link>
         </p>
