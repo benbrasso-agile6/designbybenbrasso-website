@@ -8,7 +8,7 @@ export const patientCheckInData: CaseStudyData = {
     "UX design case study for a mobile patient check-in application, focusing on accessibility and ease of use by Ben Brasso.",
   projectOverviewBanner: {
     description:
-      "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
+      "The goal of this project was to create a self-service mobile check-in experience on the VA.gov platform that works for all Veterans. It aimed to be easy to use, reduce wait times and staff workload, improve Veteran satisfaction, and support seamless delivery of care.",
     skills: "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, testing with assistive technology, information architecture, prototyping",
     tools: "Figma, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, Mural, GitHub, CodePen, Datadog, GA4, Medallia, SankeyMATIC, Mermaid Chart",
     date: "March 2022 - March 2024",
