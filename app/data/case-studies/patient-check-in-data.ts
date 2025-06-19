@@ -68,7 +68,7 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750374324/Frame_6_uwjugt.png",
-          alt: "Detailed care encounter workflow with NASA-TLX burden scores for each phase",
+          alt: "Mobile check-in proof of concept detailing the new two-step process",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
