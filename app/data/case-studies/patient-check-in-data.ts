@@ -63,7 +63,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'We found that the traditional <a href="https://design.va.gov/templates/forms/" target="_blank" rel="noopener noreferrer">VA form template</a> from the VA.gov Design System was not ideal for a quick, easy mobile check-in. To address this, we developed a new design pattern focused on presenting one clear task per screen and using simplified page titles that directly matched each task. We shared this "<a href="https://design.va.gov/templates/forms/" target="_blank" rel="noopener noreferrer">complete a sub-task</a>" design pattern, along with insights from Veterans, back to the broader VA.gov design community.',
+          text: 'We found that the traditional <a href="https://design.va.gov/templates/forms/" target="_blank" rel="noopener noreferrer">VA form template</a> from the VA.gov Design System was not ideal for a quick, easy mobile check-in. To address this, we developed a new design pattern focused on presenting one clear task per screen and using simplified page titles that directly matched each task. We shared this "<a href="https://design.va.gov/patterns/help-users-to/complete-a-sub-task" target="_blank" rel="noopener noreferrer">complete a sub-task</a>" design pattern, along with insights from Veterans, back to the broader VA.gov design community.',
         },
         {
           type: "paragraph",
