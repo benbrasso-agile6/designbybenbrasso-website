@@ -26,7 +26,7 @@ export default function NotFound() {
             {/* Homepage link */}
             <Link
               href="/"
-              className="text-neutral-900 dark:text-neutral-100 font-medium underline hover:no-underline transition-all duration-200"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium underline hover:no-underline transition-all duration-200"
             >
               Visit the homepage
             </Link>
