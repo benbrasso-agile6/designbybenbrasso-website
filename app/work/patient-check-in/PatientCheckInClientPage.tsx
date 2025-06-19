@@ -87,6 +87,11 @@ export default function PatientCheckInClientPage() {
     return () => clearTimeout(timer)
   }, [])
 
+  const githubLinkData = {
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin",
+    text: "Visit VA's Mobile Check-in repo on GitHub",
+  }
+
   return (
     <>
       <div className="mb-8 print:hidden">
@@ -113,7 +118,12 @@ export default function PatientCheckInClientPage() {
         )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {caseStudy.projectOverviewBanner && (
+            <ProjectOverviewBanner
+              bannerData={caseStudy.projectOverviewBanner}
+              githubLink={githubLinkData} // Pass the GitHub link data here
+            />
+          )}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
             {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
