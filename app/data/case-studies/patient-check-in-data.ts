@@ -63,7 +63,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "To address these challenges, we created a proof of concept and sketched the new mobile check-in experience to communicate our vision and north star—all guided by our human-centered, mobile-first design approach.",
+          text: "To address these challenges, we <strong>created a proof of concept and sketched the new mobile check-in experience to communicate our vision and north star—all guided by our human-centered, mobile-first design approach.<strong>",
         },
         {
           type: "image",
