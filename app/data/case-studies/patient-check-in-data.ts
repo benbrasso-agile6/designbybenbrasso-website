@@ -59,7 +59,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Initially, we conducted generative research, including clinic staff interviews, in-person Veteran intercepts, and detailed observational studies at multiple VA health facilities. This research uncovered significant challenges, such as poor cellular connectivity inside facilities and difficulty Veterans faced when signing into existing patient portals.",
+          text: "Initially, we conducted generative research, including clinic staff interviews, in-person Veteran intercepts, and detailed observational studies at multiple VA health facilities across the nation. This research uncovered significant challenges, such as poor cellular connectivity inside facilities and difficulty Veterans faced when signing into existing patient portals.",
         },
         {
           type: "paragraph",
