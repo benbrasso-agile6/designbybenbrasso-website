@@ -30,7 +30,8 @@ export const projectsData: Project[] = [
       "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in 1 month, while adding travel reimbursement.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
-    hasCaseStudy: false,
+    hasCaseStudy: true, // Changed from false to true
+    caseStudyUrlOverride: "/work/patient-check-in", // Added this line
   },
   {
     title: "Provider online scheduling",
