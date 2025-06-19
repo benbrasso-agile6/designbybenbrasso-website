@@ -93,7 +93,7 @@ export const patientCheckInData: CaseStudyData = {
         },
       ],
     },
-    {/*
+{/*
     {
       id: "applicable-law",
       title: "Most applicable law this work supports",
@@ -116,6 +116,6 @@ export const patientCheckInData: CaseStudyData = {
         },
       ],
     },
-    */}
+*/}
   ],
 }
