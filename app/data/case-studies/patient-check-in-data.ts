@@ -33,7 +33,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: 'The <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">MISSION Act</a> (Maintaining Internal Systems and Strengthening Integrated Outside Networks) aimed to expand Veterans’ access to community care and modernize health care delivery at the VA. This required deploying new technologies, such as mobile check-in, to simplify access, reduce wait times, and improve the overall experience for Veterans.',
+          text: 'The <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">MISSION Act</a> (Maintaining Internal Systems and Strengthening Integrated Outside Networks) aimed to expand Veterans\' access to community care and modernize health care delivery at the VA. This required deploying new technologies, such as mobile check-in, to simplify access, reduce wait times, and improve the overall experience for Veterans.',
         },
         {
           type: "paragraph",
@@ -88,33 +88,32 @@ export const patientCheckInData: CaseStudyData = {
             "Iterative improvements to mobile check-in dramatically streamlined the process, significantly reducing administrative workloads. In August 2022 alone, approximately 63,890 staff minutes were saved—averaging two minutes per Veteran previously spent on manual check-ins—which staff redirected to critical patient care tasks.",
             "From June 26 to July 31, 2023, 96% of travel reimbursement claims submitted via mobile check-in were successfully processed or were being actively reviewed, demonstrating strong integration with operational workflows and systems.",
             "Continuous research led to simpler, faster, and more valuable interactions, significantly boosting adoption. By early 2025, 77.5% of travel reimbursement claims submitted through mobile check-in were auto-adjudicated, drastically cutting processing times from weeks to mere hours or days.",
-            "Veterans themselves validated the project's success: 18 Veterans praised mobile check-in’s ease of use and expressed strong interest in broader availability at VA health facilities, as indicated in post-visit surveys from March and April 2024.",
+            "Veterans themselves validated the project's success: 18 Veterans praised mobile check-in's ease of use and expressed strong interest in broader availability at VA health facilities, as indicated in post-visit surveys from March and April 2024.",
           ],
         },
       ],
     },
-    {
-      id: "applicable-law",
-      title: "Most applicable law this work supports",
-      content: [
-        {
-          type: "h3",
-          text: "Which law supports this work the most?",
-        },
-        {
-          type: "paragraph",
-          text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
-        },
-        {
-          type: "h3",
-          text: "How is this work related to the law?",
-        },
-        {
-          type: "paragraph",
-          text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) did more than expand access to community care. It also called for the VA to modernize how it delivers health care. This means using new tools—like smartphone check-in—to make it easier for veterans to access services, reduce wait times, and improve the overall experience at VA facilities.",
-        },
-      ],
-    },
-
+    // {
+    //   id: "applicable-law",
+    //   title: "Most applicable law this work supports",
+    //   content: [
+    //     {
+    //       type: "h3",
+    //       text: "Which law supports this work the most?",
+    //     },
+    //     {
+    //       type: "paragraph",
+    //       text: '<a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">Review the VA MISSION Act of 2018 on the congress.gov website</a>',
+    //     },
+    //     {
+    //       type: "h3",
+    //       text: "How is this work related to the law?",
+    //     },
+    //     {
+    //       type: "paragraph",
+    //       text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) did more than expand access to community care. It also called for the VA to modernize how it delivers health care. This means using new tools—like smartphone check-in—to make it easier for veterans to access services, reduce wait times, and improve the overall experience at VA facilities.",
+    //     },
+    //   ],
+    // },
   ],
 }
