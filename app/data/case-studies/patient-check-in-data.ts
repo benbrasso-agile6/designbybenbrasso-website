@@ -9,7 +9,7 @@ export const patientCheckInData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "Designed a new mobile patient check-in application from the ground up, focusing on accessibility, ease of use for all age groups, and a seamless pre-appointment experience for VA medical centers.",
-    skills: "Mobile UX/UI Design, Accessibility Design, User Research, Information Architecture, Usability Testing",
+    skills: "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, testing with assistive technology, information architecture, ",
     tools: "Figma, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, Mural, GitHub, CodePen, Datadog, GA4, Medallia, SankeyMATIC, Mermaid Chart",
     date: "March 2022 - March 2024",
   },
