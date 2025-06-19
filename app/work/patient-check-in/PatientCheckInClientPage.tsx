@@ -63,15 +63,27 @@ export default function PatientCheckInClientPage() {
     }
   }
 
+  // Ensure page starts at top - robust solution for mobile Safari
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo(0, 0)
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
     }
+
+    // Immediate attempt
     scrollToTop()
-    requestAnimationFrame(() => scrollToTop())
-    const timer = setTimeout(() => scrollToTop(), 100)
+
+    // Delayed attempt using requestAnimationFrame
+    requestAnimationFrame(() => {
+      scrollToTop()
+    })
+
+    // Additional delayed attempt for Safari
+    const timer = setTimeout(() => {
+      scrollToTop()
+    }, 100)
+
     return () => clearTimeout(timer)
   }, [])
 
