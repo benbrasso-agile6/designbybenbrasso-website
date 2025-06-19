@@ -33,7 +33,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) aimed to expand Veterans’ access to community care and modernize health care delivery at the VA. This required deploying new technologies, such as mobile check-in, to simplify access, reduce wait times, and improve the overall experience for Veterans.",
+          text: 'The <a href="https://www.congress.gov/bill/115th-congress/senate-bill/2372" target="_blank" rel="noopener noreferrer">MISSION Act</a> (Maintaining Internal Systems and Strengthening Integrated Outside Networks) aimed to expand Veterans’ access to community care and modernize health care delivery at the VA. This required deploying new technologies, such as mobile check-in, to simplify access, reduce wait times, and improve the overall experience for Veterans.',
         },
         {
           type: "paragraph",
