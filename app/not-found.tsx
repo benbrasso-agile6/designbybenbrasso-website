@@ -26,13 +26,15 @@ export default function NotFound() {
             {/* Homepage link */}
             <Link
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 font-medium rounded-lg hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-200"
+              className="text-neutral-900 dark:text-neutral-100 font-medium underline hover:no-underline transition-all duration-200"
             >
               Visit the homepage
             </Link>
 
             {/* Error code */}
-            <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-12">Error code: 404</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-12">
+              <strong>Error code:</strong> 404
+            </p>
           </div>
         </div>
       </main>
