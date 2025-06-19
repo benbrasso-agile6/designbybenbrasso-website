@@ -115,6 +115,7 @@ export const patientCheckInData: CaseStudyData = {
           text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) did more than expand access to community care. It also called for the VA to modernize how it delivers health care. This means using new tools—like smartphone check-in—to make it easier for veterans to access services, reduce wait times, and improve the overall experience at VA facilities.",
         },
       ],
-    },*/}
+    },
+    */}
   ],
 }
