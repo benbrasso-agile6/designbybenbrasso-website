@@ -33,11 +33,11 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "Traditional patient check-in processes at VA medical centers relied heavily on paper forms and manual data entry, creating bottlenecks and potential for errors. Veterans often experienced long wait times and frustration with outdated systems.",
+          text: "The MISSION Act (Maintaining Internal Systems and Strengthening Integrated Outside Networks) aimed to expand Veterans’ access to community care and modernize health care delivery at the VA. This required deploying new technologies, such as mobile check-in, to simplify access, reduce wait times, and improve the overall experience for Veterans.",
         },
         {
           type: "paragraph",
-          text: "The COVID-19 pandemic accelerated the need for contactless solutions, making mobile check-in not just a convenience but a necessity for safe healthcare delivery.",
+          text: "Historically, patient check-in and other pre-appointment activities at VA heavily relied on manual, paper-based processes. Veterans frequently experienced dissatisfaction with long waits, and staff faced bottlenecks and errors. The COVID-19 pandemic further accelerated the need for digital, contactless solutions to ensure safe and efficient health care delivery.",
         },
       ],
     },
@@ -46,7 +46,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "How might we create a mobile check-in experience that serves Veterans of all ages and technical abilities while maintaining strict security standards and integrating seamlessly with existing VA systems?",
+          text: "As a human-centered designer and researcher within VA's Office of the Chief Technology Officer (OCTO), the challenge was to create a mobile check-in experience inclusive of all Veterans—regardless of age, technical proficiency, or physical capability—while meeting stringent federal security standards and ensuring seamless integration with existing VA systems.",
         },
       ],
     },
@@ -55,15 +55,27 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>We conducted extensive user research including on-site observations at VA medical centers, interviews with Veterans and clinic staff, and accessibility testing with assistive technologies.</strong>",
+          text: "We self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions, feature improvements, and product releases.",
         },
         {
           type: "paragraph",
-          text: "The design process emphasized accessibility-first principles, ensuring WCAG AA compliance throughout. We created large tap targets, high contrast options, and full screen reader compatibility.",
+          text: "Initially, we conducted generative research, including clinic staff interviews, in-person Veteran intercepts, and detailed observational studies at multiple VA health facilities. This research uncovered significant challenges, such as poor cellular connectivity inside facilities and difficulty Veterans faced when signing into existing patient portals.",
         },
         {
           type: "paragraph",
-          text: "<strong>Key innovations included one-tap check-in, integrated travel reimbursement filing, and real-time appointment status updates.</strong>",
+          text: 'We found that the traditional VA form template from the VA.gov Design System was not ideal for a quick, easy mobile check-in. To address this, we developed a new design pattern focused on presenting one clear task per screen and using simplified page titles that directly matched each task. We shared this "complete a sub-task" design pattern, along with insights from Veterans, back to the broader VA.gov design community.',
+        },
+        {
+          type: "paragraph",
+          text: "One significant technical achievement was introducing the Low Risk One Time Authorization (LoROTA), a simpler yet secure alternative to existing log in processes on VA.gov. LoROTA allowed Veterans to authenticate using only their last name and date of birth, eliminating the need to remember passwords or create new accounts.",
+        },
+        {
+          type: "paragraph",
+          text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
+        },
+        {
+          type: "paragraph",
+          text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans for when to check in.",
         },
       ],
     },
@@ -73,12 +85,10 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "list",
           items: [
-            "<strong>Increased usage by 4x within the first month</strong> of pilot launch across participating VA medical centers.",
-            "<strong>Reduced average check-in time from 15 minutes to under 2 minutes</strong> for most appointments.",
-            "<strong>Decreased waiting room congestion by 35%</strong> improving social distancing and overall clinic flow.",
-            "<strong>Achieved 95% user satisfaction score</strong> in post-implementation surveys.",
-            "<strong>Improved data accuracy by 60%</strong> through digital verification processes.",
-            "<strong>Successfully integrated travel reimbursement filing</strong> saving Veterans additional trips and paperwork.",
+            "Iterative improvements to mobile check-in dramatically streamlined the process, significantly reducing administrative workloads. In August 2022 alone, approximately 63,890 staff minutes were saved—averaging two minutes per Veteran previously spent on manual check-ins—which staff redirected to critical patient care tasks.",
+            "From June 26 to July 31, 2023, 96% of travel reimbursement claims submitted via mobile check-in were successfully processed or were being actively reviewed, demonstrating strong integration with operational workflows and systems.",
+            "Continuous research led to simpler, faster, and more valuable interactions, significantly boosting adoption. By early 2025, 77.5% of travel reimbursement claims submitted through mobile check-in were auto-adjudicated, drastically cutting processing times from weeks to mere hours or days.",
+            "Veterans themselves validated the project's success: 18 Veterans praised mobile check-in’s ease of use and expressed strong interest in broader availability at VA health facilities, as indicated in post-visit surveys from March and April 2024.",
           ],
         },
       ],
