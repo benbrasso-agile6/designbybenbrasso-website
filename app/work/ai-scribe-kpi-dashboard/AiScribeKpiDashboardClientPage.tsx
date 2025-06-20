@@ -2,81 +2,143 @@
 
 import type React from "react"
 import Image from "next/image"
+import { ArrowDownIcon } from "lucide-react" // Keep this if used elsewhere, or remove if only for anchorLink
 import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import NextProjectLink from "@/app/components/next-project-link"
+import NextProjectLink from "@/app/components/next-project-link" // Import the new component
 import { useEffect } from "react"
+
+const caseStudy = aiScribeKpiDashboardData
 
 const renderContentItem = (item: CaseStudyContentItem, index: number) => {
   switch (item.type) {
-    case "heading":
-      return (
-        <h2 key={index} className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-          {item.content}
-        </h2>
-      )
     case "paragraph":
-      return (
-        <p key={index} className="leading-7 [&:not(:first-child)]:mt-6">
-          {item.content}
-        </p>
-      )
-    case "image":
-      return (
-        <Image
-          key={index}
-          src={item.src || "/placeholder.svg"}
-          alt={item.alt}
-          width={item.width}
-          height={item.height}
-          className="rounded-lg object-cover"
-        />
-      )
+      return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
     case "list":
       return (
-        <ul key={index} className="my-6 ml-6 list-disc [&:not(:first-child)]:mt-6">
-          {item.items.map((listItem, i) => (
-            <li key={i}>{listItem}</li>
+        <ul key={index} className="list-disc pl-5 space-y-1">
+          {item.items?.map((li, liIndex) => (
+            <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
           ))}
         </ul>
       )
-    case "video":
+    case "image":
+      if (item.src && item.alt) {
+        return (
+          <div key={index} className="my-0">
+            <Image
+              src={item.src || "/placeholder.svg"}
+              alt={item.alt}
+              width={item.width || 800}
+              height={item.height || 450}
+              className={item.className || "rounded-lg w-full object-cover"}
+              priority={item.priority}
+              unoptimized
+            />
+          </div>
+        )
+      }
+      return null
+    case "h3":
       return (
-        <div key={index} className="relative aspect-video">
-          <video src={item.src} controls className="absolute inset-0 rounded-lg object-cover" />
-        </div>
+        <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
+          {item.text}
+        </h3>
       )
     default:
       return null
   }
 }
 
-const AiScribeKpiDashboardClientPage: React.FC = () => {
+export default function AiScribeKpiDashboardClientPage() {
+  const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault()
+    const targetElement = document.getElementById(targetId.substring(1))
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
   useEffect(() => {
-    document.title = aiScribeKpiDashboardData.title
+    const scrollToTop = () => {
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }
+    scrollToTop()
+    requestAnimationFrame(() => {
+      scrollToTop()
+    })
+    const timer = setTimeout(() => {
+      scrollToTop()
+    }, 100)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
     <>
-      <ProjectOverviewBanner {...aiScribeKpiDashboardData} />
+      {/* Top navigation links */}
+      <div className="mb-8 print:hidden flex justify-between items-center">
+        <BackToHomeLink />
+        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+      </div>
 
-      <div className="container max-w-5xl py-12">
-        <div className="mb-8 flex justify-between items-start print:hidden">
-          <BackToHomeLink />
-          <NextProjectLink href="/work/patient-check-in" text="Visit next project" className="text-sm sm:text-base" />
+      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+        {caseStudy.pageTitle}
+      </h1>
+
+      <div className="relative mt-12">
+        {caseStudy.mainImage && (
+          <div className="sticky top-16 z-0">
+            <Image
+              src={caseStudy.mainImage.src || "/placeholder.svg"}
+              alt={caseStudy.mainImage.alt}
+              width={caseStudy.mainImage.width}
+              height={caseStudy.mainImage.height}
+              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
+              priority={caseStudy.mainImage.priority}
+              unoptimized
+            />
+          </div>
+        )}
+
+        <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
+          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+
+          <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
+            {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
+              <div className="mt-6 mb-8 not-prose">
+                <a
+                  href={caseStudy.anchorLink.href}
+                  onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
+                  className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
+                >
+                  {caseStudy.anchorLink.text}
+                  <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                </a>
+              </div>
+            )}
+
+            {caseStudy.sections.map((section, sectionIndex) => (
+              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
+                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
+                {section.content.map(renderContentItem)}
+              </section>
+            ))}
+          </article>
         </div>
+      </div>
 
-        {aiScribeKpiDashboardData.content.map((item, index) => renderContentItem(item, index))}
-
-        <div className="mt-12 flex justify-between items-center print:hidden">
-          <BackToHomeLink />
-          <NextProjectLink href="/work/patient-check-in" text="Visit next project" className="text-sm sm:text-base" />
-        </div>
+      {/* Bottom navigation links */}
+      <div className="mt-12 print:hidden flex justify-between items-center">
+        <BackToHomeLink />
+        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
     </>
   )
 }
-
-export default AiScribeKpiDashboardClientPage

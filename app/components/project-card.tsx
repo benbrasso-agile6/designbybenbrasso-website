@@ -16,7 +16,7 @@ interface ProjectCardProps {
   caseStudyStatusText?: string
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
-  caseStudyUrlOverride?: string
+  caseStudyUrlOverride?: string // Ensure this prop is defined
 }
 
 export default function ProjectCard({
@@ -26,12 +26,12 @@ export default function ProjectCard({
   tags,
   slug,
   hasCaseStudy,
-  caseStudyUrlOverride,
+  caseStudyUrlOverride, // Ensure this is destructured
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
 }: ProjectCardProps) {
-  // This console log can help verify if the override is being received correctly
+  // For debugging: Check if caseStudyUrlOverride is received for the specific card
   if (title === "Ambient scribe KPI dashboard") {
     console.log("ProjectCard - Ambient Scribe KPI Dashboard - caseStudyUrlOverride:", caseStudyUrlOverride)
     console.log("ProjectCard - Ambient Scribe KPI Dashboard - slug:", slug)
