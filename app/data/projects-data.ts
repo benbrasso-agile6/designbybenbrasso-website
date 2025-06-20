@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
     hasCaseStudy: true,
-    caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard", // This is the crucial override
+    caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard", // This ensures the link goes to the /work/ page
   },
   {
     title: "Mobile patient check-in",
@@ -30,8 +30,8 @@ export const projectsData: Project[] = [
       "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in 1 month, while adding travel reimbursement.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
-    hasCaseStudy: true, // Changed from false to true
-    caseStudyUrlOverride: "/work/patient-check-in", // Added this line
+    hasCaseStudy: true,
+    caseStudyUrlOverride: "/work/patient-check-in",
   },
   {
     title: "Provider online scheduling",
