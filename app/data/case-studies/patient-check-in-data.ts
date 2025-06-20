@@ -149,7 +149,7 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750450718/Frame_186_adgv4u.png",
-          alt: "Mobile check-in proof of concept detailing the new two-step process",
+          alt: "Line chart of the amount of mobile check-ins and travel claims filed overtime",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
