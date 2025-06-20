@@ -100,6 +100,14 @@ export const patientCheckInData: CaseStudyData = {
           text: "Through iterative design and usability testing, we identified patterns across studies that informed the product roadmap. One recurring theme was Veterans’ desire to integrate travel reimbursement into the check-in process. We developed a plan to support this without adding friction to mobile check-in, while also offering an alternative to the existing portal—which many Veterans found frustrating.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750022654/CleanShot_2025-06-15_at_17.20.29_e3a1du.gif",
+          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
+        {
           type: "paragraph",
           text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans for when to check in.",
         },
