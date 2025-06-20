@@ -95,7 +95,7 @@ export default function PatientCheckInClientPage() {
 
   return (
     <>
-      <div className="flex justify-between items-center mb-8 print:hidden">
+      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>

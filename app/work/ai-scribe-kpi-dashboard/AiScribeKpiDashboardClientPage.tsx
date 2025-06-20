@@ -82,8 +82,8 @@ export default function AiScribeKpiDashboardClientPage() {
 
   return (
     <>
-      {/* Top navigation links */}
-      <div className="mb-8 print:hidden flex justify-between items-center">
+      {/* Top navigation links - hidden on small screens */}
+      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
@@ -134,8 +134,8 @@ export default function AiScribeKpiDashboardClientPage() {
         </div>
       </div>
 
-      {/* Bottom navigation links */}
-      <div className="mt-12 print:hidden flex justify-between items-center">
+      {/* Bottom navigation links - always visible */}
+      <div className="flex justify-between items-center mt-12 print:hidden">
         <BackToHomeLink />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
