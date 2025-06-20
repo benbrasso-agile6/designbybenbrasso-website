@@ -146,6 +146,14 @@ export const patientCheckInData: CaseStudyData = {
             "Usage of mobile check-in increased more than 4x in just one month following the introduction of user-centered features—such as integrated beneficiary travel reimbursement and timely text reminders—demonstrating how small, meaningful improvements can drive rapid adoption at scale.",
           ],
         },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750450718/Frame_186_adgv4u.png",
+          alt: "Mobile check-in proof of concept detailing the new two-step process",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },        
       ],
     },
     // {
