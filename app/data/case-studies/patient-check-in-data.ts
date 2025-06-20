@@ -9,8 +9,10 @@ export const patientCheckInData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "The goal of this project was to create a self-service mobile check-in experience on the VA.gov platform that works for all Veterans. It aimed to be easy to use, reduce wait times and staff workload, improve Veteran satisfaction, and support seamless delivery of care.",
-    skills: "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, testing with assistive technology, information architecture, prototyping",
-    tools: "Figma, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, Mural, GitHub, CodePen, Datadog, GA4, Medallia, SankeyMATIC, Mermaid Chart",
+    skills:
+      "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, testing with assistive technology, information architecture, prototyping",
+    tools:
+      "Figma, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, Mural, GitHub, CodePen, Datadog, GA4, Medallia, SankeyMATIC, Mermaid Chart",
     date: "March 2022 - March 2024",
   },
   projectDetails: [
@@ -55,7 +57,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions, feature improvements, and product releases.<strong>",
+          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions, feature improvements, and product releases.</strong>",
         },
         {
           type: "paragraph",
@@ -72,7 +74,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },        
+        },
         {
           type: "paragraph",
           text: 'We found that the traditional <a href="https://design.va.gov/templates/forms/" target="_blank" rel="noopener noreferrer">VA form template</a> from the VA.gov Design System was not ideal for a quick, easy mobile check-in. To address this, we developed a new design pattern focused on presenting one clear task per screen and using simplified page titles that directly matched each task. We shared this "<a href="https://design.va.gov/patterns/help-users-to/complete-a-sub-task" target="_blank" rel="noopener noreferrer">complete a sub-task</a>" design pattern, along with insights from Veterans, back to the broader VA.gov design community.',
@@ -88,7 +90,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },          
+        },
         {
           type: "paragraph",
           text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
