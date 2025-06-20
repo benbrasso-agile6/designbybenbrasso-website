@@ -105,7 +105,7 @@ export const patientCheckInData: CaseStudyData = {
           alt: "Mobile check-in user interface demonstration showing the check-in process",
           width: 400,
           height: 225,
-          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
         },
       ],
     },
