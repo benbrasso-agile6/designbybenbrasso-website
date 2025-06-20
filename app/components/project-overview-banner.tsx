@@ -26,7 +26,7 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
                  dark:from-sky-900 dark:via-sky-900 dark:via-[85%] dark:to-neutral-950
                  rounded-lg"
     >
-      <h1 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h1>
+      <h2 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h2>
       {/* Description font size reduced */}
       <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">{description}</p>
 
