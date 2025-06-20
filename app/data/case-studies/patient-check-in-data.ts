@@ -57,7 +57,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions, feature improvements, and product releases.</strong>",
+          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions,</strong> feature improvements, and product releases.",
         },
         {
           type: "paragraph",
