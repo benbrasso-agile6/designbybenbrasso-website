@@ -101,7 +101,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750022654/CleanShot_2025-06-15_at_17.20.29_e3a1du.gif",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750448834/CleanShot2025-06-20at15.29.50-ezgif.com-optimize_vwycge.gif",
           alt: "Service blueprint mapping the end-to-end care encounter experience",
           width: 800,
           height: 450,
