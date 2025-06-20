@@ -82,6 +82,14 @@ export const patientCheckInData: CaseStudyData = {
           text: "One significant technical achievement was introducing the Low Risk One Time Authorization (LoROTA), a simpler yet secure alternative to existing log in processes on VA.gov. LoROTA allowed Veterans to authenticate using only their last name and date of birth, eliminating the need to remember passwords or create new accounts.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750377831/Frame_185_knnsut.png",
+          alt: "Mobile check-in's Low Risk One Time Authorization (LoROTA) designs",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },          
+        {
           type: "paragraph",
           text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
         },
