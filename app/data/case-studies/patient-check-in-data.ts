@@ -109,7 +109,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "To increase the number of travel reimbursement claims that could be auto-adjudicated—reducing manual work for staff and speeding up payments to Veterans—we explored adding an eligibility check before Veterans started a claim through service mapping. Although 77.5% of claims filed through mobile check-in were already auto-adjudicated during January and February 2025, this improvement offered a more seamless experience for Veterans and helped staff process claims more efficiently.",
+          text: "<strong>To increase the number of travel reimbursement claims that could be auto-adjudicated—reducing manual work for staff and speeding up payments to Veterans—we explored adding an eligibility check before Veterans started a claim through service mapping.</strong> Although 77.5% of claims filed through mobile check-in were already auto-adjudicated during January and February 2025, this improvement offered a more seamless experience for Veterans and helped staff process claims more efficiently.",
         },        
         {
           type: "image",
