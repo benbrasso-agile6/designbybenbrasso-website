@@ -8,6 +8,7 @@ import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import { useEffect } from "react"
+import NextProjectLink from "@/app/components/next-project-link"
 
 const caseStudy = patientCheckInData
 
@@ -94,8 +95,9 @@ export default function PatientCheckInClientPage() {
 
   return (
     <>
-      <div className="mb-8 print:hidden">
+      <div className="flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
@@ -149,8 +151,9 @@ export default function PatientCheckInClientPage() {
         </div>
       </div>
 
-      <div className="mt-12 print:hidden">
+      <div className="flex justify-between items-center mt-12 print:hidden">
         <BackToHomeLink />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
     </>
   )
