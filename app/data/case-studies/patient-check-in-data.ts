@@ -143,7 +143,7 @@ export const patientCheckInData: CaseStudyData = {
             "<strong>From June 26 to July 31, 2023, 96% of travel reimbursement claims submitted via mobile check-in were successfully processed or were being actively reviewed,</strong> demonstrating strong integration with operational workflows and systems.",
             "Continuous research led to simpler, faster, and more valuable interactions, significantly boosting adoption. <strong>By early 2025, 77.5% of travel reimbursement claims submitted through mobile check-in were auto-adjudicated, drastically cutting processing times from weeks to mere hours or days.</strong>",
             "Veterans themselves validated the project's success: <strong>18 Veterans praised mobile check-in's ease of use and expressed strong interest in broader availability at VA health facilities, as indicated in post-visit surveys from March and April 2024.</strong>",
-            "Usage of mobile check-in increased more than 4x in just one month following the introduction of user-centered features—such as integrated beneficiary travel reimbursement and timely text reminders—demonstrating how small, meaningful improvements can drive rapid adoption at scale.",
+            "<strong>Usage of mobile check-in increased more than 4x in just one month following the introduction of user-centered features</strong>—such as integrated beneficiary travel reimbursement and timely text reminders—demonstrating how small, meaningful improvements can drive rapid adoption at scale.",
           ],
         },
         {
