@@ -66,27 +66,43 @@ export default function PatientCheckInClientPage() {
 
   // Ensure page starts at top - robust solution for mobile Safari
   useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo(0, 0)
-      document.documentElement.scrollTop = 0
+    const scrollToTopPrecise = () => {
+      // Temporarily override CSS scroll-behavior to ensure instant scrolling
+      document.documentElement.style.scrollBehavior = "auto"
+      document.body.style.scrollBehavior = "auto"
+
+      // Attempt scrolling using various methods. Order can matter.
+      // Setting scrollTop on body/documentElement is often effective in Safari.
       document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+
+      // Optionally, restore original scroll-behavior if it was globally set to smooth
+      // For this case, it's likely not needed to restore immediately.
     }
 
-    // Immediate attempt
-    scrollToTop()
+    // Attempt 1: Run as soon as possible
+    scrollToTopPrecise()
 
-    // Delayed attempt using requestAnimationFrame
-    requestAnimationFrame(() => {
-      scrollToTop()
+    // Attempt 2: Run on the next animation frame, after the browser has painted
+    const animationFrameId = requestAnimationFrame(() => {
+      scrollToTopPrecise()
     })
 
-    // Additional delayed attempt for Safari
-    const timer = setTimeout(() => {
-      scrollToTop()
-    }, 100)
+    // Attempt 3: Run after a slightly longer delay to catch further layout shifts or Safari quirks
+    // Increased delay from 100ms to 150ms.
+    const timerId = setTimeout(() => {
+      scrollToTopPrecise()
+    }, 150)
 
-    return () => clearTimeout(timer)
-  }, [])
+    // Cleanup function to clear timers and cancel animation frames if the component unmounts
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      clearTimeout(timerId)
+      // If scroll-behavior was changed, you might want to reset it here,
+      // but 'auto' is the default and usually fine.
+    }
+  }, []) // Empty dependency array ensures this runs only once on component mount
 
   const githubLinkData = {
     url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin",
