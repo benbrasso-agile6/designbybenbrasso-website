@@ -2,15 +2,15 @@
 
 import type React from "react"
 import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react" // Keep this if used elsewhere, or remove if only for anchorLink
-import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
+import { ArrowDownIcon } from "lucide-react"
+import { patientCheckInData } from "@/app/data/case-studies/patient-check-in-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import NextProjectLink from "@/app/components/next-project-link" // Import the new component
 import { useEffect } from "react"
+import NextProjectLink from "@/app/components/next-project-link"
 
-const caseStudy = aiScribeKpiDashboardData
+const caseStudy = patientCheckInData
 
 const renderContentItem = (item: CaseStudyContentItem, index: number) => {
   switch (item.type) {
@@ -52,7 +52,7 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
   }
 }
 
-export default function AiScribeKpiDashboardClientPage() {
+export default function PatientCheckInClientPage() {
   const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
     const targetElement = document.getElementById(targetId.substring(1))
@@ -64,28 +64,40 @@ export default function AiScribeKpiDashboardClientPage() {
     }
   }
 
+  // Ensure page starts at top - robust solution for mobile Safari
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo(0, 0)
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
     }
+
+    // Immediate attempt
     scrollToTop()
+
+    // Delayed attempt using requestAnimationFrame
     requestAnimationFrame(() => {
       scrollToTop()
     })
+
+    // Additional delayed attempt for Safari
     const timer = setTimeout(() => {
       scrollToTop()
     }, 100)
+
     return () => clearTimeout(timer)
   }, [])
 
+  const githubLinkData = {
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin",
+    text: "Visit VA's Mobile Check-in repo on GitHub",
+  }
+
   return (
     <>
-      {/* Top navigation links - hidden on small screens */}
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
@@ -108,7 +120,12 @@ export default function AiScribeKpiDashboardClientPage() {
         )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {caseStudy.projectOverviewBanner && (
+            <ProjectOverviewBanner
+              bannerData={caseStudy.projectOverviewBanner}
+              githubLink={githubLinkData} // Pass the GitHub link data here
+            />
+          )}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
             {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
@@ -134,10 +151,9 @@ export default function AiScribeKpiDashboardClientPage() {
         </div>
       </div>
 
-      {/* Bottom navigation links - always visible */}
       <div className="flex justify-between items-center mt-12 print:hidden">
         <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
     </>
   )

@@ -1,10 +1,17 @@
 import type { ProjectOverviewBannerData } from "@/app/data/case-study-types"
+import { GithubIcon } from "lucide-react" // Import GithubIcon
+import Link from "next/link" // Import Link
 
 interface ProjectOverviewBannerProps {
   bannerData: ProjectOverviewBannerData
+  githubLink?: {
+    // Add optional githubLink prop
+    url: string
+    text: string
+  }
 }
 
-export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBannerProps) {
+export default function ProjectOverviewBanner({ bannerData, githubLink }: ProjectOverviewBannerProps) {
   if (!bannerData) {
     return null
   }
@@ -22,6 +29,21 @@ export default function ProjectOverviewBanner({ bannerData }: ProjectOverviewBan
       <h2 className="text-2xl md:text-3xl font-semibold text-brand-peach-text dark:text-white mb-3">Project details</h2>
       {/* Description font size reduced */}
       <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">{description}</p>
+
+      {/* New GitHub link section */}
+      {githubLink && (
+        <p className="text-sm md:text-base mt-4 mb-6">
+          <Link
+            href={githubLink.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-neutral-700 dark:text-neutral-300 underline hover:text-brand-peach-text dark:hover:text-white focus:text-brand-peach-text dark:focus:text-white focus:outline-none group transition-colors"
+          >
+            <GithubIcon className="h-4 w-4 mr-2 text-neutral-600 dark:text-neutral-400 group-hover:text-brand-peach-text dark:group-hover:text-white transition-colors" />
+            {githubLink.text}
+          </Link>
+        </p>
+      )}
 
       <div className="space-y-4 border-t border-brand-peach-text/30 dark:border-sky-800 pt-6">
         <div className="flex flex-col sm:flex-row sm:items-baseline">
