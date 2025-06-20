@@ -113,7 +113,7 @@ export const patientCheckInData: CaseStudyData = {
         },        
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750448834/CleanShot2025-06-20at15.29.50-ezgif.com-optimize_vwycge.gif",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750450207/CleanShot_2025-06-20_at_16.08.01_tunhrm.gif",
           alt: "Beneficiary travel reimbursement product roadmap and impact vs feasibility matrix",
           width: 800,
           height: 450,
