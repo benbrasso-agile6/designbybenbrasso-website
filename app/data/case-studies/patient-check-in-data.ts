@@ -109,6 +109,10 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
+          text: "To increase the number of travel reimbursement claims that could be auto-adjudicated—reducing manual work for staff and speeding up payments to Veterans—we explored adding an eligibility check before Veterans started a claim. Although 77.5% of claims filed through mobile check-in were already auto-adjudicated during January and February 2025, this improvement offered a more seamless experience for Veterans and helped staff process claims more efficiently.",
+        },        
+        {
+          type: "paragraph",
           text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, <strong>we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans when it's to check in.</strong>",
         },
         {
