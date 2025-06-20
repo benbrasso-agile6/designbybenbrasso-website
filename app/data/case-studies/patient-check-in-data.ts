@@ -109,7 +109,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans when it's to check in.",
+          text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, <strong>we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans when it's to check in.</strong>",
         },
         {
           type: "image",
