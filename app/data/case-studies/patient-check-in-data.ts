@@ -28,7 +28,7 @@ export const patientCheckInData: CaseStudyData = {
   //   height: 450,
   //   priority: true,
   //   className: "rounded-lg my-6 w-full object-cover",
-  // }
+  // },
   sections: [
     {
       title: "Background",
@@ -57,7 +57,7 @@ export const patientCheckInData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, iterative user research to inform design decisions, feature improvements, and product releases.</strong>",
+          text: "<strong>Our Scrum Team self-organized and adopted a rigorous human-centered, mobile-first design approach that emphasized extensive, and iterative, user research to inform design decisions, feature improvements, and product releases.</strong>",
         },
         {
           type: "paragraph",
@@ -98,6 +98,14 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "paragraph",
           text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, we introduced key innovations like integrating beneficiary travel reimbursement and text reminders to Veterans for when to check in.",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750439818/CleanShot_2025-06-20_at_13.12.22_xsp0fh.gif",
+          alt: "Mobile check-in user interface demonstration showing the check-in process",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
       ],
     },
