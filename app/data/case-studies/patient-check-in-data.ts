@@ -97,7 +97,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Through iterative design and usability testing, we identified patterns across studies that informed the product roadmap. One recurring theme was Veterans’ desire to integrate travel reimbursement into the check-in process. <strong>We developed a plan to support integrating travel reimbursement without adding friction to mobile check-in, while also offering other alternatives to the existing portal—which many Veterans found frustrating.</strong>",
+          text: "Thematic analysis across studies helped identify patterns and shape the product roadmap. A recurring insight was that Veterans wanted travel reimbursement integrated into the check-in process. <strong>We developed a plan to support this without adding barriers to mobile check-in, while also providing alternative modalities to the existing portal—which many Veterans found frustrating.</strong>",
         },
         {
           type: "image",
