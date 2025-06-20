@@ -102,7 +102,7 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750448834/CleanShot2025-06-20at15.29.50-ezgif.com-optimize_vwycge.gif",
-          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          alt: "Beneficiary travel reimbursement product roadmap and impact vs feasibility matrix",
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
