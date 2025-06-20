@@ -93,7 +93,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care, VA St Louis Healthcare System. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
+          text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care, VA St Louis Healthcare System, and VA Wilkes-Barre Healthcare System. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
         },
         {
           type: "paragraph",
