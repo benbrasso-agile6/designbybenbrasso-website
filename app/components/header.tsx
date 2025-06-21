@@ -107,7 +107,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMenuOpen}
-              className="ml-0 md:ml-2 md:w-auto md:px-3 flex items-center md:gap-1.5 text-base font-semibold text-black dark:text-neutral-100"
+              className="ml-0 md:ml-2 md:w-auto md:px-3 flex items-center md:gap-1.5 text-base font-semibold text-black dark:text-neutral-100 [transform:translateZ(0)]" // Added transform here
             >
               <span className="hidden md:inline-block md:w-14 text-left">
                 {" "}
