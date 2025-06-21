@@ -7,8 +7,12 @@ export default function ScrollToTop() {
   const pathname = usePathname()
 
   useEffect(() => {
-    // Scroll to top when pathname changes
-    window.scrollTo(0, 0)
+    // Defer scroll to top slightly to allow Safari to settle
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 0) // A delay of 0 pushes it to the end of the execution queue
+
+    return () => clearTimeout(timer) // Cleanup the timer
   }, [pathname])
 
   return null

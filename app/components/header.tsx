@@ -100,7 +100,6 @@ export default function Header() {
 
           {/* Navigation Menu Button - for all sizes */}
           <div className="relative">
-            {" "}
             {/* This parent div needs to be relative for desktop dropdown positioning */}
             <Button
               variant="outline"
