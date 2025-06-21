@@ -21,6 +21,9 @@ import {
   SearchIcon,
   SmileIcon,
   WorkflowIcon,
+  Wand2Icon,
+  MessageCircleIcon,
+  FileCodeIcon,
 } from "lucide-react"
 import type React from "react"
 import { motion } from "framer-motion"
@@ -38,14 +41,17 @@ export default function ToolsIUseSection() {
     { icon: CodeIcon, text: "VS Code IDE" },
     { icon: WindIcon, text: "Tailwind CSS" },
     { icon: GithubIcon, text: "GitHub Copilot" },
-    { icon: ClipboardCheckIcon, text: "Optimal Workshop" },
+    { icon: Wand2Icon, text: "v0 by Vercel" },
     { icon: BrainCircuitIcon, text: "ChatGPT" },
+    { icon: MessageCircleIcon, text: "Claude.ai" },
+    { icon: FileCodeIcon, text: "Claude Code" },
     { icon: SparklesIcon, text: "Google Gemini" },
+    { icon: BrainCircuitIcon, text: "VA GPT (Beta)" },
+    { icon: ClipboardCheckIcon, text: "Optimal Workshop" },
     { icon: CodepenIcon, text: "CodePen" },
     { icon: WorkflowIcon, text: "Mermaid" },
     { icon: LibraryIcon, text: "U.S. Web Design System" },
     { icon: LayoutDashboardIcon, text: "Mural" },
-    { icon: BrainCircuitIcon, text: "VA GPT (Beta)" },
     { icon: BarChart3Icon, text: "Looker Studio" },
     { icon: LineChartIcon, text: "Google Analytics 4" },
     { icon: ActivityIcon, text: "Datadog" },
@@ -65,8 +71,8 @@ export default function ToolsIUseSection() {
       x: [0, -5, 5, -4, 4, 0],
       rotate: [0, -3, 3, -2, 2, 0],
       transition: {
-        delay: index * 0.03, // Changed from 0.07 to 0.03 for faster population
-        duration: 0.45, // Decreased duration for a faster animation
+        delay: index * 0.03,
+        duration: 0.45,
         ease: "easeOut",
       },
     },
