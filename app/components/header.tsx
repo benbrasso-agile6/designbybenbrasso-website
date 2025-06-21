@@ -124,7 +124,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="fixed top-16 inset-x-0 bottom-0 p-6 bg-white dark:bg-neutral-950 border-t border-border/40 z-50 overflow-y-auto md:absolute md:top-full md:left-auto md:right-0 md:bottom-auto md:mt-[22px] md:w-auto md:min-w-[250px] md:max-w-xs md:rounded-lg md:border md:shadow-xl md:p-4 md:overflow-visible"
+                  className="fixed top-16 inset-x-0 bottom-0 p-6 bg-white dark:bg-neutral-950 border-t border-border/40 z-50 overflow-y-auto md:absolute md:top-full md:left-auto md:right-0 md:bottom-auto md:mt-[22px] md:w-auto md:min-w-[250px] md:max-w-xs md:rounded-lg md:border md:shadow-xl md:p-4 md:overflow-visible [transform:translateZ(0)]"
                 >
                   <nav className="grid gap-3 text-base font-medium">
                     {/* Resume/CV link for mobile dropdown only */}
