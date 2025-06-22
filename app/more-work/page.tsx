@@ -72,17 +72,16 @@ export default function MoreWorkPage() {
             {moreWorkProjectsData.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
                 <h3 className="text-2xl md:text-3xl font-semibold text-center mb-1 dark:text-white">{project.title}</h3>
-                {/* Added p-4 for "margins" around the contained image */}
                 <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] p-4">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.imageAlt}
                     fill
                     sizes="(max-width: 1280px) 100vw, 1152px"
-                    className="object-contain" // Ensures entire image is visible
+                    className="object-contain"
                   />
                 </div>
-                <div className="text-center mt-1">
+                <div className="text-center -mt-3">
                   <Link
                     href={project.linkUrl}
                     target="_blank"
