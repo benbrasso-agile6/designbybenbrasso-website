@@ -70,18 +70,18 @@ export default function MoreWorkPage() {
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-24">
           <div className="flex flex-col items-center gap-16">
             {moreWorkProjectsData.map((project) => (
-              <div key={project.id} className="w-full max-w-4xl">
-                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 dark:text-white">{project.title}</h3>
-                <div className="relative w-full h-80 sm:h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-700">
+              <div key={project.id} className="w-full max-w-6xl">
+                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 dark:text-white">{project.title}</h3>
+                <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.imageAlt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 896px"
-                    className="object-cover"
+                    sizes="(max-width: 1280px) 100vw, 1152px"
+                    className="object-contain"
                   />
                 </div>
-                <div className="text-center mt-6">
+                <div className="text-center mt-8">
                   <Link
                     href={project.linkUrl}
                     target="_blank"
