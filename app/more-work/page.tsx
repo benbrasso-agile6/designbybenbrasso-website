@@ -24,11 +24,11 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-2",
-    title: "E-commerce Platform Redesign",
-    imageUrl: "/placeholder.svg?width=800&height=600",
+    title: "Clinical Research and Trials at UI Health Care",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635522/Frame_191_mkiko9.png",
     imageAlt: "Modern e-commerce interface",
-    linkUrl: "https://example.com/ecommerce-redesign-portfolio",
-    linkText: "Explore E-commerce Project",
+    linkUrl: "https://clinicaltrials.uihealthcare.org/",
+    linkText: "Visit https://clinicaltrials.uihealthcare.org/",
   },
   {
     id: "project-3",
