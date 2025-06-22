@@ -11,39 +11,32 @@ interface MoreWorkProject {
   imageAlt: string
   linkUrl: string
   linkText: string
-  description: string
 }
 
 const moreWorkProjectsData: MoreWorkProject[] = [
   {
     id: "project-1",
     title: "Innovative Design System",
-    imageUrl: "/placeholder.svg?width=600&height=400",
+    imageUrl: "/placeholder.svg?width=800&height=600",
     imageAlt: "Abstract representation of a design system",
     linkUrl: "https://example.com/design-system-case-study",
     linkText: "View Design System Details",
-    description:
-      "A comprehensive design system built to streamline development and ensure brand consistency across multiple platforms.",
   },
   {
     id: "project-2",
     title: "E-commerce Platform Redesign",
-    imageUrl: "/placeholder.svg?width=600&height=400",
+    imageUrl: "/placeholder.svg?width=800&height=600",
     imageAlt: "Modern e-commerce interface",
     linkUrl: "https://example.com/ecommerce-redesign-portfolio",
     linkText: "Explore E-commerce Project",
-    description:
-      "Led the UX/UI redesign for a major e-commerce platform, resulting in improved user engagement and conversion rates.",
   },
   {
     id: "project-3",
     title: "Mobile Health App Concept",
-    imageUrl: "/placeholder.svg?width=600&height=400",
+    imageUrl: "/placeholder.svg?width=800&height=600",
     imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://example.com/mobile-health-app",
     linkText: "See App Concept",
-    description:
-      "Conceptualized and designed a mobile application focused on promoting mental wellness and healthy habits.",
   },
 ]
 
@@ -74,34 +67,29 @@ export default function MoreWorkPage() {
         </section>
 
         {/* Additional Work Projects Section */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 dark:text-white">Additional Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-24">
+          <div className="flex flex-col items-center gap-16">
             {moreWorkProjectsData.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg overflow-hidden flex flex-col border border-neutral-200 dark:border-neutral-700"
-              >
-                <div className="relative w-full h-48 sm:h-56 md:h-64">
+              <div key={project.id} className="w-full max-w-4xl">
+                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 dark:text-white">{project.title}</h3>
+                <div className="relative w-full h-80 sm:h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl border border-neutral-200 dark:border-neutral-700">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.imageAlt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 1024px) 100vw, 896px"
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold mb-2 dark:text-white">{project.title}</h3>
-                  <p className="text-neutral-600 dark:text-neutral-300 text-sm mb-4 flex-grow">{project.description}</p>
+                <div className="text-center mt-6">
                   <Link
                     href={project.linkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400 font-medium group mt-auto"
+                    className="inline-flex items-center text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400 font-medium group text-lg"
                   >
                     {project.linkText}
-                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight className="ml-1.5 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </div>
               </div>
