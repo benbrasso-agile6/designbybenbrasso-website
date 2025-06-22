@@ -5,7 +5,7 @@ export default function DesignContributionsPage() {
   return (
     <>
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
-        <h1 className="leading-normal">Design <span className="text-sky-600 dark:text-sky-500">Contributions</span></h1>
+        <h1 className="leading-normal">Design System <span className="text-sky-600 dark:text-sky-500">Contributions</span></h1>
         <p>
           I’m passionate about advancing the larger design community by contributing components, patterns, and research
           that strengthen and mature design systems. 
