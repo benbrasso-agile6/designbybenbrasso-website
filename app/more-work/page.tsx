@@ -72,14 +72,13 @@ export default function MoreWorkPage() {
             {moreWorkProjectsData.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
                 <h3 className="text-2xl md:text-3xl font-semibold text-center mb-1 dark:text-white">{project.title}</h3>
-                {/* This div's height classes combined with object-contain on the Image causes letterboxing if aspect ratios don't match */}
                 <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.imageAlt}
                     fill
                     sizes="(max-width: 1280px) 100vw, 1152px"
-                    className="object-contain" // This is key to the behavior
+                    className="object-cover" // Changed from object-contain
                   />
                 </div>
                 <div className="text-center mt-1">
