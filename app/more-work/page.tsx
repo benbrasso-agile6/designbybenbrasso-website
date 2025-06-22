@@ -10,7 +10,7 @@ export default function MoreWorkPage() {
           <div className="max-w-3xl mx-auto">
             <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
               <h1 className="leading-normal text-center">
-                More of my <span className="text-sky-600 dark:text-sky-500">work</span>
+                <span className="text-sky-600 dark:text-sky-500">More</span> of my work
               </h1>
             </article>
 
