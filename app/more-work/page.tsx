@@ -71,7 +71,11 @@ export default function MoreWorkPage() {
           <div className="flex flex-col items-center gap-16">
             {moreWorkProjectsData.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
-                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h3>
+                <h3
+                  className={`text-2xl md:text-3xl font-semibold text-center dark:text-white ${project.id === "project-1" ? "mb-2" : "mb-4"}`}
+                >
+                  {project.title}
+                </h3>
                 <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
@@ -81,7 +85,7 @@ export default function MoreWorkPage() {
                     className="object-contain"
                   />
                 </div>
-                <div className="text-center mt-4">
+                <div className={`text-center ${project.id === "project-1" ? "mt-2" : "mt-4"}`}>
                   <Link
                     href={project.linkUrl}
                     target="_blank"
