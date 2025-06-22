@@ -19,7 +19,7 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     title: "Johns Hopkins School of Medicine",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635524/Frame_187_wyvifr.png",
     imageAlt: "Abstract representation of a design system",
-    linkUrl: "",
+    linkUrl: "https://www.hopkinsmedicine.org/som",
     linkText: "Visit https://www.hopkinsmedicine.org/som",
   },
   {
