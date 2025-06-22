@@ -3,29 +3,33 @@ import Footer from "@/app/components/footer"
 
 export default function MoreWorkPage() {
   return (
-    <div className="flex min-h-dvh flex-col">
+    <>
       <Header />
-
-      {/* Main content */}
-      <main id="main-content" className="flex-1">
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-950">
-          <div className="mx-auto max-w-[1000px] px-8">
-            {/* Typography container – matches design-contributions page */}
-            <article className="prose prose-neutral dark:prose-invert mx-auto text-center">
-              <h1>
-                More of my <span className="text-sky-600 dark:text-sky-500">work</span>
+      <main id="main-content" className="flex-grow">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+          <div className="max-w-3xl mx-auto">
+            <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
+              <h1 className="leading-normal text-center">
+                <span className="text-sky-600 dark:text-sky-500">More</span> of my work
               </h1>
-
-              <p>
-                Here you’ll soon find additional case studies and side projects that showcase my experience in UX
-                design, product strategy, and applied AI. I’m gathering artifacts and narrative—check back shortly!
-              </p>
             </article>
+
+            <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
+              <p>
+                This section provides a space to showcase additional projects, case studies, or other professional
+                endeavors that highlight different facets of my skills and experience.
+              </p>
+              <p>
+                As this portfolio evolves, you'll find a growing collection of work here, offering deeper insights into
+                my design process, problem-solving approaches, and the impact of my contributions.
+              </p>
+              {/* You can add more specific content, project listings, or links here */}
+    
+            </div>
           </div>
         </section>
       </main>
-
       <Footer />
-    </div>
+    </>
   )
 }
