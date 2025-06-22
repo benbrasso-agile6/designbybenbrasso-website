@@ -16,11 +16,11 @@ interface MoreWorkProject {
 const moreWorkProjectsData: MoreWorkProject[] = [
   {
     id: "project-1",
-    title: "Innovative Design System",
+    title: "Johns Hopkins School of Medicine",
     imageUrl: "/placeholder.svg?width=800&height=600",
     imageAlt: "Abstract representation of a design system",
-    linkUrl: "https://example.com/design-system-case-study",
-    linkText: "View Design System Details",
+    linkUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635524/Frame_187_wyvifr.png",
+    linkText: "Visit https://www.hopkinsmedicine.org/som",
   },
   {
     id: "project-2",
