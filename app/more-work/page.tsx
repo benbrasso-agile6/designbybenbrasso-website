@@ -211,7 +211,7 @@ export default function MoreWorkPage() {
           <div className="flex flex-col items-center gap-16">
             {visibleProjects.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
-                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h3>
+                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h2>
                 <div className="relative w-full aspect-[16/10]">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
