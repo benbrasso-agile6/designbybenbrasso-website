@@ -56,7 +56,7 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   {
     id: "project-6",
     title: "Valley Health System",
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635527/Frame_188_mqcmlw.png",
     imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.valleyhealth.com/",
     linkText: "Visit https://www.valleyhealth.com/",
