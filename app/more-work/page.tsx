@@ -47,11 +47,11 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-5",
-    title: "Valley Health System",
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
+    title: "UMass Memorial Health",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635525/Frame_192_tgxh6x.png",
     imageAlt: "Health app UI on a smartphone",
-    linkUrl: "https://www.valleyhealth.com/",
-    linkText: "Visit https://www.valleyhealth.com/",
+    linkUrl: "https://www.ummhealth.org/",
+    linkText: "Visit https://www.ummhealth.org/",
   },
   {
     id: "project-6",
