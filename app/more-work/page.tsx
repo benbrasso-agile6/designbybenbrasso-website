@@ -83,7 +83,7 @@ export default function MoreWorkPage() {
                 >
                   my case studies
                 </Link>{" "}
-                to see how I <i>think</i>, <i>collaborate</i>, and <i>drive outcomes</i> across featured projects.
+                to see how I think, collaborate, make informed decisions, and drive outcomes across featured projects.
               </p>
             </div>
           </div>
