@@ -1,7 +1,6 @@
 import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import Image from "next/image"
-import Link from "next/link"
 
 interface MoreWorkProject {
   id: string
@@ -95,14 +94,14 @@ export default function MoreWorkPage() {
                   />
                 </div>
                 <div className="text-center -mt-8">
-                  <Link
+                  <a
                     href={project.linkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400 font-medium group text-lg underline hover:no-underline"
+                    className="text-sky-600 dark:text-sky-500"
                   >
                     {project.linkText}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
