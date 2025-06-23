@@ -71,7 +71,9 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                Additional digital transformation projects in health care I’ve lead or contributed to—focused on implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX design, and sitemaps. 
+                Additional digital transformation projects in health care I've lead or contributed to—focused on
+                implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX
+                design, and sitemaps.
               </p>
             </div>
           </div>
@@ -86,7 +88,7 @@ export default function MoreWorkPage() {
                 <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] p-4">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
-                    alt={`${project.title} website design`}
+                    alt={`${project.title} website design screenshot`}
                     fill
                     sizes="(max-width: 1280px) 100vw, 1152px"
                     className="object-contain"
