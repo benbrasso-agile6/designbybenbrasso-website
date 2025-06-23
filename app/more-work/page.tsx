@@ -55,7 +55,7 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-6",
-    title: "John Hopkins Community Physicians",
+    title: "Johns Hopkins Community Physicians",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635527/Frame_188_mqcmlw.png",
     imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.hopkinsmedicine.org/community-physicians",
