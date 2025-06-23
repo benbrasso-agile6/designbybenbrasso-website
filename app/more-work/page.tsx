@@ -32,7 +32,7 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-3",
-    title: "Rush Univeristy System for Health",
+    title: "Rush University System for Health",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635525/Frame_190_bb1d2t.png",
     linkUrl: "https://www.rush.edu/",
     linkText: "Visit https://www.rush.edu/",
@@ -82,14 +82,14 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-10",
-    title: "Rush Univeristy",
+    title: "Rush University",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_194_vh4ihh.png",
     linkUrl: "https://www.rushu.rush.edu/",
     linkText: "Visit https://www.rushu.rush.edu/",
   },
   {
     id: "project-11",
-    title: "Univeristy of California Health",
+    title: "University of California Health",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700257/Frame_201_ddi8to.png",
     linkUrl: "hhttps://health.universityofcalifornia.edu/",
     linkText: "Visit https://health.universityofcalifornia.edu/",
@@ -110,7 +110,7 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-14",
-    title: "Univeristy of Iowa Health Care",
+    title: "University of Iowa Health Care",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_199_flpmgt.png",
     linkUrl: "https://uihc.org/",
     linkText: "Visit https://uihc.org/",
