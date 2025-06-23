@@ -98,7 +98,7 @@ export default function MoreWorkPage() {
                     href={project.linkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 dark:text-sky-500"
+                    className="text-sky-600 dark:text-sky-500 underline hover:text-sky-700 dark:hover:text-sky-400"
                   >
                     {project.linkText}
                   </a>
