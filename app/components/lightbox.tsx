@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { X } from "lucide-react"
 import { useEffect } from "react"
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
 
 interface LightboxProps {
   src: string
@@ -13,61 +14,48 @@ interface LightboxProps {
 
 export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
   useEffect(() => {
-    const handleEscKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose()
-      }
-    }
-
+    // This effect can remain to manage body overflow,
+    // though Dialog might also attempt to manage it.
+    // Explicitly managing it here ensures consistency.
     if (isOpen) {
       document.body.style.overflow = "hidden"
-      window.addEventListener("keydown", handleEscKey)
     } else {
       document.body.style.overflow = "auto"
     }
-
     return () => {
       document.body.style.overflow = "auto"
-      window.removeEventListener("keydown", handleEscKey)
     }
-  }, [isOpen, onClose])
+  }, [isOpen])
 
-  if (!isOpen) {
-    return null
-  }
+  // The Dialog component handles the Escape key press by default for onOpenChange.
 
   return (
-    <div
-      className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none translate-x-0 translate-y-0 max-w-none"
-      onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Image lightbox"
-    >
-      {/* Custom Close Button - matching /more-work page style */}
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]"
-        aria-label="Close lightbox"
-      >
-        <X className="h-4 w-4" strokeWidth={1.5} />
-        <span className="sr-only">Close</span>
-      </button>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none translate-x-0 translate-y-0 max-w-none">
+        {/* Custom Close Button - using DialogClose for consistency and focus management */}
+        <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]">
+          <X className="h-4 w-4" strokeWidth={1.5} />
+          <span className="sr-only">Close</span>
+        </DialogClose>
 
-      {/* Image Container - matching /more-work page style */}
-      <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="relative w-full h-full max-w-7xl max-h-full">
-          <Image
-            src={src || "/placeholder.svg"}
-            alt={alt}
-            fill
-            className="object-contain"
-            sizes="100vw"
-            unoptimized
-            priority
-          />
+        {/* Image Container */}
+        <div className="absolute inset-0 flex items-center justify-center p-4">
+          {/* Ensure src is valid before rendering Image to prevent errors if lightbox is briefly open without src */}
+          {src && (
+            <div className="relative w-full h-full max-w-7xl max-h-full">
+              <Image
+                src={src || "/placeholder.svg"}
+                alt={alt} // Alt text is important for accessibility, even if not displayed
+                fill
+                className="object-contain"
+                sizes="100vw" // Appropriate for a full-screen modal
+                unoptimized // If you are using external image URLs not configured in next.config.js
+                priority // If the lightbox image is considered high priority when opened
+              />
+            </div>
+          )}
         </div>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   )
 }
