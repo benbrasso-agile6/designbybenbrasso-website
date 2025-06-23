@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { XIcon } from "lucide-react"
+import { X } from "lucide-react"
 import { useEffect } from "react"
 
 interface LightboxProps {
@@ -38,41 +38,35 @@ export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none translate-x-0 translate-y-0 max-w-none"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-labelledby="lightbox-image"
-      aria-describedby={alt ? "lightbox-alt-text" : undefined}
+      aria-label="Image lightbox"
     >
-      <div
-        className="relative max-w-full max-h-full flex flex-col items-center"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image/container itself
+      {/* Custom Close Button - matching /more-work page style */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]"
+        aria-label="Close lightbox"
       >
-        <button
-          onClick={onClose}
-          className="absolute -top-3 -right-3 sm:top-2 sm:right-2 z-10 p-2 bg-white/30 hover:bg-white/50 text-black dark:text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-          aria-label="Close lightbox"
-        >
-          <XIcon className="h-6 w-6" />
-        </button>
-        <div className="relative w-auto h-auto max-w-[90vw] max-h-[85vh] sm:max-h-[90vh]">
+        <X className="h-4 w-4" strokeWidth={1.5} />
+        <span className="sr-only">Close</span>
+      </button>
+
+      {/* Image Container - matching /more-work page style */}
+      <div className="absolute inset-0 flex items-center justify-center p-4">
+        <div className="relative w-full h-full max-w-7xl max-h-full">
           <Image
-            id="lightbox-image"
             src={src || "/placeholder.svg"}
             alt={alt}
-            width={1200}
-            height={800}
-            className="object-contain w-full h-full rounded-md"
+            fill
+            className="object-contain"
+            sizes="100vw"
             unoptimized
             priority
           />
         </div>
-        {alt && (
-          <p id="lightbox-alt-text" className="mt-2 text-sm text-white text-center bg-black/60 px-3 py-1.5 rounded">
-            {alt}
-          </p>
-        )}
       </div>
     </div>
   )
