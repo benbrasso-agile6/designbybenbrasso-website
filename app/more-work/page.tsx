@@ -37,6 +37,30 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     linkUrl: "https://www.rush.edu/",
     linkText: "Visit https://www.rush.edu/",
   },
+  {
+    id: "project-4",
+    title: "Valley Health System",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
+    imageAlt: "Health app UI on a smartphone",
+    linkUrl: "https://www.valleyhealth.com/",
+    linkText: "Visit https://www.valleyhealth.com/",
+  },
+  {
+    id: "project-5",
+    title: "Valley Health System",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
+    imageAlt: "Health app UI on a smartphone",
+    linkUrl: "https://www.valleyhealth.com/",
+    linkText: "Visit https://www.valleyhealth.com/",
+  },
+  {
+    id: "project-6",
+    title: "Valley Health System",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
+    imageAlt: "Health app UI on a smartphone",
+    linkUrl: "https://www.valleyhealth.com/",
+    linkText: "Visit https://www.valleyhealth.com/",
+  },
 ]
 
 export default function MoreWorkPage() {
