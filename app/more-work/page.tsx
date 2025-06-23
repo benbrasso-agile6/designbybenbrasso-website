@@ -2,8 +2,6 @@ import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import Image from "next/image"
 import Link from "next/link"
-// ArrowUpRight is no longer needed
-// import { ArrowUpRight } from 'lucide-react'
 
 interface MoreWorkProject {
   id: string
@@ -82,8 +80,7 @@ export default function MoreWorkPage() {
                     className="object-contain"
                   />
                 </div>
-                {/* Increased negative margin to bring link closer */}
-                <div className="text-center -mt-5">
+                <div className="text-center -mt-8">
                   <Link
                     href={project.linkUrl}
                     target="_blank"
@@ -91,7 +88,6 @@ export default function MoreWorkPage() {
                     className="inline-flex items-center text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400 font-medium group text-lg underline hover:no-underline"
                   >
                     {project.linkText}
-                    {/* ArrowUpRight icon removed */}
                   </Link>
                 </div>
               </div>
