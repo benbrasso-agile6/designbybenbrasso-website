@@ -1,7 +1,11 @@
+"use client"
+
+import { useState, useRef, useEffect, useCallback } from "react"
 import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import Image from "next/image"
 import Link from "next/link"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface MoreWorkProject {
   id: string
@@ -54,9 +58,122 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     linkUrl: "https://www.hopkinsmedicine.org/community-physicians",
     linkText: "Visit https://www.hopkinsmedicine.org/community-physicians",
   },
+  // Add more projects here as needed
+  {
+    id: "project-7",
+    title: "St. Louis Children's Hospital",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700262/Frame_193_jqcnon.png",
+    linkUrl: "https://www.stlouischildrens.org/",
+    linkText: "Visit https://www.stlouischildrens.org/",
+  },
+  {
+    id: "project-8",
+    title: "University of Missouri School of Medicine",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700261/Frame_197_yyrerx.png",
+    linkUrl: "https://medicine.missouri.edu/",
+    linkText: "Visit https://medicine.missouri.edu/",
+  },
+  {
+    id: "project-9",
+    title: "PennState Health",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_195_qsmssb.png",
+    linkUrl: "https://www.pennstatehealth.org/",
+    linkText: "Visit https://www.pennstatehealth.org/",
+  },
+  {
+    id: "project-10",
+    title: "Rush Univeristy",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_194_vh4ihh.png",
+    linkUrl: "https://www.rushu.rush.edu/",
+    linkText: "Visit https://www.rushu.rush.edu/",
+  },
+  {
+    id: "project-11",
+    title: "Univeristy of California Health",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700257/Frame_201_ddi8to.png",
+    linkUrl: "hhttps://health.universityofcalifornia.edu/",
+    linkText: "Visit https://health.universityofcalifornia.edu/",
+  },
+  {
+    id: "project-12",
+    title: "Nebraska Medicine",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_196_fgqgmm.png",
+    linkUrl: "https://www.nebraskamed.com/",
+    linkText: "Visit https://www.nebraskamed.com/",
+  },
+  {
+    id: "project-13",
+    title: "Midwest Orthopaedics at Rush (MOR)",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700254/Frame_198_gsexm2.png",
+    linkUrl: "https://www.rushortho.com/",
+    linkText: "Visit https://www.rushortho.com/",
+  },
+  {
+    id: "project-14",
+    title: "Univeristy of Iowa Health Care",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700258/Frame_199_flpmgt.png",
+    linkUrl: "https://uihc.org/",
+    linkText: "Visit https://uihc.org/",
+  },
+  {
+    id: "project-15",
+    title: "University of Missouri Health Care",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750700257/Frame_200_myyo55.png",
+    linkUrl: "https://www.muhealth.org/",
+    linkText: "Visit https://www.muhealth.org/",
+  },
 ]
 
+const INITIAL_PROJECT_COUNT = 3
+const PROJECTS_PER_LOAD = 3
+
 export default function MoreWorkPage() {
+  const [visibleProjectsCount, setVisibleProjectsCount] = useState(INITIAL_PROJECT_COUNT)
+  const loaderRef = useRef<HTMLDivElement | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const loadMoreProjects = useCallback(() => {
+    if (isLoading || visibleProjectsCount >= moreWorkProjectsData.length) return
+
+    setIsLoading(true)
+    // Simulate a network delay for loading feel
+    setTimeout(() => {
+      setVisibleProjectsCount((prevCount) => Math.min(prevCount + PROJECTS_PER_LOAD, moreWorkProjectsData.length))
+      setIsLoading(false)
+    }, 300) // Reduced delay
+  }, [isLoading, visibleProjectsCount])
+
+  useEffect(() => {
+    const hasMore = visibleProjectsCount < moreWorkProjectsData.length
+    if (!hasMore || isLoading) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !isLoading) {
+          loadMoreProjects()
+        }
+      },
+      {
+        rootMargin: "0px 0px 600px 0px", // Trigger when loader is 600px below viewport
+        threshold: 0.01, // Trigger as soon as 1% is visible within that rootMargin
+      },
+    )
+
+    const currentLoader = loaderRef.current
+    if (currentLoader) {
+      observer.observe(currentLoader)
+    }
+
+    return () => {
+      if (currentLoader) {
+        observer.unobserve(currentLoader)
+      }
+    }
+  }, [loadMoreProjects, visibleProjectsCount, isLoading])
+
+  const visibleProjects = moreWorkProjectsData.slice(0, visibleProjectsCount)
+  const hasMoreProjectsToLoad = visibleProjectsCount < moreWorkProjectsData.length
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
@@ -71,9 +188,9 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                More digital transformation projects in health care I've lead or contributed to—focused on
-                implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX
-                design, and sitemaps.
+                More digital transformation projects in health care I've lead or contributed to—focused on implementing
+                user research, content strategy, taxonomy design, prototypes, plain language writing, UX design, and
+                sitemaps.
               </p>
               <p>
                 Explore{" "}
@@ -92,7 +209,7 @@ export default function MoreWorkPage() {
         {/* Additional Work Projects Section */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-24">
           <div className="flex flex-col items-center gap-16">
-            {moreWorkProjectsData.map((project) => (
+            {visibleProjects.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
                 <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h3>
                 <div className="relative w-full aspect-[16/10]">
@@ -102,11 +219,10 @@ export default function MoreWorkPage() {
                     fill
                     sizes="(max-width: 1280px) 100vw, 1152px"
                     className="object-contain"
+                    loading="lazy"
                   />
                 </div>
-                <div className="text-center mt-4 relative z-10">
-                  {" "}
-                  {/* Changed -mt-8 to mt-4 */}
+                <div className="text-center mt-4 lg:mt-2 xl:mt-1 relative z-10">
                   <a
                     href={project.linkUrl}
                     target="_blank"
@@ -119,6 +235,17 @@ export default function MoreWorkPage() {
               </div>
             ))}
           </div>
+
+          {/* Loader and Trigger */}
+          {hasMoreProjectsToLoad && (
+            <div ref={loaderRef} className="w-full max-w-6xl mx-auto mt-16">
+              <div className="space-y-4">
+                <Skeleton className="h-8 w-1/2 mx-auto" />
+                <Skeleton className="w-full aspect-[16/10]" />
+                <Skeleton className="h-6 w-1/4 mx-auto" />
+              </div>
+            </div>
+          )}
         </section>
       </main>
       <Footer />
