@@ -93,7 +93,7 @@ export default function MoreWorkPage() {
                     className="object-contain"
                   />
                 </div>
-                <div className="text-center -mt-8">
+                <div className="text-center -mt-8 relative z-10">
                   <a
                     href={project.linkUrl}
                     target="_blank"
