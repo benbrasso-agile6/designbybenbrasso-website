@@ -31,11 +31,11 @@ const moreWorkProjectsData: MoreWorkProject[] = [
   },
   {
     id: "project-3",
-    title: "Mobile Health App Concept",
-    imageUrl: "/placeholder.svg?width=800&height=600",
+    title: "Rush Univeristy System for Health",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635525/Frame_190_bb1d2t.png",
     imageAlt: "Health app UI on a smartphone",
-    linkUrl: "https://example.com/mobile-health-app",
-    linkText: "See App Concept",
+    linkUrl: "https://www.rush.edu/",
+    linkText: "Visit https://www.rush.edu/",
   },
 ]
 
