@@ -2,57 +2,95 @@
 
 import type React from "react"
 import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react" // Keep this if used elsewhere, or remove if only for anchorLink
+import { ArrowDownIcon } from "lucide-react"
 import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import NextProjectLink from "@/app/components/next-project-link" // Import the new component
-import { useEffect } from "react"
+import NextProjectLink from "@/app/components/next-project-link"
+import { useEffect, useState } from "react" // Added useState
+import { useMobile } from "@/hooks/use-mobile" // Added
+import Lightbox from "@/app/components/lightbox" // Added
 
 const caseStudy = aiScribeKpiDashboardData
 
-const renderContentItem = (item: CaseStudyContentItem, index: number) => {
-  switch (item.type) {
-    case "paragraph":
-      return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
-    case "list":
-      return (
-        <ul key={index} className="list-disc pl-5 space-y-1">
-          {item.items?.map((li, liIndex) => (
-            <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
-          ))}
-        </ul>
-      )
-    case "image":
-      if (item.src && item.alt) {
-        return (
-          <div key={index} className="my-0">
-            <Image
-              src={item.src || "/placeholder.svg"}
-              alt={item.alt}
-              width={item.width || 800}
-              height={item.height || 450}
-              className={item.className || "rounded-lg w-full object-cover"}
-              priority={item.priority}
-              unoptimized
-            />
-          </div>
-        )
-      }
-      return null
-    case "h3":
-      return (
-        <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
-          {item.text}
-        </h3>
-      )
-    default:
-      return null
-  }
-}
-
 export default function AiScribeKpiDashboardClientPage() {
+  const isMobile = useMobile()
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+  const [lightboxAlt, setLightboxAlt] = useState<string | null>(null)
+
+  const handleOpenLightbox = (src: string, alt: string) => {
+    setLightboxSrc(src)
+    setLightboxAlt(alt)
+    setLightboxOpen(true)
+  }
+
+  const handleCloseLightbox = () => {
+    setLightboxOpen(false)
+    // Delay clearing src/alt to allow fade-out animations if any
+    setTimeout(() => {
+      setLightboxSrc(null)
+      setLightboxAlt(null)
+    }, 300)
+  }
+
+  const renderContentItem = (item: CaseStudyContentItem, index: number) => {
+    switch (item.type) {
+      case "paragraph":
+        return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
+      case "list":
+        return (
+          <ul key={index} className="list-disc pl-5 space-y-1">
+            {item.items?.map((li, liIndex) => (
+              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
+            ))}
+          </ul>
+        )
+      case "image":
+        if (item.src && item.alt) {
+          const isPng = item.src.toLowerCase().endsWith(".png")
+          if (isMobile && isPng) {
+            return (
+              <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
+                <Image
+                  src={item.src || "/placeholder.svg"}
+                  alt={item.alt}
+                  width={item.width || 800}
+                  height={item.height || 450}
+                  className={item.className || "rounded-lg w-full object-cover"}
+                  priority={item.priority}
+                  unoptimized
+                />
+              </div>
+            )
+          }
+          return (
+            <div key={index} className="my-0">
+              <Image
+                src={item.src || "/placeholder.svg"}
+                alt={item.alt}
+                width={item.width || 800}
+                height={item.height || 450}
+                className={item.className || "rounded-lg w-full object-cover"}
+                priority={item.priority}
+                unoptimized
+              />
+            </div>
+          )
+        }
+        return null
+      case "h3":
+        return (
+          <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
+            {item.text}
+          </h3>
+        )
+      default:
+        return null
+    }
+  }
+
   const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
     const targetElement = document.getElementById(targetId.substring(1))
@@ -66,46 +104,27 @@ export default function AiScribeKpiDashboardClientPage() {
 
   useEffect(() => {
     const scrollToTopPrecise = () => {
-      // Temporarily override CSS scroll-behavior to ensure instant scrolling
       document.documentElement.style.scrollBehavior = "auto"
       document.body.style.scrollBehavior = "auto"
-
-      // Attempt scrolling using various methods. Order can matter.
-      // Setting scrollTop on body/documentElement is often effective in Safari.
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
       window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-
-      // Optionally, restore original scroll-behavior if it was globally set to smooth
-      // For this case, it's likely not needed to restore immediately.
     }
-
-    // Attempt 1: Run as soon as possible
     scrollToTopPrecise()
-
-    // Attempt 2: Run on the next animation frame, after the browser has painted
     const animationFrameId = requestAnimationFrame(() => {
       scrollToTopPrecise()
     })
-
-    // Attempt 3: Run after a slightly longer delay to catch further layout shifts or Safari quirks
-    // Increased delay from 100ms to 150ms.
     const timerId = setTimeout(() => {
       scrollToTopPrecise()
     }, 150)
-
-    // Cleanup function to clear timers and cancel animation frames if the component unmounts
     return () => {
       cancelAnimationFrame(animationFrameId)
       clearTimeout(timerId)
-      // If scroll-behavior was changed, you might want to reset it here,
-      // but 'auto' is the default and usually fine.
     }
-  }, []) // Empty dependency array ensures this runs only once on component mount
+  }, [])
 
   return (
     <>
-      {/* Top navigation links - hidden on small screens */}
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
@@ -157,11 +176,14 @@ export default function AiScribeKpiDashboardClientPage() {
         </div>
       </div>
 
-      {/* Bottom navigation links - always visible */}
       <div className="flex justify-between items-center mt-12 print:hidden">
         <BackToHomeLink />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
+
+      {lightboxOpen && lightboxSrc && lightboxAlt && (
+        <Lightbox src={lightboxSrc} alt={lightboxAlt} isOpen={lightboxOpen} onClose={handleCloseLightbox} />
+      )}
     </>
   )
 }

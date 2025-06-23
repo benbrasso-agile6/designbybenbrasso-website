@@ -54,8 +54,8 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         "brand-peach": {
-          DEFAULT: "#FFEADD", // A soft, light peach
-          text: "#A66A53", // A darker, muted peach for text or accents
+          DEFAULT: "#FFEADD",
+          text: "#A66A53",
         },
       },
       borderRadius: {
@@ -72,10 +72,22 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        // simple-fade-in and simple-fade-out are no longer strictly needed
+        // if this approach works, but keeping them doesn't hurt.
+        "simple-fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "simple-fade-out": {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "simple-fade-in": "simple-fade-in 0.2s ease-out",
+        "simple-fade-out": "simple-fade-out 0.2s ease-out",
       },
     },
   },
