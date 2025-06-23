@@ -31,7 +31,7 @@ export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none max-w-none left-0 top-0 translate-x-0 translate-y-0 data-[state=open]:fade-in data-[state=closed]:fade-out data-[state=open]:duration-200 data-[state=closed]:duration-200">
+      <DialogContent className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none max-w-none left-0 top-0 translate-x-0 translate-y-0 data-[state=open]:animate-none data-[state=closed]:animate-none opacity-100">
         {/* Custom Close Button - using DialogClose for consistency and focus management */}
         <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]">
           <X className="h-4 w-4" strokeWidth={1.5} />
