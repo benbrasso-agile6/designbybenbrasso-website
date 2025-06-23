@@ -7,7 +7,6 @@ interface MoreWorkProject {
   id: string
   title: string
   imageUrl: string
-  imageAlt: string
   linkUrl: string
   linkText: string
 }
@@ -17,7 +16,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-1",
     title: "Johns Hopkins School of Medicine",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635524/Frame_187_wyvifr.png",
-    imageAlt: "Abstract representation of a design system",
     linkUrl: "https://www.hopkinsmedicine.org/som",
     linkText: "Visit https://www.hopkinsmedicine.org/som",
   },
@@ -25,7 +23,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-2",
     title: "Clinical Research and Trials at UI Health Care",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635522/Frame_191_mkiko9.png",
-    imageAlt: "Modern e-commerce interface",
     linkUrl: "https://clinicaltrials.uihealthcare.org/",
     linkText: "Visit https://clinicaltrials.uihealthcare.org/",
   },
@@ -33,7 +30,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-3",
     title: "Rush Univeristy System for Health",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635525/Frame_190_bb1d2t.png",
-    imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.rush.edu/",
     linkText: "Visit https://www.rush.edu/",
   },
@@ -41,7 +37,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-4",
     title: "Valley Health System",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635526/Frame_189_yxkmy1.png",
-    imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.valleyhealth.com/",
     linkText: "Visit https://www.valleyhealth.com/",
   },
@@ -49,7 +44,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-5",
     title: "UMass Memorial Health",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635525/Frame_192_tgxh6x.png",
-    imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.ummhealth.org/",
     linkText: "Visit https://www.ummhealth.org/",
   },
@@ -57,7 +51,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     id: "project-6",
     title: "Johns Hopkins Community Physicians",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750635527/Frame_188_mqcmlw.png",
-    imageAlt: "Health app UI on a smartphone",
     linkUrl: "https://www.hopkinsmedicine.org/community-physicians",
     linkText: "Visit https://www.hopkinsmedicine.org/community-physicians",
   },
@@ -98,7 +91,7 @@ export default function MoreWorkPage() {
                 <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] p-4">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
-                    alt={project.imageAlt}
+                    alt={`${project.title} website design`}
                     fill
                     sizes="(max-width: 1280px) 100vw, 1152px"
                     className="object-contain"
