@@ -1,19 +1,48 @@
-import * as React from "react"
+// Ensure this file exists or create it if it doesn't.
+// This is a common implementation for such a hook.
+"use client"
 
-const MOBILE_BREAKPOINT = 768
+import { useState, useEffect } from "react"
 
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
+/**
+ * Custom hook to detect if the current viewport matches a mobile media query.
+ * @param query The media query string to match against. Defaults to '(max-width: 768px)'.
+ * @returns `true` if the media query matches, `false` otherwise.
+ */
+export const useMobile = (query = "(max-width: 768px)"): boolean => {
+  const [isMobile, setIsMobile] = useState(false)
 
-  React.useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
-    const onChange = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+  useEffect(() => {
+    // Ensure window is defined (for SSR/Node.js environments)
+    if (typeof window === "undefined") {
+      return
     }
-    mql.addEventListener("change", onChange)
-    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
-    return () => mql.removeEventListener("change", onChange)
-  }, [])
 
-  return !!isMobile
+    const mediaQuery = window.matchMedia(query)
+    const handleChange = () => {
+      setIsMobile(mediaQuery.matches)
+    }
+
+    // Initial check
+    handleChange()
+
+    // Listen for changes
+    try {
+      mediaQuery.addEventListener("change", handleChange)
+    } catch (e) {
+      // Fallback for older browsers
+      mediaQuery.addListener(handleChange)
+    }
+
+    return () => {
+      try {
+        mediaQuery.removeEventListener("change", handleChange)
+      } catch (e) {
+        // Fallback for older browsers
+        mediaQuery.removeListener(handleChange)
+      }
+    }
+  }, [query])
+
+  return isMobile
 }

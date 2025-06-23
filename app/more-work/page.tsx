@@ -6,6 +6,9 @@ import Footer from "@/app/components/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Skeleton } from "@/components/ui/skeleton"
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
+import { X } from "lucide-react"
+import { useMobile } from "@/hooks/use-mobile"
 
 interface MoreWorkProject {
   id: string
@@ -58,7 +61,6 @@ const moreWorkProjectsData: MoreWorkProject[] = [
     linkUrl: "https://www.hopkinsmedicine.org/community-physicians",
     linkText: "Visit https://www.hopkinsmedicine.org/community-physicians",
   },
-  // Add more projects here as needed
   {
     id: "project-7",
     title: "St. Louis Children's Hospital",
@@ -132,15 +134,30 @@ export default function MoreWorkPage() {
   const loaderRef = useRef<HTMLDivElement | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null)
+  const isMobile = useMobile()
+
+  // Check if device supports touch (includes tablets and mobile devices)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
+
+  useEffect(() => {
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0)
+  }, [])
+
+  const openModal = (imageUrl: string) => {
+    setSelectedImageUrl(imageUrl)
+    setIsModalOpen(true)
+  }
+
   const loadMoreProjects = useCallback(() => {
     if (isLoading || visibleProjectsCount >= moreWorkProjectsData.length) return
 
     setIsLoading(true)
-    // Simulate a network delay for loading feel
     setTimeout(() => {
       setVisibleProjectsCount((prevCount) => Math.min(prevCount + PROJECTS_PER_LOAD, moreWorkProjectsData.length))
       setIsLoading(false)
-    }, 300) // Reduced delay
+    }, 300)
   }, [isLoading, visibleProjectsCount])
 
   useEffect(() => {
@@ -154,8 +171,8 @@ export default function MoreWorkPage() {
         }
       },
       {
-        rootMargin: "0px 0px 600px 0px", // Trigger when loader is 600px below viewport
-        threshold: 0.01, // Trigger as soon as 1% is visible within that rootMargin
+        rootMargin: "0px 0px 600px 0px",
+        threshold: 0.01,
       },
     )
 
@@ -178,7 +195,7 @@ export default function MoreWorkPage() {
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main id="main-content" className="flex-grow">
-        {/* Introductory Section */}
+        {/* ... Introductory Section ... */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="max-w-3xl mx-auto">
             <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
@@ -212,7 +229,23 @@ export default function MoreWorkPage() {
             {visibleProjects.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
                 <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h2>
-                <div className="relative w-full aspect-[16/10]">
+                <div
+                  className={`relative w-full aspect-[16/10] ${isTouchDevice ? "cursor-pointer active:opacity-80 transition-opacity" : ""}`}
+                  onClick={() => {
+                    if (isTouchDevice && project.imageUrl) {
+                      openModal(project.imageUrl)
+                    }
+                  }}
+                  role={isTouchDevice ? "button" : undefined}
+                  tabIndex={isTouchDevice ? 0 : undefined}
+                  aria-label={isTouchDevice ? `View larger image for ${project.title}` : undefined}
+                  onKeyDown={(e) => {
+                    if (isTouchDevice && project.imageUrl && (e.key === "Enter" || e.key === " ")) {
+                      e.preventDefault()
+                      openModal(project.imageUrl)
+                    }
+                  }}
+                >
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={`${project.title} website design screenshot`}
@@ -249,6 +282,32 @@ export default function MoreWorkPage() {
         </section>
       </main>
       <Footer />
+
+      {/* Image Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none translate-x-0 translate-y-0 max-w-none">
+          {/* Custom Close Button */}
+          <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]">
+            <X className="h-4 w-4" strokeWidth={1.5} />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+
+          {/* Image Container */}
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            {selectedImageUrl && (
+              <div className="relative w-full h-full max-w-7xl max-h-full">
+                <Image
+                  src={selectedImageUrl || "/placeholder.svg"}
+                  alt="Enlarged project image"
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                />
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
