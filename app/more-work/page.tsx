@@ -71,7 +71,7 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                Additional digital transformation projects in health care I've lead or contributed to—focused on
+                More digital transformation projects in health care I've lead or contributed to—focused on
                 implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX
                 design, and sitemaps.
               </p>
