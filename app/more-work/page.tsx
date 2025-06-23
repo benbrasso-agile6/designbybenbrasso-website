@@ -83,8 +83,7 @@ export default function MoreWorkPage() {
                 >
                   my case studies
                 </Link>{" "}
-                to see how I <i>think</i>, <i>collaborate</i>, and <i>drive outcomes</i> across
-                featured projects.
+                to see how I <i>think</i>, <i>collaborate</i>, and <i>drive outcomes</i> across featured projects.
               </p>
             </div>
           </div>
@@ -95,8 +94,8 @@ export default function MoreWorkPage() {
           <div className="flex flex-col items-center gap-16">
             {moreWorkProjectsData.map((project) => (
               <div key={project.id} className="w-full max-w-6xl">
-                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-1 dark:text-white">{project.title}</h3>
-                <div className="relative w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] p-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 dark:text-white">{project.title}</h3>
+                <div className="relative w-full aspect-[16/10]">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={`${project.title} website design screenshot`}
@@ -105,7 +104,9 @@ export default function MoreWorkPage() {
                     className="object-contain"
                   />
                 </div>
-                <div className="text-center -mt-8 relative z-10">
+                <div className="text-center mt-4 relative z-10">
+                  {" "}
+                  {/* Changed -mt-8 to mt-4 */}
                   <a
                     href={project.linkUrl}
                     target="_blank"
