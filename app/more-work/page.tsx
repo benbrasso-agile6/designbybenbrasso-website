@@ -71,8 +71,7 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                This section provides a space to showcase additional projects, case studies, or other professional
-                endeavors that highlight different facets of my skills and experience.
+                Additional digital transformation projects in health care that I’ve worked on, including research, content strategy, taxonomy design, prototypes, plain language writing, and sitemaps.
               </p>
               <p>
                 As this portfolio evolves, you'll find a growing collection of work here, offering deeper insights into
