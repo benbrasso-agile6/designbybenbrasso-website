@@ -3,7 +3,16 @@
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { MenuIcon, FileTextIcon, CompassIcon, MailIcon, XIcon, DownloadIcon, LayersIcon } from "lucide-react"
+import {
+  MenuIcon,
+  FileTextIcon,
+  CompassIcon,
+  MailIcon,
+  XIcon,
+  DownloadIcon,
+  LayersIcon,
+  BriefcaseIcon,
+} from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
 
@@ -14,6 +23,7 @@ export default function Header() {
 
   const mainNavItems = [
     { name: "README", href: "/read-me", icon: <FileTextIcon className="h-5 w-5" /> },
+    { name: "More Work", href: "/more-work", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "Design Contributions", href: "/design-contributions", icon: <LayersIcon className="h-5 w-5" /> },
     { name: "Contact", href: "/contact", icon: <MailIcon className="h-5 w-5" /> },
   ]
