@@ -1,6 +1,7 @@
 import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import Image from "next/image"
+import Link from "next/link"
 
 interface MoreWorkProject {
   id: string
@@ -73,6 +74,17 @@ export default function MoreWorkPage() {
                 Additional digital transformation projects in health care I've lead or contributed to—focused on
                 implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX
                 design, and sitemaps.
+              </p>
+              <p>
+                Explore{" "}
+                <Link
+                  href="/"
+                  className="text-sky-600 dark:text-sky-500 underline hover:text-sky-700 dark:hover:text-sky-400"
+                >
+                  my case studies
+                </Link>{" "}
+                to see how I think, solve problems, collaborate, make design decisions, and drive outcomes across
+                featured projects.
               </p>
             </div>
           </div>
