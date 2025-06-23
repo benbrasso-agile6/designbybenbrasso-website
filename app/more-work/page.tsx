@@ -71,11 +71,7 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                Additional digital transformation projects in health care that I’ve worked on, including research, content strategy, taxonomy design, prototypes, plain language writing, and sitemaps.
-              </p>
-              <p>
-                As this portfolio evolves, you'll find a growing collection of work here, offering deeper insights into
-                my design process, problem-solving approaches, and the impact of my contributions.
+                Additional digital transformation projects in health care I’ve lead or contributed to—focused on implementing user research, content strategy, taxonomy design, prototypes, plain language writing, UX design, and sitemaps. 
               </p>
             </div>
           </div>
