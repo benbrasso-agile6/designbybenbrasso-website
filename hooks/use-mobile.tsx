@@ -46,3 +46,6 @@ export const useMobile = (query = "(max-width: 768px)"): boolean => {
 
   return isMobile
 }
+
+// Alias export so code that expects `useIsMobile` continues to work
+export { useMobile as useIsMobile }
