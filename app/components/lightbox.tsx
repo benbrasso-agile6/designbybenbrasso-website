@@ -26,7 +26,20 @@ export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none max-w-none left-0 top-0 translate-x-0 translate-y-0 data-[state=open]:animate-simple-fade-in data-[state=open]:translate-x-0 data-[state=open]:translate-y-0 data-[state=closed]:animate-simple-fade-out">
+      <DialogContent
+        className="fixed inset-0 z-50 w-screen h-screen bg-transparent border-0 p-0 shadow-none rounded-none max-w-none left-0 top-0 translate-x-0 translate-y-0 
+                              data-[state=open]:animate-in 
+                              data-[state=open]:fade-in-0 
+                              data-[state=open]:zoom-in-100 
+                              data-[state=open]:slide-in-from-left-0 
+                              data-[state=open]:slide-in-from-top-0 
+                              data-[state=closed]:animate-out 
+                              data-[state=closed]:fade-out-0 
+                              data-[state=closed]:zoom-out-100 
+                              data-[state=closed]:slide-out-to-left-0 
+                              data-[state=closed]:slide-out-to-top-0
+                              duration-200"
+      >
         {/* Custom Close Button */}
         <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]">
           <X className="h-4 w-4" strokeWidth={1.5} />

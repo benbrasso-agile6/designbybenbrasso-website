@@ -3,10 +3,11 @@ import type { Config } from "tailwindcss"
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}", // Restored original content paths
+    "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -53,7 +54,6 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         "brand-peach": {
-          // Restored brand-peach
           DEFAULT: "#FFEADD",
           text: "#A66A53",
         },
@@ -72,13 +72,13 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        // simple-fade-in and simple-fade-out are no longer strictly needed
+        // if this approach works, but keeping them doesn't hurt.
         "simple-fade-in": {
-          // Added custom fade-in
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
         "simple-fade-out": {
-          // Added custom fade-out
           from: { opacity: "1" },
           to: { opacity: "0" },
         },
@@ -86,8 +86,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "simple-fade-in": "simple-fade-in 0.2s ease-out", // Added custom fade-in animation
-        "simple-fade-out": "simple-fade-out 0.2s ease-out", // Added custom fade-out animation
+        "simple-fade-in": "simple-fade-in 0.2s ease-out",
+        "simple-fade-out": "simple-fade-out 0.2s ease-out",
       },
     },
   },
