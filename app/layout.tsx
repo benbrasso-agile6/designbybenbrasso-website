@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ben Brasso | UX Product Design Portfolio",
     description:
-      "UX dsign portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
+      "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
     images: ["https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg"],
   },
   generator: "v0.dev",
@@ -58,7 +58,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body
         className={`${plusJakartaSans.className} bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}
       >
