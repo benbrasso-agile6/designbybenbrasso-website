@@ -141,6 +141,30 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           type: "paragraph",
           text: '<a href="https://ai-scribe-pilot-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">Review the interactive prototype for the Ambient Scribe Pilot Insights Report</a>',
         },
+        {
+          type: "paragraph",
+          text: "Since its launch as the newest office within the Veterans Health Administration (VHA) in June 2024, the Digital Health Office (DHO) has focused on enhancing digital health solutions. The team's priority was ensuring VHA’s mission—delivering innovative, modern, and human-centered health care—was clearly reflected in their efforts to improve experiences for Veterans and care teams.",
+        },
+        {
+          type: "paragraph",
+          text: "As the DHO defined its mission, vision, and strategic goals, the team quickly recognized the need for a centralized workspace to store user research findings and to access practical resources such as playbooks, guides, and templates for human-centered design and research.",
+        },
+        {
+          type: "paragraph",
+          text: '<strong>To accelerate this initiative, we developed a rapid prototype to visualize a <a href="https://v0-dho-github-repo-prototype.vercel.app/" target="_blank" rel="noopener noreferrer">GitHub-based workspace for the DHO team</a>. This prototype served as an immediate demonstration of what the Digital Health Office GitHub repository could achieve, guiding the development of the actual private repository.</strong> This approach enabled the DHO team to clearly understand how centralizing their digital workspace would support their ongoing commitment to delivering exceptional digital health care experiences.',
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750800095/Frame_202_uouppc.png",
+          alt: "Screenshot of the GitHub-based workspace prototype for the DHO team",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },
+        {
+          type: "paragraph",
+          text: '<a href="https://v0-dho-github-repo-prototype.vercel.app/" target="_blank" rel="noopener noreferrer">Review the interactive prototype for the GitHub-based workspace for the DHO team</a>',
+        },
       ],
     },
     {
