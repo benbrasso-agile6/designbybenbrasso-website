@@ -40,7 +40,7 @@ export default function ProjectCard({
   const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
 
   return (
-    <Card className="overflow-hidden w-full max-w-5xl flex flex-col group bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 min-h-[auto] md:min-h-[720px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+    <Card className="overflow-hidden w-full max-w-5xl flex flex-col group bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 min-h-[auto] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
       <CardHeader className="pt-10 px-8 pb-0">
         <CardTitle className="text-2xl lg:text-3xl text-sky-800 dark:text-sky-700">{title}</CardTitle>
         <p
@@ -63,7 +63,7 @@ export default function ProjectCard({
 
       <CardContent className="px-8 py-0 mt-0" />
 
-      <CardFooter className={`px-8 pb-8 ${footerPaddingTopClass}`}>
+      <CardFooter className={`px-8 pb-6 ${footerPaddingTopClass}`}>
         {hasCaseStudy && (slug || caseStudyUrlOverride) ? (
           <Link href={linkHref} passHref>
             <Button className="bg-sky-800 hover:bg-sky-900 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
