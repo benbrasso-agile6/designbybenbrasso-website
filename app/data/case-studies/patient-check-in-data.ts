@@ -93,7 +93,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care, VA St Louis Healthcare System, and VA Wilkes-Barre Healthcare System. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
+          text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care, VA St. Louis Healthcare System, and VA Wilkes-Barre Healthcare System. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
         },
         {
           type: "paragraph",
@@ -110,7 +110,7 @@ export const patientCheckInData: CaseStudyData = {
         {
           type: "paragraph",
           text: "<strong>To increase the number of travel reimbursement claims that could be auto-adjudicated—reducing manual work for staff and speeding up payments to Veterans—we explored adding an eligibility check before Veterans started a claim through service mapping.</strong> Although 77.5% of claims filed through mobile check-in were already auto-adjudicated during January and February 2025, this improvement offered a more seamless experience for Veterans and helped staff process claims more efficiently.",
-        },        
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750450207/CleanShot_2025-06-20_at_16.08.01_tunhrm.gif",
@@ -118,7 +118,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
-        },        
+        },
         {
           type: "paragraph",
           text: "Based on moderated usability testing with Veterans and post-care Medallia survey responses, <strong>we introduced key innovations to support continuous improvement like integrating beneficiary travel reimbursement and text reminders to Veterans when it’s to check in.</strong>",
@@ -130,6 +130,18 @@ export const patientCheckInData: CaseStudyData = {
           width: 400,
           height: 225,
           className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
+        },
+        {
+          type: "paragraph",
+          text: 'By supporting travel reimbursements directly within mobile check-in, we paved the way for additional convenient options for Veterans to submit travel reimbursement claims. <strong>In April 2025, Veterans gained the ability to <a href="https://www.va.gov/health-care/file-travel-pay-reimbursement/" target="_blank" rel="noopener noreferrer">file travel claims through My HealtheVet on VA.gov</a>, and soon they’ll have the same easy experience on the VA Health and Benefits mobile app.</strong>',
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750877985/Frame_583_nx7txu.png",
+          alt: "Screenshots of online travel reimbursement modalities on VA.gov and the VA Health and Benefits mobile app",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
       ],
     },
@@ -153,7 +165,7 @@ export const patientCheckInData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },        
+        },
       ],
     },
     // {
