@@ -48,6 +48,10 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
           type: "paragraph",
           text: 'In <a href="https://department.va.gov/ai/ai-use-case-inventory/" target="_blank" rel="noopener noreferrer">VA\'s AI Use Case Inventory</a>, last updated as of December 2024, use case <i>VA-708 Ambient AI Scribe\'s</i> purpose is to transcribe and summarize recorded clinical encounters using AI and to produce written summaries for humans to later review, edit, and enter into patient records.',
         },
+        {
+          type: "paragraph",
+          text: 'And on June 23, 2025, the <a href="https://orangeslices.ai/va-digital-health-office-inks-contract-for-ai-enabled-cots-scribe-solution/" target="_blank" rel="noopener noreferrer">VA Digital Health Office inked its contract with Abridge AI for a Commercial-Off-the-Shelf (COTS) AI-enabled scribe solution</a>.',
+        },
       ],
     },
     {
@@ -178,6 +182,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
             "<strong>Identified the insight that administrative burden increases, like compounding interest,</strong> as care encounters are completed, resulting in burden felt later or after hours—sometimes carrying over into the next day—through conducting task analysis with users, workstream leadership, and health informaticists.",
             "<strong>Shared research readouts to DHO leadership that identified opportunities for improvement in the existing care encounter experience</strong> where ambient scribe and predictive AI modeling can impact care delivery, reduce administrative burnout, increase Veteran satisfaction, and improve health outcomes.",
             '<strong>Developed a <a href="https://ai-scribe-pilot-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">proof of concept KPI dashboard</a>, using AI-powered prototyping, to be used to inform Power BI dashboards and presenting outcomes</strong> during the pilot to DHO leadership to make informed decisions on product preference, clinician workflows, accuracy and safety, and onboarding additional VA health care systems.',
+            'Developed and rapidly prototyped an <a href="https://v0-dho-github-repo-prototype.vercel.app/" target="_blank" rel="noopener noreferrer">AI-powered GitHub-based workspace</a> to centralize user research, playbooks, guides, and templates, <strong>empowering the newly formed Digital Health Office (DHO) to operationalize its mission of delivering innovative, modern, and human-centered digital health solutions for Veterans and care teams.</strong>',
           ],
         },
       ],
