@@ -50,7 +50,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'And on June 23, 2025, the <a href="https://orangeslices.ai/va-digital-health-office-inks-contract-for-ai-enabled-cots-scribe-solution/" target="_blank" rel="noopener noreferrer">VA Digital Health Office inked its contract with Abridge AI for a Commercial-Off-the-Shelf (COTS) AI-enabled scribe solution</a>.',
+          text: 'And on June 23, 2025, the VA Digital Health Office inked its <a href="https://orangeslices.ai/va-digital-health-office-inks-contract-for-ai-enabled-cots-scribe-solution/" target="_blank" rel="noopener noreferrer">contract with Abridge AI for a Commercial-Off-the-Shelf (COTS) AI-enabled scribe solution</a>.',
         },
       ],
     },
