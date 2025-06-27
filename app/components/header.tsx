@@ -67,7 +67,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           >
-            <CompassIcon className="h-7 w-7 text-sky-600 dark:text-sky-500 group-hover:opacity-80 transition-opacity" />
+            <CompassIcon className="h-7 w-7 text-sky-700 dark:text-sky-400 group-hover:opacity-80 transition-opacity" />
           </motion.div>
           <div className="flex">
             {letters.map((letter, index) => (
@@ -80,7 +80,7 @@ export default function Header() {
                   ease: "easeOut",
                   delay: 0.2 + index * 0.08,
                 }}
-                className="font-bold text-lg group-hover:text-sky-600 dark:group-hover:text-sky-500 transition-colors"
+                className="font-bold text-lg group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors"
               >
                 {letter}
               </motion.span>
@@ -94,9 +94,9 @@ export default function Header() {
           <Link
             key={resumeCvItem.name}
             href={resumeCvItem.href}
-            className={`hidden md:flex items-center text-base font-semibold transition-colors hover:text-sky-600 dark:hover:text-sky-500 focus:text-sky-600 dark:focus:text-sky-500 focus:underline focus:outline-none ${
+            className={`hidden md:flex items-center text-base font-semibold transition-colors hover:text-sky-700 dark:hover:text-sky-400 focus:text-sky-700 dark:focus:text-sky-400 focus:underline focus:outline-none ${
               pathname === resumeCvItem.href && !resumeCvItem.isExternal
-                ? "text-sky-600 dark:text-sky-500"
+                ? "text-sky-700 dark:text-sky-400"
                 : "text-black dark:text-neutral-100"
             }`}
             aria-current={pathname === resumeCvItem.href && !resumeCvItem.isExternal ? "page" : undefined}
@@ -143,7 +143,7 @@ export default function Header() {
                         href={resumeCvItem.href}
                         className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
                           pathname === resumeCvItem.href && !resumeCvItem.isExternal
-                            ? "text-sky-600 dark:text-sky-500 font-semibold"
+                            ? "text-sky-700 dark:text-sky-400 font-semibold"
                             : "text-black dark:text-neutral-100"
                         }`}
                         aria-current={pathname === resumeCvItem.href && !resumeCvItem.isExternal ? "page" : undefined}
@@ -164,7 +164,7 @@ export default function Header() {
                         href={item.href}
                         className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
                           pathname === item.href
-                            ? "text-sky-600 dark:text-sky-500 font-semibold"
+                            ? "text-sky-700 dark:text-sky-400 font-semibold"
                             : "text-black dark:text-neutral-100"
                         }`}
                         aria-current={pathname === item.href ? "page" : undefined}

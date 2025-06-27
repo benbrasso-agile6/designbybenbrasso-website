@@ -2,70 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  /* Custom focus-visible styles */
-  *:focus-visible {
-    outline: 3px solid #0ea5e9; /* Tailwind sky-500 */
-    outline-offset: 2px;
-    border-radius: 2px; /* Optional: slightly rounded corners for the outline */
-  }
-  .dark *:focus-visible {
-    outline: 3px solid #38bdf8; /* Tailwind sky-400 for dark mode */
-  }
-
-  /* Remove default outline if custom focus-visible is used */
-  *:focus {
-    outline: none;
-  }
-
-  /* Ensure sr-only is defined if not already part of your Tailwind setup */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 48 96% 53%; /* CHANGED: Use yellow for focus rings for high visibility */
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -76,31 +33,27 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 48 96% 53%; /* CHANGED: Use yellow for focus rings for high visibility */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -118,114 +71,19 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-  }
-
-  /* Custom prose link colors */
-  .prose-neutral a {
-    @apply text-sky-600 underline hover:text-sky-700;
-  }
-
-  .prose-invert a {
-    @apply text-sky-500 underline hover:text-sky-400;
-  }
-
-  /* Custom bullet colors for prose content */
-  .prose-neutral ul.list-disc > li::marker,
-  .prose-neutral ol > li::marker {
-    /* Added ol for ordered lists too, just in case */
-    color: #000000; /* Black for light mode */
-  }
-
-  .dark .prose-invert ul.list-disc > li::marker,
-  .dark .prose-invert ol > li::marker {
-    /* Added ol for ordered lists too */
-    color: #262626; /* Equivalent to neutral-800 for dark mode */
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom smooth scrolling with slower duration */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Override for even smoother scrolling */
-  * {
-    scroll-behavior: smooth;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
-/* Respect user's motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* ADDED: Global focus styles for links for WCAG compliance */
+@layer components {
+  a {
+    @apply rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background;
   }
-
-  * {
-    scroll-behavior: auto;
-  }
-}
-
-/* Z-index layering for navigation components */
-.header-nav {
-  z-index: 50; /* Header has highest priority */
-}
-
-.header-mobile-menu {
-  z-index: 50; /* Mobile menu same as header */
-}
-
-.sticky-page-nav {
-  z-index: 40; /* Sticky nav below header */
-}
-
-/* Enhanced floating sticky navigation */
-.floating-sticky-nav {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* Smooth transitions for the floating nav */
-.floating-sticky-nav {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.floating-sticky-nav:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Plus/minus button styling */
-.expand-button {
-  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Courier New", monospace;
-  font-weight: 400;
-  line-height: 1;
-}
-
-/* Sticky navigation transitions */
-.sticky-nav-enter {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.sticky-nav-enter-active {
-  transform: translateY(0);
-  opacity: 1;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.sticky-nav-exit {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.sticky-nav-exit-active {
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }

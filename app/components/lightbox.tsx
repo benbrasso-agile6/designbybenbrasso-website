@@ -39,7 +39,7 @@ export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
           )}
         >
           {/* Custom Close Button */}
-          <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 focus:outline-none focus:shadow-none transition-colors focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]">
+          <DialogClose className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-black/50">
             <X className="h-4 w-4" strokeWidth={1.5} />
             <span className="sr-only">Close</span>
           </DialogClose>
