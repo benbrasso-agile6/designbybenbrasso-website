@@ -30,6 +30,14 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
       {/* Description font size reduced */}
       <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">{description}</p>
 
+      {/* Disclaimer paragraph */}
+      <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">
+        <em>
+          Disclaimer: The views expressed are my own and do not reflect those of the U.S. Department of Veterans
+          Affairs.
+        </em>
+      </p>
+
       {/* New GitHub link section */}
       {githubLink && (
         <p className="text-sm md:text-base mt-4 mb-6">
