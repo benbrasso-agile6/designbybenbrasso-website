@@ -9,8 +9,8 @@ export default function Footer() {
         {/* Top row for logo and social icons */}
         <div className="flex justify-between items-center mb-6">
           <Link href="/" className="flex items-center gap-2 group/logo">
-            <CompassIcon className="h-6 w-6 text-sky-600 dark:text-sky-500 group-hover/logo:opacity-80 transition-opacity" />
-            <p className="text-sm font-medium group-hover/logo:text-sky-600 dark:group-hover/logo:text-sky-500 transition-colors">
+            <CompassIcon className="h-6 w-6 text-sky-700 dark:text-sky-400 group-hover/logo:opacity-80 transition-opacity" />
+            <p className="text-sm font-medium group-hover/logo:text-sky-700 dark:group-hover/logo:text-sky-400 transition-colors">
               designbybenbrasso
             </p>
           </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-sky-600 dark:hover:text-sky-500 transition-colors underline"
+              className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors underline"
               aria-label="Repository for designbybenbrasso website on GitHub"
             >
               Check out the code on GitHub.

@@ -66,7 +66,7 @@ export default function ProjectCard({
       <CardFooter className={`px-8 pb-6 ${footerPaddingTopClass}`}>
         {hasCaseStudy && (slug || caseStudyUrlOverride) ? (
           <Link href={linkHref} passHref>
-            <Button className="bg-sky-800 hover:bg-sky-900 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
+            <Button className="bg-sky-900 hover:bg-sky-950 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
               Review case study
             </Button>
           </Link>
