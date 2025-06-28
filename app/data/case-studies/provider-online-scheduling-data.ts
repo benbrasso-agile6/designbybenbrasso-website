@@ -36,7 +36,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'And, most recently, Veterans Affairs Secretary Doug Collins testified before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies on May 15, 2025 that "the External Provider Scheduling (EPS) tool rollout will continue without disruption under the current administration.”',
+          text: 'Most recently, Veterans Affairs Secretary Doug Collins testified before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies on May 15, 2025 that "the External Provider Scheduling (EPS) tool rollout will continue without disruption under the current administration.”',
         },
       ],
     },
