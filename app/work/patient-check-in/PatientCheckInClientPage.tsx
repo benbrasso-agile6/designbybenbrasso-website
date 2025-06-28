@@ -7,10 +7,10 @@ import { patientCheckInData } from "@/app/data/case-studies/patient-check-in-dat
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import { useEffect, useState } from "react" // Added useState
+import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
-import { useMobile } from "@/hooks/use-mobile" // Added
-import Lightbox from "@/app/components/lightbox" // Added
+import { useMobile } from "@/hooks/use-mobile"
+import Lightbox from "@/app/components/lightbox"
 
 const caseStudy = patientCheckInData
 
@@ -123,8 +123,8 @@ export default function PatientCheckInClientPage() {
   }, [])
 
   const githubLinkData = {
-    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin",
-    text: "Visit VA's Mobile Check-in repo on GitHub",
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/check-in-experience",
+    text: "Visit VA's Check-in Experience repo on GitHub",
   }
 
   return (

@@ -86,7 +86,7 @@ export default function ProviderOnlineSchedulingClientPage() {
       {/* top nav row */}
       <div className="hidden md:flex justify-between items-center mt-6 mb-10">
         <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       {/* page title */}
@@ -124,7 +124,7 @@ export default function ProviderOnlineSchedulingClientPage() {
       {/* bottom nav row */}
       <div className="flex justify-between items-center mt-16 mb-10">
         <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       {/* lightbox */}
