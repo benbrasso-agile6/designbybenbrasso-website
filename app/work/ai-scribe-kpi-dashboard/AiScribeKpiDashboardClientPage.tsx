@@ -1,188 +1,128 @@
 "use client"
 
-import type React from "react"
+import { useState } from "react"
 import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react"
-import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
-import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import ProjectOverviewBanner from "@/app/components/project-overview-banner"
+import Header from "@/app/components/header"
+import Footer from "@/app/components/footer"
 import NextProjectLink from "@/app/components/next-project-link"
-import { useEffect, useState } from "react" // Added useState
-import { useMobile } from "@/hooks/use-mobile" // Added
-import Lightbox from "@/app/components/lightbox" // Added
-
-const caseStudy = aiScribeKpiDashboardData
+import ProjectOverviewBanner from "@/app/components/project-overview-banner"
+import Lightbox from "@/app/components/lightbox"
+import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
 
 export default function AiScribeKpiDashboardClientPage() {
-  const isMobile = useMobile()
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const [lightboxAlt, setLightboxAlt] = useState<string | null>(null)
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
-  const handleOpenLightbox = (src: string, alt: string) => {
-    setLightboxSrc(src)
-    setLightboxAlt(alt)
-    setLightboxOpen(true)
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImage(imageSrc)
   }
 
-  const handleCloseLightbox = () => {
-    setLightboxOpen(false)
-    // Delay clearing src/alt to allow fade-out animations if any
-    setTimeout(() => {
-      setLightboxSrc(null)
-      setLightboxAlt(null)
-    }, 300)
+  const closeLightbox = () => {
+    setLightboxImage(null)
   }
-
-  const renderContentItem = (item: CaseStudyContentItem, index: number) => {
-    switch (item.type) {
-      case "paragraph":
-        return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
-      case "list":
-        return (
-          <ul key={index} className="list-disc pl-5 space-y-1">
-            {item.items?.map((li, liIndex) => (
-              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
-            ))}
-          </ul>
-        )
-      case "image":
-        if (item.src && item.alt) {
-          const isPng = item.src.toLowerCase().endsWith(".png")
-          if (isMobile && isPng) {
-            return (
-              <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
-                <Image
-                  src={item.src || "/placeholder.svg"}
-                  alt={item.alt}
-                  width={item.width || 800}
-                  height={item.height || 450}
-                  className={item.className || "rounded-lg w-full object-cover"}
-                  priority={item.priority}
-                  unoptimized
-                />
-              </div>
-            )
-          }
-          return (
-            <div key={index} className="my-0">
-              <Image
-                src={item.src || "/placeholder.svg"}
-                alt={item.alt}
-                width={item.width || 800}
-                height={item.height || 450}
-                className={item.className || "rounded-lg w-full object-cover"}
-                priority={item.priority}
-                unoptimized
-              />
-            </div>
-          )
-        }
-        return null
-      case "h3":
-        return (
-          <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
-            {item.text}
-          </h3>
-        )
-      default:
-        return null
-    }
-  }
-
-  const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault()
-    const targetElement = document.getElementById(targetId.substring(1))
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }
-
-  useEffect(() => {
-    const scrollToTopPrecise = () => {
-      document.documentElement.style.scrollBehavior = "auto"
-      document.body.style.scrollBehavior = "auto"
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-    }
-    scrollToTopPrecise()
-    const animationFrameId = requestAnimationFrame(() => {
-      scrollToTopPrecise()
-    })
-    const timerId = setTimeout(() => {
-      scrollToTopPrecise()
-    }, 150)
-    return () => {
-      cancelAnimationFrame(animationFrameId)
-      clearTimeout(timerId)
-    }
-  }, [])
 
   return (
-    <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <Header />
 
-      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
-        {caseStudy.pageTitle}
-      </h1>
-
-      <div className="relative mt-12">
-        {caseStudy.mainImage && (
-          <div className="sticky top-16 z-0">
-            <Image
-              src={caseStudy.mainImage.src || "/placeholder.svg"}
-              alt={caseStudy.mainImage.alt}
-              width={caseStudy.mainImage.width}
-              height={caseStudy.mainImage.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
-              priority={caseStudy.mainImage.priority}
-              unoptimized
-            />
+      <main className="pt-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Navigation Links */}
+          <div className="flex justify-between items-center mb-8">
+            <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
+            <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
           </div>
-        )}
 
-        <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {/* Project Overview Banner */}
+          <ProjectOverviewBanner
+            title={aiScribeKpiDashboardData.title}
+            description={aiScribeKpiDashboardData.description}
+            heroImage={aiScribeKpiDashboardData.heroImage}
+            details={aiScribeKpiDashboardData.details}
+          />
 
-          <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-            {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
-              <div className="mt-6 mb-8 not-prose">
-                <a
-                  href={caseStudy.anchorLink.href}
-                  onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
-                  className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
-                >
-                  {caseStudy.anchorLink.text}
-                  <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                </a>
+          {/* Challenge Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Challenge</h2>
+            <div className="prose prose-lg max-w-none dark:prose-invert">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Healthcare providers needed a comprehensive dashboard to monitor and analyze AI scribe performance
+                metrics. The existing system lacked visual clarity and real-time insights, making it difficult for
+                administrators to track key performance indicators and make data-driven decisions about their AI scribe
+                implementation.
+              </p>
+            </div>
+          </section>
+
+          {/* Action Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Action</h2>
+            <div className="prose prose-lg max-w-none dark:prose-invert">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                I designed and developed a comprehensive KPI dashboard that transforms complex AI scribe data into
+                actionable insights. The solution focused on creating an intuitive interface that allows healthcare
+                administrators to quickly assess performance metrics and identify areas for improvement.
+              </p>
+              <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                <li>Created interactive data visualizations using modern charting libraries</li>
+                <li>Implemented real-time data updates and filtering capabilities</li>
+                <li>Designed responsive layouts that work across all device sizes</li>
+                <li>Developed custom components for metric cards and trend analysis</li>
+                <li>Integrated with existing healthcare management systems</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Key Outcomes Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Key Outcomes</h2>
+            <div className="prose prose-lg max-w-none dark:prose-invert">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                The AI Scribe KPI Dashboard significantly improved how healthcare organizations monitor and optimize
+                their AI scribe implementations, leading to better decision-making and improved operational efficiency.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Performance Insights</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Administrators gained clear visibility into AI scribe accuracy rates, processing times, and usage
+                    patterns across different departments and providers.
+                  </p>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Operational Efficiency</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Real-time monitoring capabilities enabled proactive identification of issues and optimization
+                    opportunities, reducing manual oversight requirements.
+                  </p>
+                </div>
               </div>
-            )}
+            </div>
+          </section>
 
-            {caseStudy.sections.map((section, sectionIndex) => (
-              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
-                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
-                {section.content.map(renderContentItem)}
-              </section>
-            ))}
-          </article>
+          {/* Project Images */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Project Images</h2>
+            <div className="grid gap-8">
+              {aiScribeKpiDashboardData.images.map((image, index) => (
+                <div key={index} className="space-y-4">
+                  <div
+                    className="relative aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => openLightbox(image.src)}
+                  >
+                    <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center">{image.caption}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
-      </div>
+      </main>
 
-      <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
+      <Footer />
 
-      {lightboxOpen && lightboxSrc && lightboxAlt && (
-        <Lightbox src={lightboxSrc} alt={lightboxAlt} isOpen={lightboxOpen} onClose={handleCloseLightbox} />
-      )}
-    </>
+      {/* Lightbox */}
+      {lightboxImage && <Lightbox imageSrc={lightboxImage} onClose={closeLightbox} />}
+    </div>
   )
 }
