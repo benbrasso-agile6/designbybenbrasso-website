@@ -1,195 +1,66 @@
 "use client"
-
-import type React from "react"
 import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react"
 import { providerOnlineSchedulingData } from "@/app/data/case-studies/provider-online-scheduling-data"
-import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
-import { useMobile } from "@/hooks/use-mobile"
-import Lightbox from "@/app/components/lightbox"
-
-const caseStudy = providerOnlineSchedulingData
 
 export default function ProviderOnlineSchedulingClientPage() {
-  const isMobile = useMobile()
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const [lightboxAlt, setLightboxAlt] = useState<string | null>(null)
-
-  const handleOpenLightbox = (src: string, alt: string) => {
-    setLightboxSrc(src)
-    setLightboxAlt(alt)
-    setLightboxOpen(true)
-  }
-
-  const handleCloseLightbox = () => {
-    setLightboxOpen(false)
-    setTimeout(() => {
-      setLightboxSrc(null)
-      setLightboxAlt(null)
-    }, 300)
-  }
-
-  const renderContentItem = (item: CaseStudyContentItem, index: number) => {
-    switch (item.type) {
-      case "paragraph":
-        return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
-      case "list":
-        return (
-          <ul key={index} className="list-disc pl-5 space-y-1">
-            {item.items?.map((li, liIndex) => (
-              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
-            ))}
-          </ul>
-        )
-      case "image":
-        if (item.src && item.alt) {
-          const isPng = item.src.toLowerCase().endsWith(".png")
-          if (isMobile && isPng) {
-            return (
-              <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
-                <Image
-                  src={item.src || "/placeholder.svg"}
-                  alt={item.alt}
-                  width={item.width || 800}
-                  height={item.height || 450}
-                  className={item.className || "rounded-lg w-full object-cover"}
-                  priority={item.priority}
-                  unoptimized
-                />
-              </div>
-            )
-          }
-          return (
-            <div key={index} className="my-0">
-              <Image
-                src={item.src || "/placeholder.svg"}
-                alt={item.alt}
-                width={item.width || 800}
-                height={item.height || 450}
-                className={item.className || "rounded-lg w-full object-cover"}
-                priority={item.priority}
-                unoptimized
-              />
-            </div>
-          )
-        }
-        return null
-      case "h3":
-        return (
-          <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
-            {item.text}
-          </h3>
-        )
-      default:
-        return null
-    }
-  }
-
-  const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault()
-    const targetElement = document.getElementById(targetId.substring(1))
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }
-
-  useEffect(() => {
-    const scrollToTopPrecise = () => {
-      document.documentElement.style.scrollBehavior = "auto"
-      document.body.style.scrollBehavior = "auto"
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-    }
-    scrollToTopPrecise()
-    const animationFrameId = requestAnimationFrame(() => {
-      scrollToTopPrecise()
-    })
-    const timerId = setTimeout(() => {
-      scrollToTopPrecise()
-    }, 150)
-    return () => {
-      cancelAnimationFrame(animationFrameId)
-      clearTimeout(timerId)
-    }
-  }, [])
-
-  const githubLinkData = {
-    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling",
-    text: "Visit VA's Community Care Self-Scheduling repo on GitHub",
-  }
+  const data = providerOnlineSchedulingData
 
   return (
-    <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
-
-      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
-        {caseStudy.pageTitle}
-      </h1>
-
-      <div className="relative mt-12">
-        {caseStudy.mainImage && (
-          <div className="sticky top-16 z-0">
-            <Image
-              src={caseStudy.mainImage.src || "/placeholder.svg"}
-              alt={caseStudy.mainImage.alt}
-              width={caseStudy.mainImage.width}
-              height={caseStudy.mainImage.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
-              priority={caseStudy.mainImage.priority}
-              unoptimized
-            />
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-neutral-900 dark:to-neutral-800 py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
+                {data.title}
+              </h1>
+              <p className="text-xl text-neutral-600 dark:text-neutral-300 mb-8">{data.subtitle}</p>
+            </div>
+            <div className="relative">
+              <Image
+                src={data.heroImage || "/placeholder.svg"}
+                alt={data.title}
+                width={600}
+                height={400}
+                className="rounded-lg shadow-2xl"
+                priority
+              />
+            </div>
           </div>
-        )}
+        </div>
+      </section>
 
-        <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && (
-            <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} githubLink={githubLinkData} />
-          )}
+      {/* Project Overview Banner */}
+      <ProjectOverviewBanner
+        role={data.projectDetails.role}
+        timeline={data.projectDetails.timeline}
+        team={data.projectDetails.team}
+        tools={data.projectDetails.tools}
+      />
 
-          <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-            {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
-              <div className="mt-6 mb-8 not-prose">
-                <a
-                  href={caseStudy.anchorLink.href}
-                  onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
-                  className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
-                >
-                  {caseStudy.anchorLink.text}
-                  <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                </a>
+      {/* Content Sections */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-4xl mx-auto">
+          {data.sections.map((section) => (
+            <section key={section.id} className="mb-16">
+              <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-8">{section.title}</h2>
+              <div className="prose prose-lg max-w-none text-neutral-700 dark:text-neutral-300">
+                {section.content.split("\n\n").map((paragraph, index) => (
+                  <p key={index} className="mb-6 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
-            )}
-
-            {caseStudy.sections.map((section, sectionIndex) => (
-              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
-                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
-                {section.content.map(renderContentItem)}
-              </section>
-            ))}
-          </article>
+            </section>
+          ))}
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-12 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
-
-      {lightboxOpen && lightboxSrc && lightboxAlt && (
-        <Lightbox src={lightboxSrc} alt={lightboxAlt} isOpen={lightboxOpen} onClose={handleCloseLightbox} />
-      )}
-    </>
+      {/* Next Project */}
+      {data.nextProject && <NextProjectLink title={data.nextProject.title} url={data.nextProject.url} />}
+    </div>
   )
 }

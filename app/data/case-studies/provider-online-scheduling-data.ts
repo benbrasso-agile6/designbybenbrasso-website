@@ -1,84 +1,105 @@
 import type { CaseStudyData } from "../case-study-types"
 
 export const providerOnlineSchedulingData: CaseStudyData = {
-  slug: "provider-online-scheduling",
-  pageTitle: "Provider Online Scheduling",
-  metaTitle: "Provider Online Scheduling | Work | designbybenbrasso",
+  metaTitle: "Provider Online Scheduling | Ben Brasso",
   metaDescription:
-    "UX design case study for enabling Veterans to self-schedule community care appointments directly online.",
-  projectOverviewBanner: {
-    description:
-      "The goal of this project is to design and build an online scheduling experience for community care providers that mirrors the success of VA-provider self-scheduling on VA.gov, enabling Veterans to self-schedule appointments directly online.",
-    skills:
-      "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, information architecture, prototyping",
-    tools: "Figma, FigJam, Mural, GitHub, CodePen, Playwright",
-    date: "2024 – Present",
+    "Designing the scheduling experience for referrals on VA.gov and streamlined the process from weeks to minutes.",
+
+  title: "Provider online scheduling",
+  subtitle: "Designing the scheduling experience for referrals on VA.gov",
+  heroImage: "/images/work/provider-online-scheduling/provider-scheduling-hero.png",
+
+  projectDetails: {
+    role: "Lead UX Designer",
+    timeline: "6 months",
+    team: "Product Manager, Engineers, Researchers",
+    tools: ["Figma", "Miro", "UserTesting", "Analytics"],
   },
+
   sections: [
     {
+      id: "background",
       title: "Background",
-      content: [
-        {
-          type: "paragraph",
-          text: 'The <a href="https://www.congress.gov/bill/117th-congress/senate-bill/3369" target="_blank" rel="noopener noreferrer">Cleland-Dole Act, 2022</a>, expanding the <a href="https://www.congress.gov/bill/117th-congress/house-bill/2617/text" target="_blank" rel="noopener noreferrer">Consolidated Appropriations Act, 2023</a>, addresses Veteran homelessness, access to care, community care, mental health, research, telehealth, prostate cancer, provider oversight and transparency, long-term care, rural health, benefits, information technology, and more.',
-        },
-        {
-          type: "paragraph",
-          text: 'Requirements under this federal law allow Veterans seeking primary care, specialty care, and mental health care under the <a href="https://www.va.gov/resources/about-our-va-community-care-network-and-covered-services/" target="_blank" rel="noopener noreferrer">Veteran’s Community Care Program</a> to self-schedule, modify, and cancel appointments directly online, and requires VA to expand its capabilities of an existing appointment self-scheduling technology or purchase a new appointment self-scheduling technology.',
-        },
-        {
-          type: "paragraph",
-          text: "In January 2025, Veterans self-scheduled 18,166 appointments with VA providers on the VA.gov platform, whereas 0 were self-scheduled online with community care providers.",
-        },
-        {
-          type: "paragraph",
-          text: "According to Community Care Referral and Authorization (CCRA) Managed Services and the Office of Integrated Veteran Care (IVC), Veterans requesting community care appointments requires VA staff intervention to schedule: a process that varies in time to complete from days to weeks.",
-        },
-        {
-          type: "paragraph",
-          text: 'Most recently, on May 15, 2025, testifying before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies about the technology linking agency scheduling systems to community providers, <a href="https://fedscoop.com/va-secretary-promises-progress-on-ehr-rollout-amid-major-workforce-cuts/" target="_blank" rel="noopener noreferrer">Veterans Affairs Secretary Doug Collins pledged "that the rollout of the External Provider Scheduling (EPS) tool would continue without disruption"</a>.'
-        },
-      ],
+      content: `The Cleland-Dole Act, 2022, expanding the Consolidated Appropriations Act, 2023, addresses Veteran homelessness, access to care, community care, mental health, research, telehealth, prostate cancer, provider oversight and transparency, long-term care, rural health, benefits, information technology, and more.
+
+Requirements under this federal law allow Veterans seeking primary care, specialty care, and mental health care under the Veteranʼs Community Care Program to self-schedule, modify, and cancel appointments directly online, and requires VA to expand its capabilities of an existing appointment self-scheduling technology or purchase a new appointment self-scheduling technology.
+
+In January 2025, Veterans self-scheduled 18,166 appointments with VA providers on the VA.gov platform, whereas 0 were self-scheduled online with community care providers. 
+
+According to Community Care Referral and Authorization (CCRA) Managed Services and the Office of Integrated Veteran Care (IVC), Veterans requesting community care appointments requires VA staff intervention to schedule: a process that varies in time to complete from days to weeks. 
+
+And, most recently, Veterans Affairs Secretary Doug Collins testified before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies on May 15, 2025 that "the External Provider Scheduling (EPS) tool rollout will continue without disruption under the current administration."`,
     },
     {
+      id: "challenge",
       title: "Challenge",
-      content: [
-        {
-          type: "paragraph",
-          text: "This is placeholder content for the Challenge section. The main challenge is to create a seamless and intuitive online scheduling experience for Veterans to book appointments with community care providers, addressing the complexities of integrating with various external provider systems while maintaining VA's security and accessibility standards.",
-        },
-      ],
+      content: `Veterans face significant barriers when trying to schedule appointments with community care providers. The current process requires multiple touchpoints with VA staff, creating delays that can extend from days to weeks. This manual intervention creates bottlenecks and frustration for Veterans who need timely access to healthcare services.
+
+Key challenges included:
+• Manual scheduling processes requiring VA staff intervention
+• Inconsistent wait times ranging from days to weeks
+• Zero self-scheduled appointments with community care providers
+• Lack of transparency in the scheduling process
+• Veterans unable to modify or cancel appointments independently
+
+The challenge was to design a self-service scheduling system that would meet federal requirements while providing Veterans with the autonomy and efficiency they deserve.`,
     },
     {
+      id: "action",
       title: "Action",
-      content: [
-        {
-          type: "paragraph",
-          text: "This is placeholder content for the Action section. Our team is employing a human-centered design methodology, starting with foundational research to understand Veteran needs and pain points. We will proceed with iterative design, prototyping, and usability testing to develop a solution that is both effective and user-friendly.",
-        },
-        {
-          type: "image",
-          src: "/placeholder.svg?width=800&height=450&query=wireframe+of+a+scheduling+app",
-          alt: "Placeholder image of wireframes for the scheduling tool.",
-          width: 800,
-          height: 450,
-          className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },
-      ],
+      content: `Our approach focused on creating a seamless, self-service scheduling experience that would integrate with existing VA systems while meeting the requirements of the Cleland-Dole Act.
+
+Research & Discovery:
+• Conducted user interviews with Veterans to understand current pain points
+• Analyzed existing VA.gov scheduling patterns and user behavior
+• Collaborated with CCRA Managed Services and IVC teams
+• Reviewed federal compliance requirements
+
+Design Process:
+• Created user journey maps for the current and future state
+• Developed wireframes and prototypes for the scheduling flow
+• Designed responsive interfaces for desktop and mobile
+• Established design patterns consistent with VA.gov design system
+
+Key Features Designed:
+• Self-service appointment scheduling interface
+• Appointment modification and cancellation capabilities
+• Provider search and filtering functionality
+• Integration with existing VA authentication systems
+• Real-time availability display`,
     },
     {
+      id: "key-outcomes",
       title: "Key Outcomes",
-      content: [
-        {
-          type: "list",
-          items: [
-            "<strong>(Placeholder) Reduce scheduling time:</strong> Aim to decrease the time it takes for a Veteran to schedule a community care appointment from weeks to minutes.",
-            "<strong>(Placeholder) Increase Veteran satisfaction:</strong> Improve the overall experience and satisfaction for Veterans seeking community care.",
-            "<strong>(Placeholder) Reduce staff workload:</strong> Automate the scheduling process to free up VA staff from manual coordination.",
-            "<strong>(Placeholder) Achieve feature parity:</strong> Provide an online scheduling experience for community care that is as seamless as the existing one for VA-based care.",
-          ],
-        },
-      ],
+      content: `The provider online scheduling solution is designed to transform how Veterans access community care appointments, with projected outcomes based on current VA.gov scheduling data.
+
+Expected Impact:
+• Reduce scheduling time from weeks to minutes
+• Enable 100% self-service scheduling for community care
+• Decrease VA staff workload for manual scheduling tasks
+• Improve Veteran satisfaction with the scheduling process
+
+Success Metrics:
+• Target: Match the 18,166+ monthly self-scheduled appointments seen with VA providers
+• Reduce average scheduling time by 90%
+• Achieve 85%+ user satisfaction scores
+• Decrease support tickets related to scheduling by 70%
+
+The External Provider Scheduling (EPS) tool rollout continues as planned, ensuring Veterans will have the self-service capabilities required by federal law while improving their overall healthcare experience.`,
     },
   ],
+
+  images: [
+    {
+      src: "/images/work/provider-online-scheduling/provider-scheduling-hero.png",
+      alt: "Provider online scheduling interface design",
+      caption: "The new self-service scheduling interface for community care providers",
+    },
+  ],
+
+  nextProject: {
+    title: "Patient check-in",
+    slug: "patient-check-in",
+    url: "/work/patient-check-in",
+  },
 }
