@@ -20,7 +20,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "The Cleland-Dole Act, 2022, expanding the Consolidated Appropriations Act, 2023, addresses Veteran homelessness, access to care, community care, mental health, research, telehealth, prostate cancer, provider oversight and transparency, long-term care, rural health, benefits, information technology, and more.",
+          text: 'The https://www.congress.gov/bill/117th-congress/senate-bill/3369 Cleland-Dole Act, 2022, expanding the Consolidated Appropriations Act, 2023, addresses Veteran homelessness, access to care, community care, mental health, research, telehealth, prostate cancer, provider oversight and transparency, long-term care, rural health, benefits, information technology, and more.',
         },
         {
           type: "paragraph",
