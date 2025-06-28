@@ -99,6 +99,11 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* ADDED: Utility to programmatically apply focus styles for mobile Safari reliability */
+  .force-focus-visible {
+    @apply ring-4 ring-ring ring-offset-2 ring-offset-black/50 outline-none;
+  }
 }
 
 /* ADDED: Global focus styles for links for WCAG compliance */
