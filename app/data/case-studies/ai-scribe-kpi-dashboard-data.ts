@@ -131,7 +131,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>We identified key performance indicators to focus on, including provider satisfaction, time or perceived time in the EHR, burnout score, quality of note to edited note, and adoption rate.</strong>",
+          text: "We identified key performance indicators to focus on, including provider satisfaction, time or perceived time in the EHR, burnout score, quality of note to edited note, and adoption rate.",
         },
         {
           type: "image",
