@@ -11,7 +11,7 @@ import Lightbox from "../../components/lightbox"
 import ScrollToTop from "../../components/scroll-to-top"
 import { providerOnlineSchedulingData } from "../../data/case-studies/provider-online-scheduling-data"
 
-export default function ProviderOnlineSchedulingClientPage() {
+export function ProviderOnlineSchedulingClientPage() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
   const openLightbox = (imageSrc: string) => {

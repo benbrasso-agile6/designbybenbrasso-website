@@ -4,11 +4,6 @@ import ProviderOnlineSchedulingClientPage from "./ProviderOnlineSchedulingClient
 
 const caseStudy = providerOnlineSchedulingData
 
-/**
- * Static case-study page – rendered at build time.
- */
-export const dynamic = "force-static"
-
 export async function generateMetadata(): Promise<Metadata> {
   if (!caseStudy) {
     return {
@@ -38,6 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function Page() {
+export default function ProviderOnlineSchedulingPage() {
   return <ProviderOnlineSchedulingClientPage />
 }
