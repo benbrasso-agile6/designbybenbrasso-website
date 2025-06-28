@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
 import { providerOnlineSchedulingData } from "@/app/data/case-studies/provider-online-scheduling-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
@@ -130,7 +129,7 @@ export default function ProviderOnlineSchedulingClientPage() {
   return (
     <>
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <BackToHomeLink />
+        <NextProjectLink href="/work/patient-check-in" text="Visit previous project" />
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
@@ -183,7 +182,7 @@ export default function ProviderOnlineSchedulingClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <BackToHomeLink />
+        <NextProjectLink href="/work/patient-check-in" text="Visit previous project" />
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 

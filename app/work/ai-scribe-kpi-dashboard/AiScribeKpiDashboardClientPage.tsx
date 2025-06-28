@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
 import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import NextProjectLink from "@/app/components/next-project-link"
 import { useEffect, useState } from "react" // Added useState
@@ -126,7 +125,7 @@ export default function AiScribeKpiDashboardClientPage() {
   return (
     <>
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <BackToHomeLink />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 
@@ -177,7 +176,7 @@ export default function AiScribeKpiDashboardClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <BackToHomeLink />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 
