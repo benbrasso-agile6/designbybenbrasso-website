@@ -1,13 +1,11 @@
 import type { CaseStudyData } from "./case-study-types"
 import { aiScribeKpiDashboardData } from "./case-studies/ai-scribe-kpi-dashboard-data"
-import { directOnlineSchedulingData } from "./case-studies/direct-online-scheduling-data"
 import { patientCheckInData } from "./case-studies/patient-check-in-data"
 import { providerOnlineSchedulingData } from "./case-studies/provider-online-scheduling-data"
 
 // Ensure all imported data files are used here
 const allCaseStudies: CaseStudyData[] = [
   aiScribeKpiDashboardData,
-  directOnlineSchedulingData,
   patientCheckInData,
   providerOnlineSchedulingData,
   // Add other imported case study data here

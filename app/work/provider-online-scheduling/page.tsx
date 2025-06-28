@@ -33,6 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function ProviderOnlineSchedulingWorkPage() {
+export default function ProviderOnlineSchedulingPage() {
   return <ProviderOnlineSchedulingClientPage />
 }

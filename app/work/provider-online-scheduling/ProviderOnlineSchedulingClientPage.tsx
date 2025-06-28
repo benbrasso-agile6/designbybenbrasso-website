@@ -1,195 +1,104 @@
 "use client"
 
-import type React from "react"
-import Image from "next/image"
-import { ArrowDownIcon } from "lucide-react"
-import { providerOnlineSchedulingData } from "@/app/data/case-studies/provider-online-scheduling-data"
-import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import BackToHomeLink from "@/app/components/back-to-home-link"
-import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import { useEffect, useState } from "react"
-import NextProjectLink from "@/app/components/next-project-link"
-import { useMobile } from "@/hooks/use-mobile"
-import Lightbox from "@/app/components/lightbox"
+import { useState } from "react"
+import Header from "../../components/header"
+import Footer from "../../components/footer"
+import BackToHomeLink from "../../components/back-to-home-link"
+import NextProjectLink from "../../components/next-project-link"
+import ProjectDetailsTable from "../../components/project-details-table"
+import ProjectOverviewBanner from "../../components/project-overview-banner"
+import Lightbox from "../../components/lightbox"
+import ScrollToTop from "../../components/scroll-to-top"
+import { providerOnlineSchedulingData } from "../../data/case-studies/provider-online-scheduling-data"
 
-const caseStudy = providerOnlineSchedulingData
+export function ProviderOnlineSchedulingClientPage() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
-export default function ProviderOnlineSchedulingClientPage() {
-  const isMobile = useMobile()
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const [lightboxAlt, setLightboxAlt] = useState<string | null>(null)
-
-  const handleOpenLightbox = (src: string, alt: string) => {
-    setLightboxSrc(src)
-    setLightboxAlt(alt)
-    setLightboxOpen(true)
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImage(imageSrc)
   }
 
-  const handleCloseLightbox = () => {
-    setLightboxOpen(false)
-    setTimeout(() => {
-      setLightboxSrc(null)
-      setLightboxAlt(null)
-    }, 300)
+  const closeLightbox = () => {
+    setLightboxImage(null)
   }
 
-  const renderContentItem = (item: CaseStudyContentItem, index: number) => {
-    switch (item.type) {
-      case "paragraph":
-        return <p key={index} dangerouslySetInnerHTML={{ __html: item.text || "" }} />
-      case "list":
-        return (
-          <ul key={index} className="list-disc pl-5 space-y-1">
-            {item.items?.map((li, liIndex) => (
-              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
-            ))}
-          </ul>
-        )
-      case "image":
-        if (item.src && item.alt) {
-          const isPng = item.src.toLowerCase().endsWith(".png")
-          if (isMobile && isPng) {
-            return (
-              <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
-                <Image
-                  src={item.src || "/placeholder.svg"}
-                  alt={item.alt}
-                  width={item.width || 800}
-                  height={item.height || 450}
-                  className={item.className || "rounded-lg w-full object-cover"}
-                  priority={item.priority}
-                  unoptimized
-                />
-              </div>
-            )
-          }
-          return (
-            <div key={index} className="my-0">
-              <Image
-                src={item.src || "/placeholder.svg"}
-                alt={item.alt}
-                width={item.width || 800}
-                height={item.height || 450}
-                className={item.className || "rounded-lg w-full object-cover"}
-                priority={item.priority}
-                unoptimized
-              />
-            </div>
-          )
-        }
-        return null
-      case "h3":
-        return (
-          <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
-            {item.text}
-          </h3>
-        )
-      default:
-        return null
-    }
-  }
-
-  const handleAnchorScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault()
-    const targetElement = document.getElementById(targetId.substring(1))
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }
-
-  useEffect(() => {
-    const scrollToTopPrecise = () => {
-      document.documentElement.style.scrollBehavior = "auto"
-      document.body.style.scrollBehavior = "auto"
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-    }
-    scrollToTopPrecise()
-    const animationFrameId = requestAnimationFrame(() => {
-      scrollToTopPrecise()
-    })
-    const timerId = setTimeout(() => {
-      scrollToTopPrecise()
-    }, 150)
-    return () => {
-      cancelAnimationFrame(animationFrameId)
-      clearTimeout(timerId)
-    }
-  }, [])
-
-  const githubLinkData = {
-    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/community-care",
-    text: "Visit VA's Community Care Appointments repo on GitHub",
+  const projectDetails = {
+    role: providerOnlineSchedulingData.projectDetails.role,
+    timeline: providerOnlineSchedulingData.projectDetails.timeline,
+    team: providerOnlineSchedulingData.projectDetails.team,
+    tools: providerOnlineSchedulingData.projectDetails.tools,
   }
 
   return (
-    <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
-
-      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
-        {caseStudy.pageTitle}
-      </h1>
-
-      <div className="relative mt-12">
-        {caseStudy.mainImage && (
-          <div className="sticky top-16 z-0">
-            <Image
-              src={caseStudy.mainImage.src || "/placeholder.svg"}
-              alt={caseStudy.mainImage.alt}
-              width={caseStudy.mainImage.width}
-              height={caseStudy.mainImahe.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
-              priority={caseStudy.mainImage.priority}
-              unoptimized
-            />
-          </div>
-        )}
-
-        <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && (
-            <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} githubLink={githubLinkData} />
-          )}
-
-          <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
-            {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
-              <div className="mt-6 mb-8 not-prose">
-                <a
-                  href={caseStudy.anchorLink.href}
-                  onClick={(e) => handleAnchorScroll(e, caseStudy.anchorLink!.href)}
-                  className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
-                >
-                  {caseStudy.anchorLink.text}
-                  <ArrowDownIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                </a>
+    <div className="flex flex-col min-h-dvh">
+      <Header />
+      <main id="main-content" className="flex-1">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 lg:py-24">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <BackToHomeLink />
+            <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
+              <div>
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  {providerOnlineSchedulingData.title}
+                </h1>
+                <p className="text-xl text-gray-600 mb-8">{providerOnlineSchedulingData.subtitle}</p>
+                <ProjectDetailsTable projectDetails={projectDetails} />
               </div>
-            )}
+              <div className="relative">
+                <img
+                  src={providerOnlineSchedulingData.heroImage || "/placeholder.svg"}
+                  alt="Provider Online Scheduling Hero"
+                  className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                  onClick={() => openLightbox(providerOnlineSchedulingData.heroImage)}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-            {caseStudy.sections.map((section, sectionIndex) => (
-              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
-                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
-                {section.content.map(renderContentItem)}
-              </section>
+        {/* Project Overview Banner */}
+        <ProjectOverviewBanner
+          title={providerOnlineSchedulingData.title}
+          description={providerOnlineSchedulingData.description}
+        />
+
+        {/* Content Sections */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 max-w-4xl">
+            {providerOnlineSchedulingData.sections.map((section, index) => (
+              <div key={index} className="mb-16">
+                {section.type === "text" && (
+                  <div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">{section.title}</h2>
+                    <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+                      {section.content.split("\n\n").map((paragraph, pIndex) => (
+                        <p key={pIndex} className="mb-6">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
-          </article>
-        </div>
-      </div>
+          </div>
+        </section>
 
-      <div className="flex justify-between items-center mt-12 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
-      </div>
+        {/* Next Project Link */}
+        <NextProjectLink
+          nextProject={{
+            title: "Mobile patient check-in",
+            slug: "patient-check-in",
+            caseStudyUrlOverride: "/work/patient-check-in",
+          }}
+        />
+      </main>
+      <Footer />
+      <ScrollToTop />
 
-      {lightboxOpen && lightboxSrc && lightboxAlt && (
-        <Lightbox src={lightboxSrc} alt={lightboxAlt} isOpen={lightboxOpen} onClose={handleCloseLightbox} />
-      )}
-    </>
+      {/* Lightbox */}
+      {lightboxImage && <Lightbox imageSrc={lightboxImage} onClose={closeLightbox} />}
+    </div>
   )
 }

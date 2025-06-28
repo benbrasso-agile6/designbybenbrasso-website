@@ -40,6 +40,7 @@ export const projectsData: Project[] = [
       "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
     tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
-    hasCaseStudy: false,
+    hasCaseStudy: true, // Changed from false to true
+    caseStudyUrlOverride: "/work/provider-online-scheduling", // Added this line
   },
 ]
