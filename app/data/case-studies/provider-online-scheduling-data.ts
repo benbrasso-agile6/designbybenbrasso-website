@@ -36,7 +36,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Most recently, <a href="https://fedscoop.com/va-secretary-promises-progress-on-ehr-rollout-amid-major-workforce-cuts/" target="_blank" rel="noopener noreferrer">Veterans Affairs Secretary Doug Collins testified before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies on May 15, 2025, about the technology linking agency scheduling systems to community providers</a>. He pledged that the rollout of the External Provider Scheduling (EPS) tool would continue without disruption.',
+          text: 'Most recently, testifying before the House Appropriations Subcommittee on Military Construction, Veterans Affairs, and Related Agencies on May 15, 2025 about the technology linking agency scheduling systems to community providers, <a href="https://fedscoop.com/va-secretary-promises-progress-on-ehr-rollout-amid-major-workforce-cuts/" target="_blank" rel="noopener noreferrer">Veterans Affairs Secretary Doug Collins pledged "that the rollout of the External Provider Scheduling (EPS) tool would continue"</a> without disruption.'
         },
       ],
     },
