@@ -45,7 +45,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "This is placeholder content for the Challenge section. The main challenge is to create a seamless and intuitive online scheduling experience for Veterans to book appointments with community care providers, addressing the complexities of integrating with various external provider systems while maintaining VA's security and accessibility standards.",
+          text: "<strong>How might we take an existing VA staff-oriented process that takes days or weeks down to minutes and empower Veterans to schedule their community care authorized referrals on their own on the VA.gov platform?</strong>",
         },
       ],
     },
