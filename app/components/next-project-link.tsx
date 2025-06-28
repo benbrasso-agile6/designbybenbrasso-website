@@ -1,24 +1,25 @@
 import Link from "next/link"
-import { ArrowRightIcon, ArrowUpLeftIcon } from "lucide-react"
+import { CornerUpRight, ArrowUpLeft } from "lucide-react"
 
 interface NextProjectLinkProps {
   href: string
   text: string
+  className?: string
   isPrevious?: boolean
 }
 
-export default function NextProjectLink({ href, text, isPrevious = false }: NextProjectLinkProps) {
+export default function NextProjectLink({ href, text, className, isPrevious = false }: NextProjectLinkProps) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 underline group"
+      className={`inline-flex items-center text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 group transition-colors duration-150 ${className}`}
     >
       {isPrevious && (
-        <ArrowUpLeftIcon className="mr-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+        <ArrowUpLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
       )}
       {text}
       {!isPrevious && (
-        <ArrowRightIcon className="ml-1.5 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+        <CornerUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
       )}
     </Link>
   )

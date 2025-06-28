@@ -1,71 +1,47 @@
 export interface Project {
-  id: string
   title: string
-  description: string
-  image: string
   slug: string
+  description: string
+  imageUrl: string
   tags: string[]
-  hasCaseStudy: boolean
-  caseStudyUrlOverride?: string
+  hasCaseStudy?: boolean
+  caseStudyStatusText?: string
+  imageMarginTopClass?: string
+  footerPaddingTopClass?: string
+  caseStudyUrlOverride?: string // This property allows overriding the link
 }
 
 export const projectsData: Project[] = [
   {
-    id: "1",
-    title: "AI Scribe KPI dashboard",
-    description: "Designing data visualization and KPI tracking for AI-powered medical transcription services.",
-    image: "/placeholder.svg?height=300&width=400&text=AI+Scribe+Dashboard",
+    title: "Ambient scribe KPI dashboard",
     slug: "ai-scribe-kpi-dashboard",
-    tags: ["Dashboard", "Data Visualization", "Healthcare"],
+    description:
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the VA Digital Health Office's AI investments.</strong>",
+    imageUrl:
+      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
+    tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
   },
   {
-    id: "2",
-    title: "Patient check-in",
-    description: "Streamlining the patient check-in process through digital solutions and improved user experience.",
-    image: "/placeholder.svg?height=300&width=400&text=Patient+Check-in",
+    title: "Mobile patient check-in",
     slug: "patient-check-in",
-    tags: ["Mobile", "Healthcare", "User Experience"],
+    description:
+      "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in one month, while adding travel reimbursement.</strong>",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
+    tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/patient-check-in",
   },
   {
-    id: "3",
     title: "Provider online scheduling",
-    description:
-      "Enabling Veterans to self-schedule appointments with community care providers through an intuitive online platform.",
-    image: "/placeholder.svg?height=300&width=400&text=Provider+Scheduling",
     slug: "direct-online-scheduling",
-    tags: ["Scheduling", "Healthcare", "Web Application"],
+    description:
+      "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
+    tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
     hasCaseStudy: true,
+    // This override points the button to the correct static page
     caseStudyUrlOverride: "/work/provider-online-scheduling",
-  },
-  {
-    id: "4",
-    title: "Design system",
-    description: "Building a comprehensive design system to ensure consistency across all digital products.",
-    image: "/placeholder.svg?height=300&width=400&text=Design+System",
-    slug: "design-system",
-    tags: ["Design System", "Components", "Documentation"],
-    hasCaseStudy: false,
-  },
-  {
-    id: "5",
-    title: "Mobile app redesign",
-    description: "Complete redesign of the mobile application to improve user engagement and accessibility.",
-    image: "/placeholder.svg?height=300&width=400&text=Mobile+Redesign",
-    slug: "mobile-app-redesign",
-    tags: ["Mobile", "Redesign", "Accessibility"],
-    hasCaseStudy: false,
-  },
-  {
-    id: "6",
-    title: "E-commerce platform",
-    description: "Designing a modern e-commerce platform with focus on conversion optimization and user experience.",
-    image: "/placeholder.svg?height=300&width=400&text=E-commerce",
-    slug: "ecommerce-platform",
-    tags: ["E-commerce", "Conversion", "Web Design"],
-    hasCaseStudy: false,
   },
 ]

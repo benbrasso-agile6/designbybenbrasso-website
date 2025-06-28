@@ -5,7 +5,7 @@ import Footer from "@/app/components/footer"
 
 export const metadata: Metadata = {
   title: "Provider Online Scheduling | Ben Brasso",
-  description: "A case study on designing provider online scheduling solutions for Veterans Affairs.",
+  description: "A case study on designing and implementing provider online scheduling solutions for Veterans Affairs.",
 }
 
 export default function ProviderOnlineSchedulingLayout({
