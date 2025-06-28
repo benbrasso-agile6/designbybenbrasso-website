@@ -129,7 +129,7 @@ export default function PatientCheckInClientPage() {
   return (
     <>
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
         <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
       </div>
 
@@ -182,7 +182,7 @@ export default function PatientCheckInClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
         <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
       </div>
 

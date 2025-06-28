@@ -125,7 +125,7 @@ export default function AiScribeKpiDashboardClientPage() {
   return (
     <>
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 
@@ -176,7 +176,7 @@ export default function AiScribeKpiDashboardClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 
