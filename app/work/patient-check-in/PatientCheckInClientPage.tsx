@@ -131,7 +131,7 @@ export default function PatientCheckInClientPage() {
     <>
       <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
         <BackToHomeLink />
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
@@ -184,7 +184,7 @@ export default function PatientCheckInClientPage() {
 
       <div className="flex justify-between items-center mt-12 print:hidden">
         <BackToHomeLink />
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (
