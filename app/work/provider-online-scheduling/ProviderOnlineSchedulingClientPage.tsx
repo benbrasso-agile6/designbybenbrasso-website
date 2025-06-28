@@ -123,7 +123,7 @@ export default function ProviderOnlineSchedulingClientPage() {
   }, [])
 
   const githubLinkData = {
-    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/community-care",
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling",
     text: "Visit VA's Community Care Scheduling repo on GitHub",
   }
 
