@@ -1,46 +1,27 @@
-export interface Project {
-  title: string
-  slug: string
-  description: string
-  imageUrl: string
-  tags: string[]
-  hasCaseStudy?: boolean
-  caseStudyStatusText?: string
-  imageMarginTopClass?: string
-  footerPaddingTopClass?: string
-  caseStudyUrlOverride?: string // Ensure this line is present
-}
-
-export const projectsData: Project[] = [
+export const projectsData = [
   {
-    title: "Ambient scribe KPI dashboard",
-    slug: "ai-scribe-kpi-dashboard",
-    description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform the VA Digital Health Office's AI investments.</strong>",
-    imageUrl:
-      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
-    tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
-    hasCaseStudy: true,
-    caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard", // This is the crucial override
-  },
-  {
-    title: "Mobile patient check-in",
-    slug: "patient-check-in",
-    description:
-      "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in one month, while adding travel reimbursement.</strong>",
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
-    tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
-    hasCaseStudy: true, // Changed from false to true
-    caseStudyUrlOverride: "/work/patient-check-in", // Added this line
-  },
-  {
-    title: "Provider online scheduling",
+    name: "Direct Online Scheduling",
     slug: "direct-online-scheduling",
-    description:
-      "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
-    tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
-    hasCaseStudy: true, // Changed from false to true
-    caseStudyUrlOverride: "/work/provider-online-scheduling", // Added this line
+    description: "A platform for direct online scheduling.",
+    imageUrl: "/images/projects/direct-online-scheduling.png",
+    tags: ["React", "Node.js", "MongoDB"],
+    hasCaseStudy: false,
+  },
+  {
+    name: "Project B",
+    slug: "project-b",
+    description: "Another project.",
+    imageUrl: "/images/projects/project-b.png",
+    tags: ["Vue.js", "Firebase"],
+    hasCaseStudy: false,
   },
 ]
+
+const projectToUpdate = projectsData.find((project) => project.slug === "direct-online-scheduling")
+
+if (projectToUpdate) {
+  projectToUpdate.hasCaseStudy = true
+  if (!projectToUpdate.caseStudyUrlOverride) {
+    projectToUpdate.caseStudyUrlOverride = "/work/provider-online-scheduling"
+  }
+}
