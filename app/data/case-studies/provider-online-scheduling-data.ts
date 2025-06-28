@@ -45,7 +45,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>How might we take an existing VA staff-oriented process that takes days or weeks down to minutes and empower Veterans to schedule their community care authorized referrals on their own on the VA.gov platform?</strong>",
+          text: "<strong>How might we take an existing staff-oriented process that takes days or weeks down to minutes and empower Veterans to schedule their community care authorized referrals on their own on the VA.gov platform?</strong>",
         },
       ],
     },
