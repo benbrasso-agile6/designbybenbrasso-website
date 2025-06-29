@@ -54,7 +54,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "Understanding current state of the ecosystem was our first order of business:",
+          text: "Understanding the current state of the community care request and referral ecosystem was the first order of business:",
         },
         {
           type: "list",
