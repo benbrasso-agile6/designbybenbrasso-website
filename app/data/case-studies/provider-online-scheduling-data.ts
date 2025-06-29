@@ -86,7 +86,19 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },            
+        },   
+        {
+          type: "paragraph",
+          text: "While cross-team coordination and project management functions were still being established, our team—responsible for the Veteran-facing experience on VA.gov—needed to act quickly. Based on what we had learned during discovery, we pivoted toward placing a prototype in front of Veterans to begin gathering feedback. This was especially important because direct scheduling with a provider would be a first for VA.gov.",
+        },  
+        {
+          type: "paragraph",
+          text: "We grounded our design approach in findings from prior user research, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
+        },        
+        {
+          type: "paragraph",
+          text: "Prior research conducted by an adjacent Veteran-facing product team uncovered key insights from Veterans in late 2020:",
+        },                            
       ],
     },
     {
