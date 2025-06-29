@@ -97,7 +97,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },        
         {
           type: "paragraph",
-          text: "Prior research conducted by an adjacent Veteran-facing product team uncovered key insights from Veterans in late 2020:",
+          text: "Prior research conducted by an adjacent Veteran-facing product team—focused on provider selection for community care appointments—uncovered key insights from Veterans in late 2020:",
         },  
         {
           type: "list",
