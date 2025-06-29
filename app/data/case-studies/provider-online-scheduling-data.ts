@@ -93,7 +93,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },  
         {
           type: "paragraph",
-          text: "We grounded our design approach in findings from prior user research, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
+          text: "<strong>We grounded our initial design swagger and approach in findings from prior user research</strong>, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
         },        
         {
           type: "paragraph",
