@@ -75,6 +75,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
+        {
+          type: "paragraph",
+          text: "However, as we continued discovery research, we uncovered even more VA and external systems, coordination steps, interdependencies, and people involved in the community care appointment scheduling process. What began as a small Scrum team quickly grew into a large, coordinated effort involving Veteran-facing product teams, care teams, clinical operations, API teams, project management groups, and our External Provider Scheduling (EPS) team.",
+        },        
       ],
     },
     {
