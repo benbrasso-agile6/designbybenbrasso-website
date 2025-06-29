@@ -97,7 +97,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },        
         {
           type: "paragraph",
-          text: 'Prior research conducted by an adjacent Veteran-facing product team—focused on provider selection for community care appointments—uncovered key insights from Veterans in late 2020:',
+          text: '<a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/research/2020-10-cc-provider-selection-usability" target="_blank" rel="noopener noreferrer">Prior research conducted by an adjacent Veteran-facing product team—focused on provider selection for community care appointments</a>—uncovered key insights from Veterans in late 2020:',
         },  
         {
           type: "list",
