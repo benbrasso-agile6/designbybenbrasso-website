@@ -69,8 +69,8 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "/placeholder.svg?width=800&height=450",
-          alt: "Placeholder image of wireframes for the scheduling tool.",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751162919/Frame_584_kfpnnc.png",
+          alt: "Workflow diagram of existing process for requesting and scheduling a community care appointment",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
