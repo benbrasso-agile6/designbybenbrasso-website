@@ -103,7 +103,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           type: "list",
           items: [
             "Participants wanted a more personalized list of providers. Most hoped to schedule with someone they had seen before or had researched on their own.",
-            "Appointment availability was top of mind. Veterans wanted to know how soon they could be seen, or whether a provider was available on specific dates.",
+            "<strong>Appointment availability was top of mind. Veterans wanted to know how soon they could be seen,</strong> or whether a provider was available on specific dates.",
             "While distance was useful, some preferred an alphabetical list to easily find providers they already knew.",
             "Many said they would research providers ahead of time—often checking review sites to understand a provider’s reputation.",
           ],
