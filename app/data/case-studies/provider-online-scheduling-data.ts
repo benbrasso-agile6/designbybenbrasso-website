@@ -10,7 +10,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
     description:
       "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
     skills:
-      "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, information architecture, prototyping",
+      "HCD and product leadership, UX product design, UX research and synthesis, executive communication, data storytelling, stakeholder advocate, consensus-builder, service design, information architecture, prototyping, accessibility design",
     tools: "Figma, Mural, GitHub, CodePen, Visio, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, WellHive Care Navigation API-Docs",
     date: "April 2024 – January 2025",
   },
