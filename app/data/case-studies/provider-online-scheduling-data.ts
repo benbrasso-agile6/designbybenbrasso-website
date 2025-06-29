@@ -65,7 +65,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Admittedly, the existing workflow didn’t appear overly complex. However, the real challenge was navigating a technology and process shift—from a mostly offline system that relied on phone tag between the Veteran, VA staff, and community care providers, to an online solution that empowered Veterans to schedule appointments with eligible community providers in real time, with those appointments written back into VA systems for continuity.",
+          text: "Admittedly, the existing workflow didn’t appear overly complex. However, the real challenge was navigating a technology and process shift—from a mostly offline system that relied on phone tag between the Veteran, VA staff, and community care providers, to an online solution that empowered Veterans to schedule appointments with eligible community providers in real time, with those appointments written back into VA systems to ensure continuity.",
         },
         {
           type: "image",
