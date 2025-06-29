@@ -133,7 +133,7 @@ export default function ProviderOnlineSchedulingClientPage() {
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
-      <h1 className="leading-[1.5] text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+      <h1 className="page-title-spacing text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
         {caseStudy.pageTitle}
       </h1>
 
