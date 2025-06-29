@@ -98,7 +98,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "Prior research conducted by an adjacent Veteran-facing product team uncovered key insights from Veterans in late 2020:",
-        },                            
+        },  
+        {
+          type: "list",
+          items: [
+            "How do Veterans request an appointment with a community care provider?",
+            "What are the required steps for VHA clinical and support staff to authorize a referral?",
+          ],
+        },                                  
       ],
     },
     {
