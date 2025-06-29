@@ -12,7 +12,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, information architecture, prototyping",
     tools: "Figma, FigJam, Mural, GitHub, CodePen, Playwright",
-    date: "2024 – Present",
+    date: "April 2024 – January 2025",
   },
   sections: [
     {
