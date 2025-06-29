@@ -2,13 +2,13 @@ import type { CaseStudyData } from "../case-study-types"
 
 export const providerOnlineSchedulingData: CaseStudyData = {
   slug: "provider-online-scheduling",
-  pageTitle: "Provider Online Scheduling",
-  metaTitle: "Provider Online Scheduling | Work | designbybenbrasso",
+  pageTitle: "Community Care Provider Online Scheduling",
+  metaTitle: "Community Care Provider Online Scheduling | Work | designbybenbrasso",
   metaDescription:
-    "UX design case study for enabling Veterans to self-schedule community care appointments directly online.",
+    "UX design case study for enabling Veterans to self-schedule community care appointments directly on VA.gov.",
   projectOverviewBanner: {
     description:
-      "The goal of this project is to design and build an online scheduling experience for community care providers that mirrors the success of VA-provider self-scheduling on VA.gov, enabling Veterans to self-schedule appointments directly online.",
+      "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, storytelling, service design, information architecture, prototyping",
     tools: "Figma, Mural, GitHub, CodePen, Visio, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, WellHive Care Navigation API-Docs",
