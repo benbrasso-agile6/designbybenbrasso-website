@@ -102,8 +102,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "list",
           items: [
-            "How do Veterans request an appointment with a community care provider?",
-            "What are the required steps for VHA clinical and support staff to authorize a referral?",
+            "Participants wanted a more personalized list of providers. Most hoped to schedule with someone they had seen before or had researched on their own.",
+            "Appointment availability was top of mind. Veterans wanted to know how soon they could be seen, or whether a provider was available on specific dates.",
+            "While distance was useful, some preferred an alphabetical list to easily find providers they already knew.",
+            "Many said they would research providers ahead of time—often checking review sites to understand a provider’s reputation.",
           ],
         },                                  
       ],
