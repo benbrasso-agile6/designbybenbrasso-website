@@ -54,7 +54,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "Understanding the current state of the community care request and referral ecosystem was the first order of business:",
+          text: "Understanding the current state of the community care appointment request and referral ecosystem was the first order of business:",
         },
         {
           type: "list",
@@ -62,6 +62,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "How do Veterans request an appointment with a community care provider?",
             "What are the required steps for VHA clinical and support staff to authorize a referral?",
           ],
+        },
+        {
+          type: "paragraph",
+          text: "Admittedly, the existing workflow didn’t appear overly complex. However, the real challenge was navigating a technology and process shift—from a mostly offline system that relied on phone tag between the Veteran, VA staff, and community care providers, to an online solution that empowered Veterans to schedule appointments with eligible community providers in real time, with those appointments written back into VA systems.",
         },
         {
           type: "image",
