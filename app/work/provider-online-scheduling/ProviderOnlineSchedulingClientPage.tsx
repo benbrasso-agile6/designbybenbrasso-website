@@ -1,15 +1,15 @@
 "use client"
-import Image from "next/image"
-import type React from "react"
 
+import type React from "react"
+import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
 import { providerOnlineSchedulingData } from "@/app/data/case-studies/provider-online-scheduling-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
-import Lightbox from "@/app/components/lightbox" // Import Lightbox component
+import Lightbox from "@/app/components/lightbox"
 
 const caseStudy = providerOnlineSchedulingData
 
@@ -100,7 +100,26 @@ export default function ProviderOnlineSchedulingClientPage() {
     }
   }
 
-  // useEffect is not used in the existing code, so it's not included here
+  useEffect(() => {
+    const scrollToTopPrecise = () => {
+      document.documentElement.style.scrollBehavior = "auto"
+      document.body.style.scrollBehavior = "auto"
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+    }
+    scrollToTopPrecise()
+    const animationFrameId = requestAnimationFrame(() => {
+      scrollToTopPrecise()
+    })
+    const timerId = setTimeout(() => {
+      scrollToTopPrecise()
+    }, 150)
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      clearTimeout(timerId)
+    }
+  }, [])
 
   const githubLinkData = {
     url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling",
@@ -114,7 +133,7 @@ export default function ProviderOnlineSchedulingClientPage() {
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
-      <h1 className="leading-normal text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+      <h1 className="leading-[1.5] text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
         {caseStudy.pageTitle}
       </h1>
 
