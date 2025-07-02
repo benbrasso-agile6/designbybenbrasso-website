@@ -110,7 +110,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751499549/CleanShot_2025-07-02_at_19.37.28_boqvds.gif",
-          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          alt: "Userflow options for the community care provider scheduling process",
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
