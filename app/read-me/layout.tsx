@@ -4,7 +4,7 @@ import Footer from "@/app/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Ben Brasso’s Read Me | Ben Brasso",
+  title: "Ben Brasso's Read Me - Ben Brasso",
   description: "Learn more about Ben Brasso, his design philosophy, process, and how he likes to work.", // Ensured no outer curly quotes
 }
 

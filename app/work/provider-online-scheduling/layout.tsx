@@ -4,7 +4,7 @@ import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 
 export const metadata: Metadata = {
-  title: "Provider Online Scheduling | Ben Brasso",
+  title: "Provider Online Scheduling - Ben Brasso",
   description: "A case study on designing and implementing provider online scheduling solutions for Veterans Affairs.",
 }
 

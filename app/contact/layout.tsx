@@ -4,7 +4,7 @@ import Footer from "@/app/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact | Ben Brasso",
+  title: "Contact - Ben Brasso",
   description: "Get in touch with Ben Brasso for UX design and product strategy inquiries.",
 }
 
