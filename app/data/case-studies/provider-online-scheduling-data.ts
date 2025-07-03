@@ -174,7 +174,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         }, 
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751499549/CleanShot_2025-07-02_at_19.37.28_boqvds.gif",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
           alt: "Userflow options for the community care provider scheduling process",
           width: 800,
           height: 450,
