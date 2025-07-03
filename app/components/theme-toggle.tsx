@@ -30,22 +30,17 @@ export function ThemeToggle() {
   }
 
   return (
-    <div className="flex items-center space-x-2 group hover:scale-110 transition-transform duration-300 ease-out cursor-pointer">
+    <div className="flex items-center space-x-2">
       <Sun
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-500 ease-out ${
-          theme === "dark" ? "text-slate-500 scale-75 opacity-60" : "text-foreground scale-100 opacity-100"
-        } ${mounted ? "animate-in fade-in duration-700" : ""}`}
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
+          theme === "dark" ? "text-slate-500 scale-75 opacity-50" : "text-foreground scale-100 opacity-100"
+        }`}
       />
-      <Switch
-        checked={theme === "dark"}
-        onCheckedChange={toggleTheme}
-        aria-label="Toggle theme"
-        className="transition-all duration-300 ease-out group-hover:shadow-lg"
-      />
+      <Switch checked={theme === "dark"} onCheckedChange={toggleTheme} aria-label="Toggle theme" />
       <Moon
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-500 ease-out ${
-          theme === "light" ? "text-slate-500 scale-75 opacity-60" : "text-foreground scale-100 opacity-100"
-        } ${mounted ? "animate-in fade-in duration-700 delay-150" : ""}`}
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
+          theme === "light" ? "text-slate-500 scale-75 opacity-50" : "text-foreground scale-100 opacity-100"
+        }`}
       />
     </div>
   )
