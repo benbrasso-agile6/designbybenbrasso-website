@@ -36,7 +36,12 @@ export function ThemeToggle() {
           theme === "dark" ? "text-slate-500 scale-75 opacity-50" : "text-foreground scale-100 opacity-100"
         }`}
       />
-      <Switch checked={theme === "dark"} onCheckedChange={toggleTheme} aria-label="Toggle theme" />
+      <Switch
+        checked={theme === "dark"}
+        onCheckedChange={toggleTheme}
+        aria-label="Toggle theme"
+        className="hover:scale-110 transition-transform duration-200 ease-out"
+      />
       <Moon
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
           theme === "light" ? "text-slate-500 scale-75 opacity-50" : "text-foreground scale-100 opacity-100"
