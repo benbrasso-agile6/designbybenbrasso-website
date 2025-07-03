@@ -11,7 +11,8 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, executive communication, data storytelling, stakeholder advocate, consensus-builder, service design, information architecture, prototyping, accessibility design",
-    tools: "Figma, Mural, GitHub, CodePen, Visio, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, WellHive Care Navigation API-Docs",
+    tools:
+      "Figma, Mural, GitHub, CodePen, Visio, VA.gov Design System, UserZoom, Axe DevTools, Optimal Workshop, WellHive Care Navigation API-Docs",
     date: "April 2024 – January 2025",
   },
   sections: [
@@ -78,7 +79,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "However, as we continued discovery research, <strong>we uncovered even more VA and external systems, coordination steps, interdependencies, and people involved in the community care appointment scheduling process</strong>. What began as a small Scrum team quickly grew into a large, coordinated effort involving Veteran-facing product teams, care teams, clinical operations, API teams, project management groups, and our External Provider Scheduling (EPS) team.",
-        },    
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751230124/Frame_586_wj3vbv.png",
@@ -86,31 +87,31 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
-        },   
+        },
         {
           type: "paragraph",
           text: "While cross-team coordination and project management functions were still being established, our team—responsible for the Veteran-facing experience on VA.gov—needed to act quickly. Based on what we had learned during discovery, <strong>we pivoted toward placing a prototype in front of Veterans to begin gathering feedback. This was especially important because direct scheduling with a provider would be a first for VA.gov.</strong>",
-        },  
+        },
         {
           type: "paragraph",
           text: "<strong>We grounded our initial design swagger and approach in findings from prior user research</strong>, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
-        },        
+        },
         {
           type: "paragraph",
           text: '<a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/research/2020-10-cc-provider-selection-usability" target="_blank" rel="noopener noreferrer">Prior research conducted by an adjacent Veteran-facing product team—focused on provider selection for community care appointments</a>—uncovered key insights from Veterans in late 2020:',
-        },  
+        },
         {
-          type: "list",
+          type: "numeric-list",
           items: [
             "Participants wanted a more personalized list of providers. Most hoped to schedule with someone they had seen before or had researched on their own.",
             "<strong>Appointment availability was top of mind. Veterans wanted to know how soon they could be seen,</strong> or whether a provider was available on specific dates.",
             "<strong>While distance was useful, some preferred an alphabetical list to easily find providers they already knew.</strong> Many said they would research providers ahead of time—often checking review sites to understand a provider’s reputation.",
           ],
-        },  
+        },
         {
           type: "paragraph",
           text: "<strong>We grounded our initial design swagger and approach in findings from prior user research</strong>, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
-        },      
+        },
         {
           type: "paragraph",
           text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options. At the same time, <strong>we had to balance several competing priorities to define our minimum viable product (MVP). These included aligning with existing VA.gov scheduling design patterns, keeping the experience low in cognitive load, ensuring timely access to accurate data, and accounting for how much information the EPS and VA system APIs could return</strong> in one or multiple calls—factors that could directly affect page load performance.",
@@ -118,7 +119,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "<strong>We made a “big bet” that Veterans would prefer a userflow with fewer steps and provider availability accessible as early as possible.</strong> However, because we were designing in parallel with technical discovery around API capabilities, we had to remain flexible. This meant preparing for multiple userflows in case our preferred approach wasn't technically feasible.",
-        },                         
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751499549/CleanShot_2025-07-02_at_19.37.28_boqvds.gif",
@@ -130,15 +131,15 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:",
-        },   
+        },
         {
-          type: "list",
+          type: "numeric-list",
           items: [
             "<strong>Contextual inquiry through a semi-structured interview</strong> to obtain information on how Veterans schedule community care appointments, how they think about referrals, and where they access or would access referrals online.",
             "<strong>Usability testing</strong> for self-scheduling a VA approved community care appointment using a Figma prototype for sighted users and a CodePen prototype for assistive technology (AT) users.",
             "<strong>Concept testing to obtain feedback on a prototype</strong> for finding VA approved community care referrals on VA.gov that need to be self-scheduled and accessing referrals from past appointments.",
           ],
-        },  
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
@@ -146,7 +147,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           width: 400,
           height: 225,
           className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
-        },                                          
+        },
       ],
     },
     {
