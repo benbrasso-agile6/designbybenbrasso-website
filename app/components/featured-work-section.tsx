@@ -1,61 +1,44 @@
-import { projectsData } from "@/app/data/projects-data"
+import { caseStudiesData } from "@/app/data/case-studies-data"
 import ProjectCard from "./project-card"
 import ActionLink from "./action-link"
 
 export default function FeaturedWorkSection() {
   return (
-    <section id="work" className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900">
-      <div className="max-w-[1000px] mx-auto">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 px-8">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
-            My <span className="text-sky-600 dark:text-sky-500">case studies</span>
-          </h2>
-          <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A selection of projects—not always completed in a linear process—that showcase my skills in UX design,
-            product management, user research, and using AI.
+    <section className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">My case studies</h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Detailed explorations of my design process and problem-solving approach
           </p>
         </div>
-        <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
-          {projectsData.map((project) => {
-            let specificImageMarginTopClass = "mt-6" // Default for image margin
-            let specificFooterPaddingTopClass = "pt-6" // Default for footer padding
 
-            if (project.slug === "direct-online-scheduling") {
-              specificImageMarginTopClass = "mt-3" // Smaller margin above image
-              specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
-            }
-
-            // Comment out provider online scheduling for now - skip rendering this project
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          {caseStudiesData.map((project) => {
+            // Hide the provider online scheduling project for now
             if (project.slug === "direct-online-scheduling") {
               return null
             }
 
-            // Ensure all project properties are spread or explicitly passed
             return (
               <ProjectCard
-                key={project.title}
+                key={project.id}
                 title={project.title}
                 description={project.description}
-                imageUrl={project.imageUrl}
+                image={project.image}
+                href={`/work/${project.slug}`}
                 tags={project.tags}
-                slug={project.slug}
-                hasCaseStudy={project.hasCaseStudy}
-                caseStudyStatusText={project.caseStudyStatusText}
-                imageMarginTopClass={specificImageMarginTopClass}
-                footerPaddingTopClass={specificFooterPaddingTopClass}
-                caseStudyUrlOverride={project.caseStudyUrlOverride} // Explicitly pass the prop
               />
             )
           })}
         </div>
-        <div className="mt-16 md:mt-20 text-center px-8">
-          <p className="max-w-[700px] mx-auto text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+
+        <div className="text-center">
+          <p className="text-lg text-muted-foreground mb-6">
             Explore more of my case studies to see how I think, collaborate, make informed decisions, and drive
             outcomes.
           </p>
-          <div className="mt-8">
-            <ActionLink href="/case-studies">Explore featured case studies</ActionLink>
-          </div>
+          <ActionLink href="/case-studies">Explore featured case studies</ActionLink>
         </div>
       </div>
     </section>
