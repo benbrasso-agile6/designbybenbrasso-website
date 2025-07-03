@@ -64,7 +64,7 @@ export default function ProjectCard({
             {stats.map((stat, index) => (
               <div key={index}>
                 <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{stat.label}</p>
-                <p className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 font-light">{stat.value}</p>
+                <p className="text-xl font-bold text-neutral-800 dark:text-neutral-200 font-light">{stat.value}</p>
               </div>
             ))}
           </div>

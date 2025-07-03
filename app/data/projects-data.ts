@@ -23,6 +23,10 @@ export const projectsData: Project[] = [
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
+    stats: [
+      { label: "AI-powered opportunities identified", value: "9 during care encounter" },
+      { label: "Highest baseline perceived workload", value: "8.5 on the NASA-TLX (0-10 scale)" },
+    ],
   },
   {
     title: "Mobile patient check-in",
