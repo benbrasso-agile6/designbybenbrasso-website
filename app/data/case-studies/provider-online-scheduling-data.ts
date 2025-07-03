@@ -141,6 +141,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           ],
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
+          alt: "Community care appointment scheduling user interface process",
+          width: 400,
+          height: 225,
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
+        },
+        {
           type: "paragraph",
           text: "Fifteen Veterans—including four who use assistive technology—participated in remote, moderated usability testing of the community care self-scheduling prototype. Veterans were generally able to complete all tasks and navigate the scheduling process with ease, though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
         },
@@ -152,14 +160,6 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           type: "paragraph",
           text: "Veterans responded positively to the filter and sort interface. Based on this feedback, the design pattern was contributed to the VA.gov Design System, where it later helped shape a new experimental search results component.",
         },    
-        {
-          type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
-          alt: "Community care appointment scheduling user interface process",
-          width: 400,
-          height: 225,
-          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
-        },
       ],
     },
     {
