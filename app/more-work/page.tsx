@@ -214,7 +214,7 @@ export default function MoreWorkPage() {
               <p>
                 Explore{" "}
                 <Link
-                  href="/"
+                  href="/case-studies"
                   className="text-sky-600 dark:text-sky-500 underline hover:text-sky-700 dark:hover:text-sky-400"
                 >
                   my case studies
