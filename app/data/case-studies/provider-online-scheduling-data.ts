@@ -172,6 +172,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "Veterans expect VA to follow up with timely reminders to schedule, even when they choose to self-schedule.",
           ],
         }, 
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751499549/CleanShot_2025-07-02_at_19.37.28_boqvds.gif",
+          alt: "Userflow options for the community care provider scheduling process",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
       ],
     },
     {
