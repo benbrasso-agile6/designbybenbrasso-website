@@ -146,7 +146,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Fifteen Veterans—including four who use assistive technology—participated in remote, moderated usability testing of the community care self-scheduling prototype. Veterans were generally able to complete all tasks and navigate the scheduling process with ease, though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
+          text: "Twelve of the thirteen participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
         },
         {
           type: "paragraph",
