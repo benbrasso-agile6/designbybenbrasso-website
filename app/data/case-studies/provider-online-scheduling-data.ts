@@ -158,7 +158,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Veterans responded positively to the filter and sort interface. Based on this feedback, the design pattern was contributed to the VA.gov Design System, where it later helped shape a new experimental search results component.",
+          text: "Veterans responded positively to the filter and sort interface. Based on this feedback, the filter and sort design pattern was contributed to the VA.gov Design System, where it later helped shape a new experimental search results component.",
         },    
       ],
     },
