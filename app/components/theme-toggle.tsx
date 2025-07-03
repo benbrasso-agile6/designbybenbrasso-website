@@ -40,7 +40,7 @@ export function ThemeToggle() {
         checked={theme === "dark"}
         onCheckedChange={toggleTheme}
         aria-label="Toggle theme"
-        className="hover:scale-110 transition-transform duration-200 ease-out"
+        className="hover:scale-110 transition-transform duration-300 ease-out"
       />
       <Moon
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
