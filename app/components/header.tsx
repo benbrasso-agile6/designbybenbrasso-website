@@ -23,6 +23,7 @@ export default function Header() {
 
   const mainNavItems = [
     { name: "README", href: "/read-me", icon: <FileTextIcon className="h-5 w-5" /> },
+    { name: "Case Studies", href: "/case-studies", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "More Work", href: "/more-work", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "Design Contributions", href: "/design-contributions", icon: <LayersIcon className="h-5 w-5" /> },
     { name: "Contact", href: "/contact", icon: <MailIcon className="h-5 w-5" /> },
