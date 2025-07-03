@@ -1,63 +1,15 @@
-import Link from "next/link"
-import { CompassIcon, LinkedinIcon, GithubIcon } from "lucide-react"
 import { ThemeToggle } from "@/app/components/theme-toggle"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
   return (
-    <footer className="w-full border-t border-sky-600/30 dark:border-sky-500/30 bg-white dark:bg-neutral-950">
-      <div className="w-full mx-auto px-6 py-8">
-        {/* Top row for logo and social icons */}
-        <div className="flex justify-between items-center mb-6">
-          <Link href="/" className="flex items-center gap-2 group/logo">
-            <CompassIcon className="h-6 w-6 text-sky-700 dark:text-sky-400 group-hover/logo:opacity-80 transition-opacity" />
-            <p className="text-sm font-medium group-hover/logo:text-sky-700 dark:group-hover/logo:text-sky-400 transition-colors">
-              designbybenbrasso
-            </p>
-          </Link>
-          <div className="flex items-center gap-3">
-            <Link
-              href="https://github.com/benbrasso-agile6"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ben Brasso's GitHub Profile"
-              className="rounded-full bg-neutral-800 dark:bg-neutral-900 p-2 group transition-colors hover:bg-neutral-700"
-            >
-              <GithubIcon className="h-5 w-5 text-neutral-100 group-hover:text-sky-500 transition-colors" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/benbrasso/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ben Brasso's LinkedIn Profile"
-              className="rounded-full bg-neutral-800 dark:bg-neutral-900 p-2 group transition-colors hover:bg-neutral-700"
-            >
-              <LinkedinIcon className="h-5 w-5 text-neutral-100 group-hover:text-sky-500 transition-colors" />
-            </Link>
-          </div>
-        </div>
+    <footer className="border-t bg-background">
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col items-center space-y-4">
+          {/* Theme Toggle */}
+          <ThemeToggle />
 
-        {/* Bottom row for text content, aligned on the same y-axis */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4 text-sm">
-          <div className="text-neutral-500 dark:text-neutral-400 text-center md:text-left">
-            Built using v0 for rapid prototyping, extended with custom components.
-            <br />
-            <Link
-              href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors underline"
-              aria-label="Repository for designbybenbrasso website on GitHub"
-            >
-              Check out the code on GitHub.
-            </Link>
-          </div>
-          <div className="flex flex-col items-center md:items-end gap-4">
-            <ThemeToggle />
-            <p className="text-muted-foreground text-center md:text-right">
-              &copy; {currentYear} Ben Brasso. All rights reserved.
-            </p>
-          </div>
+          {/* Copyright */}
+          <p className="text-sm text-muted-foreground text-center">© 2025 Ben Brasso. All rights reserved.</p>
         </div>
       </div>
     </footer>
