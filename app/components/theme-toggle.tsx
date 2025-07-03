@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch"
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   // Ensure component is mounted to avoid hydration mismatch
   useEffect(() => {
@@ -16,7 +17,13 @@ export function ThemeToggle() {
   }, [])
 
   const toggleTheme = () => {
+    setIsTransitioning(true)
     setTheme(theme === "light" ? "dark" : "light")
+
+    // Reset transition state after animation completes
+    setTimeout(() => {
+      setIsTransitioning(false)
+    }, 1500) // Total animation time
   }
 
   if (!mounted) {
@@ -33,9 +40,11 @@ export function ThemeToggle() {
     <div className="flex items-center space-x-2">
       <Sun
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
-          theme === "dark"
-            ? "text-slate-500 scale-75 opacity-50"
-            : "text-foreground scale-100 opacity-100 delay-[800ms]"
+          theme === "light"
+            ? "text-foreground scale-100 opacity-100"
+            : isTransitioning
+              ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+              : "text-slate-500 scale-75 opacity-50"
         }`}
       />
       <Switch
@@ -46,9 +55,11 @@ export function ThemeToggle() {
       />
       <Moon
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
-          theme === "light"
-            ? "text-slate-500 scale-75 opacity-50"
-            : "text-foreground scale-100 opacity-100 delay-[800ms]"
+          theme === "dark"
+            ? "text-foreground scale-100 opacity-100"
+            : isTransitioning
+              ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+              : "text-slate-500 scale-75 opacity-50"
         }`}
       />
     </div>
