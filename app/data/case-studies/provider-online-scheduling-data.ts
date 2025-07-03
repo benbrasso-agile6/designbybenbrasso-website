@@ -141,6 +141,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           ],
         },
         {
+          type: "paragraph",
+          text: "<strong>We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:</strong>",
+        },
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
           alt: "Community care appointment scheduling user interface process",
