@@ -25,8 +25,8 @@ export default function FeaturedWorkSection() {
               specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
 
-            // Comment out provider online scheduling for now
-            if (project.slug === "provider-online-scheduling") {
+            // Comment out provider online scheduling for now - skip rendering this project
+            if (project.slug === "direct-online-scheduling") {
               return null
             }
 
