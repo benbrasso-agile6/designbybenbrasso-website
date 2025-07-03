@@ -142,7 +142,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:</strong>",
+          text: "Fifteen Veterans—including four who use assistive technology—participated in remote, moderated usability testing of the community care self-scheduling prototype. Veterans were generally able to complete all tasks and navigate the scheduling process with ease, though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
         },
         {
           type: "image",
