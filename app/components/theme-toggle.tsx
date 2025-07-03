@@ -33,7 +33,9 @@ export function ThemeToggle() {
     <div className="flex items-center space-x-2">
       <Sun
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
-          theme === "dark" ? "text-slate-500 scale-75 opacity-50 delay-500" : "text-foreground scale-100 opacity-100"
+          theme === "dark"
+            ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+            : "text-foreground scale-100 opacity-100"
         }`}
       />
       <Switch
@@ -44,7 +46,9 @@ export function ThemeToggle() {
       />
       <Moon
         className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
-          theme === "light" ? "text-slate-500 scale-75 opacity-50 delay-500" : "text-foreground scale-100 opacity-100"
+          theme === "light"
+            ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+            : "text-foreground scale-100 opacity-100"
         }`}
       />
     </div>
