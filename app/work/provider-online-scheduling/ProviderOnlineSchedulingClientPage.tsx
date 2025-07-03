@@ -45,6 +45,14 @@ export default function ProviderOnlineSchedulingClientPage() {
             ))}
           </ul>
         )
+      case "numeric-list":
+        return (
+          <ol key={index} className="list-decimal pl-5 space-y-1">
+            {item.items?.map((li, liIndex) => (
+              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
+            ))}
+          </ol>
+        )
       case "image":
         if (item.src && item.alt) {
           const isPng = item.src.toLowerCase().endsWith(".png")
