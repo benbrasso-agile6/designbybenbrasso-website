@@ -126,7 +126,15 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
-        },                                        
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
+          alt: "Mobile check-in user interface demonstration showing the check-in process",
+          width: 400,
+          height: 225,
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
+        },                                          
       ],
     },
     {
