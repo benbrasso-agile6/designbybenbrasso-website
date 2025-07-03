@@ -25,6 +25,14 @@ const renderContentItem = (item: CaseStudyContentItem, index: number) => {
           ))}
         </ul>
       )
+    case "numeric-list":
+      return (
+        <ol key={index}>
+          {item.items?.map((li, liIndex) => (
+            <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
+          ))}
+        </ol>
+      )
     case "image":
       if (item.src && item.alt) {
         // This image rendering is for images within sections, not the main project image
@@ -78,7 +86,7 @@ export default function CaseStudyClientPage({ params }: Props) {
   <Button
     asChild
     variant="outline"
-    className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400"
+    className="mb-8 print:hidden border-sky-600 text-sky-600 hover:bg-sky-100 hover:text-sky-700 dark:border-sky-500 dark:text-sky-500 dark:hover:bg-sky-900/30 dark:hover:text-sky-400 bg-transparent"
   >
     <Link href="/#work">
       <ArrowLeftIcon className="mr-2 h-4 w-4" />
