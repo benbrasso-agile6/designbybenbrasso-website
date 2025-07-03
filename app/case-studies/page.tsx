@@ -9,7 +9,7 @@ export default function CaseStudiesPage() {
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="max-w-3xl mx-auto">
             <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
-              <h1 className="leading-normal text-center">Featured Case Studies</h1>
+              <h1 className="leading-normal text-center">Featured <span className="text-sky-600 dark:text-sky-500">Case Studies</span></h1>
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>This page is under construction. Please check back soon.</p>
