@@ -4,15 +4,12 @@ import { useState } from "react"
 
 /**
  * Scenic image shown at the bottom of the /read-me page.
- * Uses a plain <img> element so that the file is loaded directly
- * (bypassing Next.js `next/image` optimisation, which can fail when
- * the asset is remote or blocked).
+ * A plain <img> element is used so the asset loads directly
+ * (avoiding Next.js image optimisation proxies).
  *
- * If the primary image can’t be loaded, we fall back to the generic
- * `placeholder.jpg` that already exists in /public.
+ * Falls back to /placeholder.jpg if the primary image fails.
  */
-export function FooterImage() {
-  // Primary local asset (bundled in /public)
+export default function FooterImage() {
   const PRIMARY_SRC = "/images/readme-footer-scenic.png"
   const FALLBACK_SRC = "/placeholder.jpg"
 
