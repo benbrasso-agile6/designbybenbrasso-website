@@ -25,6 +25,12 @@ export default function FeaturedWorkSection() {
               specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
 
+            // Comment out provider online scheduling for now
+            if (project.slug === "provider-online-scheduling") {
+              return null
+            }
+
+            // Ensure all project properties are spread or explicitly passed
             return (
               <ProjectCard
                 key={project.title}
@@ -37,7 +43,7 @@ export default function FeaturedWorkSection() {
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
                 footerPaddingTopClass={specificFooterPaddingTopClass}
-                caseStudyUrlOverride={project.caseStudyUrlOverride}
+                caseStudyUrlOverride={project.caseStudyUrlOverride} // Explicitly pass the prop
               />
             )
           })}
@@ -48,7 +54,7 @@ export default function FeaturedWorkSection() {
             outcomes.
           </p>
           <div className="mt-8">
-            <ActionLink href="/more-work">Explore featured case studies</ActionLink>
+            <ActionLink href="">Explore featured case studies</ActionLink>
           </div>
         </div>
       </div>
