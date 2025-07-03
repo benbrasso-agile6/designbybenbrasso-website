@@ -23,7 +23,7 @@ export function ThemeToggle() {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false)
-    }, 1500) // Total animation time
+    }, 4000) // Total animation time
   }
 
   if (!mounted) {
@@ -39,11 +39,11 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center space-x-2">
       <Sun
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-[2000ms] ease-out ${
           theme === "light"
             ? "text-foreground scale-100 opacity-100"
             : isTransitioning
-              ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+              ? "text-slate-500 scale-75 opacity-50 delay-[2000ms]"
               : "text-slate-500 scale-75 opacity-50"
         }`}
       />
@@ -54,11 +54,11 @@ export function ThemeToggle() {
         className="hover:scale-110 transition-transform duration-[1000ms] ease-out"
       />
       <Moon
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-700 ease-out ${
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-[2000ms] ease-out ${
           theme === "dark"
             ? "text-foreground scale-100 opacity-100"
             : isTransitioning
-              ? "text-slate-500 scale-75 opacity-50 delay-[800ms]"
+              ? "text-slate-500 scale-75 opacity-50 delay-[2000ms]"
               : "text-slate-500 scale-75 opacity-50"
         }`}
       />
