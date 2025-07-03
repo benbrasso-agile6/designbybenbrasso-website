@@ -134,9 +134,9 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "list",
           items: [
-            "Participants wanted a more personalized list of providers. Most hoped to schedule with someone they had seen before or had researched on their own.",
-            "<strong>Appointment availability was top of mind. Veterans wanted to know how soon they could be seen,</strong> or whether a provider was available on specific dates.",
-            "<strong>While distance was useful, some preferred an alphabetical list to easily find providers they already knew.</strong> Many said they would research providers ahead of time—often checking review sites to understand a provider’s reputation.",
+            "<strong>Contextual inquiry through a semi-structured interview</strong> to obtain information on how Veterans schedule community care appointments, how they think about referrals, and where they access or would access referrals online.",
+            "<strong>Usability testing</strong> for self-scheduling a VA approved community care appointment using a Figma prototype for sighted users and a CodePen prototype for assistive technology (AT) users.",
+            "<strong>Concept testing to obtain feedback on a prototype</strong> for finding VA approved community care referrals on VA.gov that need to be self-scheduled and accessing referrals from past appointments.",
           ],
         },  
         {
