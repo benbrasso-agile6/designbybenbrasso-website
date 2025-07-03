@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
     stats: [
-      { label: "AI-powered opportunities", value: "9 in care encounter" },
+      { label: "AI-powered opportunities identified", value: "9 in care encounter" },
       { label: "Highest baseline perceived workload", value: "8.5 on the NASA-TLX (0-10 scale)" },
     ],
   },
