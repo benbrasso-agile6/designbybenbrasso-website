@@ -1,28 +1,29 @@
-import { readMeData } from "./read-me-data"
+"use client"
+
+import FooterImage from "./components/footer-image"
 import ReadMeContentSection from "./components/read-me-content-section"
 import StickyReadMeNavigation from "./components/sticky-read-me-navigation"
-import FooterImage from "./components/footer-image"
 
+import { readMeSectionsData } from "./read-me-data"
+
+/**
+ * Top-level page for /read-me
+ */
 export default function ReadMePage() {
   return (
-    <div className="bg-background text-foreground">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12">
-          <aside className="hidden md:block">
-            <StickyReadMeNavigation sections={readMeData.sections} />
-          </aside>
-          <main>
-            <div className="prose prose-gray dark:prose-invert max-w-none">
-              {readMeData.sections.map((section) => (
-                <ReadMeContentSection key={section.id} section={section} />
-              ))}
-            </div>
-          </main>
-        </div>
-        <div className="mt-16 md:mt-24">
-          <FooterImage />
-        </div>
-      </div>
+    <div className="relative lg:flex lg:space-x-10">
+      {/* Sticky side navigation (desktop) */}
+      <StickyReadMeNavigation sections={readMeSectionsData} />
+
+      {/* Main content */}
+      <main id="readme-top" className="prose max-w-3xl mx-auto lg:mx-0">
+        {readMeSectionsData.map((section) => (
+          <ReadMeContentSection key={section.id} section={section} />
+        ))}
+
+        {/* Scenic footer graphic (optional) */}
+        <FooterImage />
+      </main>
     </div>
   )
 }

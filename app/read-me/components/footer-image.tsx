@@ -1,26 +1,25 @@
 "use client"
 
 import { useState } from "react"
-import { cn } from "@/lib/utils"
 
 /**
- * Renders the scenic footer image on the /read-me page.
- * If the Cloudinary asset 404s or fails for any reason, we render nothing.
+ * Remote footer photo (Cloudinary)
+ * If the request fails we render nothing (no broken-image icon).
  */
-export default function FooterImage() {
-  const [errored, setErrored] = useState(false)
+const CLOUDINARY_URL = "https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
 
-  if (errored) return null
+export default function FooterImage() {
+  const [failed, setFailed] = useState(false)
+
+  if (failed) return null
 
   return (
-    <div className="w-full flex justify-center mt-16">
-      <img
-        src="https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
-        alt="Tropical sunset with calm water and warm colors"
-        loading="lazy"
-        className={cn("max-w-4xl w-full h-auto rounded-lg shadow-lg", "object-cover")}
-        onError={() => setErrored(true)}
-      />
-    </div>
+    <img
+      src={CLOUDINARY_URL || "/placeholder.svg"}
+      alt=""
+      loading="lazy"
+      className="w-full h-auto mt-12 rounded-lg"
+      onError={() => setFailed(true)}
+    />
   )
 }
