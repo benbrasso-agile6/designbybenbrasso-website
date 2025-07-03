@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
     hasCaseStudy: true,
-    caseStudyUrlOverride: "/case-studies/ai-scribe-kpi-dashboard",
+    caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
   },
   {
     title: "Mobile patient check-in",
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
     hasCaseStudy: true,
-    caseStudyUrlOverride: "/case-studies/patient-check-in",
+    caseStudyUrlOverride: "/work/patient-check-in",
   },
   {
     title: "Provider online scheduling",
@@ -42,6 +42,6 @@ export const projectsData: Project[] = [
     tags: ["UX Design", "Healthcare", "User Research", "Prototyping", "Scheduling"],
     hasCaseStudy: true,
     // This override points the button to the correct static page
-    caseStudyUrlOverride: "/case-studies/provider-online-scheduling",
+    caseStudyUrlOverride: "/work/provider-online-scheduling",
   },
 ]
