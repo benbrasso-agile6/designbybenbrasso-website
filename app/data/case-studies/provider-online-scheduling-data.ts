@@ -150,7 +150,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Fifteen Veterans—including four who use assistive technology—participated in a <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling/research/2024-06%20Community%20Care%20Self-Scheduling%20-%20Usability%20and%20Concept%20Testing" target="_blank" rel="noopener noreferrer">remote, moderated concept test and usability resarch study of the community care self-scheduling prototype.</a> <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.',
+          text: 'Fifteen Veterans—including four who used assistive technology—participated in a <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling/research/2024-06%20Community%20Care%20Self-Scheduling%20-%20Usability%20and%20Concept%20Testing" target="_blank" rel="noopener noreferrer">remote, moderated concept test and usability resarch study of the community care self-scheduling experience.</a> <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.',
         },
         {
           type: "paragraph",
