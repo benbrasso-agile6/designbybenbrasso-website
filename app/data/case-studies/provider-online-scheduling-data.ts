@@ -130,7 +130,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
-          alt: "Mobile check-in user interface demonstration showing the check-in process",
+          alt: "Community care appointment scheduling user interface process",
           width: 400,
           height: 225,
           className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
