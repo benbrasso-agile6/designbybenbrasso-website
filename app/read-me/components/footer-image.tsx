@@ -4,22 +4,24 @@ import { useState } from "react"
 
 /**
  * Scenic image shown at the bottom of the /read-me page.
- * A plain <img> element is used so the asset loads directly
- * (avoiding Next.js image optimisation proxies).
+ * Uses a plain <img> element to load a remote image directly.
  *
- * Falls back to /placeholder.jpg if the primary image fails.
+ * If the image fails to load, the component renders nothing.
  */
 export default function FooterImage() {
-  const PRIMARY_SRC = "/images/readme-footer-scenic.png"
-  const FALLBACK_SRC = "/placeholder.jpg"
+  const [isError, setIsError] = useState(false)
 
-  const [src, setSrc] = useState(PRIMARY_SRC)
+  const remoteImageUrl = "https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
+
+  if (isError) {
+    return null
+  }
 
   return (
     <img
-      src={src || "/placeholder.svg"}
-      onError={() => setSrc(FALLBACK_SRC)}
-      alt="Scenic illustration used in the footer"
+      src={remoteImageUrl || "/placeholder.svg"}
+      onError={() => setIsError(true)}
+      alt="A scenic, abstract, colorful landscape."
       loading="lazy"
       className="w-full h-auto object-cover rounded-md"
     />
