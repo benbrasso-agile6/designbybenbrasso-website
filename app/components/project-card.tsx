@@ -17,6 +17,7 @@ interface ProjectCardProps {
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
   caseStudyUrlOverride?: string
+  stats?: { label: string; value: string }[]
 }
 
 export default function ProjectCard({
@@ -30,6 +31,7 @@ export default function ProjectCard({
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
+  stats,
 }: ProjectCardProps) {
   // If caseStudyUrlOverride is provided, it's used. Otherwise, it falls back to the slug.
   const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
@@ -56,7 +58,18 @@ export default function ProjectCard({
         </div>
       </CardHeader>
 
-      <CardContent className="px-8 py-0 mt-0" />
+      <CardContent className={`px-8 ${stats && stats.length > 0 ? "pt-6" : "pt-0"}`}>
+        {stats && stats.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{stat.label}</p>
+                <p className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">{stat.value}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </CardContent>
 
       <CardFooter className={`px-8 pb-6 ${footerPaddingTopClass}`}>
         {hasCaseStudy && (slug || caseStudyUrlOverride) ? (

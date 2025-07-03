@@ -9,6 +9,7 @@ export interface Project {
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
   caseStudyUrlOverride?: string // This property allows overriding the link
+  stats?: { label: string; value: string }[]
 }
 
 export const projectsData: Project[] = [
@@ -32,6 +33,10 @@ export const projectsData: Project[] = [
     tags: ["Mobile App", "Healthcare", "Accessibility", "UI Design", "Patient Experience"],
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/patient-check-in",
+    stats: [
+      { label: "Staff time saved", value: "64k minutes per month" },
+      { label: "Users", value: "110k per month" },
+    ],
   },
   {
     title: "Provider online scheduling",

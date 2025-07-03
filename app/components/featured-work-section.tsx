@@ -1,63 +1,114 @@
-import { projectsData } from "@/app/data/projects-data"
-import ProjectCard from "./project-card"
-import ActionLink from "./action-link"
+import type React from "react"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function FeaturedWorkSection() {
+interface Project {
+  slug: string
+  title: string
+  description: string
+  imageUrl: string
+  tags: string[]
+  hasCaseStudy: boolean
+  caseStudyStatusText?: string
+  imageMarginTopClass?: string
+  footerPaddingTopClass?: string
+  caseStudyUrlOverride?: string
+  stats?: {
+    [key: string]: string
+  }
+}
+
+interface ProjectCardProps extends Project {}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  slug,
+  title,
+  description,
+  imageUrl,
+  tags,
+  hasCaseStudy,
+  caseStudyStatusText,
+  imageMarginTopClass = "mt-8",
+  footerPaddingTopClass = "pt-8",
+  caseStudyUrlOverride,
+  stats,
+}) => {
   return (
-    <section id="work" className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900">
-      <div className="max-w-[1000px] mx-auto">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 px-8">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
-            My <span className="text-sky-600 dark:text-sky-500">case studies</span>
-          </h2>
-          <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A selection of projects—not always completed in a linear process—that showcase my skills in UX design,
-            product management, user research, and using AI.
-          </p>
+    <div className="relative group">
+      <div className={`relative overflow-hidden rounded-3xl ${imageMarginTopClass}`}>
+        <Image
+          src={imageUrl || "/placeholder.svg"}
+          alt={title}
+          width={600}
+          height={400}
+          className="transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div className={`px-6 ${footerPaddingTopClass}`}>
+        <h3 className="text-2xl font-semibold mt-4">{title}</h3>
+        <p className="text-gray-600 mt-2">{description}</p>
+        <div className="mt-3">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
-        <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
-          {projectsData.map((project) => {
-            let specificImageMarginTopClass = "mt-6" // Default for image margin
-            let specificFooterPaddingTopClass = "pt-6" // Default for footer padding
-
-            if (project.slug === "direct-online-scheduling") {
-              specificImageMarginTopClass = "mt-3" // Smaller margin above image
-              specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
-            }
-
-            // Comment out provider online scheduling for now - skip rendering this project
-            if (project.slug === "direct-online-scheduling") {
-              return null
-            }
-
-            // Ensure all project properties are spread or explicitly passed
-            return (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                imageUrl={project.imageUrl}
-                tags={project.tags}
-                slug={project.slug}
-                hasCaseStudy={project.hasCaseStudy}
-                caseStudyStatusText={project.caseStudyStatusText}
-                imageMarginTopClass={specificImageMarginTopClass}
-                footerPaddingTopClass={specificFooterPaddingTopClass}
-                caseStudyUrlOverride={project.caseStudyUrlOverride} // Explicitly pass the prop
-              />
-            )
-          })}
-        </div>
-        <div className="mt-16 md:mt-20 text-center px-8">
-          <p className="max-w-[700px] mx-auto text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Explore more of my case studies to see how I think, collaborate, make informed decisions, and drive
-            outcomes.
-          </p>
-          <div className="mt-8">
-            <ActionLink href="/case-studies">Explore featured case studies</ActionLink>
+        {stats && (
+          <div className="mt-3">
+            {Object.entries(stats).map(([key, value]) => (
+              <div key={key} className="text-sm text-gray-700">
+                <strong>{key}:</strong> {value}
+              </div>
+            ))}
           </div>
+        )}
+        {hasCaseStudy ? (
+          <Link
+            href={caseStudyUrlOverride || `/case-studies/${slug}`}
+            className="inline-block mt-4 text-blue-500 hover:underline"
+          >
+            {caseStudyStatusText || "View Case Study"}
+          </Link>
+        ) : null}
+      </div>
+    </div>
+  )
+}
+
+interface FeaturedWorkSectionProps {
+  projects: Project[]
+}
+
+const FeaturedWorkSection: React.FC<FeaturedWorkSectionProps> = ({ projects }) => {
+  return (
+    <section className="py-12 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Featured Work</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              tags={project.tags}
+              slug={project.slug}
+              hasCaseStudy={project.hasCaseStudy}
+              caseStudyStatusText={project.caseStudyStatusText}
+              imageMarginTopClass={project.imageMarginTopClass}
+              footerPaddingTopClass={project.footerPaddingTopClass}
+              caseStudyUrlOverride={project.caseStudyUrlOverride}
+              stats={project.stats}
+            />
+          ))}
         </div>
       </div>
     </section>
   )
 }
+
+export default FeaturedWorkSection
