@@ -101,7 +101,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           text: '<a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/research/2020-10-cc-provider-selection-usability" target="_blank" rel="noopener noreferrer">Prior research conducted by an adjacent Veteran-facing product team—focused on provider selection for community care appointments</a>—uncovered key insights from Veterans in late 2020:',
         },
         {
-          type: "numeric-list",
+          type: "list",
           items: [
             "Participants wanted a more personalized list of providers. Most hoped to schedule with someone they had seen before or had researched on their own.",
             "<strong>Appointment availability was top of mind. Veterans wanted to know how soon they could be seen,</strong> or whether a provider was available on specific dates.",
