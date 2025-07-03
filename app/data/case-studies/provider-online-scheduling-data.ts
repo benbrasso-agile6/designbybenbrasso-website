@@ -130,7 +130,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:",
+          text: "<strong>We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:</strong>",
         },
         {
           type: "numeric-list",
