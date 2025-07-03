@@ -1,5 +1,6 @@
 import { projectsData } from "@/app/data/projects-data"
 import ProjectCard from "./project-card"
+import ActionLink from "./action-link"
 
 export default function FeaturedWorkSection() {
   return (
@@ -10,7 +11,8 @@ export default function FeaturedWorkSection() {
             My <span className="text-sky-600 dark:text-sky-500">case studies</span>
           </h2>
           <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A selection of projects—not always completed in a linear process—that showcase my skills in UX design, product management, user research, and using AI.
+            A selection of projects—not always completed in a linear process—that showcase my skills in UX design,
+            product management, user research, and using AI.
           </p>
         </div>
         <div className="flex flex-col items-center gap-16 md:gap-20 px-4 sm:px-6 md:px-8">
@@ -23,7 +25,6 @@ export default function FeaturedWorkSection() {
               specificFooterPaddingTopClass = "pt-3" // Smaller padding above footer text
             }
 
-            // Ensure all project properties are spread or explicitly passed
             return (
               <ProjectCard
                 key={project.title}
@@ -36,10 +37,19 @@ export default function FeaturedWorkSection() {
                 caseStudyStatusText={project.caseStudyStatusText}
                 imageMarginTopClass={specificImageMarginTopClass}
                 footerPaddingTopClass={specificFooterPaddingTopClass}
-                caseStudyUrlOverride={project.caseStudyUrlOverride} // Explicitly pass the prop
+                caseStudyUrlOverride={project.caseStudyUrlOverride}
               />
             )
           })}
+        </div>
+        <div className="mt-16 md:mt-20 text-center px-8">
+          <p className="max-w-[700px] mx-auto text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Explore more of my case studies to see how I think, collaborate, make informed decisions, and drive
+            outcomes.
+          </p>
+          <div className="mt-8">
+            <ActionLink href="/more-work">Explore featured case studies</ActionLink>
+          </div>
         </div>
       </div>
     </section>
