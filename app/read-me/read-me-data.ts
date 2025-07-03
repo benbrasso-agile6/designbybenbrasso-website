@@ -183,6 +183,3 @@ export const readMeSectionsData: ReadMeSectionItem[] = [
     },
   },
 ]
-
-// 👇 Alias so legacy code that expects `readMeData` keeps working
-export { readMeSectionsData as readMeData }

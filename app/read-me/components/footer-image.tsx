@@ -3,23 +3,25 @@
 import { useState } from "react"
 
 /**
- * Remote footer photo (Cloudinary)
- * If the request fails we render nothing (no broken-image icon).
+ * Scenic image shown at the bottom of the /read-me page.
+ * A plain <img> element is used so the asset loads directly
+ * (avoiding Next.js image optimisation proxies).
+ *
+ * Falls back to /placeholder.jpg if the primary image fails.
  */
-const CLOUDINARY_URL = "https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
-
 export default function FooterImage() {
-  const [failed, setFailed] = useState(false)
+  const PRIMARY_SRC = "https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
+  const FALLBACK_SRC = "/placeholder.jpg"
 
-  if (failed) return null
+  const [src, setSrc] = useState(PRIMARY_SRC)
 
   return (
     <img
-      src={CLOUDINARY_URL || "/placeholder.svg"}
-      alt=""
+      src={src || "/placeholder.svg"}
+      onError={() => setSrc(FALLBACK_SRC)}
+      alt="Scenic illustration used in the footer"
       loading="lazy"
-      className="w-full h-auto mt-12 rounded-lg"
-      onError={() => setFailed(true)}
+      className="w-full h-auto object-cover rounded-md"
     />
   )
 }
