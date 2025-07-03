@@ -1,76 +1,38 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-
-const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
+import type React from "react"
 
 interface ProjectCardProps {
   title: string
   description: string
   imageUrl: string
-  tags: string[]
-  slug?: string
-  hasCaseStudy?: boolean
-  projectUrl?: string
-  caseStudyStatusText?: string
+  projectUrl: string
   imageMarginTopClass?: string
-  footerPaddingTopClass?: string
-  caseStudyUrlOverride?: string
 }
 
-export default function ProjectCard({
+const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   imageUrl,
-  tags,
-  slug,
-  hasCaseStudy,
-  caseStudyUrlOverride,
-  caseStudyStatusText,
-  imageMarginTopClass = "mt-6",
-  footerPaddingTopClass = "pt-6",
-}: ProjectCardProps) {
-  // If caseStudyUrlOverride is provided, it's used. Otherwise, it falls back to the slug.
-  const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
-
+  projectUrl,
+  imageMarginTopClass = "mt-0",
+}) => {
   return (
-    <Card className="overflow-hidden w-full max-w-5xl flex flex-col group bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 min-h-[auto] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-      <CardHeader className="pt-10 px-8 pb-0">
-        <CardTitle className="text-2xl lg:text-3xl text-sky-800 dark:text-sky-700">{title}</CardTitle>
-        <p
-          className="text-base md:text-lg lg:text-xl leading-loose text-neutral-700 dark:text-neutral-300 mt-6"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
-        <div className={`w-full ${imageMarginTopClass}`}>
-          <div className="aspect-[16/9] w-full overflow-hidden rounded-md bg-white dark:bg-neutral-800 flex items-center justify-center">
-            <Image
-              src={imageUrl || "/placeholder.svg?width=890&height=500&query=large+project+showcase+image"}
-              alt={title}
-              width={890}
-              height={500}
-              className="object-contain w-full h-full transition-transform duration-300"
-              unoptimized
-            />
-          </div>
+    <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+      <div className="relative rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="overflow-hidden rounded-xl">
+          <img
+            src={imageUrl || "/placeholder.svg"}
+            alt={`${title} thumbnail`}
+            className={`w-full rounded-xl shadow-lg ${imageMarginTopClass}`}
+            loading="lazy"
+          />
         </div>
-      </CardHeader>
-
-      <CardContent className="px-8 py-0 mt-0" />
-
-      <CardFooter className={`px-8 pb-6 ${footerPaddingTopClass}`}>
-        {hasCaseStudy && (slug || caseStudyUrlOverride) ? (
-          <Link href={linkHref} passHref>
-            <Button className="bg-sky-900 hover:bg-sky-950 text-white dark:bg-sky-700 dark:hover:bg-sky-800">
-              Review case study
-            </Button>
-          </Link>
-        ) : (
-          <p className="text-base text-neutral-500 dark:text-neutral-400">
-            {caseStudyStatusText || DEFAULT_CASE_STUDY_STATUS_TEXT}
-          </p>
-        )}
-      </CardFooter>
-    </Card>
+        <div className="p-4">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+          <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>
+        </div>
+      </div>
+    </a>
   )
 }
+
+export default ProjectCard
