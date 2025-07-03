@@ -1,4 +1,4 @@
-import { caseStudiesData } from "@/app/data/case-studies-data"
+import { projectsData } from "@/app/data/projects-data"
 import ProjectCard from "./project-card"
 import ActionLink from "./action-link"
 
@@ -14,9 +14,9 @@ export default function FeaturedWorkSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {caseStudiesData.map((project) => {
-            // Hide the provider online scheduling project for now
-            if (project.slug === "direct-online-scheduling") {
+          {projectsData.map((project) => {
+            // Hide the Provider Online Scheduling project for now
+            if (project.slug === "provider-online-scheduling") {
               return null
             }
 
