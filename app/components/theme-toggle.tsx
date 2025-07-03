@@ -20,6 +20,7 @@ export function ThemeToggle() {
   }
 
   if (!mounted) {
+    // Render a placeholder on the server to prevent layout shift
     return (
       <div className="flex items-center space-x-2">
         <div className="h-[1.2rem] w-[1.2rem]" />
@@ -32,19 +33,19 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center space-x-2">
       <Sun
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-[2000ms] ease-out ${
-          theme === "dark" ? "text-slate-500 scale-75 opacity-30" : "text-yellow-500 scale-100 opacity-100"
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-500 ease-in-out ${
+          theme === "light" ? "text-foreground scale-100 opacity-100" : "text-muted-foreground scale-75 opacity-50"
         }`}
       />
       <Switch
         checked={theme === "dark"}
         onCheckedChange={toggleTheme}
         aria-label="Toggle theme"
-        className="hover:scale-110 transition-transform duration-[1000ms] ease-out"
+        className="hover:scale-110 transition-transform duration-200 ease-out"
       />
       <Moon
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-[2000ms] ease-out ${
-          theme === "light" ? "text-slate-500 scale-75 opacity-30" : "text-blue-400 scale-100 opacity-100"
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-500 ease-in-out ${
+          theme === "dark" ? "text-foreground scale-100 opacity-100" : "text-muted-foreground scale-75 opacity-50"
         }`}
       />
     </div>
