@@ -117,7 +117,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>We grounded our initial design swagger and approach in findings from prior user research</strong>, and we also drew inspiration from the private sector—where direct online scheduling for new patients became widely adopted in the mid-to-late 2010s. Epic’s Open Scheduling played a key role in driving that trend.",
+          text: "We made a “big bet” that Veterans would prefer a userflow with fewer steps and provider availability accessible as early as possible. However, because we were designing in parallel with technical discovery around API capabilities, we had to remain flexible. This meant preparing for multiple userflows in case our preferred approach wasn't technically feasible.",
         },                         
         {
           type: "image",
