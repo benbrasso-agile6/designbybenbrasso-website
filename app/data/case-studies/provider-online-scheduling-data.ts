@@ -128,6 +128,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
         },
         {
+          type: "paragraph",
+          text: "We conducted a remote, moderated research study with Veterans that included 3 methods of collecting feedback:",
+        },   
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
           alt: "Community care appointment scheduling user interface process",
