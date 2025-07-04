@@ -128,22 +128,22 @@ export default function DesignContributionsPage() {
         <ul>
           <li>
             <a
-              href="https://design.va.gov/components/card#appointment-large-with-icon"
+              href="https://depo-platform-documentation.scrollhelp.site/research-design/accessible-prototyping-with-codepen"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-600 dark:text-sky-500"
             >
-              Card - Appointment, large with icon variation
+              Accessible prototyping with CodePen
             </a>
           </li>
           <li>
             <a
-              href="https://design.va.gov/components/search-filter"
+              href="https://depo-platform-documentation.scrollhelp.site/research-design/conducting-on-site-intercept-interviews"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-600 dark:text-sky-500"
             >
-              Search filter
+              Conducting on-site intercept interviews
             </a>
           </li>
         </ul>
