@@ -27,7 +27,12 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-        <FeaturedWorkSection projects={caseStudies} title={null} className="bg-muted/40 py-12" />
+        <FeaturedWorkSection
+          projectsToDisplay={caseStudies}
+          showHeading={false}
+          showMoreWorkLink={false}
+          sectionClassName="w-full pb-16 md:pb-24 lg:pb-32 bg-muted/40"
+        />
       </main>
       <Footer />
     </div>
