@@ -162,7 +162,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },   
         {
           type: "paragraph",
-          text: "<strong>Key Takeaways</strong>",
+          text: "<strong>Key takeaways:</strong>",
         },
         {
           type: "list",
