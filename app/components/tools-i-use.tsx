@@ -24,6 +24,7 @@ import {
   Wand2Icon,
   MessageCircleIcon,
   FileCodeIcon,
+  MicIcon,
 } from "lucide-react"
 import type React from "react"
 import { motion } from "framer-motion"
@@ -57,6 +58,7 @@ export default function ToolsIUseSection() {
     { icon: ActivityIcon, text: "Datadog" },
     { icon: UsersIcon, text: "HCD Methodologies" },
     { icon: RefreshCwIcon, text: "Agile" },
+    { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },
     { icon: LightbulbIcon, text: "An open mind" },
     { icon: SearchIcon, text: "Curiosity" },
     { icon: SmileIcon, text: "An abundance mindset" },
