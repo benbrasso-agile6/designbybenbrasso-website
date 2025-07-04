@@ -73,7 +73,7 @@ export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
             ref={closeButtonRef}
             // Remove the programmatic class on blur to allow normal focus-visible behavior if user tabs away and back
             onBlur={(e) => e.currentTarget.classList.remove("force-focus-visible")}
-            className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-black/50"
+            className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 transition-colors focus:outline-none focus:shadow-none focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)] force-focus-visible:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]"
           >
             <X className="h-4 w-4" strokeWidth={1.5} />
             <span className="sr-only">Close</span>

@@ -103,22 +103,37 @@ export default function PatientCheckInClientPage() {
 
   useEffect(() => {
     const scrollToTopPrecise = () => {
-      document.documentElement.style.scrollBehavior = "auto"
-      document.body.style.scrollBehavior = "auto"
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+      // Force immediate scroll for iOS Safari
+      if (typeof window !== "undefined") {
+        // Disable smooth scrolling temporarily
+        document.documentElement.style.scrollBehavior = "auto"
+        document.body.style.scrollBehavior = "auto"
+
+        // Multiple scroll methods for iOS Safari compatibility
+        window.scrollTo(0, 0)
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+
+        // Force a reflow
+        document.body.offsetHeight
+
+        // Try again with requestAnimationFrame
+        requestAnimationFrame(() => {
+          window.scrollTo(0, 0)
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+        })
+      }
     }
+
+    // Immediate scroll
     scrollToTopPrecise()
-    const animationFrameId = requestAnimationFrame(() => {
-      scrollToTopPrecise()
-    })
-    const timerId = setTimeout(() => {
-      scrollToTopPrecise()
-    }, 150)
+
+    // Additional attempts with delays for iOS Safari
+    const timeouts = [0, 10, 50, 100, 200].map((delay) => setTimeout(scrollToTopPrecise, delay))
+
     return () => {
-      cancelAnimationFrame(animationFrameId)
-      clearTimeout(timerId)
+      timeouts.forEach(clearTimeout)
     }
   }, [])
 
