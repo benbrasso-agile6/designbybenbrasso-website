@@ -192,10 +192,12 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "list",
           items: [
-            "Conservatively, if we use 7 days as the current baseline for how long it takes staff to manually schedule a community care appointment for a Veteran, that's roughly 10,080 minutes. At one pilot site using the External Provider Scheduling (EPS) platform, staff are completing the same task in just 7 minutes on average—<strong>a potential time savings of 10,073 minutes per appointment. When applied to approximately 250,000 community care authorized referrals per month, that translates to a potential savings of over 41 million minutes—or nearly 700,000 hours—each month.</strong>",
-            "<strong>(Placeholder) Increase Veteran satisfaction:</strong> Improve the overall experience and satisfaction for Veterans seeking community care.",
-            "<strong>(Placeholder) Reduce staff workload:</strong> Automate the scheduling process to free up VA staff from manual coordination.",
-            "<strong>(Placeholder) Achieve feature parity:</strong> Provide an online scheduling experience for community care that is as seamless as the existing one for VA-based care.",
+            "<strong>Enabled a first-of-its-kind digital experience on VA.gov,</strong> allowing Veterans to self-schedule community care appointments online—replacing a previously manual, staff-driven process that often took days or weeks",
+            "<strong>Dramatically reduced scheduling time through the External Provider Scheduling (EPS) platform,</strong> from an estimated 7 days (10,080 minutes) to just 7 minutes per appointment. If scaled across 250,000 referrals per month, this improvement could save over 41 million minutes—or nearly 700,000 staff hours—each month.",
+            "<strong>Improved Veteran satisfaction with the scheduling experience,</strong> as evidenced by high task completion rates, low cognitive load, and unprompted positive feedback during usability testing",
+            "<strong>Designed and tested an accessible userflow and prototype,</strong> incorporating feedback from Veterans using assistive technologies to ensure an inclusive experience. In addition, we contributed guidance on accessible prototyping with CodePen to the VA Platform research community, helping other teams adopt more inclusive design and testing practices.",
+            "<strong>Designed and tested an accessible userflow and prototype,</strong> incorporating feedback from Veterans using assistive technologies to ensure an inclusive experience. In addition, we contributed guidance on accessible prototyping with CodePen to the VA Platform research community, helping other teams adopt more inclusive design and testing practices.",
+            "<strong>Designed and tested an accessible userflow and prototype,</strong> incorporating feedback from Veterans using assistive technologies to ensure an inclusive experience. In addition, we contributed guidance on accessible prototyping with CodePen to the VA Platform research community, helping other teams adopt more inclusive design and testing practices.",
           ],
         },
       ],
