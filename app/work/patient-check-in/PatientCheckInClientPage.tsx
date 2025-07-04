@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
 import Lightbox from "@/app/components/lightbox"
+import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
 
 const caseStudy = patientCheckInData
 
@@ -128,9 +129,8 @@ export default function PatientCheckInClientPage() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
+      <div className="flex mb-8 print:hidden">
+        <BackToAllCaseStudiesLink />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">

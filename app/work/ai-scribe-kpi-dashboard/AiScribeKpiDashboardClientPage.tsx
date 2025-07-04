@@ -7,9 +7,10 @@ import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
 import NextProjectLink from "@/app/components/next-project-link"
-import { useEffect, useState } from "react" // Added useState
-import { useMobile } from "@/hooks/use-mobile" // Added
-import Lightbox from "@/app/components/lightbox" // Added
+import { useEffect, useState } from "react"
+import { useMobile } from "@/hooks/use-mobile"
+import Lightbox from "@/app/components/lightbox"
+import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
 
 const caseStudy = aiScribeKpiDashboardData
 
@@ -124,9 +125,8 @@ export default function AiScribeKpiDashboardClientPage() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+      <div className="flex mb-8 print:hidden">
+        <BackToAllCaseStudiesLink />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
