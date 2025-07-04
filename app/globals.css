@@ -85,15 +85,26 @@
     @apply text-sky-500 underline hover:text-sky-400;
   }
 
-  /* Custom bullet colors for prose content */
+  /* Custom bullet colors for prose content - Made darker to match /work/ pages */
   .prose-neutral ul.list-disc > li::marker,
   .prose-neutral ol > li::marker {
-    color: #000000; /* Black for light mode */
+    color: #171717; /* Darker neutral-900 for better contrast */
   }
 
   .dark .prose-invert ul.list-disc > li::marker,
   .dark .prose-invert ol > li::marker {
-    color: #262626; /* Equivalent to neutral-800 for dark mode */
+    color: #e5e5e5; /* Lighter neutral-200 for dark mode contrast */
+  }
+
+  /* Additional prose bullet styling for nested lists */
+  .prose-neutral ul > li::marker,
+  .prose-neutral ol > li::marker {
+    color: #171717; /* Consistent dark color for all list markers */
+  }
+
+  .dark .prose-invert ul > li::marker,
+  .dark .prose-invert ol > li::marker {
+    color: #e5e5e5; /* Consistent light color for dark mode */
   }
 }
 
