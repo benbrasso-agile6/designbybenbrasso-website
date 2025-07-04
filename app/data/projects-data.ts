@@ -52,5 +52,8 @@ export const projectsData: Project[] = [
     hasCaseStudy: true,
     // This override points the button to the correct static page
     caseStudyUrlOverride: "/work/provider-online-scheduling",
+    stats: [
+      { label: "Staff time saved", value: "64k minutes per month" },
+      { label: "Users", value: "110k per month" },
   },
 ]
