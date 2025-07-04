@@ -1,11 +1,11 @@
 import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import ProjectCard from "@/app/components/project-card"
-import { projects } from "@/app/data/projects-data"
+import { projectsData } from "@/app/data/projects-data"
 
 export default function CaseStudiesPage() {
-  // We only want the three case-study projects
-  const caseStudies = projects.slice(0, 3)
+  // We only want the three projects that have a case study
+  const caseStudies = projectsData.filter((p) => p.hasCaseStudy).slice(0, 3)
 
   return (
     <div className="flex min-h-dvh flex-col">
