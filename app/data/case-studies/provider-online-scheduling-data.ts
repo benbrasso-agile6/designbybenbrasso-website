@@ -174,7 +174,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Veterans responded positively to the filter and sort interface. Based on this feedback, <strong><a href="https://github.com/department-of-veterans-affairs/vets-design-system-documentation/issues/3185" target="_blank" rel="noopener noreferrer">the filter and sort design pattern was contributed to the VA.gov Design System</a>, where it later <a href="https://design.va.gov/templates/search-results" target="_blank" rel="noopener noreferrer">helped shape a new experimental search results component.</a></strong>',
+          text: "While the Veteran-facing experience was being rapidly designed and tested, we also created an ecosystem map to give leadership, engineers, product managers, privacy officers, VA scheduling staff, and external partners a shared understanding of all the moving parts. The map helped visualize the people, systems, tools, environments, and dependencies involved in delivering a high-quality care experience for Veterans.",
         },    
         {
           type: "image",
