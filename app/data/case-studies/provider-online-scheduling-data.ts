@@ -174,7 +174,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "While the Veteran-facing experience was being rapidly designed and tested, we also created an ecosystem map to give leadership, engineers, product managers, privacy officers, VA scheduling staff, and external partners a shared understanding of all the moving parts. The map helped visualize the people, systems, tools, environments, and dependencies involved in delivering a high-quality care experience for Veterans.",
+          text: "While the Veteran-facing experience was being rapidly designed and tested, we also <strong>created an ecosystem map to give leadership, engineers, product managers, privacy officers, VA scheduling staff, and external partners a shared understanding of all the moving parts.</strong> The map helped visualize the people, systems, tools, environments, and dependencies involved in delivering a high-quality care experience for Veterans.",
         },    
         {
           type: "image",
