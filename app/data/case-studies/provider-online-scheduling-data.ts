@@ -171,7 +171,11 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "The self-scheduling process—from referral notification to booking—generally met expectations but could be improved by clarifying content, enhancing filter value, and improving some screen reader accessibility.",
             "Veterans expect VA to follow up with timely reminders to schedule, even when they choose to self-schedule.",
           ],
-        }, 
+        },
+        {
+          type: "paragraph",
+          text: 'Veterans responded positively to the filter and sort interface. Based on this feedback, <strong><a href="https://github.com/department-of-veterans-affairs/vets-design-system-documentation/issues/3185" target="_blank" rel="noopener noreferrer">the filter and sort design pattern was contributed to the VA.gov Design System</a>, where it later <a href="https://design.va.gov/templates/search-results" target="_blank" rel="noopener noreferrer">helped shape a new experimental search results component.</a></strong>',
+        },    
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
