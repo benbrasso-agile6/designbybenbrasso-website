@@ -55,5 +55,6 @@ export const projectsData: Project[] = [
     stats: [
       { label: "Projected staff time saved", value: "700,000 hours per month" },
       { label: "Projected users", value: "250,000 per month" },
+    ],
   },
-]
+];
