@@ -5,16 +5,18 @@ export default function DesignContributionsPage() {
   return (
     <>
       <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
-        <h1 className="leading-normal">Design System <span className="text-sky-600 dark:text-sky-500">Contributions</span></h1>
+        <h1 className="leading-normal">
+          Design System <span className="text-sky-600 dark:text-sky-500">Contributions</span>
+        </h1>
         <p>
           I’m passionate about advancing the larger design community by contributing components, patterns, and research
-          that strengthen and mature design systems. 
+          that strengthen and mature design systems.
         </p>
-        
+
         <p>
-          By giving back to shared systems like VA.gov’s, I aim to support
-          scalable, accessible, and consistent user experiences—while helping teams build with greater confidence and
-          efficiency. These are a selection of contributions I’ve made to support and grow design systems.
+          By giving back to shared systems like VA.gov’s, I aim to support scalable, accessible, and consistent user
+          experiences—while helping teams build with greater confidence and efficiency. These are a selection of
+          contributions I’ve made to support and grow design systems.
         </p>
       </article>
 
@@ -115,6 +117,33 @@ export default function DesignContributionsPage() {
               className="text-sky-600 dark:text-sky-500"
             >
               Navigate a long list
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
+        <h2>Research at VA</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://depo-platform-documentation.scrollhelp.site/research-design/accessible-prototyping-with-codepen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 dark:text-sky-500"
+            >
+              Accessible prototyping with CodePen
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://depo-platform-documentation.scrollhelp.site/research-design/conducting-on-site-intercept-interviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 dark:text-sky-500"
+            >
+              Conducting on-site intercept interviews
             </a>
           </li>
         </ul>

@@ -12,7 +12,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Ben Brasso | UX Product Design Portfolio",
+  title: "Ben Brasso - UX Product Design Portfolio",
   description:
     "UX dsign portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
   robots: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Ben Brasso | UX Product Design Portfolio",
+    title: "Ben Brasso - UX Product Design Portfolio",
     description:
       "UX dsign portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ben Brasso | UX Product Design Portfolio",
+    title: "Ben Brasso - UX Product Design Portfolio",
     description:
       "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
     images: ["https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg"],

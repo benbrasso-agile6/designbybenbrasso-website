@@ -5,12 +5,12 @@ import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
 import { patientCheckInData } from "@/app/data/case-studies/patient-check-in-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
-import BackToHomeLink from "@/app/components/back-to-home-link"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import { useEffect, useState } from "react" // Added useState
+import { useEffect, useState } from "react"
 import NextProjectLink from "@/app/components/next-project-link"
-import { useMobile } from "@/hooks/use-mobile" // Added
-import Lightbox from "@/app/components/lightbox" // Added
+import { useMobile } from "@/hooks/use-mobile"
+import Lightbox from "@/app/components/lightbox"
+import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
 
 const caseStudy = patientCheckInData
 
@@ -123,15 +123,14 @@ export default function PatientCheckInClientPage() {
   }, [])
 
   const githubLinkData = {
-    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/checkin",
-    text: "Visit VA's Mobile Check-in repo on GitHub",
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/check-in-experience",
+    text: "Visit VA's Check-in Experience repo on GitHub",
   }
 
   return (
     <>
-      <div className="hidden md:flex justify-between items-center mb-8 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
+      <div className="flex mb-8 print:hidden">
+        <BackToAllCaseStudiesLink />
       </div>
 
       <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
@@ -183,8 +182,8 @@ export default function PatientCheckInClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <BackToHomeLink />
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (

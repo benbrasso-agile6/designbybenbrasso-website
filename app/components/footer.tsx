@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { CompassIcon, LinkedinIcon, GithubIcon } from "lucide-react"
+import { ThemeToggle } from "@/app/components/theme-toggle"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -37,7 +38,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom row for text content, aligned on the same y-axis */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-baseline gap-4 text-sm">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4 text-sm">
           <div className="text-neutral-500 dark:text-neutral-400 text-center md:text-left">
             Built using v0 for rapid prototyping, extended with custom components.
             <br />
@@ -51,9 +52,12 @@ export default function Footer() {
               Check out the code on GitHub.
             </Link>
           </div>
-          <p className="text-muted-foreground text-center md:text-right">
-            &copy; {currentYear} Ben Brasso. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center md:items-end gap-4">
+            <ThemeToggle />
+            <p className="text-muted-foreground text-center md:text-right">
+              &copy; {currentYear} Ben Brasso. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

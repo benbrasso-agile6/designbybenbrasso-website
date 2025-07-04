@@ -3,18 +3,18 @@
 import type React from "react"
 import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
-import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
+import { providerOnlineSchedulingData } from "@/app/data/case-studies/provider-online-scheduling-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import NextProjectLink from "@/app/components/next-project-link"
 import { useEffect, useState } from "react"
+import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
 import Lightbox from "@/app/components/lightbox"
 import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
 
-const caseStudy = aiScribeKpiDashboardData
+const caseStudy = providerOnlineSchedulingData
 
-export default function AiScribeKpiDashboardClientPage() {
+export default function ProviderOnlineSchedulingClientPage() {
   const isMobile = useMobile()
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
@@ -28,7 +28,6 @@ export default function AiScribeKpiDashboardClientPage() {
 
   const handleCloseLightbox = () => {
     setLightboxOpen(false)
-    // Delay clearing src/alt to allow fade-out animations if any
     setTimeout(() => {
       setLightboxSrc(null)
       setLightboxAlt(null)
@@ -46,6 +45,14 @@ export default function AiScribeKpiDashboardClientPage() {
               <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
             ))}
           </ul>
+        )
+      case "numeric-list":
+        return (
+          <ol key={index} className="list-decimal pl-5 space-y-1">
+            {item.items?.map((li, liIndex) => (
+              <li key={liIndex} dangerouslySetInnerHTML={{ __html: li }} />
+            ))}
+          </ol>
         )
       case "image":
         if (item.src && item.alt) {
@@ -123,13 +130,18 @@ export default function AiScribeKpiDashboardClientPage() {
     }
   }, [])
 
+  const githubLinkData = {
+    url: "https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling",
+    text: "Visit VA's Community Care Self-Scheduling repo on GitHub",
+  }
+
   return (
     <>
       <div className="flex mb-8 print:hidden">
         <BackToAllCaseStudiesLink />
       </div>
 
-      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+      <h1 className="page-title-spacing text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
         {caseStudy.pageTitle}
       </h1>
 
@@ -149,7 +161,9 @@ export default function AiScribeKpiDashboardClientPage() {
         )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {caseStudy.projectOverviewBanner && (
+            <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} githubLink={githubLinkData} />
+          )}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
             {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
@@ -176,8 +190,8 @@ export default function AiScribeKpiDashboardClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/patient-check-in" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (

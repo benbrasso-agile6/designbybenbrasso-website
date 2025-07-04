@@ -4,7 +4,7 @@ import Footer from "@/app/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Design Contributions | Ben Brasso",
+  title: "Design Contributions - Ben Brasso",
   description:
     "Discover Ben Brasso's contributions to design systems, featuring components and patterns developed for VA.gov. Learn about his commitment to scalable and accessible user experiences.",
 }

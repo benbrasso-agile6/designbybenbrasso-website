@@ -16,7 +16,8 @@ interface ProjectCardProps {
   caseStudyStatusText?: string
   imageMarginTopClass?: string
   footerPaddingTopClass?: string
-  caseStudyUrlOverride?: string // Ensure this prop is defined
+  caseStudyUrlOverride?: string
+  stats?: { label: string; value: string }[]
 }
 
 export default function ProjectCard({
@@ -26,17 +27,13 @@ export default function ProjectCard({
   tags,
   slug,
   hasCaseStudy,
-  caseStudyUrlOverride, // Ensure this is destructured
+  caseStudyUrlOverride,
   caseStudyStatusText,
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
+  stats,
 }: ProjectCardProps) {
-  // For debugging: Check if caseStudyUrlOverride is received for the specific card
-  if (title === "Ambient scribe KPI dashboard") {
-    console.log("ProjectCard - Ambient Scribe KPI Dashboard - caseStudyUrlOverride:", caseStudyUrlOverride)
-    console.log("ProjectCard - Ambient Scribe KPI Dashboard - slug:", slug)
-  }
-
+  // If caseStudyUrlOverride is provided, it's used. Otherwise, it falls back to the slug.
   const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
 
   return (
@@ -61,7 +58,18 @@ export default function ProjectCard({
         </div>
       </CardHeader>
 
-      <CardContent className="px-8 py-0 mt-0" />
+      <CardContent className={`px-8 ${stats && stats.length > 0 ? "pt-6" : "pt-0"}`}>
+        {stats && stats.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{stat.label}</p>
+                <p className="text-xl font-bold text-neutral-800 dark:text-neutral-200 font-light">{stat.value}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </CardContent>
 
       <CardFooter className={`px-8 pb-6 ${footerPaddingTopClass}`}>
         {hasCaseStudy && (slug || caseStudyUrlOverride) ? (

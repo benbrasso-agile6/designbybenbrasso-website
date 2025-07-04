@@ -1,39 +1,28 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 
-interface FooterImageProps {
-  src: string
-  alt: string
-  imgWidth: number
-  imgHeight: number
-}
+/**
+ * Scenic image shown at the bottom of the /read-me page.
+ * A plain <img> element is used so the asset loads directly
+ * (avoiding Next.js image optimisation proxies).
+ *
+ * Falls back to /placeholder.jpg if the primary image fails.
+ * Added bottom padding to create space between image and footer navigation.
+ */
+export default function FooterImage() {
+  const PRIMARY_SRC = "https://res.cloudinary.com/dpl6apspp/image/upload/v1748743572/1299427_gdw03z.jpg"
+  const FALLBACK_SRC = "/placeholder.jpg"
 
-export default function FooterImage({ src, alt, imgWidth, imgHeight }: FooterImageProps) {
-  const [imageSrc, setImageSrc] = useState(src)
-  const [hasError, setHasError] = useState(false)
-
-  const handleImageError = () => {
-    if (!hasError) {
-      // Only set the fallback once to prevent infinite loops
-      setHasError(true)
-      setImageSrc("/placeholder.svg?width=1400&height=700")
-    }
-  }
+  const [src, setSrc] = useState(PRIMARY_SRC)
 
   return (
-    <div className="w-full">
-      <Image
-        src={imageSrc || "/placeholder.svg"}
-        alt={alt}
-        width={imgWidth}
-        height={imgHeight}
-        className="w-full h-auto object-cover"
-        priority={false}
-        onError={handleImageError}
-        unoptimized
-      />
-    </div>
+    <img
+      src={src || "/placeholder.svg"}
+      onError={() => setSrc(FALLBACK_SRC)}
+      alt="Scenic illustration used in the footer"
+      loading="lazy"
+      className="w-full h-auto object-cover rounded-md mb-8" // Added mb-8 for bottom margin
+    />
   )
 }
