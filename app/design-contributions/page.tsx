@@ -121,6 +121,33 @@ export default function DesignContributionsPage() {
           </li>
         </ul>
       </section>
+
+      <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
+        <h2>Research at VA</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://design.va.gov/components/card#appointment-large-with-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 dark:text-sky-500"
+            >
+              Card - Appointment, large with icon variation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://design.va.gov/components/search-filter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 dark:text-sky-500"
+            >
+              Search filter
+            </a>
+          </li>
+        </ul>
+      </section>
     </>
   )
 }
