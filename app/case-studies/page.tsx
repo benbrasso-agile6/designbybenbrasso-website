@@ -31,7 +31,7 @@ export default function CaseStudiesPage() {
           projectsToDisplay={caseStudies}
           showHeading={false}
           showMoreWorkLink={false}
-          sectionClassName="w-full pb-16 md:pb-24 lg:pb-32 bg-muted/40"
+          sectionClassName="w-full pb-16 md:pb-24 lg:pb-32 bg-white dark:bg-neutral-900"
         />
       </main>
       <Footer />
