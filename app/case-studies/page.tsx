@@ -1,18 +1,15 @@
 import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
-import ProjectCard from "@/app/components/project-card"
+import FeaturedWorkSection from "@/app/components/featured-work-section"
 import { projectsData } from "@/app/data/projects-data"
 
 export default function CaseStudiesPage() {
-  // We only want the three projects that have a case study
-  const caseStudies = projectsData.filter((p) => p.hasCaseStudy).slice(0, 3)
+  const caseStudies = projectsData.filter((p) => p.hasCaseStudy)
 
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
-
       <main id="main-content" className="flex-grow">
-        {/* Intro */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="max-w-3xl mx-auto">
             <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
@@ -20,7 +17,6 @@ export default function CaseStudiesPage() {
                 Featured <span className="text-sky-600 dark:text-sky-500">case studies</span>
               </h1>
             </article>
-
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
                 Behind every design is a story. These case studies highlight the thinking, collaboration, and decisions
@@ -31,19 +27,8 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
-        {/* Project cards */}
-        <section className="bg-muted/40 py-12">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <FeaturedWorkSection projects={caseStudies} title={null} className="bg-muted/40 py-12" />
       </main>
-
       <Footer />
     </div>
   )
