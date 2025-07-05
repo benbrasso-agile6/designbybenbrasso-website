@@ -1,94 +1,73 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { Dialog, DialogClose } from "@/components/ui/dialog"
-import { cn } from "@/lib/utils"
 
-/**
- * A simple, single-image lightbox.
- * – Locks body scroll while open
- * – Gives the close button programmatic focus on mobile (with a yellow ring)
- * – No slideshow/navigation logic
- */
 interface LightboxProps {
-  src: string
-  alt: string
   isOpen: boolean
   onClose: () => void
+  src: string
+  alt: string
 }
 
-export default function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
-  const closeButtonRef = useRef<HTMLButtonElement>(null)
-
-  /* -------------------------------------------------------------------------- */
-  /*                           Body-scroll lock / focus                         */
-  /* -------------------------------------------------------------------------- */
+export default function Lightbox({ isOpen, onClose, src, alt }: LightboxProps) {
   useEffect(() => {
-    const { body } = document
-    const originalOverflow = body.style.overflow
-
     if (isOpen) {
-      body.style.overflow = "hidden"
-
-      // On small screens give programmatic focus so iOS users can dismiss w/ keyboard
-      if (window.innerWidth < 768) {
-        setTimeout(() => {
-          closeButtonRef.current?.focus()
-          closeButtonRef.current?.classList.add("force-focus-visible")
-        }, 100)
-      }
+      document.body.style.overflow = "hidden"
     } else {
-      body.style.overflow = originalOverflow
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      body.style.overflow = originalOverflow
+      document.body.style.overflow = "unset"
     }
   }, [isOpen])
 
-  /* -------------------------------------------------------------------------- */
-  /*                              Render dialog                                 */
-  /* -------------------------------------------------------------------------- */
-  return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out" />
-        <DialogPrimitive.Content
-          className={cn(
-            "fixed inset-0 z-50 h-screen w-screen border-0 p-0 shadow-none bg-transparent",
-            "data-[state=open]:animate-in data-[state=closed]:animate-out duration-200",
-          )}
-        >
-          {/* Close button */}
-          <DialogClose
-            ref={closeButtonRef}
-            onBlur={(e) => e.currentTarget.classList.remove("force-focus-visible")}
-            className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/20 text-white hover:bg-black/40 hover:border-white/40 transition-colors focus:outline-none focus:shadow-none focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)] force-focus-visible:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]"
-          >
-            <X className="h-4 w-4" strokeWidth={1.5} />
-            <span className="sr-only">Close</span>
-          </DialogClose>
+  if (!isOpen) return null
 
-          {/* Image */}
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div className="relative max-h-full max-w-full">
+  return (
+    <DialogPrimitive.Root open={isOpen} onOpenChange={onClose}>
+      <DialogPrimitive.Portal>
+        <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm" />
+        <DialogPrimitive.Content
+          className="fixed left-[50%] top-[50%] z-50 translate-x-[-50%] translate-y-[-50%] w-full h-full flex items-center justify-center p-4"
+          onOpenAutoFocus={(e) => {
+            e.preventDefault()
+            // Focus the close button on mobile
+            if (window.innerWidth < 768) {
+              setTimeout(() => {
+                const closeButton = document.querySelector("[data-lightbox-close]") as HTMLElement
+                if (closeButton) {
+                  closeButton.focus()
+                }
+              }, 100)
+            }
+          }}
+        >
+          <div className="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+            <div className="relative max-w-full max-h-full">
               <Image
                 src={src || "/placeholder.svg"}
                 alt={alt}
                 width={1200}
                 height={800}
-                className="max-h-[calc(100vh-2rem)] max-w-[calc(100vw-2rem)] object-contain"
-                sizes="100vw"
-                unoptimized
+                className="max-w-full max-h-[calc(100vh-2rem)] w-auto h-auto object-contain"
                 priority
               />
             </div>
+            <DialogPrimitive.Close
+              data-lightbox-close
+              className="absolute top-4 right-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-white/10 backdrop-blur-sm border border-white/20 p-2 focus:[box-shadow:0_0_0_4px_rgba(0,0,0,0.5),0_0_0_6px_rgb(250,204,21)]"
+              onClick={onClose}
+            >
+              <X className="h-4 w-4 text-white" />
+              <span className="sr-only">Close</span>
+            </DialogPrimitive.Close>
           </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
-    </Dialog>
+    </DialogPrimitive.Root>
   )
 }

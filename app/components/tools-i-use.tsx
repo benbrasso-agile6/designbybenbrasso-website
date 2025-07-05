@@ -1,31 +1,108 @@
-import { Figma, Palette, Users, Target, Lightbulb, Zap, Heart, Mic } from "lucide-react"
+"use client"
 
-const tools = [
-  { name: "Figma", icon: Figma },
-  { name: "Adobe Creative Suite", icon: Palette },
-  { name: "User Research", icon: Users },
-  { name: "Agile", icon: Target },
-  { name: "Web Content Accessibility Guidelines (WCAG)", icon: Mic },
-  { name: "Design Thinking", icon: Lightbulb },
-  { name: "Innovation", icon: Zap },
-  { name: "Empathy", icon: Heart },
-]
+import {
+  PaletteIcon,
+  TriangleIcon,
+  GithubIcon,
+  CodeIcon,
+  WindIcon,
+  ClipboardCheckIcon,
+  BrainCircuitIcon,
+  SparklesIcon,
+  CodepenIcon,
+  LibraryIcon,
+  LayoutDashboardIcon,
+  BarChart3Icon,
+  LineChartIcon,
+  ActivityIcon,
+  UsersIcon,
+  RefreshCwIcon,
+  LightbulbIcon,
+  SearchIcon,
+  SmileIcon,
+  WorkflowIcon,
+  Wand2Icon,
+  MessageCircleIcon,
+  FileCodeIcon,
+  MicIcon,
+} from "lucide-react"
+import type React from "react"
+import { motion } from "framer-motion"
 
-export default function ToolsIUse() {
+interface ToolItem {
+  icon: React.ElementType
+  text: string
+}
+
+export default function ToolsIUseSection() {
+  const tools: ToolItem[] = [
+    { icon: PaletteIcon, text: "Figma" },
+    { icon: TriangleIcon, text: "Vercel" },
+    { icon: GithubIcon, text: "GitHub" },
+    { icon: CodeIcon, text: "VS Code IDE" },
+    { icon: WindIcon, text: "Tailwind CSS" },
+    { icon: GithubIcon, text: "GitHub Copilot" },
+    { icon: Wand2Icon, text: "v0 by Vercel" },
+    { icon: BrainCircuitIcon, text: "ChatGPT" },
+    { icon: MessageCircleIcon, text: "Claude.ai" },
+    { icon: FileCodeIcon, text: "Claude Code" },
+    { icon: SparklesIcon, text: "Google Gemini" },
+    { icon: BrainCircuitIcon, text: "VA GPT (Beta)" },
+    { icon: ClipboardCheckIcon, text: "Optimal Workshop" },
+    { icon: CodepenIcon, text: "CodePen" },
+    { icon: WorkflowIcon, text: "Mermaid" },
+    { icon: LibraryIcon, text: "U.S. Web Design System" },
+    { icon: LayoutDashboardIcon, text: "Mural" },
+    { icon: BarChart3Icon, text: "Looker Studio" },
+    { icon: LineChartIcon, text: "Google Analytics 4" },
+    { icon: ActivityIcon, text: "Datadog" },
+    { icon: UsersIcon, text: "HCD Methodologies" },
+    { icon: RefreshCwIcon, text: "Agile" },
+    { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },
+    { icon: LightbulbIcon, text: "An open mind" },
+    { icon: SearchIcon, text: "Curiosity" },
+    { icon: SmileIcon, text: "An abundance mindset" },
+    { icon: LightbulbIcon, text: "Optimism" },
+  ]
+
+  const getItemVariants = (index: number) => ({
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: [0, -5, 5, -4, 4, 0],
+      rotate: [0, -3, 3, -2, 2, 0],
+      transition: {
+        delay: index * 0.03,
+        duration: 0.45,
+        ease: "easeOut",
+      },
+    },
+  })
+
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Tools I Use</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {tools.map((tool, index) => {
-            const IconComponent = tool.icon
+    <section className="py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-950">
+      <div className="max-w-[1000px] mx-auto px-8">
+        <div className="mb-12 md:mb-16 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
+            What tools I use to <span className="text-sky-600 dark:text-sky-500">design</span>
+          </h2>
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-5">
+          {tools.map((item, index) => {
+            const IconComponent = item.icon
             return (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
-                  <IconComponent className="w-8 h-8 text-gray-700" />
-                </div>
-                <h3 className="text-sm font-medium text-gray-900">{tool.name}</h3>
-              </div>
+              <motion.div
+                key={index}
+                className="flex items-center gap-2.5 px-5 py-3 bg-neutral-100 dark:bg-neutral-800 rounded-xl text-lg font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm cursor-default"
+                variants={getItemVariants(index)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <IconComponent className="h-5 w-5 text-sky-700 dark:text-sky-600 flex-shrink-0" aria-hidden="true" />
+                <span>{item.text}</span>
+              </motion.div>
             )
           })}
         </div>
