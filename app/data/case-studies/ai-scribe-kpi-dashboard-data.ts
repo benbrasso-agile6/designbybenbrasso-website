@@ -155,7 +155,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: '<strong>To accelerate this initiative, we developed a rapid prototype—using AI-powered v0 by Vercel—to visualize a <a href="https://v0-dho-github-repo-prototype.vercel.app/" target="_blank" rel="noopener noreferrer">GitHub-based workspace for the DHO team</a>. This prototype served as an immediate demonstration of what the Digital Health Office GitHub repository could achieve, guiding the development of the actual private repository.</strong> This approach enabled the DHO team to clearly understand how centralizing their digital workspace would support their ongoing commitment to delivering exceptional digital health care experiences.',
+          text: '<strong>To accelerate this initiative, we developed a rapid prototype—using AI-powered v0 by Vercel—to visualize a <a href="https://v0-dho-github-repo-prototype.vercel.app/" target="_blank" rel="noopener noreferrer">GitHub-based workspace for the DHO</a>. This prototype served as an immediate demonstration of what the Digital Health Office GitHub repository could achieve, guiding the development of the actual private repository.</strong> This approach enabled the DHO team to clearly understand how centralizing their digital workspace would support their ongoing commitment to delivering exceptional digital health care experiences.',
         },
         {
           type: "image",
