@@ -38,7 +38,10 @@
     "@radix-ui/react-toggle": "latest",
     "@radix-ui/react-toggle-group": "latest",
     "@radix-ui/react-tooltip": "latest",
+    "@remix-run/react": "latest",
+    "@sveltejs/kit": "latest",
     "@tailwindcss/typography": "latest",
+    "@vercel/analytics": "latest",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -58,9 +61,12 @@
     "recharts": "latest",
     "resend": "latest",
     "sonner": "latest",
+    "svelte": "latest",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "latest",
+    "vue": "latest",
+    "vue-router": "latest",
     "zod": "latest"
   },
   "devDependencies": {

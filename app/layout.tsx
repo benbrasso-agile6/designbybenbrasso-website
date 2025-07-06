@@ -4,6 +4,8 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "./components/scroll-to-top"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -14,7 +16,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Ben Brasso - UX Product Design Portfolio",
   description:
-    "UX dsign portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
+    "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
   robots: {
     index: false,
     follow: false,
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ben Brasso - UX Product Design Portfolio",
     description:
-      "UX dsign portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
+      "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-first solutions architect.", // Shorter version
     images: [
       {
         url: "https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg",
@@ -70,10 +72,13 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
-          <ScrollToTop />
-          {children}
-        </ThemeProvider>
+        <Suspense fallback={null}>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+            <ScrollToTop />
+            {children}
+          </ThemeProvider>
+        </Suspense>
+        <Analytics />
       </body>
     </html>
   )
