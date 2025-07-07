@@ -96,6 +96,14 @@ export const patientCheckInData: CaseStudyData = {
           text: "We conducted iterative design and usability testing cycles, including specific user acceptance tests (UAT) at VA Bay Pines Health Care, VA St. Louis Healthcare System, and VA Wilkes-Barre Healthcare System. This continuous cycle of collecting and incorporating real-time feedback from Veterans and clinical staff significantly improved the mobile check-in experience.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751847389/Frame_595_zvrvea.png",
+          alt: "Photographs of mobile check-in posters at VA health facilities",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },
+        {
           type: "paragraph",
           text: "Thematic analysis across studies helped identify patterns and shape the product roadmap. A recurring insight was that Veterans wanted travel reimbursement integrated into the check-in process. <strong>We developed a plan to support this without adding barriers to mobile check-in, while also providing alternative modalities to the existing portal—which many Veterans found frustrating.</strong>",
         },

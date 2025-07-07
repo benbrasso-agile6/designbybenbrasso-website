@@ -49,6 +49,11 @@ export default function PatientCheckInClientPage() {
       case "image":
         if (item.src && item.alt) {
           const isPng = item.src.toLowerCase().endsWith(".png")
+
+          // Special handling for the mobile check-in posters image
+          const isCheckInPostersImage = item.alt === "Photographs of mobile check-in posters at VA health facilities"
+          const imageClassName = isCheckInPostersImage ? "w-full" : item.className || "rounded-lg w-full object-cover"
+
           if (isMobile && isPng) {
             return (
               <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
@@ -57,7 +62,7 @@ export default function PatientCheckInClientPage() {
                   alt={item.alt}
                   width={item.width || 800}
                   height={item.height || 450}
-                  className={item.className || "rounded-lg w-full object-cover"}
+                  className={imageClassName}
                   priority={item.priority}
                   unoptimized
                 />
@@ -71,7 +76,7 @@ export default function PatientCheckInClientPage() {
                 alt={item.alt}
                 width={item.width || 800}
                 height={item.height || 450}
-                className={item.className || "rounded-lg w-full object-cover"}
+                className={imageClassName}
                 priority={item.priority}
                 unoptimized
               />

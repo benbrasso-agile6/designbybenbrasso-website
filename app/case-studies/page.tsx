@@ -2,6 +2,7 @@ import Header from "@/app/components/header"
 import Footer from "@/app/components/footer"
 import FeaturedWorkSection from "@/app/components/featured-work-section"
 import { projectsData } from "@/app/data/projects-data"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function CaseStudiesPage() {
   const caseStudies = projectsData.filter((p) => p.hasCaseStudy)
@@ -32,9 +33,11 @@ export default function CaseStudiesPage() {
           showHeading={false}
           showMoreWorkLink={false}
           sectionClassName="w-full pb-16 md:pb-24 lg:pb-32 bg-white dark:bg-neutral-900"
+          statsHeadingLevel={3}
         />
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }

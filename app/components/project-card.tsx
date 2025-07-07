@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import type { JSX } from "react"
 
 const DEFAULT_CASE_STUDY_STATUS_TEXT = "Case study coming soon..."
 
@@ -18,6 +19,7 @@ interface ProjectCardProps {
   footerPaddingTopClass?: string
   caseStudyUrlOverride?: string
   stats?: { label: string; value: string }[]
+  statsHeadingLevel?: 3 | 4
 }
 
 export default function ProjectCard({
@@ -32,9 +34,10 @@ export default function ProjectCard({
   imageMarginTopClass = "mt-6",
   footerPaddingTopClass = "pt-6",
   stats,
+  statsHeadingLevel = 4,
 }: ProjectCardProps) {
-  // If caseStudyUrlOverride is provided, it's used. Otherwise, it falls back to the slug.
   const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
+  const StatsLabelTag = `h${statsHeadingLevel}` as keyof JSX.IntrinsicElements
 
   return (
     <Card className="overflow-hidden w-full max-w-5xl flex flex-col group bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 min-h-[auto] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
@@ -63,7 +66,9 @@ export default function ProjectCard({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
             {stats.map((stat, index) => (
               <div key={index}>
-                <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{stat.label}</p>
+                <StatsLabelTag className="text-sm font-medium text-neutral-500 dark:text-neutral-400 font-normal m-0">
+                  {stat.label}
+                </StatsLabelTag>
                 <p className="text-xl font-bold text-neutral-800 dark:text-neutral-200 font-light">{stat.value}</p>
               </div>
             ))}

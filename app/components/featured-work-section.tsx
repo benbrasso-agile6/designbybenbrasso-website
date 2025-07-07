@@ -7,6 +7,7 @@ interface FeaturedWorkSectionProps {
   showHeading?: boolean
   showMoreWorkLink?: boolean
   sectionClassName?: string
+  statsHeadingLevel?: 3 | 4
 }
 
 export default function FeaturedWorkSection({
@@ -14,6 +15,7 @@ export default function FeaturedWorkSection({
   showHeading = true,
   showMoreWorkLink = true,
   sectionClassName = "w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900",
+  statsHeadingLevel,
 }: FeaturedWorkSectionProps) {
   // If no specific projects are passed, default to the home page's list (first two case studies).
   const projects = projectsToDisplay ?? projectsData.filter((p) => p.slug !== "direct-online-scheduling")
@@ -52,6 +54,7 @@ export default function FeaturedWorkSection({
                 footerPaddingTopClass={footerPaddingTopClass}
                 caseStudyUrlOverride={project.caseStudyUrlOverride}
                 stats={project.stats}
+                statsHeadingLevel={statsHeadingLevel}
               />
             )
           })}
