@@ -117,6 +117,11 @@
   .force-focus-visible {
     @apply ring-4 ring-ring ring-offset-2 ring-offset-black/50 outline-none;
   }
+
+  /* ADDED: Specific line-height override for Provider Online Scheduling page h1 */
+  .provider-h1-leading {
+    line-height: 1.5 !important;
+  }
 }
 
 /* ADDED: Global focus styles for links for WCAG compliance */
@@ -124,15 +129,19 @@
   a {
     @apply rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background;
   }
-  .page-title-spacing {
+  /* REMOVE THIS - it's overriding the h1 line-height */
+  /* .page-title-spacing {
     line-height: 1.5 !important;
-  }
+  } */
 
   /* Highlighted "Key Outcomes" box */
   .key-outcomes-section {
     /* light-mode background colour */
     background-color: #fff9f5; /* meets WCAG against foreground text */
-    @apply p-6 md:p-8 rounded-xl relative overflow-hidden;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
   }
 
   /* Dark-mode override */
@@ -143,8 +152,23 @@
   /* Bottom fade-out */
   .key-outcomes-section::after {
     content: "";
-    @apply absolute bottom-0 left-0 right-0 h-24;
-    background: linear-gradient(to top, hsl(var(--background)), transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    background: linear-gradient(to bottom, transparent, #fff9f5);
+    pointer-events: none;
+  }
+
+  .dark .key-outcomes-section::after {
+    background: linear-gradient(to bottom, transparent, #3a251c);
+  }
+
+  @media (min-width: 768px) {
+    .key-outcomes-section {
+      padding: 2rem;
+    }
   }
 }
 

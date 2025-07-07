@@ -157,7 +157,7 @@ export default function ProviderOnlineSchedulingClientPage() {
         <BackToAllCaseStudiesLink />
       </div>
 
-      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+      <h1 className="provider-h1-leading text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
         {caseStudy.pageTitle}
       </h1>
 

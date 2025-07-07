@@ -76,7 +76,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750017016/Frame_2_hq2z2p.png",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751916072/Frame_2_hq2z2p.png",
           alt: "Care encounter workflow analysis diagram",
           width: 800,
           height: 450,
@@ -92,7 +92,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750018632/Frame_3_kjzwyo.png",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751916307/Frame_3_kjzwyo.png",
           alt: "Detailed care encounter workflow with NASA-TLX burden scores for each phase",
           width: 800,
           height: 450,
