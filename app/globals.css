@@ -76,7 +76,7 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Custom prose link colors - Updated to match design-contributions page */
+  /* Custom prose link colors - Updated to match standard site colors */
   .prose-neutral a {
     @apply text-sky-600 underline hover:text-sky-700;
   }
@@ -126,6 +126,25 @@
   }
   .page-title-spacing {
     line-height: 1.5 !important;
+  }
+
+  /* Highlighted "Key Outcomes" box */
+  .key-outcomes-section {
+    /* light-mode background colour */
+    background-color: #fff9f5; /* meets WCAG against foreground text */
+    @apply p-6 md:p-8 rounded-xl relative overflow-hidden;
+  }
+
+  /* Dark-mode override */
+  .dark .key-outcomes-section {
+    background-color: #3a251c; /* meets WCAG for dark theme */
+  }
+
+  /* Bottom fade-out */
+  .key-outcomes-section::after {
+    content: "";
+    @apply absolute bottom-0 left-0 right-0 h-24;
+    background: linear-gradient(to top, hsl(var(--background)), transparent);
   }
 }
 

@@ -11,6 +11,7 @@ import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
 import Lightbox from "@/app/components/lightbox"
 import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
+import { cn } from "@/lib/utils"
 
 const caseStudy = providerOnlineSchedulingData
 
@@ -156,7 +157,7 @@ export default function ProviderOnlineSchedulingClientPage() {
         <BackToAllCaseStudiesLink />
       </div>
 
-      <h1 className="page-title-spacing text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
+      <h1 className="leading-tight text-4xl sm:text-5xl font-bold mb-7 text-neutral-900 dark:text-neutral-100">
         {caseStudy.pageTitle}
       </h1>
 
@@ -194,12 +195,36 @@ export default function ProviderOnlineSchedulingClientPage() {
               </div>
             )}
 
-            {caseStudy.sections.map((section, sectionIndex) => (
-              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
-                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
-                {section.content.map(renderContentItem)}
-              </section>
-            ))}
+            {caseStudy.sections.map((section, sectionIndex) => {
+              const isKeyOutcomes = section.title === "Key Outcomes" || section.title === "Key Outcomes & Impact"
+
+              // Filter out the gif from Key Outcomes content if it's the last item
+              let sectionContent = section.content
+              let extractedGif = null
+
+              if (isKeyOutcomes) {
+                const lastItem = section.content[section.content.length - 1]
+                if (lastItem?.type === "image" && lastItem.src?.toLowerCase().includes(".gif")) {
+                  extractedGif = lastItem
+                  sectionContent = section.content.slice(0, -1)
+                }
+              }
+
+              return (
+                <div key={sectionIndex}>
+                  <section
+                    id={section.id || `section-${sectionIndex}`}
+                    className={cn("mb-12", isKeyOutcomes && "key-outcomes-section")}
+                  >
+                    <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
+                    {sectionContent.map(renderContentItem)}
+                  </section>
+
+                  {/* Render extracted gif in its own container */}
+                  {extractedGif && <div className="mb-12">{renderContentItem(extractedGif, 0)}</div>}
+                </div>
+              )
+            })}
           </article>
         </div>
       </div>

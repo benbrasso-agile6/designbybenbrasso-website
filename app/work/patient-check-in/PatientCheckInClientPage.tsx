@@ -11,6 +11,7 @@ import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
 import Lightbox from "@/app/components/lightbox"
 import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
+import { cn } from "@/lib/utils"
 
 const caseStudy = patientCheckInData
 
@@ -191,12 +192,19 @@ export default function PatientCheckInClientPage() {
               </div>
             )}
 
-            {caseStudy.sections.map((section, sectionIndex) => (
-              <section key={sectionIndex} id={section.id || `section-${sectionIndex}`} className="mb-12">
-                <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
-                {section.content.map(renderContentItem)}
-              </section>
-            ))}
+            {caseStudy.sections.map((section, sectionIndex) => {
+              const isKeyOutcomes = section.title === "Key Outcomes" || section.title === "Key Outcomes & Impact"
+              return (
+                <section
+                  key={sectionIndex}
+                  id={section.id || `section-${sectionIndex}`}
+                  className={cn("mb-12", isKeyOutcomes && "key-outcomes-section")}
+                >
+                  <h2 className="text-3xl font-semibold mt-10 mb-4">{section.title}</h2>
+                  {section.content.map(renderContentItem)}
+                </section>
+              )
+            })}
           </article>
         </div>
       </div>
