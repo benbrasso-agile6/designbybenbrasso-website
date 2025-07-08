@@ -53,21 +53,23 @@ export default function Footer() {
               Check out the code on GitHub.
             </Link>
           </div>
-          <div className="flex flex-col items-center md:items-end gap-4">
-            <div className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-3">
-              <div className="text-center md:text-right">
+          <div className="flex flex-col items-center md:items-end gap-4 md:max-w-xs">
+            <div className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-2 md:justify-end">
+              <div className="text-center md:text-right md:flex-shrink">
                 <p className="text-xs text-neutral-600 dark:text-neutral-400">Professional Member, issued by</p>
                 <p className="text-xs font-medium text-neutral-700 dark:text-neutral-300 whitespace-nowrap">
                   International Association of Accessibility Professionals (IAAP)
                 </p>
               </div>
-              <Image
-                src="https://res.cloudinary.com/dpl6apspp/image/upload/v1752006824/professional-member_1_pvqxst.png"
-                alt="International Association of Accessibility Professionals (IAAP) Professional Member Logo"
-                width={40}
-                height={40}
-                className="object-contain"
-              />
+              <div className="md:flex-shrink-0">
+                <Image
+                  src="https://res.cloudinary.com/dpl6apspp/image/upload/v1752006824/professional-member_1_pvqxst.png"
+                  alt="International Association of Accessibility Professionals (IAAP) Professional Member Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
             </div>
             <ThemeToggle />
             <p className="text-muted-foreground text-center md:text-right">
