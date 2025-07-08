@@ -54,10 +54,10 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col items-center md:items-end gap-4">
-            <div className="flex items-center gap-3">
-              <div className="text-right">
+            <div className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-3">
+              <div className="text-center md:text-right">
                 <p className="text-xs text-neutral-600 dark:text-neutral-400">Professional Member, issued by</p>
-                <p className="text-xs font-medium text-neutral-700 dark:text-neutral-300">
+                <p className="text-xs font-medium text-neutral-700 dark:text-neutral-300 whitespace-nowrap">
                   International Association of Accessibility Professionals (IAAP)
                 </p>
               </div>
