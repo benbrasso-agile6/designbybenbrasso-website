@@ -147,11 +147,11 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "All of which leads to one final insight—that since its launch as the newest office within the Veterans Health Administration (VHA) in June 2024, the Digital Health Office (DHO) has focused on enhancing digital health solutions. The team's priority was ensuring VHA’s mission—delivering innovative, modern, and human-centered health care—was clearly reflected in their efforts to improve experiences for Veterans and care teams.",
+          text: 'All of which leads to one final insight—since its launch <a href="https://www.nextgov.com/emerging-tech/2024/06/veterans-health-administration-creates-new-office-streamline-tech-initiatives/397330/" target="_blank" rel="noopener noreferrer">on June 2, 2024, the Digital Health Office (DHO) has focused on enhancing digital health solutions that improve experiences for Veterans and care teams.</a> The DHO was created as part of a broader VHA Central Office optimization effort, which began in April 2023 to centralize several of the Veterans Health Administration’s technology-focused components under a single, unified authority. From the start, the team’s priority has been to ensure that VHA’s mission—delivering innovative, modern, and human-centered health care—is clearly reflected in everything they do.',
         },
         {
           type: "paragraph",
-          text: "As the DHO defined its mission, vision, and strategic goals, the team quickly recognized the need for a centralized workspace to store user research findings and to access practical resources such as playbooks, guides, and templates for human-centered design and research.",
+          text: "As the DHO defined its vision, organization, and strategic goals, the team quickly recognized the need for a centralized workspace to store user research findings and to access practical resources such as playbooks, guides, and templates for human-centered design and research.",
         },
         {
           type: "paragraph",
