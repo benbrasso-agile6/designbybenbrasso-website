@@ -55,6 +55,7 @@ export default function Lightbox({ isOpen, onClose, src, alt }: LightboxProps) {
                 height={800}
                 className="max-w-full max-h-[calc(100vh-2rem)] w-auto h-auto object-contain"
                 priority
+                unoptimized
               />
             </div>
             <DialogPrimitive.Close
