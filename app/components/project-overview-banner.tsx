@@ -56,24 +56,24 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
           <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
             Skills
           </h3>
-          {/* Value font size reduced */}
-          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{skills}</p>
+          {/* Value font size changed to 1rem */}
+          <p className="text-neutral-600 dark:text-sky-200 text-base w-full sm:w-3/4">{skills}</p>
         </div>
         <div className="flex flex-col sm:flex-row sm:items-baseline">
           {/* Label font size reduced */}
           <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
             Tools
           </h3>
-          {/* Value font size reduced */}
-          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{tools}</p>
+          {/* Value font size changed to 1rem */}
+          <p className="text-neutral-600 dark:text-sky-200 text-base w-full sm:w-3/4">{tools}</p>
         </div>
         <div className="flex flex-col sm:flex-row sm:items-baseline">
           {/* Label font size reduced */}
           <h3 className="text-sm font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
             Date
           </h3>
-          {/* Value font size reduced */}
-          <p className="text-neutral-600 dark:text-sky-200 text-sm w-full sm:w-3/4">{date}</p>
+          {/* Value font size changed to 1rem */}
+          <p className="text-neutral-600 dark:text-sky-200 text-base w-full sm:w-3/4">{date}</p>
         </div>
       </div>
     </div>
