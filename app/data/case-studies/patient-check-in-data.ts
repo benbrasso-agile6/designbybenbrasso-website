@@ -22,7 +22,7 @@ export const patientCheckInData: CaseStudyData = {
     { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
   ],
   // mainImage: {
-  //   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
+  //   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
   //   alt: "Mobile Patient Check-in project showcase showing mobile interface design",
   //   width: 800,
   //   height: 450,
