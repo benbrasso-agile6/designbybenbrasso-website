@@ -127,7 +127,7 @@
 /* ADDED: Global focus styles for links for WCAG compliance */
 @layer components {
   a {
-    @apply rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background;
+    @apply rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 ring-offset-background;
   }
   /* REMOVE THIS - it's overriding the h1 line-height */
   /* .page-title-spacing {
