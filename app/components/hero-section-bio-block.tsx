@@ -9,7 +9,7 @@ export default function DescriptiveTextBlock() {
         </strong>
       </p>
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
-        As a UX design lead and researcher, I have guided multi-disciplinary teams through complex systems-thinking
+        As a design lead and researcher, I have guided multi-disciplinary teams through complex systems-thinking
         in public and private health care,{" "}
         <strong>
           helping transform organizational objectives into informed, purposeful, and accessible user-centered
