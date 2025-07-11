@@ -21,14 +21,15 @@ export const patientCheckInData: CaseStudyData = {
     { label: "Timeline", value: "8 Months" },
     { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
   ],
-  // mainImage: {
-  //   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
-  //   alt: "Mobile Patient Check-in project showcase showing mobile interface design",
-  //   width: 800,
-  //   height: 450,
-  //   priority: true,
-  //   className: "rounded-lg my-6 w-full object-cover",
-  // },
+  mainImage: {
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
+    alt: "Mobile check-in workflow detailing new arrived status for VA staff",
+    width: 800,
+    height: 450,
+    priority: true,
+    className: "rounded-lg mt-12 mb-6 w-full object-cover",
+    showBorder: false,
+  },
   sections: [
     {
       title: "Background",
@@ -69,7 +70,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750374324/Frame_6_uwjugt.png",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751917291/Frame_6_uwjugt.png",
           alt: "Mobile check-in proof of concept detailing the new two-step process",
           width: 800,
           height: 450,

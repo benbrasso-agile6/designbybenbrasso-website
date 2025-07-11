@@ -47,6 +47,7 @@ export interface CaseStudyData {
     height: number
     priority?: boolean
     className?: string
+    showBorder?: boolean
   }
   sections: CaseStudySection[]
 }
