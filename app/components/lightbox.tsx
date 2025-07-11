@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect } from "react"
-import Image from "next/image"
 import { X } from "lucide-react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -48,14 +47,12 @@ export default function Lightbox({ isOpen, onClose, src, alt }: LightboxProps) {
         >
           <div className="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
             <div className="relative max-w-full max-h-full">
-              <Image
+              <img
                 src={src || "/placeholder.svg"}
                 alt={alt}
                 width={1200}
                 height={800}
                 className="max-w-full max-h-[calc(100vh-2rem)] w-auto h-auto object-contain"
-                priority
-                unoptimized
               />
             </div>
             <DialogPrimitive.Close

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
 import { patientCheckInData } from "@/app/data/case-studies/patient-check-in-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
@@ -58,28 +57,24 @@ export default function PatientCheckInClientPage() {
           if (isMobile && isPng) {
             return (
               <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
-                <Image
+                <img
                   src={item.src || "/placeholder.svg"}
                   alt={item.alt}
                   width={item.width || 800}
                   height={item.height || 450}
                   className={imageClassName}
-                  priority={item.priority}
-                  unoptimized
                 />
               </div>
             )
           }
           return (
             <div key={index} className="my-0">
-              <Image
+              <img
                 src={item.src || "/placeholder.svg"}
                 alt={item.alt}
                 width={item.width || 800}
                 height={item.height || 450}
                 className={imageClassName}
-                priority={item.priority}
-                unoptimized
               />
             </div>
           )
@@ -161,7 +156,7 @@ export default function PatientCheckInClientPage() {
       <div className="relative mt-12">
         {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
-            <Image
+            <img
               src={caseStudy.mainImage.src || "/placeholder.svg"}
               alt={caseStudy.mainImage.alt}
               width={caseStudy.mainImage.width}
@@ -170,8 +165,6 @@ export default function PatientCheckInClientPage() {
                 "rounded-lg w-full object-cover",
                 caseStudy.mainImage.showBorder !== false && "border-2 border-neutral-700 dark:border-neutral-600",
               )}
-              priority={caseStudy.mainImage.priority}
-              unoptimized
             />
           </div>
         )}
