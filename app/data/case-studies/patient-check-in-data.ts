@@ -70,7 +70,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750374324/Frame_6_uwjugt.png",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751917291/Frame_6_uwjugt.png",
           alt: "Mobile check-in proof of concept detailing the new two-step process",
           width: 800,
           height: 450,
