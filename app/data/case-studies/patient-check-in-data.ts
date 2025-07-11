@@ -21,14 +21,14 @@ export const patientCheckInData: CaseStudyData = {
     { label: "Timeline", value: "8 Months" },
     { label: "Tools", value: ["Figma", "VA.gov Design System", "Storybook", "UserZoom"] },
   ],
-   mainImage: {
-     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
-     alt: "Mobile check-in workflow detailing new arrived status for VA staff",
-     width: 800,
-     height: 450,
-     priority: true,
-     className: "rounded-lg mt-12 mb-6 w-full object-cover", 
-    },
+  mainImage: {
+   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
+   alt: "Mobile check-in workflow detailing new arrived status for VA staff",
+   width: 800,
+   height: 450,
+   priority: true,
+   className: "rounded-lg mt-12 mb-6 w-full object-cover", 
+  },
   sections: [
     {
       title: "Background",
