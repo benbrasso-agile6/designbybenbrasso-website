@@ -32,7 +32,7 @@ const DesignContributionsNavigation = () => {
               onClick={(e) => handleNavigation(e, section.id)}
               className="text-base text-slate-600 hover:text-sky-600 dark:text-slate-400 dark:hover:text-sky-500 transition-colors duration-200"
             >
-              {section.title}
+              {section.title} ↓
             </a>
           </li>
         ))}
