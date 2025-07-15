@@ -1,3 +1,5 @@
+import DesignContributionsNavigation from "./components/design-contributions-navigation"
+
 export default function DesignContributionsPage() {
   const resumeUrl =
     "https://www.dropbox.com/scl/fi/shwx97aarjojfuihfjk85/Ben-Brasso-Resume-2025.pdf?rlkey=f8y8kjg2jqfxvo4xgsc5qc4fv&st=d89477ve&dl=1"
@@ -18,10 +20,13 @@ export default function DesignContributionsPage() {
           experiences—while helping teams build with greater confidence and efficiency. These are a selection of
           contributions I’ve made to support and grow design systems.
         </p>
+        <DesignContributionsNavigation />
       </article>
 
       <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-        <h2>VA.gov Design System</h2>
+        <h2 id="va-design-system" className="scroll-mt-20">
+          VA.gov Design System
+        </h2>
 
         <h3>Components</h3>
         <ul>
@@ -123,7 +128,9 @@ export default function DesignContributionsPage() {
       </section>
 
       <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-        <h2>Research at VA</h2>
+        <h2 id="research-at-va" className="scroll-mt-20">
+          Research at VA
+        </h2>
 
         <ul>
           <li>
