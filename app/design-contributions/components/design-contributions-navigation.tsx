@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { ArrowDown } from "lucide-react"
 
 const designContributionsSections = [
   { id: "va-design-system", title: "VA.gov Design System" },
@@ -30,9 +31,10 @@ const DesignContributionsNavigation = () => {
             <a
               href={`#${section.id}`}
               onClick={(e) => handleNavigation(e, section.id)}
-              className="text-base text-slate-600 hover:text-sky-600 dark:text-slate-400 dark:hover:text-sky-500 transition-colors duration-200"
+              className="group inline-flex items-center text-base text-sky-600 hover:text-sky-700 dark:text-sky-500 dark:hover:text-sky-400 transition-colors duration-200"
             >
-              {section.title} <span className="no-underline">↓</span>
+              <span className="group-hover:underline">{section.title}</span>
+              <ArrowDown className="ml-1.5 h-4 w-4 flex-shrink-0 opacity-70 transition-opacity group-hover:opacity-100" />
             </a>
           </li>
         ))}
