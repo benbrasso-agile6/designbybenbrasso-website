@@ -22,7 +22,7 @@ const DesignContributionsNavigation = () => {
   }
 
   return (
-    <nav className="not-prose my-8 border-t border-b py-6 border-slate-200 dark:border-slate-800">
+    <nav className="not-prose my-8 rounded-xl border bg-slate-50 p-6 dark:bg-slate-800/50 dark:border-slate-800">
       <h2 className="text-lg font-semibold mb-3">On this page</h2>
       <ul className="space-y-2">
         {designContributionsSections.map((section) => (
