@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react"
 
 const designContributionsSections = [
   { id: "va-design-system", title: "VA.gov Design System" },
-  { id: "research-at-va", title: "Research at VA" },
+  { id: "research-operations-at-va", title: "Research Operations at VA" },
 ]
 
 const DesignContributionsNavigation = () => {

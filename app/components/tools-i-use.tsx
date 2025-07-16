@@ -25,6 +25,7 @@ import {
   MessageCircleIcon,
   FileCodeIcon,
   MicIcon,
+  NotebookPenIcon,
 } from "lucide-react"
 import type React from "react"
 import { motion } from "framer-motion"
@@ -56,6 +57,7 @@ export default function ToolsIUseSection() {
     { icon: BarChart3Icon, text: "Looker Studio" },
     { icon: LineChartIcon, text: "Google Analytics 4" },
     { icon: ActivityIcon, text: "Datadog" },
+    { icon: NotebookPenIcon, text: "Granola.ai" },
     { icon: UsersIcon, text: "HCD Methodologies" },
     { icon: RefreshCwIcon, text: "Agile" },
     { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },

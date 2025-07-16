@@ -128,8 +128,8 @@ export default function DesignContributionsPage() {
       </section>
 
       <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-        <h2 id="research-at-va" className="scroll-mt-20">
-          Research at VA
+        <h2 id="research-operations-at-va" className="scroll-mt-20">
+          Research Operations at VA
         </h2>
 
         <ul>
