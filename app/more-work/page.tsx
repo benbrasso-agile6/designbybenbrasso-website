@@ -207,9 +207,9 @@ export default function MoreWorkPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                More digital transformation projects in health care I've lead or contributed to—focused on implementing
-                user research, content strategy, taxonomy design, prototypes, plain language writing, UX design, and
-                sitemaps.
+                More digital transformation projects in health care and academic medicine I've lead or contributed
+                to—focused on implementing user research, content strategy, taxonomy design, prototyping, plain language
+                writing, UX design, and sitemaps.
               </p>
               <p>
                 Explore{" "}
@@ -255,6 +255,7 @@ export default function MoreWorkPage() {
                     sizes="(max-width: 1280px) 100vw, 1152px"
                     className="object-contain"
                     loading="lazy"
+                    unoptimized
                   />
                 </div>
                 <div className="text-center mt-4 lg:mt-2 xl:mt-1 relative z-10">
@@ -313,6 +314,7 @@ export default function MoreWorkPage() {
                     fill
                     className="object-contain"
                     sizes="100vw"
+                    unoptimized
                   />
                 </div>
               )}
