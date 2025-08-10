@@ -1,3 +1,13 @@
 {
-  "buildCommand": "pnpm install && pnpm build"
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noimageindex, noarchive, nosnippet"
+        }
+      ]
+    }
+  ]
 }

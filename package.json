@@ -38,6 +38,7 @@
     "@radix-ui/react-toggle": "latest",
     "@radix-ui/react-toggle-group": "latest",
     "@radix-ui/react-tooltip": "latest",
+    "@react-email/render": "latest",
     "@remix-run/react": "latest",
     "@sveltejs/kit": "latest",
     "@tailwindcss/typography": "latest",

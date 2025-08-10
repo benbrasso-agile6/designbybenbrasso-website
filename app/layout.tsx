@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
     nocache: true,
+    noimageindex: true,
     googleBot: {
       index: false,
       follow: false,
