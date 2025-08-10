@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Ben Brasso - UX Product Design Portfolio",
   description:
     "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-forward strategist.", // Shorter version
+  category: "portfolio",
   robots: {
     index: false,
     follow: false,
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
     title: "Ben Brasso - UX Product Design Portfolio",
     description:
       "UX design portfolio and website for Ben Brasso, human-centered designer, researcher, and AI-forward strategist.", // Shorter version
