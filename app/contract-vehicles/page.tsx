@@ -12,7 +12,7 @@ export default function ContractVehiclesPage() {
               Contracts and <span className="text-sky-600 dark:text-sky-500">Contract Vehicles</span>
             </h1>
             <p>
-              My work with federal agencies has come through roles at technology companies that held government contract vechiles and technical partnerships. These roles gave me insight into how federal contracts support the delivery of modern, human-centered digital services.
+              My work with federal agencies has come through roles at technology companies that held government contract vehicles and technical partnerships. These roles gave me insight into how federal contracts support the delivery of modern, human-centered digital services.
             </p>
 
             <p>
