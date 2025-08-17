@@ -49,11 +49,9 @@ export default function ContractVehiclesPage() {
               U.S. Department of Veterans Affairs (VA)
             </h2>
 
-            <h3>VA T4NG</h3>
+            <h3>Department of Veterans Affairs Digital Health Office (DHO) Program Development Staffing Services</h3>
             <ul>
-              <li>Technology Transformation Services</li>
-              <li>Digital Modernization</li>
-              <li>User Experience Enhancement</li>
+              <li>Start Date: July 2024</li>
             </ul>
 
             <h3>DHS EAGLE II</h3>
