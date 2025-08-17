@@ -27,7 +27,7 @@ export default function ContractVehiclesPage() {
 
             <h3>HHS - Office of Grants (OG) Software Integration and Frontend Technology (SWIFT) BPA</h3>
             <ul>
-              <li>HHS's Simpler Notice of Funding Opportunities (NOFOs)</li>
+              <li>HHS’s Simpler Notice of Funding Opportunities (NOFOs)</li>
               <li>Start Date: June 2025</li>
             </ul>
           </section>
