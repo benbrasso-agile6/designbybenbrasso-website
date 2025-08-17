@@ -23,7 +23,7 @@ export default function ContractVehiclesPage() {
           </article>
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-            <h2 id="gsa-schedules" className="scroll-mt-20">
+            <h2 id="us-department-of-health-and-human-services-hhs" className="scroll-mt-20">
               US Department of Health and Human Services (HHS)
             </h2>
 
@@ -45,7 +45,7 @@ export default function ContractVehiclesPage() {
           </section>
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-            <h2 id="agency-specific" className="scroll-mt-20">
+            <h2 id="us-department-of-veterans-affairs-va" className="scroll-mt-20">
               U.S. Department of Veterans Affairs (VA)
             </h2>
 
