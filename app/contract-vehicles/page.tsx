@@ -12,13 +12,11 @@ export default function ContractVehiclesPage() {
               Contracts and <span className="text-sky-600 dark:text-sky-500">Contract Vehicles</span>
             </h1>
             <p>
-              I have experience working with various government contract vehicles and procurement mechanisms that enable
-              efficient delivery of design and technology services to federal agencies.
+              My work with federal agencies has come through roles at technology companies that held government contract vechiles and technical partnerships. These roles gave me insight into how federal contracts support the delivery of modern, human-centered digital services.
             </p>
 
             <p>
-              Through these contract vehicles, I've helped organizations streamline their procurement processes while
-              ensuring compliance with federal regulations and delivering high-quality user-centered design solutions.
+              As an employee on these contracts, I’ve contributed to delivering high-quality, user-centered design solutions that help agencies improve accessibility, efficiency, and impact.
             </p>
           </article>
 
