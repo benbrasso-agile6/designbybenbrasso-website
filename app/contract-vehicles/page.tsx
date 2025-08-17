@@ -3,10 +3,10 @@ import Footer from "../components/footer"
 
 export default function ContractVehiclesPage() {
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col min-h-dvh bg-white dark:bg-neutral-950">
       <Header />
-      <main id="main-content" className="flex-1">
-        <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16 max-w-4xl">
+      <main id="main-content" className="flex-1 py-12 md:py-16 lg:py-20">
+        <div className="max-w-[1000px] mx-auto px-8">
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
             <h1 className="leading-normal">
               Contract <span className="text-sky-600 dark:text-sky-500">Vehicles</span>
