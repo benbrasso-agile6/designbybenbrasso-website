@@ -27,20 +27,10 @@ export default function ContractVehiclesPage() {
               US Department of Health and Human Services (HHS)
             </h2>
 
-            <h3>Schedule 70 - IT Services</h3>
+            <h3>HHS - Office of Grants (OG) Software Integration and Frontend Technology (SWIFT) BPA</h3>
             <ul>
-              <li>User Experience Design Services</li>
-              <li>Digital Strategy and Consulting</li>
-              <li>Accessibility Compliance and Testing</li>
-              <li>Design System Development</li>
-            </ul>
-
-            <h3>Schedule 541 - Professional Services</h3>
-            <ul>
-              <li>Research and Analysis</li>
-              <li>Strategic Planning</li>
-              <li>Process Improvement</li>
-              <li>Training and Development</li>
+              <li>HHS's Simpler Notice of Funding Opportunities (NOFOs)</li>
+              <li>Start Date: June 2025</li>
             </ul>
           </section>
 
