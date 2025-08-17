@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dpl6apspp/image/upload/IMG_7897_tmmfga.jpg",
         width: 1200,
         height: 630,
-        alt: "Ben Brasso - Full-Stack UX Product Design Portfolio",
+        alt: "Design by Ben Brasso portfolio logo",
       },
     ],
   },
