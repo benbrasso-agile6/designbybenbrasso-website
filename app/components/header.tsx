@@ -12,6 +12,7 @@ import {
   DownloadIcon,
   LayersIcon,
   BriefcaseIcon,
+  PenToolIcon,
 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
@@ -26,7 +27,7 @@ export default function Header() {
     { name: "Case Studies", href: "/case-studies", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "More Work", href: "/more-work", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "Design Contributions", href: "/design-contributions", icon: <LayersIcon className="h-5 w-5" /> },
-    { name: "Contract Vehicles", href: "/contract-vehicles", icon: <FileTextIcon className="h-5 w-5" /> },
+    { name: "Contract Vehicles", href: "/contract-vehicles", icon: <PenToolIcon className="h-5 w-5" /> }, // Changed from FileTextIcon to PenToolIcon to represent contract signing
     { name: "Contact", href: "/contact", icon: <MailIcon className="h-5 w-5" /> },
   ]
 
