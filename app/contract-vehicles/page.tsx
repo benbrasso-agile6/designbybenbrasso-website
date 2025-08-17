@@ -45,26 +45,6 @@ export default function ContractVehiclesPage() {
           </section>
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
-            <h2 id="specialized-vehicles" className="scroll-mt-20">
-              Specialized Contract Vehicles
-            </h2>
-
-            <h3>OASIS+ Professional Services</h3>
-            <ul>
-              <li>Management and Advisory Services</li>
-              <li>Digital Transformation Consulting</li>
-              <li>User Research and Testing</li>
-            </ul>
-
-            <h3>CIO-SP3 Small Business</h3>
-            <ul>
-              <li>IT Professional Services</li>
-              <li>Systems Integration</li>
-              <li>Software Development Support</li>
-            </ul>
-          </section>
-
-          <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
             <h2 id="agency-specific" className="scroll-mt-20">
               U.S. Department of Veterans Affairs (VA)
             </h2>
