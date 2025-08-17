@@ -66,7 +66,7 @@ export default function ContractVehiclesPage() {
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
             <h2 id="agency-specific" className="scroll-mt-20">
-              Agency-Specific Vehicles
+              U.S. Department of Veterans Affairs (VA)
             </h2>
 
             <h3>VA T4NG</h3>
