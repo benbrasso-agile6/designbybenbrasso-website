@@ -9,7 +9,7 @@ export default function ContractVehiclesPage() {
         <div className="max-w-[1000px] mx-auto px-8">
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral">
             <h1 className="leading-normal">
-              Contract <span className="text-sky-600 dark:text-sky-500">Vehicles</span>
+              Contracts and <span className="text-sky-600 dark:text-sky-500">Contract Vehicles</span>
             </h1>
             <p>
               I have experience working with various government contract vehicles and procurement mechanisms that enable
