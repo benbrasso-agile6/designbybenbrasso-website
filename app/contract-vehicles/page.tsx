@@ -24,7 +24,7 @@ export default function ContractVehiclesPage() {
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
             <h2 id="gsa-schedules" className="scroll-mt-20">
-              GSA Schedules
+              US Department of Health and Human Services (HHS)
             </h2>
 
             <h3>Schedule 70 - IT Services</h3>
