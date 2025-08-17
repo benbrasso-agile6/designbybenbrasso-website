@@ -50,7 +50,7 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'And on June 23, 2025, the VA Digital Health Office inked its <a href="https://orangeslices.ai/va-digital-health-office-inks-contract-for-ai-enabled-cots-scribe-solution/" target="_blank" rel="noopener noreferrer">contract with Abridge AI for a Commercial-Off-the-Shelf (COTS) AI-enabled scribe solution</a>.',
+          text: 'And on June 24, 2025, the <a href="https://govtribe.com/opportunity/federal-contract-opportunity/modification-to-a-previous-notice-ambient-scribe-sole-source-36c10g25q00882" target="_blank" rel="noopener noreferrer">Department of Veterans Affairs Strategic Acquisition Center issued a modified Special Notice announcing its intent to award sole source contracts to two companies for Commercial-Off-the-Shelf (COTS) ambient scribe solutions</a>. This amendment revises the apparent awardees to Knowtex Inc. and Abridge AI, Inc.',
         },
       ],
     },
