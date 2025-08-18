@@ -4,7 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "./components/scroll-to-top"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 
 const plusJakartaSans = Plus_Jakarta_Sans({

@@ -124,6 +124,13 @@ export default function CaseStudyClientPage({ params }: Props) {
           {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
+            <style jsx>{`
+              article a strong,
+              article strong a {
+                font-weight: 700 !important;
+              }
+            `}</style>
+
             {caseStudy.anchorLink && !caseStudy.projectOverviewBanner && (
               <div className="mt-4 mb-8 not-prose">
                 <a
