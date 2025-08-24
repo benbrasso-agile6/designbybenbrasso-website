@@ -10,14 +10,14 @@ export default function DescriptiveTextBlock() {
       </p>
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
         As a design lead and principal researcher, I have guided multi-disciplinary teams through complex systems-thinking
-        in public and private health care,{" "}
+        in private and public health care and sciences,{" "}
         <strong>
           helping transform organizational objectives into informed, purposeful, and accessible user-centered
           experiences.
         </strong>
       </p>
       <p className="text-lg text-neutral-700 dark:text-neutral-200 md:text-xl leading-relaxed md:leading-[2.75rem]">
-        I'm a sponge for learning new skills, technology, and conquering new goals, while cultivating a culture for continuous, collective experimentation.
+        I'm a sponge for learning new skills, technology, and conquering new goals, while cultivating a culture of continuous, collective experimentation.
       </p>
       {/*
       <p className="text-lg text-neutral-500 dark:text-neutral-300 md:text-xl leading-relaxed md:leading-[2.75rem]">

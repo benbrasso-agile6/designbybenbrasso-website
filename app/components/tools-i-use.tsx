@@ -26,6 +26,7 @@ import {
   FileCodeIcon,
   MicIcon,
   NotebookPenIcon,
+  DatabaseIcon,
 } from "lucide-react"
 import type React from "react"
 import { motion } from "framer-motion"
@@ -38,6 +39,7 @@ interface ToolItem {
 export default function ToolsIUseSection() {
   const tools: ToolItem[] = [
     { icon: PaletteIcon, text: "Figma" },
+    { icon: PaletteIcon, text: "FigJam" },
     { icon: TriangleIcon, text: "Vercel" },
     { icon: GithubIcon, text: "GitHub" },
     { icon: CodeIcon, text: "VS Code IDE" },
@@ -58,6 +60,7 @@ export default function ToolsIUseSection() {
     { icon: LineChartIcon, text: "Google Analytics 4" },
     { icon: ActivityIcon, text: "Datadog" },
     { icon: NotebookPenIcon, text: "Granola.ai" },
+    { icon: DatabaseIcon, text: "Airtable" },
     { icon: UsersIcon, text: "HCD Methodologies" },
     { icon: RefreshCwIcon, text: "Agile" },
     { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },
