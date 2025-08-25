@@ -24,8 +24,8 @@ export const projectsData: Project[] = [
     hasCaseStudy: true,
     caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
     stats: [
-      { label: "AI-workflow effencies identified", value: "9 within the care encounter" },
-      { label: "Highest baseline perceived workload", value: "8.5 on the NASA-TLX (0-10 scale)" },
+      { label: "AI-workflow effencies identified", value: "9 in the care encounter" },
+      { label: "Projected appointments impacted", value: "50 million annually" },
     ],
   },
   {
@@ -39,7 +39,7 @@ export const projectsData: Project[] = [
     caseStudyUrlOverride: "/work/patient-check-in",
     stats: [
       { label: "Staff time saved", value: "64k minutes per month" },
-      { label: "Users benefited", value: "110k per month" },
+      { label: "Veterans benefited", value: "110k per month" },
     ],
   },
   {
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
     caseStudyUrlOverride: "/work/provider-online-scheduling",
     stats: [
       { label: "Projected staff time saved", value: "700k hours per month" },
-      { label: "Projected users benefited", value: "250k per month" },
+      { label: "Projected Veterans benefited", value: "250k per month" },
     ],
   },
 ];
