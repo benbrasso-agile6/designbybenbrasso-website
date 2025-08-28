@@ -34,7 +34,7 @@ export default function ContractVehiclesPage() {
 
           <section className="prose prose-lg max-w-none dark:prose-invert prose-neutral mt-12 md:mt-16">
             <h2 id="us-department-of-veterans-affairs-va" className="scroll-mt-20">
-              U.S. Department of Veterans Affairs (VA)
+              US Department of Veterans Affairs (VA)
             </h2>
 
             <h3>Department of Veterans Affairs Digital Health Office (DHO) Program Development Staffing Services</h3>
