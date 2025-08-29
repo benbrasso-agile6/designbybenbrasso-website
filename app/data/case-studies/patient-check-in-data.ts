@@ -142,7 +142,7 @@ export const patientCheckInData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'By supporting travel reimbursements directly within mobile check-in, we paved the way for additional convenient options for Veterans to submit travel reimbursement claims. <strong>Veterans gained the ability to <a href="https://www.va.gov/health-care/file-travel-pay-reimbursement/" target="_blank" rel="noopener noreferrer">file travel claims through My HealtheVet on VA.gov</a> in April 2025 and <a href="https://www.stripes.com/veterans/2025-08-12/va-veterans-mobile-app-mileage-claims-18738908.html" target="_blank" rel="noopener noreferrer">on the VA Health and Benefits mobile app in August 2025</a>.</strong>',
+          text: 'By supporting travel reimbursements directly within mobile check-in, we paved the way for additional convenient options for Veterans to submit travel reimbursement claims. <strong>Veterans gained the ability to <a href="https://www.va.gov/health-care/file-travel-pay-reimbursement/" target="_blank" rel="noopener noreferrer">file travel claims through My HealtheVet on VA.gov</a> in April 2025 and <a href="https://www.youtube.com/watch?v=BbB0BiXDFEo" target="_blank" rel="noopener noreferrer">in the VA Health and Benefits (VAHB) mobile app in July 2025</a>.</strong> As of August, over 15,000 claims are submitted daily through the VAHB mobile app.',
         },
         {
           type: "image",
