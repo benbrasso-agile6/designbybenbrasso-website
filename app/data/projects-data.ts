@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
     caseStudyUrlOverride: "/work/ai-scribe-kpi-dashboard",
     stats: [
       { label: "AI-workflow effencies identified", value: "9 in the care encounter" },
-      { label: "Projected appointments impacted", value: "50 million annually" },
+      { label: "Projected appointments with ambient scribe", value: "50 million annually" },
     ],
   },
   {
