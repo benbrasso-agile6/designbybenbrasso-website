@@ -209,7 +209,7 @@ export default function MoreWorkPage() {
               <p>
                 More digital transformation projects in health care and academic medicine I've lead or contributed
                 to—focused on implementing user research, content strategy, taxonomy design, prototyping, plain language
-                writing, UX design, and sitemaps.
+                writing, UX design, design systems and componenet libraries, and sitemaps.
               </p>
               <p>
                 Explore{" "}
