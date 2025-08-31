@@ -20,9 +20,9 @@ export default function CaseStudiesPage() {
             </article>
             <div className="prose prose-lg dark:prose-invert max-w-none text-center mt-8">
               <p>
-                Behind every design is a story. These case studies highlight the thinking, collaboration, and decisions
+                <strong>Behind every design is a story.</strong> These case studies highlight the thinking, collaboration, and decisions
                 that shaped each project—from early research to delivery. You’ll review how I’ve worked across health
-                care and government, using AI-powered tools to help turn complex problems into accessible, impactful
+                care and government, using AI-powered tools, human-centered design methodologies, and data storytelling to help turn complex problems into accessible, impactful
                 solutions.
               </p>
             </div>
