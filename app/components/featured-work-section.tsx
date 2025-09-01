@@ -67,7 +67,7 @@ export default function FeaturedWorkSection({
               outcomes.
             </p>
             <div className="mt-8">
-              <ActionLink href="/case-studies">Explore featured case studies</ActionLink>
+              <ActionLink href="/case-studies">Explore all case studies</ActionLink>
             </div>
           </div>
         )}
