@@ -9,51 +9,34 @@ export default function HeroSection() {
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Static gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900"></div>
-
-        {/* Atmospheric gas/cloud effects */}
+        {/* Cinematic background image */}
         <div className="absolute inset-0">
-          {/* Large atmospheric clouds */}
-          <div className="absolute top-1/4 left-1/6 w-96 h-64 bg-gradient-to-r from-sky-400/30 via-blue-400/20 to-transparent dark:from-sky-400/20 dark:via-blue-400/15 dark:to-transparent rounded-[100px] blur-3xl animate-[drift_25s_ease-in-out_infinite]"></div>
-          <div className="absolute top-3/4 right-1/4 w-80 h-56 bg-gradient-to-l from-purple-400/25 via-blue-400/15 to-transparent dark:from-purple-400/15 dark:via-blue-400/10 dark:to-transparent rounded-[80px] blur-2xl animate-[driftSlow_30s_ease-in-out_infinite_reverse]"></div>
-          <div
-            className="absolute bottom-1/3 left-1/3 w-72 h-48 bg-gradient-to-br from-emerald-400/20 via-teal-400/15 to-transparent dark:from-emerald-400/12 dark:via-teal-400/8 dark:to-transparent rounded-[90px] blur-3xl animate-[float_20s_ease-in-out_infinite]"
-            style={{ animationDelay: "8s" }}
-          ></div>
-
-          {/* Medium gas wisps */}
-          <div
-            className="absolute top-1/2 right-1/6 w-64 h-40 bg-gradient-to-tr from-sky-300/15 via-cyan-300/10 to-transparent dark:from-sky-300/8 dark:via-cyan-300/5 dark:to-transparent rounded-[70px] blur-2xl animate-[wisp_18s_ease-in-out_infinite]"
-            style={{ animationDelay: "4s" }}
-          ></div>
-          <div
-            className="absolute top-1/6 right-1/2 w-56 h-36 bg-gradient-to-bl from-blue-300/18 via-indigo-300/12 to-transparent dark:from-blue-300/10 dark:via-indigo-300/6 dark:to-transparent rounded-[60px] blur-xl animate-[wisp_22s_ease-in-out_infinite_reverse]"
-            style={{ animationDelay: "12s" }}
-          ></div>
-
-          {/* Small atmospheric particles */}
-          <div
-            className="absolute top-2/3 left-1/5 w-40 h-28 bg-gradient-to-r from-teal-300/12 to-transparent dark:from-teal-300/6 dark:to-transparent rounded-[50px] blur-xl animate-[particle_15s_ease-in-out_infinite]"
-            style={{ animationDelay: "6s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 right-1/3 w-48 h-32 bg-gradient-to-l from-purple-300/10 to-transparent dark:from-purple-300/5 dark:to-transparent rounded-[55px] blur-lg animate-[particle_19s_ease-in-out_infinite_reverse]"
-            style={{ animationDelay: "14s" }}
-          ></div>
+          <Image
+            src="/cinematic-atmospheric-clouds-and-mist-in-dark-mood.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-40 dark:opacity-30"
+            priority
+          />
         </div>
 
-        {/* Flowing gas streams */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-32 h-80 bg-gradient-to-b from-sky-400/8 via-blue-400/12 to-transparent dark:from-sky-400/4 dark:via-blue-400/6 dark:to-transparent rounded-[40px] blur-lg animate-[stream_28s_ease-in-out_infinite] transform rotate-12"></div>
-          <div
-            className="absolute bottom-1/3 right-1/5 w-28 h-72 bg-gradient-to-t from-emerald-400/6 via-teal-400/10 to-transparent dark:from-emerald-400/3 dark:via-teal-400/5 dark:to-transparent rounded-[35px] blur-lg animate-[stream_24s_ease-in-out_infinite_reverse] transform -rotate-12"
-            style={{ animationDelay: "10s" }}
-          ></div>
+          {/* Large moving atmospheric overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 via-blue-600/15 to-purple-600/20 dark:from-sky-400/15 dark:via-blue-500/10 dark:to-purple-500/15 animate-[atmosphericDrift_20s_ease-in-out_infinite]"></div>
+
+          {/* Floating light particles */}
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-sky-400/30 dark:bg-sky-300/20 rounded-full blur-xl animate-[floatUp_15s_ease-in-out_infinite]"></div>
+          <div className="absolute top-3/4 right-1/3 w-24 h-24 bg-blue-400/25 dark:bg-blue-300/15 rounded-full blur-lg animate-[floatUp_18s_ease-in-out_infinite] delay-[5s]"></div>
+          <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-purple-400/20 dark:bg-purple-300/12 rounded-full blur-md animate-[floatUp_22s_ease-in-out_infinite] delay-[10s]"></div>
+
+          {/* Drifting mist layers */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-sky-300/10 to-transparent dark:via-sky-200/5 animate-[mistDrift_25s_linear_infinite]"></div>
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-transparent via-blue-300/8 to-transparent dark:via-blue-200/4 animate-[mistDrift_30s_linear_infinite_reverse] delay-[8s]"></div>
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/5 via-neutral-800/2 to-neutral-900/8 dark:from-neutral-950/15 dark:via-neutral-950/5 dark:to-neutral-950/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-white/10 to-white/5 dark:from-neutral-950/20 dark:via-neutral-950/10 dark:to-neutral-950/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/20 via-neutral-800/10 to-neutral-900/25 dark:from-neutral-950/30 dark:via-neutral-950/15 dark:to-neutral-950/35"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/5 to-white/2 dark:from-neutral-950/15 dark:via-neutral-950/8 dark:to-neutral-950/5"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1000px] mx-auto px-8">
@@ -122,35 +105,21 @@ export default function HeroSection() {
       </div>
 
       <style jsx>{`
-        @keyframes drift {
-          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); }
-          25% { transform: translateY(-30px) translateX(40px) scale(1.05) rotate(2deg); }
-          50% { transform: translateY(-15px) translateX(-30px) scale(0.95) rotate(-1deg); }
-          75% { transform: translateY(-45px) translateX(25px) scale(1.02) rotate(1deg); }
+        @keyframes atmosphericDrift {
+          0%, 100% { transform: translateX(0px) translateY(0px) scale(1); opacity: 0.6; }
+          25% { transform: translateX(-50px) translateY(-30px) scale(1.05); opacity: 0.8; }
+          50% { transform: translateX(30px) translateY(-20px) scale(0.95); opacity: 0.4; }
+          75% { transform: translateX(-20px) translateY(-40px) scale(1.02); opacity: 0.7; }
         }
-        @keyframes driftSlow {
-          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); }
-          33% { transform: translateY(-20px) translateX(-35px) scale(1.03) rotate(-1deg); }
-          66% { transform: translateY(-35px) translateX(20px) scale(0.97) rotate(1deg); }
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-          50% { transform: translateY(-25px) translateX(15px) scale(1.02); }
-        }
-        @keyframes wisp {
-          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); opacity: 0.6; }
-          25% { transform: translateY(-20px) translateX(30px) scale(1.1) rotate(1deg); opacity: 0.8; }
-          50% { transform: translateY(-10px) translateX(-25px) scale(0.9) rotate(-0.5deg); opacity: 0.4; }
-          75% { transform: translateY(-30px) translateX(15px) scale(1.05) rotate(0.5deg); opacity: 0.7; }
-        }
-        @keyframes particle {
+        @keyframes floatUp {
           0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
-          50% { transform: translateY(-15px) translateX(20px) scale(1.1); opacity: 0.6; }
+          25% { transform: translateY(-60px) translateX(20px) scale(1.2); opacity: 0.6; }
+          50% { transform: translateY(-100px) translateX(-15px) scale(0.8); opacity: 0.8; }
+          75% { transform: translateY(-80px) translateX(30px) scale(1.1); opacity: 0.4; }
         }
-        @keyframes stream {
-          0%, 100% { transform: translateY(0px) translateX(0px) scaleY(1) rotate(12deg); opacity: 0.4; }
-          33% { transform: translateY(-20px) translateX(10px) scaleY(1.1) rotate(14deg); opacity: 0.6; }
-          66% { transform: translateY(-10px) translateX(-15px) scaleY(0.9) rotate(10deg); opacity: 0.3; }
+        @keyframes mistDrift {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
         }
       `}</style>
     </section>
