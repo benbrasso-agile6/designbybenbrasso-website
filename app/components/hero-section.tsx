@@ -20,8 +20,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-amber-25/40 to-yellow-50/45 dark:from-orange-950/30 dark:via-amber-950/25 dark:to-yellow-950/35"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-cream-50/35 via-peach-25/20 to-orange-25/15 dark:from-orange-950/25 dark:via-amber-950/15 dark:to-yellow-950/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-100/60 via-blue-50/50 to-cyan-100/55 dark:from-sky-900/40 dark:via-blue-900/35 dark:to-cyan-900/45"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-50/45 via-sky-25/30 to-cyan-25/25 dark:from-blue-900/35 dark:via-sky-900/25 dark:to-cyan-900/30"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1000px] mx-auto px-8">
