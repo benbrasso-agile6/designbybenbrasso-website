@@ -39,14 +39,14 @@ export default function HeroSection() {
       </div>
 
       {/* Atmospheric Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/30 via-neutral-800/20 to-neutral-900/40 dark:from-neutral-950/50 dark:via-neutral-950/30 dark:to-neutral-950/60"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/70 to-white/60 dark:from-neutral-950/90 dark:via-neutral-950/70 dark:to-neutral-950/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/10 via-neutral-800/5 to-neutral-900/15 dark:from-neutral-950/20 dark:via-neutral-950/10 dark:to-neutral-950/25"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/20 to-white/10 dark:from-neutral-950/40 dark:via-neutral-950/20 dark:to-neutral-950/10"></div>
 
       {/* Subtle animated light effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/8 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
