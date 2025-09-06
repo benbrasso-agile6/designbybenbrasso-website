@@ -17,6 +17,7 @@ import {
 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 export default function Header() {
   const pathname = usePathname()
@@ -65,9 +66,23 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full border-b border-white/20 dark:border-neutral-800/30 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full border-b border-white/20 dark:border-neutral-800/30 overflow-hidden"
     >
-      <div className="w-full mx-auto flex h-16 items-center justify-between px-6 relative">
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/abstract-blue-orange-gas-no-pink-background.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-60 dark:opacity-50 animate-[gasImageFlow_35s_ease-in-out_infinite]"
+          priority
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-sky-100/75 to-blue-50/60 dark:from-slate-800/80 dark:via-sky-900/60 dark:to-blue-900/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-sky-25/50 via-cyan-100/55 to-white/80 dark:from-slate-900/60 dark:via-sky-900/40 dark:via-cyan-900/45 dark:to-slate-900/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent dark:from-slate-900/50 dark:via-transparent dark:to-transparent"></div>
+
+      <div className="w-full mx-auto flex h-16 items-center justify-between px-6 relative z-10">
         <Link href="/" className="flex items-center gap-2 group">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -188,6 +203,31 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes gasImageFlow {
+          0%, 100% { 
+            transform: scale(1.05) rotate(0deg);
+            filter: hue-rotate(0deg) brightness(1) contrast(1);
+          }
+          20% { 
+            transform: scale(1.08) rotate(0.5deg);
+            filter: hue-rotate(8deg) brightness(1.02) contrast(1.05);
+          }
+          40% { 
+            transform: scale(1.03) rotate(-0.3deg);
+            filter: hue-rotate(-5deg) brightness(0.98) contrast(0.95);
+          }
+          60% { 
+            transform: scale(1.07) rotate(0.4deg);
+            filter: hue-rotate(12deg) brightness(1.01) contrast(1.02);
+          }
+          80% { 
+            transform: scale(1.04) rotate(-0.2deg);
+            filter: hue-rotate(-3deg) brightness(0.99) contrast(0.98);
+          }
+        }
+      `}</style>
     </header>
   )
 }
