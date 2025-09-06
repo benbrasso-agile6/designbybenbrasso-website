@@ -21,7 +21,7 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-sky-100/75 to-blue-50/60 dark:from-slate-800/80 dark:via-sky-900/60 dark:to-blue-900/50"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-sky-25/50 to-cyan-100/55 dark:from-slate-900/60 dark:via-sky-900/40 dark:to-cyan-900/45"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-sky-25/50 via-cyan-100/55 to-white/80 dark:from-slate-900/60 dark:via-sky-900/40 dark:via-cyan-900/45 dark:to-slate-900/70"></div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent dark:from-slate-900/50 dark:via-transparent dark:to-transparent"></div>
 
