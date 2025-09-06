@@ -65,7 +65,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full border-b border-border bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md"
     >
       <div className="w-full mx-auto flex h-16 items-center justify-between px-6 relative">
         <Link href="/" className="flex items-center gap-2 group">
