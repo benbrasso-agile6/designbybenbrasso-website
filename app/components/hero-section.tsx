@@ -7,21 +7,35 @@ import HeroSectionBioBlock from "./hero-section-bio-block"
 export default function HeroSection() {
   return (
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
-      {/* Video Background */}
+      {/* Animated gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover opacity-30"
-          style={{ filter: "blur(1px)" }}
-        >
-          <source
-            src="/placeholder.mp4?query=subtle atmospheric cinematic background with soft lighting and gentle movement"
-            type="video/mp4"
-          />
-        </video>
+        {/* Animated gradient base */}
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900 animate-pulse"
+          style={{ animationDuration: "8s" }}
+        ></div>
+
+        {/* Floating animated elements */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute top-1/4 left-1/6 w-32 h-32 bg-sky-200/20 dark:bg-sky-400/10 rounded-full blur-xl animate-bounce"
+            style={{ animationDuration: "6s", animationDelay: "0s" }}
+          ></div>
+          <div
+            className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-200/15 dark:bg-blue-400/8 rounded-full blur-lg animate-bounce"
+            style={{ animationDuration: "8s", animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-slate-200/20 dark:bg-slate-400/10 rounded-full blur-lg animate-bounce"
+            style={{ animationDuration: "7s", animationDelay: "4s" }}
+          ></div>
+        </div>
+
+        {/* Subtle moving gradient overlay */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-50/30 to-transparent dark:via-sky-900/20 animate-pulse"
+          style={{ animationDuration: "12s" }}
+        ></div>
       </div>
 
       {/* Atmospheric Overlays */}
