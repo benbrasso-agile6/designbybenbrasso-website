@@ -55,15 +55,15 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="fixed top-16 left-0 right-0 bg-white dark:bg-neutral-950 border-t border-border shadow-lg z-[999999] overflow-y-auto max-h-[calc(100vh-4rem)]"
+      className="fixed top-16 left-0 right-0 bottom-0 bg-white dark:bg-neutral-950 border-t border-border shadow-lg z-[999999] overflow-y-auto"
       style={{ pointerEvents: "auto" }}
     >
-      <nav className="grid gap-1 text-base font-medium p-4">
+      <nav className="grid gap-4 text-base font-medium p-6">
         {/* Resume/CV link for mobile */}
         <Link
           key={resumeCvItem.name}
           href={resumeCvItem.href}
-          className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
+          className={`flex items-center gap-3 px-2.5 py-3 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
             pathname === resumeCvItem.href && !resumeCvItem.isExternal
               ? "text-sky-700 dark:text-sky-400 font-semibold"
               : "text-black dark:text-neutral-100"
@@ -83,7 +83,7 @@ export default function Header() {
           <Link
             key={item.name}
             href={item.href}
-            className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
+            className={`flex items-center gap-3 px-2.5 py-3 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
               pathname === item.href
                 ? "text-sky-700 dark:text-sky-400 font-semibold"
                 : "text-black dark:text-neutral-100"
