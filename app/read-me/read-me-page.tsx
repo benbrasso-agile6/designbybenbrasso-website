@@ -31,7 +31,7 @@ export default function ReadMePage() {
       />
       <article id="readme-top" className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
         <h1 className="leading-normal">
-          Ben Brasso’s <span className="uppercase">ReadMe</span>
+          Ben Brasso’s <span className="text-sky-600 dark:text-sky-500"><span className="uppercase">ReadMe</span></span>
         </h1>
         <p className="lead !mb-0 text-neutral-700 dark:text-neutral-300">bras • soh</p>
         <p className="!mt-1 text-neutral-700 dark:text-neutral-300 flex items-center">
