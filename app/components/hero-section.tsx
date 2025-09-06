@@ -11,30 +11,43 @@ export default function HeroSection() {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900"></div>
 
-        {/* Floating orbs */}
+        {/* Atmospheric gas/cloud effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/6 w-60 h-60 bg-sky-400/50 dark:bg-sky-400/35 rounded-full blur-2xl animate-[floatLarge_10s_ease-in-out_infinite]"></div>
-          <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-blue-400/45 dark:bg-blue-400/30 rounded-full blur-xl animate-[floatLarge_14s_ease-in-out_infinite_reverse]"></div>
+          {/* Large atmospheric clouds */}
+          <div className="absolute top-1/4 left-1/6 w-96 h-64 bg-gradient-to-r from-sky-400/30 via-blue-400/20 to-transparent dark:from-sky-400/20 dark:via-blue-400/15 dark:to-transparent rounded-[100px] blur-3xl animate-[drift_25s_ease-in-out_infinite]"></div>
+          <div className="absolute top-3/4 right-1/4 w-80 h-56 bg-gradient-to-l from-purple-400/25 via-blue-400/15 to-transparent dark:from-purple-400/15 dark:via-blue-400/10 dark:to-transparent rounded-[80px] blur-2xl animate-[driftSlow_30s_ease-in-out_infinite_reverse]"></div>
           <div
-            className="absolute bottom-1/3 left-1/3 w-40 h-40 bg-purple-400/40 dark:bg-purple-400/25 rounded-full blur-xl animate-[floatLarge_12s_ease-in-out_infinite]"
+            className="absolute bottom-1/3 left-1/3 w-72 h-48 bg-gradient-to-br from-emerald-400/20 via-teal-400/15 to-transparent dark:from-emerald-400/12 dark:via-teal-400/8 dark:to-transparent rounded-[90px] blur-3xl animate-[float_20s_ease-in-out_infinite]"
+            style={{ animationDelay: "8s" }}
+          ></div>
+
+          {/* Medium gas wisps */}
+          <div
+            className="absolute top-1/2 right-1/6 w-64 h-40 bg-gradient-to-tr from-sky-300/15 via-cyan-300/10 to-transparent dark:from-sky-300/8 dark:via-cyan-300/5 dark:to-transparent rounded-[70px] blur-2xl animate-[wisp_18s_ease-in-out_infinite]"
             style={{ animationDelay: "4s" }}
           ></div>
           <div
-            className="absolute top-1/2 right-1/6 w-36 h-36 bg-emerald-400/45 dark:bg-emerald-400/30 rounded-full blur-lg animate-[floatLarge_16s_ease-in-out_infinite]"
-            style={{ animationDelay: "2s" }}
+            className="absolute top-1/6 right-1/2 w-56 h-36 bg-gradient-to-bl from-blue-300/18 via-indigo-300/12 to-transparent dark:from-blue-300/10 dark:via-indigo-300/6 dark:to-transparent rounded-[60px] blur-xl animate-[wisp_22s_ease-in-out_infinite_reverse]"
+            style={{ animationDelay: "12s" }}
+          ></div>
+
+          {/* Small atmospheric particles */}
+          <div
+            className="absolute top-2/3 left-1/5 w-40 h-28 bg-gradient-to-r from-teal-300/12 to-transparent dark:from-teal-300/6 dark:to-transparent rounded-[50px] blur-xl animate-[particle_15s_ease-in-out_infinite]"
+            style={{ animationDelay: "6s" }}
           ></div>
           <div
-            className="absolute top-1/6 right-1/2 w-32 h-32 bg-teal-400/40 dark:bg-teal-400/25 rounded-full blur-lg animate-[floatLarge_11s_ease-in-out_infinite_reverse]"
-            style={{ animationDelay: "6s" }}
+            className="absolute bottom-1/4 right-1/3 w-48 h-32 bg-gradient-to-l from-purple-300/10 to-transparent dark:from-purple-300/5 dark:to-transparent rounded-[55px] blur-lg animate-[particle_19s_ease-in-out_infinite_reverse]"
+            style={{ animationDelay: "14s" }}
           ></div>
         </div>
 
-        {/* Orbiting elements */}
+        {/* Flowing gas streams */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 w-20 h-20 bg-sky-500/60 dark:bg-sky-400/40 rounded-full blur-md animate-[orbit_20s_linear_infinite] transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/3 left-1/4 w-32 h-80 bg-gradient-to-b from-sky-400/8 via-blue-400/12 to-transparent dark:from-sky-400/4 dark:via-blue-400/6 dark:to-transparent rounded-[40px] blur-lg animate-[stream_28s_ease-in-out_infinite] transform rotate-12"></div>
           <div
-            className="absolute top-1/2 left-1/2 w-16 h-16 bg-blue-500/50 dark:bg-blue-400/35 rounded-full blur-sm animate-[orbitReverse_25s_linear_infinite] transform -translate-x-1/2 -translate-y-1/2"
-            style={{ animationDelay: "5s" }}
+            className="absolute bottom-1/3 right-1/5 w-28 h-72 bg-gradient-to-t from-emerald-400/6 via-teal-400/10 to-transparent dark:from-emerald-400/3 dark:via-teal-400/5 dark:to-transparent rounded-[35px] blur-lg animate-[stream_24s_ease-in-out_infinite_reverse] transform -rotate-12"
+            style={{ animationDelay: "10s" }}
           ></div>
         </div>
       </div>
@@ -109,20 +122,35 @@ export default function HeroSection() {
       </div>
 
       <style jsx>{`
-        @keyframes floatLarge {
+        @keyframes drift {
+          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); }
+          25% { transform: translateY(-30px) translateX(40px) scale(1.05) rotate(2deg); }
+          50% { transform: translateY(-15px) translateX(-30px) scale(0.95) rotate(-1deg); }
+          75% { transform: translateY(-45px) translateX(25px) scale(1.02) rotate(1deg); }
+        }
+        @keyframes driftSlow {
+          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); }
+          33% { transform: translateY(-20px) translateX(-35px) scale(1.03) rotate(-1deg); }
+          66% { transform: translateY(-35px) translateX(20px) scale(0.97) rotate(1deg); }
+        }
+        @keyframes float {
           0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-          25% { transform: translateY(-40px) translateX(30px) scale(1.1); }
-          50% { transform: translateY(-20px) translateX(-40px) scale(0.9); }
-          75% { transform: translateY(-60px) translateX(20px) scale(1.05); }
+          50% { transform: translateY(-25px) translateX(15px) scale(1.02); }
         }
-        /* Removed drift and driftReverse keyframes that created the box-like horizontal movement */
-        @keyframes orbit {
-          0% { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
-          100% { transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg); }
+        @keyframes wisp {
+          0%, 100% { transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); opacity: 0.6; }
+          25% { transform: translateY(-20px) translateX(30px) scale(1.1) rotate(1deg); opacity: 0.8; }
+          50% { transform: translateY(-10px) translateX(-25px) scale(0.9) rotate(-0.5deg); opacity: 0.4; }
+          75% { transform: translateY(-30px) translateX(15px) scale(1.05) rotate(0.5deg); opacity: 0.7; }
         }
-        @keyframes orbitReverse {
-          0% { transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg); }
-          100% { transform: translate(-50%, -50%) rotate(-360deg) translateX(120px) rotate(360deg); }
+        @keyframes particle {
+          0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
+          50% { transform: translateY(-15px) translateX(20px) scale(1.1); opacity: 0.6; }
+        }
+        @keyframes stream {
+          0%, 100% { transform: translateY(0px) translateX(0px) scaleY(1) rotate(12deg); opacity: 0.4; }
+          33% { transform: translateY(-20px) translateX(10px) scaleY(1.1) rotate(14deg); opacity: 0.6; }
+          66% { transform: translateY(-10px) translateX(-15px) scaleY(0.9) rotate(10deg); opacity: 0.3; }
         }
       `}</style>
     </section>
