@@ -7,13 +7,11 @@ import HeroSectionBioBlock from "./hero-section-bio-block"
 export default function HeroSection() {
   return (
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
-      {/* Animated gradient background */}
+      {/* Static gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900">
-          <div className="absolute inset-0 bg-gradient-to-r from-sky-200/60 via-blue-100/40 to-purple-100/50 dark:from-sky-800/50 dark:via-blue-900/40 dark:to-purple-900/40 animate-[drift_12s_ease-in-out_infinite]"></div>
-          <div className="absolute inset-0 bg-gradient-to-l from-emerald-100/40 via-transparent to-teal-100/30 dark:from-emerald-900/30 dark:via-transparent dark:to-teal-900/25 animate-[driftReverse_18s_ease-in-out_infinite]"></div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900"></div>
 
+        {/* Floating orbs */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/6 w-60 h-60 bg-sky-400/50 dark:bg-sky-400/35 rounded-full blur-2xl animate-[floatLarge_10s_ease-in-out_infinite]"></div>
           <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-blue-400/45 dark:bg-blue-400/30 rounded-full blur-xl animate-[floatLarge_14s_ease-in-out_infinite_reverse]"></div>
@@ -31,6 +29,7 @@ export default function HeroSection() {
           ></div>
         </div>
 
+        {/* Orbiting elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 w-20 h-20 bg-sky-500/60 dark:bg-sky-400/40 rounded-full blur-md animate-[orbit_20s_linear_infinite] transform -translate-x-1/2 -translate-y-1/2"></div>
           <div
@@ -116,14 +115,7 @@ export default function HeroSection() {
           50% { transform: translateY(-20px) translateX(-40px) scale(0.9); }
           75% { transform: translateY(-60px) translateX(20px) scale(1.05); }
         }
-        @keyframes drift {
-          0%, 100% { transform: translateX(0px) translateY(0px); }
-          50% { transform: translateX(60px) translateY(-20px); }
-        }
-        @keyframes driftReverse {
-          0%, 100% { transform: translateX(0px) translateY(0px); }
-          50% { transform: translateX(-50px) translateY(15px); }
-        }
+        /* Removed drift and driftReverse keyframes that created the box-like horizontal movement */
         @keyframes orbit {
           0% { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg); }
