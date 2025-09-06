@@ -9,38 +9,38 @@ export default function HeroSection() {
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Animated gradient base */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900 animate-pulse"
-          style={{ animationDuration: "8s" }}
-        ></div>
+        {/* Animated gradient base with custom keyframes */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900">
+          <div className="absolute inset-0 bg-gradient-to-r from-sky-100/40 via-transparent to-blue-100/40 dark:from-sky-900/30 dark:via-transparent dark:to-blue-900/30 animate-[drift_15s_ease-in-out_infinite]"></div>
+        </div>
 
-        {/* Floating animated elements */}
+        {/* Floating cinematic particles */}
         <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/6 w-40 h-40 bg-sky-300/30 dark:bg-sky-400/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]"></div>
+          <div className="absolute top-3/4 right-1/4 w-32 h-32 bg-blue-300/25 dark:bg-blue-400/15 rounded-full blur-xl animate-[float_12s_ease-in-out_infinite_reverse]"></div>
           <div
-            className="absolute top-1/4 left-1/6 w-32 h-32 bg-sky-200/20 dark:bg-sky-400/10 rounded-full blur-xl animate-bounce"
-            style={{ animationDuration: "6s", animationDelay: "0s" }}
+            className="absolute bottom-1/3 left-1/3 w-28 h-28 bg-slate-300/30 dark:bg-slate-400/20 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]"
+            style={{ animationDelay: "4s" }}
           ></div>
           <div
-            className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-200/15 dark:bg-blue-400/8 rounded-full blur-lg animate-bounce"
-            style={{ animationDuration: "8s", animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-slate-200/20 dark:bg-slate-400/10 rounded-full blur-lg animate-bounce"
-            style={{ animationDuration: "7s", animationDelay: "4s" }}
+            className="absolute top-1/2 right-1/6 w-24 h-24 bg-sky-200/35 dark:bg-sky-500/15 rounded-full blur-lg animate-[float_14s_ease-in-out_infinite]"
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
 
-        {/* Subtle moving gradient overlay */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-50/30 to-transparent dark:via-sky-900/20 animate-pulse"
-          style={{ animationDuration: "12s" }}
-        ></div>
+        {/* Moving light rays */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-sky-300/20 to-transparent dark:via-sky-400/10 animate-[sway_20s_ease-in-out_infinite] transform-gpu"></div>
+          <div
+            className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-transparent via-blue-300/15 to-transparent dark:via-blue-400/8 animate-[sway_25s_ease-in-out_infinite_reverse] transform-gpu"
+            style={{ animationDelay: "5s" }}
+          ></div>
+        </div>
       </div>
 
       {/* Atmospheric Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/60 via-neutral-800/40 to-neutral-900/70 dark:from-neutral-950/80 dark:via-neutral-950/60 dark:to-neutral-950/90"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/85 to-white/75 dark:from-neutral-950/95 dark:via-neutral-950/85 dark:to-neutral-950/75"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/30 via-neutral-800/20 to-neutral-900/40 dark:from-neutral-950/50 dark:via-neutral-950/30 dark:to-neutral-950/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/70 to-white/60 dark:from-neutral-950/90 dark:via-neutral-950/70 dark:to-neutral-950/60"></div>
 
       {/* Subtle animated light effects */}
       <div className="absolute inset-0 opacity-20">
@@ -116,6 +116,26 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-[1000px] mx-auto mt-12 md:mt-16 lg:mt-20 px-8">
         <HeroSectionBioBlock />
       </div>
+
+      {/* Custom CSS animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+          25% { transform: translateY(-20px) translateX(10px) scale(1.05); }
+          50% { transform: translateY(-10px) translateX(-15px) scale(0.95); }
+          75% { transform: translateY(-30px) translateX(5px) scale(1.02); }
+        }
+        @keyframes drift {
+          0%, 100% { transform: translateX(0px); }
+          50% { transform: translateX(30px); }
+        }
+        @keyframes sway {
+          0%, 100% { transform: translateX(0px) rotate(0deg); }
+          25% { transform: translateX(15px) rotate(1deg); }
+          50% { transform: translateX(-10px) rotate(-0.5deg); }
+          75% { transform: translateX(20px) rotate(0.8deg); }
+        }
+      `}</style>
     </section>
   )
 }
