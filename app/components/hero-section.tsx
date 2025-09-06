@@ -11,17 +11,17 @@ export default function HeroSection() {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0">
           <Image
-            src="/abstract-liquid-waves-dark-cinematic-background.jpg"
+            src="/abstract-gas-smoke-atmospheric-background.jpg"
             alt=""
             fill
-            className="object-cover opacity-50 dark:opacity-40 animate-[liquidImageFlow_30s_ease-in-out_infinite]"
+            className="object-cover opacity-60 dark:opacity-50 animate-[gasImageFlow_35s_ease-in-out_infinite]"
             priority
           />
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/40 via-neutral-800/30 to-neutral-900/45 dark:from-neutral-950/50 dark:via-neutral-950/35 dark:to-neutral-950/55"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-white/8 to-white/5 dark:from-neutral-950/25 dark:via-neutral-950/15 dark:to-neutral-950/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-slate-200/25 to-blue-200/35 dark:from-blue-950/40 dark:via-slate-950/30 dark:to-blue-900/45"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-50/20 via-slate-100/12 to-blue-100/8 dark:from-blue-950/30 dark:via-slate-950/20 dark:to-blue-950/15"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1000px] mx-auto px-8">
@@ -90,22 +90,26 @@ export default function HeroSection() {
       </div>
 
       <style jsx>{`
-        @keyframes liquidImageFlow {
+        @keyframes gasImageFlow {
           0%, 100% { 
-            transform: scale(1.1) rotate(0deg);
+            transform: scale(1.05) rotate(0deg);
             filter: hue-rotate(0deg) brightness(1) contrast(1);
           }
-          25% { 
-            transform: scale(1.15) rotate(1deg);
-            filter: hue-rotate(15deg) brightness(1.05) contrast(1.1);
+          20% { 
+            transform: scale(1.08) rotate(0.5deg);
+            filter: hue-rotate(8deg) brightness(1.02) contrast(1.05);
           }
-          50% { 
-            transform: scale(1.08) rotate(-0.5deg);
-            filter: hue-rotate(-10deg) brightness(0.95) contrast(0.9);
+          40% { 
+            transform: scale(1.03) rotate(-0.3deg);
+            filter: hue-rotate(-5deg) brightness(0.98) contrast(0.95);
           }
-          75% { 
-            transform: scale(1.12) rotate(0.8deg);
-            filter: hue-rotate(20deg) brightness(1.02) contrast(1.05);
+          60% { 
+            transform: scale(1.07) rotate(0.4deg);
+            filter: hue-rotate(12deg) brightness(1.01) contrast(1.02);
+          }
+          80% { 
+            transform: scale(1.04) rotate(-0.2deg);
+            filter: hue-rotate(-3deg) brightness(0.99) contrast(0.98);
           }
         }
       `}</style>
