@@ -36,7 +36,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-                className="block text-sky-700 dark:text-sky-300"
+                className="block text-black dark:text-white"
               >
                 Hey! 👋
               </motion.span>
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-                className="inline-block text-sky-600 dark:text-sky-300"
+                className="inline-block text-sky-600 dark:text-sky-400"
               >
                 {"I'm\u00A0"}
               </motion.span>
@@ -52,7 +52,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-                className="text-sky-700 dark:text-sky-300 inline-block"
+                className="text-black dark:text-white inline-block"
               >
                 Ben Brasso,
               </motion.span>
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 1.1 }}
-                className="inline-block text-sky-600 dark:text-sky-300"
+                className="inline-block text-sky-600 dark:text-sky-400"
               >
                 {" "}
                 UX product designer, and navigator of the nebulous. 🧭
