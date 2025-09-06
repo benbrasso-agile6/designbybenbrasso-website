@@ -1,5 +1,6 @@
+import type React from "react"
 interface ContactHeroContentProps {
-  title: string
+  title: string | React.ReactNode
   description: string
   className?: string
 }
