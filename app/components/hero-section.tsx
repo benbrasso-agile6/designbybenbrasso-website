@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0">
           <Image
-            src="/abstract-gas-smoke-atmospheric-background.jpg"
+            src="/abstract-blue-orange-atmospheric-gas-background.jpg"
             alt=""
             fill
             className="object-cover opacity-60 dark:opacity-50 animate-[gasImageFlow_35s_ease-in-out_infinite]"
