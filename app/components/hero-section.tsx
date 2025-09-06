@@ -6,9 +6,9 @@ import HeroSectionBioBlock from "./hero-section-bio-block"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
+    <section className="relative w-full -mt-16 pt-16 md:pt-24 lg:pt-32 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Static gradient background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-[calc(100%+4rem)]">
         <div className="absolute inset-0">
           <Image
             src="/abstract-blue-orange-gas-no-pink-background.jpg"
@@ -21,7 +21,7 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-sky-100/75 to-blue-50/60 dark:from-slate-800/80 dark:via-sky-900/60 dark:to-blue-900/50"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-sky-25/50 via-cyan-100/55 via-white/70 to-white/95 dark:from-slate-900/60 dark:via-sky-900/40 dark:via-cyan-900/45 dark:via-slate-900/60 dark:to-slate-900/85"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-sky-25/50 via-cyan-100/55 to-white/80 dark:from-slate-900/60 dark:via-sky-900/40 dark:via-cyan-900/45 dark:to-slate-900/70"></div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent dark:from-slate-900/50 dark:via-transparent dark:to-transparent"></div>
 
