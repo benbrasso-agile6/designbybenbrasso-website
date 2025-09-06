@@ -106,6 +106,26 @@
   .dark .prose-invert ol > li::marker {
     color: #e5e5e5; /* Consistent light color for dark mode */
   }
+
+  /* Added mobile-specific strong text styling for better cross-device compatibility */
+  .prose-neutral a strong,
+  .prose-neutral strong a,
+  .prose-invert a strong,
+  .prose-invert strong a {
+    @apply font-bold;
+  }
+
+  /* Ensure strong text displays properly on all mobile devices */
+  @media screen and (max-width: 768px) {
+    .prose-neutral a strong,
+    .prose-neutral strong a,
+    .prose-invert a strong,
+    .prose-invert strong a {
+      font-weight: 700 !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
 }
 
 @layer utilities {
