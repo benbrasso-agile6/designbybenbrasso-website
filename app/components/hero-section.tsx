@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Static gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 animate-[liquidFlow_30s_ease-in-out_infinite]">
+        <div className="absolute inset-0">
           <Image
             src="/abstract-liquid-waves-dark-cinematic-background.jpg"
             alt=""
@@ -17,6 +17,10 @@ export default function HeroSection() {
             className="object-cover opacity-50 dark:opacity-40"
             priority
           />
+          {/* Animated liquid overlay that creates internal movement */}
+          <div className="absolute inset-0 animate-[liquidRipple_25s_ease-in-out_infinite] bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/15 mix-blend-overlay"></div>
+          <div className="absolute inset-0 animate-[liquidWave_35s_ease-in-out_infinite] bg-gradient-to-tr from-transparent via-cyan-900/10 to-transparent mix-blend-soft-light"></div>
+          <div className="absolute inset-0 animate-[liquidFlow_40s_linear_infinite] bg-gradient-to-r from-transparent via-blue-800/8 to-transparent mix-blend-color-dodge"></div>
         </div>
       </div>
 
@@ -90,11 +94,39 @@ export default function HeroSection() {
       </div>
 
       <style jsx>{`
+        @keyframes liquidRipple {
+          0%, 100% { 
+            transform: scale(1) rotate(0deg);
+            filter: hue-rotate(0deg) brightness(1);
+          }
+          33% { 
+            transform: scale(1.05) rotate(2deg);
+            filter: hue-rotate(30deg) brightness(1.1);
+          }
+          66% { 
+            transform: scale(0.95) rotate(-1deg);
+            filter: hue-rotate(-20deg) brightness(0.9);
+          }
+        }
+        
+        @keyframes liquidWave {
+          0%, 100% { 
+            transform: translateX(0%) skewX(0deg);
+            opacity: 0.3;
+          }
+          50% { 
+            transform: translateX(-100%) skewX(5deg);
+            opacity: 0.6;
+          }
+        }
+        
         @keyframes liquidFlow {
-          0%, 100% { transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); }
-          25% { transform: translateX(-20px) translateY(-15px) scale(1.02) rotate(0.5deg); }
-          50% { transform: translateX(15px) translateY(-10px) scale(0.98) rotate(-0.3deg); }
-          75% { transform: translateX(-10px) translateY(-20px) scale(1.01) rotate(0.2deg); }
+          0% { 
+            transform: translateX(-100%) scaleY(1);
+          }
+          100% { 
+            transform: translateX(100%) scaleY(1.2);
+          }
         }
       `}</style>
     </section>
