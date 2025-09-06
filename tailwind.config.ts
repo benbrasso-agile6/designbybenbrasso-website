@@ -10,6 +10,12 @@ const config = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  corePlugins: {
+    // Disable deprecated color variants that cause v3.0 warnings
+  },
   theme: {
     container: {
       center: true,
