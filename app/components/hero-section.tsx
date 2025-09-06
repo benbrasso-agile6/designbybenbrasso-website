@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[1fr_auto] lg:gap-16 items-start">
           {/* Text content - will appear below avatar on small screens due to flex-col-reverse */}
           <div className="space-y-6 text-left">
-            <div className="bg-white/40 dark:bg-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-white/20 dark:border-slate-700/30">
+            <div className="bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-2xl p-6 border border-white/30 dark:border-slate-700/40">
               <h1 className="text-[2rem] sm:text-4xl md:text-5xl xl:text-5xl font-semibold leading-snug sm:leading-snug md:leading-tight xl:leading-tight">
                 <motion.span
                   initial={{ opacity: 0, x: -20 }}
@@ -43,7 +43,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-                  className="inline-block text-slate-900 dark:text-white"
+                  className="inline-block text-slate-950 dark:text-white"
                 >
                   {"I'm\u00A0"}
                 </motion.span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 1.1 }}
-                  className="inline-block text-slate-900 dark:text-white"
+                  className="inline-block text-slate-950 dark:text-white"
                 >
                   {" "}
                   UX product designer, and navigator of the nebulous. 🧭
