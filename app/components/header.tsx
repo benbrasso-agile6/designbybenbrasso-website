@@ -24,14 +24,48 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    if (!isMenuOpen || typeof window === "undefined") return
+
+    let closeTimeout: NodeJS.Timeout
+
+    const handleScrollOrClick = (event: Event) => {
+      if (window.innerWidth < 768) return
+
+      if (event.type === "click") {
+        const target = event.target as Node
+        const isClickInDropdown = dropdownRef.current?.contains(target)
+        const isClickInMenuButton = headerRef.current?.querySelector("button")?.contains(target)
+
+        if (isClickInDropdown || isClickInMenuButton) return
+      }
+
+      if (closeTimeout) clearTimeout(closeTimeout)
+
+      closeTimeout = setTimeout(() => {
+        setIsMenuOpen(false)
+      }, 150)
+    }
+
+    window.addEventListener("scroll", handleScrollOrClick, { passive: true })
+    document.addEventListener("click", handleScrollOrClick)
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollOrClick)
+      document.removeEventListener("click", handleScrollOrClick)
+      if (closeTimeout) clearTimeout(closeTimeout)
+    }
+  }, [isMenuOpen])
+
   const mainNavItems = [
     { name: "README", href: "/read-me", icon: <FileTextIcon className="h-5 w-5" /> },
-    { name: "Case Studies", href: "/case-studies", icon: <FileSearchIcon className="h-5 w-5" /> }, // Changed from SearchIcon to FileSearchIcon to represent analyzing documents/case studies
+    { name: "Case Studies", href: "/case-studies", icon: <FileSearchIcon className="h-5 w-5" /> },
     { name: "More Work", href: "/more-work", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "Design Contributions", href: "/design-contributions", icon: <LayersIcon className="h-5 w-5" /> },
     { name: "Contract Vehicles", href: "/contract-vehicles", icon: <PenToolIcon className="h-5 w-5" /> },
@@ -54,12 +88,11 @@ export default function Header() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed top-16 left-0 right-0 bottom-0 bg-white dark:bg-neutral-950 border-t border-border shadow-lg z-[999999] overflow-y-auto"
       style={{ pointerEvents: "auto" }}
     >
       <nav className="grid gap-4 text-base font-medium p-6">
-        {/* Resume/CV link for mobile */}
         <Link
           key={resumeCvItem.name}
           href={resumeCvItem.href}
@@ -78,7 +111,6 @@ export default function Header() {
           {resumeCvItem.name}
         </Link>
 
-        {/* Main nav items */}
         {mainNavItems.map((item) => (
           <Link
             key={item.name}
@@ -132,9 +164,7 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Right side navigation area */}
         <div className="flex items-center gap-3">
-          {/* Resume/CV Link - always visible on md and up */}
           <Link
             key={resumeCvItem.name}
             href={resumeCvItem.href}
@@ -152,9 +182,7 @@ export default function Header() {
             {resumeCvItem.name}
           </Link>
 
-          {/* Navigation Menu Button - for all sizes */}
           <div className="relative">
-            {/* This parent div needs to be relative for desktop dropdown positioning */}
             <Button
               variant="outline"
               size="icon"
@@ -172,13 +200,13 @@ export default function Header() {
             <AnimatePresence>
               {isMenuOpen && (
                 <>
-                  {/* Desktop dropdown */}
                   {mounted && typeof window !== "undefined" && window.innerWidth >= 768 && (
                     <motion.div
+                      ref={dropdownRef}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="absolute top-full left-auto right-0 bottom-auto mt-[22px] w-auto min-w-[250px] max-w-xs rounded-lg border shadow-xl p-4 overflow-visible bg-white dark:bg-neutral-950 z-50"
                     >
                       <nav className="grid gap-3 text-base font-medium">
