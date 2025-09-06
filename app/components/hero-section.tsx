@@ -44,7 +44,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-                className="inline-block text-slate-950 dark:text-white"
+                className="inline-block text-sky-600 dark:text-sky-300"
               >
                 {"I'm\u00A0"}
               </motion.span>
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 1.1 }}
-                className="inline-block text-slate-950 dark:text-white"
+                className="inline-block text-sky-600 dark:text-sky-300"
               >
                 {" "}
                 UX product designer, and navigator of the nebulous. 🧭
