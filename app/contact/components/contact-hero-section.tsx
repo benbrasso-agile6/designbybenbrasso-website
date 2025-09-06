@@ -17,7 +17,7 @@ export default function ContactHeroSection({
   enableParallax = true,
 }: ContactHeroSectionProps) {
   const styledTitle =
-    title === "Let’s Connect" ? (
+    title === "Lets Connect" ? (
       <>
         Let’s <span className="text-sky-600 dark:text-sky-500">Connect</span>
       </>
