@@ -34,7 +34,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-                className="block text-sky-600 dark:text-sky-400 drop-shadow-lg"
+                className="block text-sky-700 dark:text-sky-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               >
                 Hey! 👋
               </motion.span>
@@ -42,7 +42,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-                className="inline-block text-neutral-900 dark:text-white drop-shadow-lg"
+                className="inline-block text-slate-900 dark:text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               >
                 {"I’m\u00A0"}
               </motion.span>
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-                className="text-sky-600 dark:text-sky-400 inline-block drop-shadow-lg"
+                className="text-sky-700 dark:text-sky-300 inline-block drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               >
                 Ben Brasso,
               </motion.span>
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 1.1 }}
-                className="inline-block text-neutral-900 dark:text-white drop-shadow-lg"
+                className="inline-block text-slate-900 dark:text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               >
                 {" "}
                 UX product designer, and navigator of the nebulous. 🧭
