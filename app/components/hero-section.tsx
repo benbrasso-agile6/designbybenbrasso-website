@@ -9,44 +9,44 @@ export default function HeroSection() {
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Animated gradient base with custom keyframes */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-neutral-50 to-slate-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-slate-900">
-          <div className="absolute inset-0 bg-gradient-to-r from-sky-100/40 via-transparent to-blue-100/40 dark:from-sky-900/30 dark:via-transparent dark:to-blue-900/30 animate-[drift_15s_ease-in-out_infinite]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-sky-200/60 via-blue-100/40 to-purple-100/50 dark:from-sky-800/50 dark:via-blue-900/40 dark:to-purple-900/40 animate-[drift_12s_ease-in-out_infinite]"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-emerald-100/40 via-transparent to-teal-100/30 dark:from-emerald-900/30 dark:via-transparent dark:to-teal-900/25 animate-[driftReverse_18s_ease-in-out_infinite]"></div>
         </div>
 
-        {/* Floating cinematic particles */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/6 w-40 h-40 bg-sky-300/30 dark:bg-sky-400/20 rounded-full blur-2xl animate-[float_8s_ease-in-out_infinite]"></div>
-          <div className="absolute top-3/4 right-1/4 w-32 h-32 bg-blue-300/25 dark:bg-blue-400/15 rounded-full blur-xl animate-[float_12s_ease-in-out_infinite_reverse]"></div>
+          <div className="absolute top-1/4 left-1/6 w-60 h-60 bg-sky-400/50 dark:bg-sky-400/35 rounded-full blur-2xl animate-[floatLarge_10s_ease-in-out_infinite]"></div>
+          <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-blue-400/45 dark:bg-blue-400/30 rounded-full blur-xl animate-[floatLarge_14s_ease-in-out_infinite_reverse]"></div>
           <div
-            className="absolute bottom-1/3 left-1/3 w-28 h-28 bg-slate-300/30 dark:bg-slate-400/20 rounded-full blur-xl animate-[float_10s_ease-in-out_infinite]"
+            className="absolute bottom-1/3 left-1/3 w-40 h-40 bg-purple-400/40 dark:bg-purple-400/25 rounded-full blur-xl animate-[floatLarge_12s_ease-in-out_infinite]"
             style={{ animationDelay: "4s" }}
           ></div>
           <div
-            className="absolute top-1/2 right-1/6 w-24 h-24 bg-sky-200/35 dark:bg-sky-500/15 rounded-full blur-lg animate-[float_14s_ease-in-out_infinite]"
+            className="absolute top-1/2 right-1/6 w-36 h-36 bg-emerald-400/45 dark:bg-emerald-400/30 rounded-full blur-lg animate-[floatLarge_16s_ease-in-out_infinite]"
             style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute top-1/6 right-1/2 w-32 h-32 bg-teal-400/40 dark:bg-teal-400/25 rounded-full blur-lg animate-[floatLarge_11s_ease-in-out_infinite_reverse]"
+            style={{ animationDelay: "6s" }}
           ></div>
         </div>
 
-        {/* Moving light rays */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-sky-300/20 to-transparent dark:via-sky-400/10 animate-[sway_20s_ease-in-out_infinite] transform-gpu"></div>
+          <div className="absolute top-1/2 left-1/2 w-20 h-20 bg-sky-500/60 dark:bg-sky-400/40 rounded-full blur-md animate-[orbit_20s_linear_infinite] transform -translate-x-1/2 -translate-y-1/2"></div>
           <div
-            className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-transparent via-blue-300/15 to-transparent dark:via-blue-400/8 animate-[sway_25s_ease-in-out_infinite_reverse] transform-gpu"
+            className="absolute top-1/2 left-1/2 w-16 h-16 bg-blue-500/50 dark:bg-blue-400/35 rounded-full blur-sm animate-[orbitReverse_25s_linear_infinite] transform -translate-x-1/2 -translate-y-1/2"
             style={{ animationDelay: "5s" }}
           ></div>
         </div>
       </div>
 
-      {/* Atmospheric Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/10 via-neutral-800/5 to-neutral-900/15 dark:from-neutral-950/20 dark:via-neutral-950/10 dark:to-neutral-950/25"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/20 to-white/10 dark:from-neutral-950/40 dark:via-neutral-950/20 dark:to-neutral-950/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/5 via-neutral-800/2 to-neutral-900/8 dark:from-neutral-950/15 dark:via-neutral-950/5 dark:to-neutral-950/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-white/10 to-white/5 dark:from-neutral-950/20 dark:via-neutral-950/10 dark:to-neutral-950/5"></div>
 
-      {/* Subtle animated light effects */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute inset-0 opacity-60">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/30 rounded-full blur-3xl animate-[pulse_4s_ease-in-out_infinite]"></div>
         <div
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-400/25 rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -117,23 +117,28 @@ export default function HeroSection() {
         <HeroSectionBioBlock />
       </div>
 
-      {/* Custom CSS animations */}
       <style jsx>{`
-        @keyframes float {
+        @keyframes floatLarge {
           0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-          25% { transform: translateY(-20px) translateX(10px) scale(1.05); }
-          50% { transform: translateY(-10px) translateX(-15px) scale(0.95); }
-          75% { transform: translateY(-30px) translateX(5px) scale(1.02); }
+          25% { transform: translateY(-40px) translateX(30px) scale(1.1); }
+          50% { transform: translateY(-20px) translateX(-40px) scale(0.9); }
+          75% { transform: translateY(-60px) translateX(20px) scale(1.05); }
         }
         @keyframes drift {
-          0%, 100% { transform: translateX(0px); }
-          50% { transform: translateX(30px); }
+          0%, 100% { transform: translateX(0px) translateY(0px); }
+          50% { transform: translateX(60px) translateY(-20px); }
         }
-        @keyframes sway {
-          0%, 100% { transform: translateX(0px) rotate(0deg); }
-          25% { transform: translateX(15px) rotate(1deg); }
-          50% { transform: translateX(-10px) rotate(-0.5deg); }
-          75% { transform: translateX(20px) rotate(0.8deg); }
+        @keyframes driftReverse {
+          0%, 100% { transform: translateX(0px) translateY(0px); }
+          50% { transform: translateX(-50px) translateY(15px); }
+        }
+        @keyframes orbit {
+          0% { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+        @keyframes orbitReverse {
+          0% { transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(-360deg) translateX(120px) rotate(360deg); }
         }
       `}</style>
     </section>
