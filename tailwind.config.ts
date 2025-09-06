@@ -12,9 +12,15 @@ const config = {
   prefix: "",
   future: {
     hoverOnlyWhenSupported: true,
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
   corePlugins: {
-    // Disable deprecated color variants that cause v3.0 warnings
+    lightBlue: false,
+    warmGray: false,
+    trueGray: false,
+    coolGray: false,
+    blueGray: false,
   },
   theme: {
     container: {
