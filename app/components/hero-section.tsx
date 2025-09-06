@@ -46,7 +46,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
                 className="inline-block text-black dark:text-white"
               >
-                {"I'm\u00A0"}
+                {"I’m\u00A0"}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
