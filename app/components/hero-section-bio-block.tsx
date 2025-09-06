@@ -17,7 +17,7 @@ export default function DescriptiveTextBlock() {
         </strong>
       </p>
       <p className="text-lg text-slate-950 dark:text-white md:text-xl leading-relaxed md:leading-[2.75rem]">
-        I'm a sponge for learning new skills, technology, and conquering new goals, while cultivating a culture of
+        I’m a sponge for learning new skills, technology, and conquering new goals, while cultivating a culture of
         continuous, collective experimentation.
       </p>
       {/*
