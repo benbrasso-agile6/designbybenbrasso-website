@@ -225,10 +225,6 @@ html {
   z-index: 50; /* Header has highest priority */
 }
 
-.header-mobile-menu {
-  z-index: 50; /* Mobile menu same as header */
-}
-
 .sticky-page-nav {
   z-index: 40; /* Sticky nav below header */
 }

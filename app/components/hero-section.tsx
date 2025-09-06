@@ -6,7 +6,7 @@ import HeroSectionBioBlock from "./hero-section-bio-block"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full -mt-16 pt-16 md:pt-24 lg:pt-32 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
+    <section className="relative w-full -mt-16 pt-16 md:pt-24 lg:pt-32 pb-10 md:pb-16 lg:pb-20 overflow-hidden z-0">
       {/* Static gradient background */}
       <div className="absolute inset-0 w-full h-[calc(100%+4rem)]">
         <div className="absolute inset-0">
@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-transparent dark:from-slate-900/50 dark:via-transparent dark:to-transparent"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1000px] mx-auto px-8">
+      <div className="relative z-1 max-w-[1000px] mx-auto px-8">
         {/* Flex column-reverse for small screens, grid for lg screens */}
         <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[1fr_auto] lg:gap-16 items-start">
           {/* Text content - will appear below avatar on small screens due to flex-col-reverse */}
@@ -72,7 +72,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -350 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="flex justify-start lg:justify-center mt-16 lg:mt-4" // justify-start for small screens, lg:justify-center for larger
+            className="flex justify-start lg:justify-center mt-12 lg:mt-0" // justify-start for small screens, lg:justify-center for larger
           >
             <Image
               src="/images/ben-brasso-avatar.png"
@@ -87,7 +87,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-[1000px] mx-auto mt-12 md:mt-16 lg:mt-20 px-8">
+      <div className="relative z-1 max-w-[1000px] mx-auto mt-12 md:mt-16 lg:mt-20 px-8">
         <HeroSectionBioBlock />
       </div>
 

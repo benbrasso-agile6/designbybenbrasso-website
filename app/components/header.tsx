@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
+import { createPortal } from "react-dom"
 import { Button } from "@/components/ui/button"
 import {
   MenuIcon,
@@ -21,7 +22,12 @@ import { usePathname } from "next/navigation"
 export default function Header() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const mainNavItems = [
     { name: "README", href: "/read-me", icon: <FileTextIcon className="h-5 w-5" /> },
@@ -43,29 +49,60 @@ export default function Header() {
   const logoText = "designbybenbrasso"
   const letters = logoText.split("")
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false)
-      }
-    }
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden" // Prevent scrolling of page content when menu is open
-      document.addEventListener("mousedown", handleClickOutside)
-    } else {
-      document.body.style.overflow = "" // Restore scrolling
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-    return () => {
-      document.body.style.overflow = "" // Ensure scrolling is restored on unmount
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [isMenuOpen])
+  const MobileMenuOverlay = () => (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+      className="fixed top-16 left-0 right-0 bg-white dark:bg-neutral-950 border-t border-border shadow-lg z-[999999] overflow-y-auto max-h-[calc(100vh-4rem)]"
+      style={{ pointerEvents: "auto" }}
+    >
+      <nav className="grid gap-1 text-base font-medium p-4">
+        {/* Resume/CV link for mobile */}
+        <Link
+          key={resumeCvItem.name}
+          href={resumeCvItem.href}
+          className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
+            pathname === resumeCvItem.href && !resumeCvItem.isExternal
+              ? "text-sky-700 dark:text-sky-400 font-semibold"
+              : "text-black dark:text-neutral-100"
+          }`}
+          aria-current={pathname === resumeCvItem.href && !resumeCvItem.isExternal ? "page" : undefined}
+          onClick={() => setIsMenuOpen(false)}
+          {...(resumeCvItem.download && { download: resumeCvItem.download })}
+          target={resumeCvItem.isExternal || resumeCvItem.download ? "_blank" : undefined}
+          rel={resumeCvItem.isExternal || resumeCvItem.download ? "noopener noreferrer" : undefined}
+        >
+          {resumeCvItem.icon}
+          {resumeCvItem.name}
+        </Link>
+
+        {/* Main nav items */}
+        {mainNavItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
+              pathname === item.href
+                ? "text-sky-700 dark:text-sky-400 font-semibold"
+                : "text-black dark:text-neutral-100"
+            }`}
+            aria-current={pathname === item.href ? "page" : undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.icon}
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+    </motion.div>
+  )
 
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full border-b border-border bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md"
+      className="sticky top-0 w-full border-b border-border bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md z-50"
     >
       <div className="w-full mx-auto flex h-16 items-center justify-between px-6 relative">
         <Link href="/" className="flex items-center gap-2 group">
@@ -124,70 +161,58 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMenuOpen}
-              className="ml-0 md:ml-2 md:w-auto md:px-3 flex items-center md:gap-1.5 text-base font-semibold text-black dark:text-neutral-100 [transform:translateZ(0)]" // Added transform here
+              className={`ml-0 md:ml-2 md:w-auto md:px-3 flex items-center md:gap-1.5 text-base font-semibold text-black dark:text-neutral-100 ${
+                isMenuOpen ? "bg-neutral-100 dark:bg-neutral-800" : ""
+              }`}
             >
-              <span className="hidden md:inline-block md:w-14 text-left">
-                {" "}
-                {/* Applied fixed width and text-left for md+ */}
-                {isMenuOpen ? "Close" : "Menu"}
-              </span>
+              <span className="hidden md:inline-block w-12 text-left">{isMenuOpen ? "Close" : "Menu"}</span>
               {isMenuOpen ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
             </Button>
+
             <AnimatePresence>
               {isMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="fixed top-16 inset-x-0 bottom-0 p-6 bg-white dark:bg-neutral-950 border-t border-border/40 z-50 overflow-y-auto md:absolute md:top-full md:left-auto md:right-0 md:bottom-auto md:mt-[22px] md:w-auto md:min-w-[250px] md:max-w-xs md:rounded-lg md:border md:shadow-xl md:p-4 md:overflow-visible [transform:translateZ(0)]"
-                >
-                  <nav className="grid gap-3 text-base font-medium">
-                    {/* Resume/CV link for mobile dropdown only */}
-                    <div className="md:hidden">
-                      <Link
-                        key={resumeCvItem.name}
-                        href={resumeCvItem.href}
-                        className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
-                          pathname === resumeCvItem.href && !resumeCvItem.isExternal
-                            ? "text-sky-700 dark:text-sky-400 font-semibold"
-                            : "text-black dark:text-neutral-100"
-                        }`}
-                        aria-current={pathname === resumeCvItem.href && !resumeCvItem.isExternal ? "page" : undefined}
-                        onClick={() => setIsMenuOpen(false)}
-                        {...(resumeCvItem.download && { download: resumeCvItem.download })}
-                        target={resumeCvItem.isExternal || resumeCvItem.download ? "_blank" : undefined}
-                        rel={resumeCvItem.isExternal || resumeCvItem.download ? "noopener noreferrer" : undefined}
-                      >
-                        {resumeCvItem.icon}
-                        {resumeCvItem.name}
-                      </Link>
-                    </div>
-
-                    {/* Main nav items for all dropdowns */}
-                    {mainNavItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
-                          pathname === item.href
-                            ? "text-sky-700 dark:text-sky-400 font-semibold"
-                            : "text-black dark:text-neutral-100"
-                        }`}
-                        aria-current={pathname === item.href ? "page" : undefined}
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.icon}
-                        {item.name}
-                      </Link>
-                    ))}
-                  </nav>
-                </motion.div>
+                <>
+                  {/* Desktop dropdown */}
+                  {mounted && typeof window !== "undefined" && window.innerWidth >= 768 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      className="absolute top-full left-auto right-0 bottom-auto mt-[22px] w-auto min-w-[250px] max-w-xs rounded-lg border shadow-xl p-4 overflow-visible bg-white dark:bg-neutral-950 z-50"
+                    >
+                      <nav className="grid gap-3 text-base font-medium">
+                        {mainNavItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`flex items-center gap-3 px-2.5 py-2 rounded-md transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:bg-neutral-100 dark:focus:bg-neutral-800 focus:outline-none ${
+                              pathname === item.href
+                                ? "text-sky-700 dark:text-sky-400 font-semibold"
+                                : "text-black dark:text-neutral-100"
+                            }`}
+                            aria-current={pathname === item.href ? "page" : undefined}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {item.icon}
+                            {item.name}
+                          </Link>
+                        ))}
+                      </nav>
+                    </motion.div>
+                  )}
+                </>
               )}
             </AnimatePresence>
           </div>
         </div>
       </div>
+
+      {mounted &&
+        isMenuOpen &&
+        typeof window !== "undefined" &&
+        window.innerWidth < 768 &&
+        createPortal(<MobileMenuOverlay />, document.body)}
     </header>
   )
 }
