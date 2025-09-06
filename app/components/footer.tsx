@@ -41,7 +41,7 @@ export default function Footer() {
         {/* Bottom row for text content, aligned on the same y-axis */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4 text-sm">
           <div className="text-neutral-500 dark:text-neutral-400 text-center md:text-left">
-            Built using v0 for rapid prototyping, extended with custom components.
+            Built using v0 for rapid prototyping, extended with custom components and image generation.
             <br />
             <Link
               href="https://github.com/benbrasso-agile6/designbybenbrasso-website"
