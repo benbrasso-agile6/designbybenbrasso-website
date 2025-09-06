@@ -72,7 +72,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -350 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="flex justify-start lg:justify-center" // justify-start for small screens, lg:justify-center for larger
+            className="flex justify-start lg:justify-center mt-8 lg:mt-0" // justify-start for small screens, lg:justify-center for larger
           >
             <Image
               src="/images/ben-brasso-avatar.png"
