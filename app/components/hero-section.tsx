@@ -9,29 +9,21 @@ export default function HeroSection() {
     <section className="relative w-full pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20 overflow-hidden">
       {/* Static gradient background */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Cinematic background image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 animate-[liquidFlow_30s_ease-in-out_infinite]">
           <Image
-            src="/cinematic-atmospheric-clouds-and-mist-in-dark-mood.jpg"
+            src="/abstract-liquid-waves-dark-cinematic-background.jpg"
             alt=""
             fill
-            className="object-cover opacity-40 dark:opacity-30"
+            className="object-cover opacity-50 dark:opacity-40"
             priority
           />
         </div>
 
         <div className="absolute inset-0">
-          {/* Large moving atmospheric overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 via-blue-600/15 to-purple-600/20 dark:from-sky-400/15 dark:via-blue-500/10 dark:to-purple-500/15 animate-[atmosphericDrift_20s_ease-in-out_infinite]"></div>
-
           {/* Floating light particles */}
           <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-sky-400/30 dark:bg-sky-300/20 rounded-full blur-xl animate-[floatUp_15s_ease-in-out_infinite]"></div>
           <div className="absolute top-3/4 right-1/3 w-24 h-24 bg-blue-400/25 dark:bg-blue-300/15 rounded-full blur-lg animate-[floatUp_18s_ease-in-out_infinite] delay-[5s]"></div>
           <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-purple-400/20 dark:bg-purple-300/12 rounded-full blur-md animate-[floatUp_22s_ease-in-out_infinite] delay-[10s]"></div>
-
-          {/* Drifting mist layers */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-sky-300/10 to-transparent dark:via-sky-200/5 animate-[mistDrift_25s_linear_infinite]"></div>
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-transparent via-blue-300/8 to-transparent dark:via-blue-200/4 animate-[mistDrift_30s_linear_infinite_reverse] delay-[8s]"></div>
         </div>
       </div>
 
@@ -105,21 +97,17 @@ export default function HeroSection() {
       </div>
 
       <style jsx>{`
-        @keyframes atmosphericDrift {
-          0%, 100% { transform: translateX(0px) translateY(0px) scale(1); opacity: 0.6; }
-          25% { transform: translateX(-50px) translateY(-30px) scale(1.05); opacity: 0.8; }
-          50% { transform: translateX(30px) translateY(-20px) scale(0.95); opacity: 0.4; }
-          75% { transform: translateX(-20px) translateY(-40px) scale(1.02); opacity: 0.7; }
+        @keyframes liquidFlow {
+          0%, 100% { transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); }
+          25% { transform: translateX(-20px) translateY(-15px) scale(1.02) rotate(0.5deg); }
+          50% { transform: translateX(15px) translateY(-10px) scale(0.98) rotate(-0.3deg); }
+          75% { transform: translateX(-10px) translateY(-20px) scale(1.01) rotate(0.2deg); }
         }
         @keyframes floatUp {
           0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
           25% { transform: translateY(-60px) translateX(20px) scale(1.2); opacity: 0.6; }
           50% { transform: translateY(-100px) translateX(-15px) scale(0.8); opacity: 0.8; }
           75% { transform: translateY(-80px) translateX(30px) scale(1.1); opacity: 0.4; }
-        }
-        @keyframes mistDrift {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
         }
       `}</style>
     </section>
