@@ -52,8 +52,9 @@ export default function Footer() {
               className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors underline"
               aria-label="Repository for designbybenbrasso website on GitHub"
             >
-              Check out the code on GitHub.
+              Check out the code on GitHub
             </Link>
+            .
           </div>
           <div className="flex flex-col items-center md:items-end gap-4 md:max-w-xs">
             <div className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-2 md:justify-end">
