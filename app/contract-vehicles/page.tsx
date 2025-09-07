@@ -51,6 +51,7 @@ export default function ContractVehiclesPage() {
             <h3>GSA Multiple Award Schedule (MAS)</h3>
             <ul>
               <li>Veteran Appointments and Check-In Experience (CIE)</li>
+              <li>Proposal involvement: Technical factors, case study writer</li>
               <li>Start Date: January 2024</li>
             </ul>
 
