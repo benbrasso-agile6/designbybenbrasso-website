@@ -18,7 +18,7 @@ export default function ContractVehiclesPage() {
             </p>
 
             <p>
-              As an employee on these contracts, I’ve contributed to delivering high-quality, user-centered design
+              As an rostered staff member on these contracts, I’ve contributed to delivering high-quality, user-centered design
               solutions that help agencies improve accessibility, efficiency, and impact.
             </p>
           </article>
@@ -31,8 +31,8 @@ export default function ContractVehiclesPage() {
             <h3 className="text-xl font-semibold">
               HHS - Office of Grants (OG) Software Integration and Frontend Technology (SWIFT) BPA
             </h3>
+            <h4 className="text-lg font-bold mt-4">HHS’s Simpler Notice of Funding Opportunities (NOFOs)</h4>
             <ul>
-              <li>HHS's Simpler Notice of Funding Opportunities (NOFOs)</li>
               <li>Start Date: June 2025</li>
             </ul>
           </section>
@@ -69,8 +69,8 @@ export default function ContractVehiclesPage() {
             <h4 className="text-lg font-bold mt-4">
               Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle
             </h4>
+            <h5 className="text-base font-semibold mt-3">CTO Health Products - Check-In Experience (CIE) Task Order</h5>
             <ul>
-              <li>CTO Health Products - Check-In Experience (CIE) Task Order</li>
               <li>Start Date: April 2022</li>
             </ul>
           </section>
