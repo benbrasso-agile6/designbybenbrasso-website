@@ -62,7 +62,7 @@ export default function ContractVehiclesPage() {
             </ul>
 
             <h3>Technology for Next Generation (T4NG) IDIQ</h3>
-            <h2>Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle</h2>
+            <h3>Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle</h3>
             <ul>
               <li>Task Order: CTO Health Products - Check-In Experience (CIE)</li>
               <li>Start Date: April 2022</li>
