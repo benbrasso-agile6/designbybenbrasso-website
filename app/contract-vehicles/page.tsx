@@ -69,8 +69,8 @@ export default function ContractVehiclesPage() {
             <h4 className="text-lg font-bold mt-4">
               Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle
             </h4>
+            <h4 className="text-lg font-bold mt-4">CTO Health Products - Check-In Experience (CIE) Task Order</h4>
             <ul>
-              <li>CTO Health Products - Check-In Experience (CIE) Task Order</li>
               <li>Start Date: April 2022</li>
             </ul>
           </section>
