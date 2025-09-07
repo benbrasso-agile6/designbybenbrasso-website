@@ -12,11 +12,14 @@ export default function ContractVehiclesPage() {
               Contracts and <span className="text-sky-600 dark:text-sky-500">Contract Vehicles</span>
             </h1>
             <p>
-              My work with federal agencies has come through roles at technology companies that held government contract vehicles and technical partnerships. These roles gave me insight into how federal contracts support the delivery of modern, human-centered digital services.
+              My work with federal agencies has come through roles at technology companies that held government contract
+              vehicles and technical partnerships. These roles gave me insight into how federal contracts support the
+              delivery of modern, human-centered digital services.
             </p>
 
             <p>
-              As an employee on these contracts, I’ve contributed to delivering high-quality, user-centered design solutions that help agencies improve accessibility, efficiency, and impact.
+              As an employee on these contracts, I’ve contributed to delivering high-quality, user-centered design
+              solutions that help agencies improve accessibility, efficiency, and impact.
             </p>
           </article>
 
@@ -36,8 +39,11 @@ export default function ContractVehiclesPage() {
             <h2 id="us-department-of-veterans-affairs-va" className="scroll-mt-20">
               US Department of Veterans Affairs (VA)
             </h2>
-          
-            <h3>VA Secure, Performant, Reliable, and User-Centered Design Experiences (SPRUCE) Indefinite Delivery Indenfinite Quantity (IDIQ) Contract</h3>
+
+            <h3>
+              VA Secure, Performant, Reliable, and User-Centered Design Experiences (SPRUCE) Indefinite Delivery
+              Indefinite Quantity (IDIQ) Contract
+            </h3>
             <ul>
               <li>Proposal involvement: 7-day code challenge team</li>
               <li>Start date: October 2024</li>
