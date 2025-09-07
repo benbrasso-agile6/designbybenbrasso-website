@@ -36,6 +36,12 @@ export default function ContractVehiclesPage() {
             <h2 id="us-department-of-veterans-affairs-va" className="scroll-mt-20">
               US Department of Veterans Affairs (VA)
             </h2>
+          
+            <h3>VA Secure, Performant, Reliable, and User-Centered Design Experiences (SPRUCE) Indefinite Delivery Indenfinite Quantity (IDIQ) Contract</h3>
+            <ul>
+              <li>Proposal involvement: 7-day code challenge team</li>
+              <li>Start date: October 2024</li>
+            </ul>
 
             <h3>Department of Veterans Affairs Digital Health Office (DHO) Program Development Staffing Services</h3>
             <ul>
