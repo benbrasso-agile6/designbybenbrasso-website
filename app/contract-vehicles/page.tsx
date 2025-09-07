@@ -70,7 +70,7 @@ export default function ContractVehiclesPage() {
               Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle
             </h4>
             <ul>
-              <li>Task Order: CTO Health Products - Check-In Experience (CIE)</li>
+              <li>CTO Health Products - Check-In Experience (CIE) Task Order</li>
               <li>Start Date: April 2022</li>
             </ul>
           </section>
