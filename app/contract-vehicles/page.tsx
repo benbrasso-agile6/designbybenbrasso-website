@@ -66,7 +66,7 @@ export default function ContractVehiclesPage() {
             </ul>
 
             <h3 className="text-xl font-semibold">Technology for Next Generation (T4NG) IDIQ</h3>
-            <h4 className="text-lg font-medium mt-4">
+            <h4 className="text-lg font-bold mt-4">
               Product and Technology Ecosystem Management Services (PTEMS) Contract Vehicle
             </h4>
             <ul>
