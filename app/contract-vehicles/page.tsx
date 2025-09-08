@@ -18,7 +18,7 @@ export default function ContractVehiclesPage() {
             </p>
 
             <p>
-              As a rostered staffer on these contracts, <strong>I’ve contributed to delivering high-quality, user-centered design
+              As a staff member on these contracts, <strong>I’ve contributed to delivering high-quality, user-centered design
               solutions that help agencies improve accessibility, efficiency, and impact</strong>.
             </p>
           </article>
