@@ -43,7 +43,7 @@ export default function CaseStudiesPage() {
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p>
                 If you’d like a glimpse behind the work, my{" "}
-                <a href="/readme" className="text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400">
+                <a href="/read-me" className="text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400">
                   README
                 </a>{" "}
                 offers a more personal look at who I am and how I work. It’s a living document where I share what
