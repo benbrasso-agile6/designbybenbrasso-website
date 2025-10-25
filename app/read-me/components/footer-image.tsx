@@ -11,7 +11,7 @@ import { useState } from "react"
  * Added bottom padding to create space between image and footer navigation.
  */
 export default function FooterImage() {
-  const PRIMARY_src="/images/design-mode/1299427_gdw03z.jpg"
+  const PRIMARY_SRC = "/images/design-mode/1299427_gdw03z.jpg"
   const FALLBACK_SRC = "/placeholder.jpg"
 
   const [src, setSrc] = useState(PRIMARY_SRC)
