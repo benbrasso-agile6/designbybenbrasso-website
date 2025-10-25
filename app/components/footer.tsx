@@ -66,7 +66,7 @@ export default function Footer() {
               </div>
               <div className="md:flex-shrink-0">
                 <Image
-                  src="https://res.cloudinary.com/dpl6apspp/image/upload/v1752006824/professional-member_1_pvqxst.png"
+                  src="/images/design-mode/professional-member_1_pvqxst.png"
                   alt="International Association of Accessibility Professionals (IAAP) Professional Member Logo"
                   width={40}
                   height={40}

@@ -57,7 +57,7 @@ export default function ReadMePage() {
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-[-48px] md:mb-[-64px] lg:mb-[-80px]">
         <div className="max-w-[1400px] mx-auto">
           <FooterImage
-            src="https://res.cloudinary.com/dpl6apspp/image/upload/1299427_gdw03z.jpg"
+            src="/images/design-mode/1299427_gdw03z.jpg"
             alt="Astronaut from Interstellar walking on an alien planet surface, representing the journey of navigating the nebulous"
             imgWidth={1400}
             imgHeight={700}

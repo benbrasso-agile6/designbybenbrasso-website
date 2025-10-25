@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[1fr_auto] lg:gap-16 items-start">
           {/* Text content - will appear below avatar on small screens due to flex-col-reverse */}
           <div className="space-y-6 text-left">
-            <h1 className="text-[2rem] sm:text-4xl md:text-5xl xl:text-5xl font-semibold leading-snug sm:leading-snug md:leading-tight xl:leading-tight">
+            <h1 className="text-[2.25rem] sm:text-4xl md:text-5xl xl:text-5xl font-semibold leading-snug sm:leading-snug md:leading-tight xl:leading-tight">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
                 className="inline-block text-black dark:text-white"
               >
-                {"I’m\u00A0"}
+                {"I'm\u00A0"}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -87,7 +87,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-1 max-w-[1000px] mx-auto mt-12 md:mt-16 lg:mt-20 px-8">
+      <div className="relative z-1 max-w-[1000px] mx-auto mt-20 md:mt-16 lg:mt-20 px-8">
         <HeroSectionBioBlock />
       </div>
 

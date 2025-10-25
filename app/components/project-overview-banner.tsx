@@ -31,8 +31,12 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
       <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">{description}</p>
 
       {/* Disclaimer paragraph */}
-      <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base">
-        <em>Disclaimer: These views are my own and do not represent the U.S. Department of Veterans Affairs. Personally identifiable information (PII) and protected health information (PHI) were not used. Protected and sensitive information were excluded or redacted.</em>
+      <p className="text-neutral-700 dark:text-sky-100 mb-6 text-sm md:text-base font-semibold">
+        <em>
+          Disclaimer: These views are my own and do not represent the U.S. Department of Veterans Affairs. Personally
+          identifiable information (PII) and protected health information (PHI) were not used. Protected and sensitive
+          information were excluded or redacted.
+        </em>
       </p>
 
       {/* New GitHub link section */}

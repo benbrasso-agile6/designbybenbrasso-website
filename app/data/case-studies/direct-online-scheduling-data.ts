@@ -9,7 +9,7 @@ export const directOnlineSchedulingData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project involved designing a comprehensive direct online scheduling system for Veterans seeking community care appointments, focusing on reducing wait times and improving the overall booking experience through user-centered design.",
-    skills: "UX/UI Design, User Research, Information Architecture, Accessibility Design, Prototyping",
+    skills: "UX/UI design, user research, information architecture, accessibility specialist, prototyping",
     tools: "Figma, Optimal Workshop, VA.gov Design System, GitHub, UserTesting.com",
     date: "January 2023 - Ongoing",
   },
