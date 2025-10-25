@@ -11,8 +11,8 @@ interface ContactHeroSectionProps {
 
 export default function ContactHeroSection({
   title = "Let's Connect",
-  description = "Have a project in mind, a question, or just want to vibe? I’d love to hear from you.",
-  imagesrc="/images/design-mode/IMG_2251_at7pkn.jpg",
+  description = "Have a project in mind, a question, or just want to vibe? I'd love to hear from you.",
+  imageSrc = "/images/design-mode/IMG_2251_at7pkn.jpg",
   imageAlt = "Ben Brasso",
   enableParallax = true,
 }: ContactHeroSectionProps) {
