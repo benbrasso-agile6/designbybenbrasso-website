@@ -95,23 +95,23 @@ export default function HeroSection() {
         @keyframes gasImageFlow {
           0%, 100% { 
             transform: scale(1.0) rotate(0deg);
-            filter: hue-rotate(0deg) brightness(1) contrast(1);
+            filter: hue-rotate(0deg) brightness(1) contrast(1) saturate(1);
           }
           20% { 
             transform: scale(1.18) rotate(3deg);
-            filter: hue-rotate(25deg) brightness(1.08) contrast(1.12);
+            filter: hue-rotate(60deg) brightness(1.08) contrast(1.12) saturate(1.4);
           }
           40% { 
             transform: scale(1.03) rotate(-2deg);
-            filter: hue-rotate(-15deg) brightness(0.92) contrast(0.88);
+            filter: hue-rotate(-20deg) brightness(0.92) contrast(0.88) saturate(1.2);
           }
           60% { 
             transform: scale(1.16) rotate(2.5deg);
-            filter: hue-rotate(30deg) brightness(1.06) contrast(1.1);
+            filter: hue-rotate(75deg) brightness(1.06) contrast(1.1) saturate(1.5);
           }
           80% { 
             transform: scale(1.05) rotate(-1.5deg);
-            filter: hue-rotate(-12deg) brightness(0.94) contrast(0.92);
+            filter: hue-rotate(-15deg) brightness(0.94) contrast(0.92) saturate(1.15);
           }
         }
       `}</style>
