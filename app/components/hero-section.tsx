@@ -94,23 +94,23 @@ export default function HeroSection() {
       <style jsx>{`
         @keyframes gasImageFlow {
           0%, 100% { 
-            transform: scale(1.0) rotate(0deg);
+            transform: scale(1.0) scaleY(0.85) rotate(0deg);
             filter: hue-rotate(0deg) brightness(1) contrast(1);
           }
           20% { 
-            transform: scale(1.15) rotate(2deg);
+            transform: scale(1.15) scaleY(0.88) rotate(2deg);
             filter: hue-rotate(25deg) brightness(1.08) contrast(1.12);
           }
           40% { 
-            transform: scale(1.03) rotate(-1.5deg);
+            transform: scale(1.03) scaleY(0.82) rotate(-1.5deg);
             filter: hue-rotate(-15deg) brightness(0.92) contrast(0.88);
           }
           60% { 
-            transform: scale(1.13) rotate(1.8deg);
+            transform: scale(1.13) scaleY(0.87) rotate(1.8deg);
             filter: hue-rotate(30deg) brightness(1.06) contrast(1.1);
           }
           80% { 
-            transform: scale(1.05) rotate(-1deg);
+            transform: scale(1.05) scaleY(0.84) rotate(-1deg);
             filter: hue-rotate(-12deg) brightness(0.94) contrast(0.92);
           }
         }
