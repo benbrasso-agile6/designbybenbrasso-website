@@ -14,7 +14,7 @@ export default function HeroSection() {
             src="/abstract-blue-orange-gas-no-pink-background.jpg"
             alt=""
             fill
-            className="object-cover opacity-60 dark:opacity-50 animate-[gasImageFlow_35s_ease-in-out_infinite]"
+            className="object-cover opacity-75 dark:opacity-65 animate-[gasImageFlow_25s_ease-in-out_infinite]"
             priority
           />
         </div>
@@ -36,7 +36,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-                className="block text-sky-600 dark:text-sky-400"
+                className="block text-sky-700 dark:text-sky-400"
               >
                 Hey! 👋
               </motion.span>
@@ -52,7 +52,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-                className="text-sky-600 dark:text-sky-400 inline-block"
+                className="text-sky-700 dark:text-sky-400 inline-block"
               >
                 Ben Brasso,
               </motion.span>
@@ -74,15 +74,27 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="flex justify-start lg:justify-center mt-12 lg:mt-0" // justify-start for small screens, lg:justify-center for larger
           >
-            <Image
-              src="/images/ben-brasso-avatar.png"
-              alt="Ben Brasso - UX Designer"
-              width={300}
-              height={300}
-              className="rounded-full object-cover aspect-square shadow-2xl border-4 border-sky-600/30 dark:border-sky-400/30"
-              priority
-              unoptimized // Add this prop
-            />
+            <motion.div
+              animate={{
+                scale: [1, 1.02, 1],
+              }}
+              transition={{
+                duration: 4,
+                ease: "easeInOut",
+                repeat: Number.POSITIVE_INFINITY,
+                repeatType: "reverse",
+              }}
+            >
+              <Image
+                src="/images/ben-brasso-avatar.png"
+                alt="Ben Brasso - UX Designer"
+                width={300}
+                height={300}
+                className="rounded-full object-cover aspect-square shadow-2xl border-4 border-sky-700/30 dark:border-sky-400/30"
+                priority
+                unoptimized // Add this prop
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -98,20 +110,20 @@ export default function HeroSection() {
             filter: hue-rotate(0deg) brightness(1) contrast(1);
           }
           20% { 
-            transform: scale(1.08) rotate(0.5deg);
-            filter: hue-rotate(8deg) brightness(1.02) contrast(1.05);
+            transform: scale(1.12) rotate(1deg);
+            filter: hue-rotate(15deg) brightness(1.05) contrast(1.08);
           }
           40% { 
-            transform: scale(1.03) rotate(-0.3deg);
-            filter: hue-rotate(-5deg) brightness(0.98) contrast(0.95);
+            transform: scale(1.02) rotate(-0.8deg);
+            filter: hue-rotate(-10deg) brightness(0.95) contrast(0.92);
           }
           60% { 
-            transform: scale(1.07) rotate(0.4deg);
-            filter: hue-rotate(12deg) brightness(1.01) contrast(1.02);
+            transform: scale(1.10) rotate(0.9deg);
+            filter: hue-rotate(18deg) brightness(1.03) contrast(1.05);
           }
           80% { 
-            transform: scale(1.04) rotate(-0.2deg);
-            filter: hue-rotate(-3deg) brightness(0.99) contrast(0.98);
+            transform: scale(1.04) rotate(-0.5deg);
+            filter: hue-rotate(-8deg) brightness(0.97) contrast(0.96);
           }
         }
       `}</style>
