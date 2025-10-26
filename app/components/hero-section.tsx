@@ -98,19 +98,19 @@ export default function HeroSection() {
             filter: hue-rotate(0deg) brightness(1) contrast(1);
           }
           20% { 
-            transform: scale(1.15) rotate(2deg);
+            transform: scale(1.18) rotate(3deg);
             filter: hue-rotate(25deg) brightness(1.08) contrast(1.12);
           }
           40% { 
-            transform: scale(1.03) rotate(-1.5deg);
+            transform: scale(1.03) rotate(-2deg);
             filter: hue-rotate(-15deg) brightness(0.92) contrast(0.88);
           }
           60% { 
-            transform: scale(1.13) rotate(1.8deg);
+            transform: scale(1.16) rotate(2.5deg);
             filter: hue-rotate(30deg) brightness(1.06) contrast(1.1);
           }
           80% { 
-            transform: scale(1.05) rotate(-1deg);
+            transform: scale(1.05) rotate(-1.5deg);
             filter: hue-rotate(-12deg) brightness(0.94) contrast(0.92);
           }
         }
