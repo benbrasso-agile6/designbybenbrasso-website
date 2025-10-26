@@ -62,7 +62,7 @@ export default function ToolsIUseSection() {
     { icon: NotebookPenIcon, text: "Granola.ai" },
     { icon: DatabaseIcon, text: "Airtable" },
     { icon: DatabaseIcon, text: "Make (Celonis)" },
-    { icon: UsersIcon, text: "HCD Methodologies" },
+    { icon: UsersIcon, text: "HCD methodologies" },
     { icon: RefreshCwIcon, text: "Agile" },
     { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },
     { icon: LightbulbIcon, text: "An open mind" },
