@@ -14,7 +14,7 @@ export default function HeroSection() {
             src="/abstract-blue-orange-gas-no-pink-background.jpg"
             alt=""
             fill
-            className="object-cover opacity-75 dark:opacity-65 animate-[gasImageFlow_25s_ease-in-out_infinite]"
+            className="object-cover opacity-85 dark:opacity-75 animate-[gasImageFlow_20s_ease-in-out_infinite]"
             priority
           />
         </div>
@@ -72,29 +72,17 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -350 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="flex justify-start lg:justify-center mt-12 lg:mt-0" // justify-start for small screens, lg:justify-center for larger
+            className="flex justify-start lg:justify-center mt-12 lg:mt-0"
           >
-            <motion.div
-              animate={{
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 4,
-                ease: "easeInOut",
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "reverse",
-              }}
-            >
-              <Image
-                src="/images/ben-brasso-avatar.png"
-                alt="Ben Brasso - UX Designer"
-                width={300}
-                height={300}
-                className="rounded-full object-cover aspect-square shadow-2xl border-4 border-sky-700/30 dark:border-sky-400/30"
-                priority
-                unoptimized // Add this prop
-              />
-            </motion.div>
+            <Image
+              src="/images/ben-brasso-avatar.png"
+              alt="Ben Brasso - UX Designer"
+              width={300}
+              height={300}
+              className="rounded-full object-cover aspect-square shadow-2xl border-4 border-sky-700/30 dark:border-sky-400/30"
+              priority
+              unoptimized
+            />
           </motion.div>
         </div>
       </div>
@@ -106,24 +94,24 @@ export default function HeroSection() {
       <style jsx>{`
         @keyframes gasImageFlow {
           0%, 100% { 
-            transform: scale(1.05) rotate(0deg);
+            transform: scale(1.0) rotate(0deg);
             filter: hue-rotate(0deg) brightness(1) contrast(1);
           }
           20% { 
-            transform: scale(1.12) rotate(1deg);
-            filter: hue-rotate(15deg) brightness(1.05) contrast(1.08);
+            transform: scale(1.15) rotate(2deg);
+            filter: hue-rotate(25deg) brightness(1.08) contrast(1.12);
           }
           40% { 
-            transform: scale(1.02) rotate(-0.8deg);
-            filter: hue-rotate(-10deg) brightness(0.95) contrast(0.92);
+            transform: scale(1.03) rotate(-1.5deg);
+            filter: hue-rotate(-15deg) brightness(0.92) contrast(0.88);
           }
           60% { 
-            transform: scale(1.10) rotate(0.9deg);
-            filter: hue-rotate(18deg) brightness(1.03) contrast(1.05);
+            transform: scale(1.13) rotate(1.8deg);
+            filter: hue-rotate(30deg) brightness(1.06) contrast(1.1);
           }
           80% { 
-            transform: scale(1.04) rotate(-0.5deg);
-            filter: hue-rotate(-8deg) brightness(0.97) contrast(0.96);
+            transform: scale(1.05) rotate(-1deg);
+            filter: hue-rotate(-12deg) brightness(0.94) contrast(0.92);
           }
         }
       `}</style>
