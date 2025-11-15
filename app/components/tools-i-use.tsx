@@ -91,7 +91,7 @@ export default function ToolsIUseSection() {
       <div className="max-w-[1000px] mx-auto px-8">
         <div className="mb-12 md:mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
-            What tools I use to <span className="text-sky-600 dark:text-sky-500">design</span>
+            Tools I use to <span className="text-sky-600 dark:text-sky-500">design</span>
           </h2>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5">
