@@ -63,7 +63,7 @@ export default function ToolsIUseSection() {
     { icon: DatabaseIcon, text: "Airtable" },
     { icon: DatabaseIcon, text: "Make (Celonis)" },
     { icon: UsersIcon, text: "Human-centered design" },
-    { icon: RefreshCwIcon, text: "Agile" },
+    { icon: RefreshCwIcon, text: "Agile development" },
     { icon: MicIcon, text: "Web Content Accessibility Guidelines (WCAG)" },
     { icon: LightbulbIcon, text: "An open mind" },
     { icon: SearchIcon, text: "Curiosity" },
