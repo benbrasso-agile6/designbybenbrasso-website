@@ -29,11 +29,75 @@ import {
   DatabaseIcon,
 } from "lucide-react"
 import type React from "react"
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, useAnimation } from "framer-motion"
 
 interface ToolItem {
   icon: React.ElementType
   text: string
+}
+
+function ToolItemComponent({ item, index }: { item: ToolItem; index: number }) {
+  const controls = useAnimation()
+  const [isActive, setIsActive] = useState(false)
+  const IconComponent = item.icon
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: [0, -5, 5, -4, 4, 0],
+      rotate: [0, -3, 3, -2, 2, 0],
+      transition: {
+        delay: index * 0.03,
+        duration: 0.45,
+        ease: "easeOut",
+      },
+    },
+  }
+
+  const triggerWiggle = () => {
+    controls.start({
+      x: [0, -5, 5, -4, 4, 0],
+      rotate: [0, -3, 3, -2, 2, 0],
+      transition: {
+        duration: 0.45,
+        ease: "easeOut",
+      },
+    })
+  }
+
+  return (
+    <motion.div
+      className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-lg font-semibold shadow-sm cursor-default focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950 transition-colors ${
+        isActive
+          ? "bg-sky-100 text-sky-900 dark:bg-sky-900/30 dark:text-sky-100"
+          : "bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200"
+      }`}
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
+      animate={controls}
+      viewport={{ once: true, amount: 0.3 }}
+      onHoverStart={() => {
+        setIsActive(true)
+        triggerWiggle()
+      }}
+      onHoverEnd={() => setIsActive(false)}
+      onFocus={() => {
+        setIsActive(true)
+        triggerWiggle()
+      }}
+      onBlur={() => setIsActive(false)}
+      tabIndex={0}
+      role="listitem"
+      aria-label={item.text}
+    >
+      <IconComponent className="h-5 w-5 text-sky-700 dark:text-sky-600 flex-shrink-0" aria-hidden="true" />
+      <span>{item.text}</span>
+    </motion.div>
+  )
 }
 
 export default function ToolsIUseSection() {
@@ -71,30 +135,6 @@ export default function ToolsIUseSection() {
     { icon: LightbulbIcon, text: "Optimism" },
   ]
 
-  const getItemVariants = (index: number) => ({
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      x: [0, -5, 5, -4, 4, 0],
-      rotate: [0, -3, 3, -2, 2, 0],
-      transition: {
-        delay: index * 0.03,
-        duration: 0.45,
-        ease: "easeOut",
-      },
-    },
-  })
-
-  const wiggleAnimation = {
-    x: [0, -5, 5, -4, 4, 0],
-    rotate: [0, -3, 3, -2, 2, 0],
-    transition: {
-      duration: 0.45,
-      ease: "easeOut",
-    },
-  }
-
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-950">
       <div className="max-w-[1000px] mx-auto px-8">
@@ -104,27 +144,9 @@ export default function ToolsIUseSection() {
           </h2>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5">
-          {tools.map((item, index) => {
-            const IconComponent = item.icon
-            return (
-              <motion.div
-                key={index}
-                className="flex items-center gap-2.5 px-5 py-3 bg-neutral-100 dark:bg-neutral-800 rounded-xl text-lg font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm cursor-default hover:bg-sky-100 hover:text-sky-900 dark:hover:bg-sky-900/30 dark:hover:text-sky-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950 transition-colors"
-                variants={getItemVariants(index)}
-                initial="hidden"
-                whileInView="visible"
-                whileHover={wiggleAnimation}
-                whileFocus={wiggleAnimation}
-                viewport={{ once: true, amount: 0.3 }}
-                tabIndex={0}
-                role="listitem"
-                aria-label={item.text}
-              >
-                <IconComponent className="h-5 w-5 text-sky-700 dark:text-sky-600 flex-shrink-0" aria-hidden="true" />
-                <span>{item.text}</span>
-              </motion.div>
-            )
-          })}
+          {tools.map((item, index) => (
+            <ToolItemComponent key={index} item={item} index={index} />
+          ))}
         </div>
       </div>
     </section>
