@@ -42,7 +42,7 @@
     "@react-email/render": "latest",
     "@remix-run/react": "latest",
     "@sveltejs/kit": "latest",
-    "@sveltejs/vite-plugin-svelte": "latest",
+    "@sveltejs/vite-plugin-svelte": "^3.0.5",
     "@tailwindcss/typography": "latest",
     "@vercel/analytics": "latest",
     "autoprefixer": "^10.4.20",
