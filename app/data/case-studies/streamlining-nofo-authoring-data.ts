@@ -2,7 +2,7 @@ import type { CaseStudyData } from "../case-study-types"
 
 export const streamliningNofoAuthoringData: CaseStudyData = {
   slug: "streamlining-nofo-authoring-and-workflows",
-  pageTitle: "Streamlining NOFO authoring and workflows",
+  pageTitle: "Streamlining NOFO Authoring and Workflows",
   metaTitle: "Streamlining NOFO Authoring and Workflows | Work | designbybenbrasso",
   metaDescription:
     "Detailed case study of the NOFO Composer MVP project, focusing on reducing administrative burden in the creation of Notices of Funding Opportunity at HHS.",
