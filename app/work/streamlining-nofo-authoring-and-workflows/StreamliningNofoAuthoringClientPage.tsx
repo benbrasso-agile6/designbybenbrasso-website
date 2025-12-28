@@ -139,6 +139,11 @@ export default function StreamliningNofoAuthoringClientPage() {
     }
   }, [])
 
+  const githubLinkData = {
+    url: "https://github.com/HHS/simpler-grants-pdf-builder/tree/main/nofos/composer#nofo-composer-mvp-product-documentation",
+    text: "Visit HHS' NOFO Composer MVP product documentation on GitHub",
+  }
+
   return (
     <>
       <div className="flex mb-8 print:hidden">
@@ -165,7 +170,9 @@ export default function StreamliningNofoAuthoringClientPage() {
         )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {caseStudy.projectOverviewBanner && (
+            <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} githubLink={githubLinkData} />
+          )}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
             <style jsx>{`
