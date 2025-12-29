@@ -1,57 +1,23 @@
-export interface ProjectStat {
-  label: string
-  value: string
-}
+import type { ProjectCardProps } from "./path-to-project-card-props" // Assuming ProjectCardProps is declared in another file
 
-export interface Project {
-  title: string
-  description: string
-  slug: string
-  tags: string[]
-  imageUrl: string
-  hasCaseStudy: boolean
-  caseStudyStatusText?: string
-  caseStudyUrlOverride?: string
-  stats?: ProjectStat[]
-}
-
-export const projectsData: Project[] = [
+export const projectsData: ProjectCardProps[] = [
   {
-    title: "Ambient scribe KPI dashboard",
+    title: "Community Care Provider Online Scheduling",
     description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office’s AI investments.</strong>",
-    slug: "ai-scribe-kpi-dashboard",
-    tags: ["AI", "Healthcare", "Product Design"],
+      "Designed a self-scheduling experience that allowed Veterans to choose a community care provider and time slot, <strong>saving an estimated 41 million minutes per month in staff time.</strong>",
+    slug: "provider-online-scheduling",
+    tags: ["health care", "design systems", "service design"],
     imageUrl:
-      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
-    hasCaseStudy: true,
-    stats: [
-      {
-        label: "AI-workflow efficiencies identified",
-        value: "9 in the care encounter",
-      },
-      {
-        label: "Projected appointments with ambient scribe",
-        value: "50 million annually",
-      },
-    ],
-  },
-  {
-    title: "Mobile patient check-in",
-    description:
-      "Re-imagined patient check-in on VA.gov, <strong>increasing usage 4x in one month, while adding travel reimbursement.</strong>",
-    slug: "patient-check-in",
-    tags: ["Healthcare", "Product Design", "Accessibility"],
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
+      "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
     hasCaseStudy: true,
     stats: [
       {
         label: "Staff time saved",
-        value: "64k minutes per month",
+        value: "41M minutes per month",
       },
       {
-        label: "Veterans benefited",
-        value: "110k per month",
+        label: "Scheduling time reduced",
+        value: "From 7 days to 7 minutes",
       },
     ],
   },
