@@ -41,7 +41,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'The Simpler NOFO initiative was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. <a href="https://simplergrants.hhs.gov/simplernofos/overview" target="_blank" rel="noopener noreferrer">Early research, prototypes, and pilots</a> demonstrated that these changes could meaningfully improve clarity and usability for applicants.',
+          text: '<strong>The Simpler NOFO initiative was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible</strong>. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. <a href="https://simplergrants.hhs.gov/simplernofos/overview" target="_blank" rel="noopener noreferrer">Early research, prototypes, and pilots</a> demonstrated that these changes could meaningfully improve clarity and usability for applicants.',
         },
         {
           type: "paragraph",
@@ -53,7 +53,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. At the same time, this growing maturity exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes. Improving the applicant experience at scale now required addressing how NOFOs were authored, governed, and maintained upstream.",
+          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. At the same time, this growing maturity exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes. <strong>Improving the applicant experience at scale now required addressing how NOFOs were authored, governed, and maintained upstream</strong>.",
         },
       ],
     },
@@ -74,7 +74,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "As a result, the same systems that supported document creation were now limiting the initiative's ability to scale. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
+          text: "<strong>As a result, the same systems that supported document creation were now limiting the initiative's ability to scale</trong>. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
         },
       ],
     },
@@ -83,7 +83,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "To address these challenges, we explored the need for a new approach to NOFO authoring that treated content as a system rather than a static document. This work led to the concept of NOFO Composer, a structured authoring and content management tool designed to support governance, reuse, and program-level flexibility while fitting into existing review and clearance workflows.",
+          text: "<strong>To address these challenges, we explored the need for a new approach to NOFO authoring that treated content as a system rather than a static document. This work led to the concept of NOFO Composer,</strong> a structured authoring and content management tool designed to support governance, reuse, and program-level flexibility while fitting into existing review and clearance workflows.",
         },
         {
           type: "paragraph",
@@ -91,7 +91,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Based on this research, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to draft customized NOFOs through a step-by-step experience that removed irrelevant sections and clarified expectations. Rather than attempting to replace familiar tools such as Microsoft Word, which teams rely on for drafting, formatting, and collaboration, or SharePoint, which supports document sharing and review, the experience was intentionally designed to work alongside existing workflows.",
+          text: "Based on this research, we designed, built, and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to draft customized NOFOs through a step-by-step experience that removed irrelevant sections and clarified expectations. <strong>Rather than attempting to replace familiar tools such as Microsoft Word, which teams rely on for drafting, formatting, and collaboration, or SharePoint, which supports document sharing and review, the experience was intentionally designed to work alongside existing workflows.",
         },
         {
           type: "paragraph",
