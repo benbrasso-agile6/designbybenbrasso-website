@@ -36,7 +36,7 @@ export default function ProjectCard({
   stats,
   statsHeadingLevel = 4,
 }: ProjectCardProps) {
-  const linkHref = caseStudyUrlOverride || (slug ? `/project/${slug}` : "#")
+  const linkHref = caseStudyUrlOverride || (slug ? `/case-studies/${slug}` : "#")
   const StatsLabelTag = `h${statsHeadingLevel}` as keyof JSX.IntrinsicElements
 
   return (
