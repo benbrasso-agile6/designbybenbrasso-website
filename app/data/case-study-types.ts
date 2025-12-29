@@ -24,6 +24,7 @@ export interface ProjectOverviewBannerData {
   skills: string
   tools: string
   date: string
+  disclaimer?: string // Added optional disclaimer field for case-study-specific disclaimers
 }
 
 export interface CaseStudyData {
