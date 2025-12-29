@@ -45,7 +45,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "As the initiative matured, the work expanded beyond improving individual documents to supporting repeatable delivery at scale. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use.",
+          text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use.",
         },
         {
           type: "paragraph",
