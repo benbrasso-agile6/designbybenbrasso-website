@@ -95,7 +95,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Findings from this research informed concrete recommendations for fast-follow releases, including reliable Word export to support review and clearance, and foundational governance and workflow capabilities needed to scale Composer responsibly. These insights established a research-validated foundation that guides ongoing improvements to Composer and informs integration and prioritization within the HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap">broader Simpler Grants Management modernization effort</a>.',
+          text: 'Findings from this research informed concrete recommendations for fast-follow releases, including reliable Word export to support review and clearance, and foundational governance and workflow capabilities needed to scale Composer responsibly. These insights established a research-validated foundation that guides ongoing improvements to Composer and informs integration and prioritization within the HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a>.',
         },
       ],
     },
