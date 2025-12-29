@@ -1,19 +1,21 @@
 export const projectsData = [
   {
-    title: "Mobile Patient Check-in",
-    description: "Creating a self-service mobile check-in experience on VA.gov that works for all Veterans.",
-    slug: "patient-check-in",
-    tags: ["Healthcare", "Product Design", "Accessibility"],
-    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
+    title: "Ambient scribe KPI dashboard",
+    description:
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard using AI to inform VA Digital Health Office's AI investments.",
+    slug: "ai-scribe-kpi-dashboard",
+    tags: ["AI", "Healthcare", "Product Design"],
+    imageUrl:
+      "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     hasCaseStudy: true,
   },
   {
-    title: "Community Care Provider Online Scheduling",
-    description: "Enabling Veterans to self-schedule community care appointments directly on VA.gov.",
-    slug: "provider-online-scheduling",
-    tags: ["Healthcare", "Product Design", "User Research"],
-    imageUrl:
-      "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
+    title: "Mobile patient check-in",
+    description:
+      "Re-imagined patient check-in on VA.gov, increasing usage 4x in one month, while adding travel reimbursement.",
+    slug: "patient-check-in",
+    tags: ["Healthcare", "Product Design", "Accessibility"],
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749261703/Frame_535_mcx97r.png",
     hasCaseStudy: true,
   },
 ]
