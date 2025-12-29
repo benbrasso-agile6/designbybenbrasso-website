@@ -95,7 +95,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "The MVP was validated through task-based usability testing and user acceptance research with HHS administrators and NOFO writers. Clear success criteria and KPIs were used to assess ease of use, workflow improvement, and adoption readiness. Findings from this research informed concrete recommendations for fast-follow releases, ensuring the work resulted in a usable, research-validated foundation that could evolve and scale rather than a one-off solution.",
+          text: "Findings from this research informed concrete recommendations for fast-follow releases, including reliable Word export to support review and clearance, and foundational governance and workflow capabilities needed to scale Composer responsibly. These insights established a research-validated foundation that guides ongoing improvements to Composer and informs integration and prioritization within the HHS Office of Grants’ broader Simpler Grants Management modernization effort.",
         },
       ],
     },
