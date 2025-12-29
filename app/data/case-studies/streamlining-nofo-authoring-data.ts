@@ -62,7 +62,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "NOFO authoring is a collaborative process involving agency-wide grant policy writers, OpDiv policy administrators, and program-level writers. Each group has distinct responsibilities, but all rely heavily on Microsoft Word documents, email, and shared drives to manage policy language, updates, reviews, and HHS clearance.",
+          text: "NOFO authoring is a collaborative process involving agency-wide grant policy writers, Operating Division (OpDiv) policy administrators, and program-level writers. Each group has distinct responsibilities, but all rely heavily on Microsoft Word documents, email, and shared drives to manage policy language, updates, reviews, and HHS clearance.",
         },
         {
           type: "paragraph",
