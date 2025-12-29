@@ -15,7 +15,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       "Figma, FigJam GitHub, VS Code, GitHub Copilot Chat, US Web Design System, ChatGPT, Gemini's Nano Banana Pro, Python, Django CI, Airtable",
     date: "August – December 2025",
     disclaimer:
-      "Disclaimer: This case study reflects process, research, and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
+      "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
   },
   projectDetails: [
     { label: "Client Type", value: "Government / Public Sector" },
