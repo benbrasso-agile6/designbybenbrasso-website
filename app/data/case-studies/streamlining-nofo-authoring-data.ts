@@ -41,7 +41,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "The Simpler NOFO initiative was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. Early research, prototypes, and pilots demonstrated that these changes could meaningfully improve clarity and usability for applicants.",
+          text: 'The Simpler NOFO initiative was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. <a href="https://simplergrants.hhs.gov/simplernofos/overview">Early research, prototypes, and pilots</a> demonstrated that these changes could meaningfully improve clarity and usability for applicants.',
         },
         {
           type: "paragraph",
