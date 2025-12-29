@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     title: "Ambient scribe KPI dashboard",
     slug: "ai-scribe-kpi-dashboard",
     description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office’s AI investments.</strong>",
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office's AI investments.</strong>",
     imageUrl:
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1748741837/ChatGPT_Image_May_31_2025_09_30_33_PM_rujlow.png",
     tags: ["SaaS", "Dashboard", "Data Visualization", "AI", "Healthcare Analytics"],
@@ -57,4 +57,18 @@ export const projectsData: Project[] = [
       { label: "Projected Veterans benefited", value: "250k per month" },
     ],
   },
-];
+  {
+    title: "Streamlining NOFO authoring and workflows",
+    slug: "streamlining-nofo-authoring-and-workflows",
+    description:
+      "Designed an MVP for a NOFO (Notice of Funding Opportunity) composer to <strong>streamline federal grant authoring workflows and reduce time-to-publish.</strong>",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1735520000/nofo-composer-preview.png",
+    tags: ["Enterprise", "Workflow Design", "Content Management", "Government", "Productivity"],
+    hasCaseStudy: true,
+    caseStudyUrlOverride: "/work/streamlining-nofo-authoring-and-workflows",
+    stats: [
+      { label: "Workflow efficiency improvement", value: "Estimated 40% reduction in authoring time" },
+      { label: "Stakeholders involved", value: "Cross-functional federal teams" },
+    ],
+  },
+]
