@@ -8,12 +8,14 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     "Detailed case study of the NOFO Composer MVP project, focusing on reducing administrative burden in the creation of Notices of Funding Opportunity at HHS.",
   projectOverviewBanner: {
     description:
-      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity (NOFOs) by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants’ broader technology modernization effort, known as Simpler Grants Management.",
+      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity (NOFOs) by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants' broader technology modernization effort, known as Simpler Grants Management.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocate, service design, user acceptance testing with Python web application, prototyping, change management specialist",
     tools:
       "Figma, GitHub, VS Code, GitHub Copilot Chat, GitHub Copilot code review, US Web Design System, Microsoft Teams, ChatGPT, Microsoft SharePoint, FigJam, Gemini's Nano Banana Pro, Python, Django CI, Airtable",
     date: "August 2025 – December 2025",
+    disclaimer:
+      "Disclaimer: This case study reflects process, research, and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
   },
   projectDetails: [
     { label: "Client Type", value: "Government / Public Sector" },
