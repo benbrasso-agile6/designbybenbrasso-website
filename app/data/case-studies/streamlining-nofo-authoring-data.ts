@@ -91,7 +91,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Based on this research, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to generate customized guides through a step-by-step experience that removed irrelevant sections and clarified expectations. Rather than attempting to replace familiar tools, the experience was intentionally designed to work alongside Microsoft Word, supporting real-world drafting, collaboration, and clearance needs.",
+          text: "Based on this research, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to draft customized NOFOs through a step-by-step experience that removed irrelevant sections and clarified expectations. Rather than attempting to replace familiar tools, the experience was intentionally designed to work alongside Microsoft Word, supporting real-world drafting, collaboration, and clearance needs.",
         },
         {
           type: "paragraph",
