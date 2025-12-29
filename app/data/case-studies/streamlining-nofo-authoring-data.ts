@@ -78,5 +78,26 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
       ],
     },
+  {
+      title: "Action",
+      content: [
+        {
+          type: "paragraph",
+          text: "NOFO authoring is a collaborative process involving agency-wide grant policy writers, Operating Division (OpDiv) policy administrators, and program-level writers. Each group has distinct responsibilities, but all rely heavily on Microsoft Word documents, email, and shared drives to manage policy language, updates, reviews, and HHS clearance.",
+        },
+        {
+          type: "paragraph",
+          text: "As Simpler NOFOs expanded, this approach became increasingly difficult to sustain. Policy updates had to be manually tracked and re-applied across multiple content guides, often after authoring and writing were already underway. These downstream updates created frustration for writers and administrators alike and led to longer review cycles as teams worked to ensure policy information remained accurate and consistent.",
+        },
+        {
+          type: "paragraph",
+          text: "The lack of centralized governance further compounded the problem. It was often unclear which content was standard, which was program-specific, and who had authority to make changes at different stages of the process. Writers spent time interpreting guidance instead of drafting, while policy administrators relied on manual checks to ensure required language had not been altered or omitted.",
+        },
+        {
+          type: "paragraph",
+          text: "As a result, the same systems that supported document creation were now limiting the initiative's ability to scale. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
+        },
+      ],
+    },
   ],
 }
