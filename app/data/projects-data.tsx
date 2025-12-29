@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
   {
     title: "Ambient scribe KPI dashboard",
     description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office's AI investments.</strong>",
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office’s AI investments.</strong>",
     slug: "ai-scribe-kpi-dashboard",
     tags: ["AI", "Healthcare", "Product Design"],
     imageUrl:
