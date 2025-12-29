@@ -1,23 +1,24 @@
 export const projectsData = [
   {
-    title: "Real-time AI risk detection",
-    description: "Building a real-time dashboard for DTCC's AI risk monitoring system.",
-    slug: "ai-risk-detection-for-financial-markets",
-    tags: ["AI/ML", "Product Design", "Design System"],
-    image: "/images/dtcc-vulnerabilities-check.png",
+    title: "Mobile Patient Check-in",
+    description: "Creating a self-service mobile check-in experience on VA.gov that works for all Veterans.",
+    slug: "patient-check-in",
+    tags: ["Healthcare", "Product Design", "Accessibility"],
+    image: "https://res.cloudinary.com/dpl6apspp/image/upload/v1752269146/Frame_680_epfz6b.png",
   },
   {
-    title: "Provider scheduling platform",
-    description: "Redesigning a scheduling platform for healthcare providers and patients.",
-    slug: "provider-online-scheduling-platform",
+    title: "Community Care Provider Online Scheduling",
+    description: "Enabling Veterans to self-schedule community care appointments directly on VA.gov.",
+    slug: "provider-online-scheduling",
     tags: ["Healthcare", "Product Design", "User Research"],
-    image: "/images/provider-scheduling-hero.png",
+    image: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
   },
   {
-    title: "AI-powered design mentor",
-    description: "Creating an AI assistant that helps designers improve their work through contextual feedback.",
-    slug: "ai-powered-design-mentor",
-    tags: ["AI/ML", "Product Design", "EdTech"],
-    image: "/images/design-mentor-hero.png",
+    title: "Ambient Scribe Pilot KPI Dashboard",
+    description:
+      "Understanding gaps and opportunities in the care encounter experience to inform the ambient scribe pilot plan.",
+    slug: "ai-scribe-kpi-dashboard",
+    tags: ["AI/ML", "Healthcare", "Data Visualization"],
+    image: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/CleanShot_2025-06-13_at_15.38.32_jkb9y3.gif",
   },
 ]
