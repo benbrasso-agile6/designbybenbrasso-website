@@ -83,19 +83,19 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "NOFO authoring is a collaborative process involving agency-wide grant policy writers, Operating Division (OpDiv) policy administrators, and program-level writers. Each group has distinct responsibilities, but all rely heavily on Microsoft Word documents, email, and shared drives to manage policy language, updates, reviews, and HHS clearance.",
+          text: "To address these challenges, we explored the need for a new approach to NOFO authoring that treated content as a system rather than a static document. This work led to the concept of NOFO Composer, a structured authoring and content management tool designed to support governance, reuse, and program-level flexibility while fitting into existing review and clearance workflows.",
         },
         {
           type: "paragraph",
-          text: "As Simpler NOFOs expanded, this approach became increasingly difficult to sustain. Policy updates had to be manually tracked and re-applied across multiple content guides, often after authoring and writing were already underway. These downstream updates created frustration for writers and administrators alike and led to longer review cycles as teams worked to ensure policy information remained accurate and consistent.",
+          text: "We began with discovery research to understand how agency-wide policy writers, OpDiv policy administrators, and program-level writers author NOFOs in practice. This included examining how content guides were created, updated, shared, and reused, as well as how policy changes flowed downstream once drafting was already in progress. These insights clarified where friction occurred and what guardrails were required to support both consistency and flexibility.",
         },
         {
           type: "paragraph",
-          text: "The lack of centralized governance further compounded the problem. It was often unclear which content was standard, which was program-specific, and who had authority to make changes at different stages of the process. Writers spent time interpreting guidance instead of drafting, while policy administrators relied on manual checks to ensure required language had not been altered or omitted.",
+          text: "Based on this research, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to generate customized guides through a step-by-step experience that removed irrelevant sections and clarified expectations. Rather than attempting to replace familiar tools, the experience was intentionally designed to work alongside Microsoft Word, supporting real-world drafting, collaboration, and clearance needs.",
         },
         {
           type: "paragraph",
-          text: "As a result, the same systems that supported document creation were now limiting the initiative's ability to scale. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
+          text: "The MVP was validated through task-based usability testing and user acceptance research with HHS administrators and NOFO writers. Clear success criteria and KPIs were used to assess ease of use, workflow improvement, and adoption readiness. Findings from this research informed concrete recommendations for fast-follow releases, ensuring the work resulted in a usable, research-validated foundation that could evolve and scale rather than a one-off solution.",
         },
       ],
     },
