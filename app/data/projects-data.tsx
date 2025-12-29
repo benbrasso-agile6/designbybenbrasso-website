@@ -61,7 +61,7 @@ export const projectsData: Project[] = [
       "Designed the scheduling experience for referrals on VA.gov and <strong>streamlined the process from weeks to minutes.</strong>",
     slug: "provider-online-scheduling",
     tags: ["Healthcare", "Product Design", "Service Design"],
-    imageUrl: "/images/screenshot-202025-12-29-20at-206.png",
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749400918/Frame_532_ofw0ui.png",
     hasCaseStudy: true,
     stats: [
       {
