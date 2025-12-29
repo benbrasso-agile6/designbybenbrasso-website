@@ -16,14 +16,4 @@ export const projectsData = [
       "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
     hasCaseStudy: true,
   },
-  {
-    title: "Ambient Scribe Pilot KPI Dashboard",
-    description:
-      "Understanding gaps and opportunities in the care encounter experience to inform the ambient scribe pilot plan.",
-    slug: "ai-scribe-kpi-dashboard",
-    tags: ["AI/ML", "Healthcare", "Data Visualization"],
-    imageUrl:
-      "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/CleanShot_2025-06-13_at_15.38.32_jkb9y3.gif",
-    hasCaseStudy: true,
-  },
 ]
