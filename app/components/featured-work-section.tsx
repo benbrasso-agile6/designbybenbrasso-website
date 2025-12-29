@@ -17,8 +17,7 @@ export default function FeaturedWorkSection({
   sectionClassName = "w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900",
   statsHeadingLevel,
 }: FeaturedWorkSectionProps) {
-  // If no specific projects are passed, default to the home page's list (first two case studies).
-  const projects = projectsToDisplay ?? projectsData.filter((p) => p.slug !== "direct-online-scheduling")
+  const projects = projectsToDisplay ?? projectsData.filter((p) => p.slug !== "direct-online-scheduling").slice(0, 2)
 
   return (
     <section id="work" className={sectionClassName}>
