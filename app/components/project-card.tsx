@@ -44,7 +44,7 @@ export default function ProjectCard({
       <CardHeader className="pt-10 px-8 pb-0">
         <CardTitle className="text-2xl lg:text-3xl text-sky-800 dark:text-sky-700">{title}</CardTitle>
         <p
-          className="text-base md:text-lg lg:text-xl leading-loose text-neutral-700 dark:text-neutral-300 mt-6"
+          className="text-base md:text-lg lg:text-xl leading-normal md:leading-loose text-neutral-700 dark:text-neutral-300 mt-6"
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <div className={`w-full ${imageMarginTopClass}`}>
