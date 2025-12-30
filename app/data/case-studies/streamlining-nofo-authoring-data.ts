@@ -83,15 +83,27 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>To address these challenges, we explored the need for a new approach to NOFO authoring that treated content as a system rather than a static document. This work led to the concept of NOFO Composer,</strong> a structured authoring and content management tool designed to support governance, reuse, and program-level flexibility while fitting into existing review and clearance workflows.",
+          text: "To address these challenges, we explored a new approach to NOFO authoring that treated content as a governed system rather than a static document. <strong>This work led to NOFO Composer, a structured authoring and content management tool designed to support policy oversight, reuse, and program-level flexibility while fitting into existing review and clearance workflows</strong>.",
         },
         {
           type: "paragraph",
-          text: "We began with discovery research to understand how agency-wide policy writers, OpDiv policy administrators, and program-level writers author NOFOs in practice. This included examining how content guides were created, updated, shared, and reused, as well as how policy changes flowed downstream once drafting was already in progress. These insights clarified where friction occurred and what guardrails were required to support both consistency and flexibility.",
+          text: "We conducted research with agency-wide grant policy writers, OpDiv policy administrators, and program-level writers to understand how NOFOs are authored in practice. <strong>Research focused on real-world constraints, including how content guides are created and maintained, how policy updates flow once drafting is underway, and where friction occurs during review and clearance</strong>.",
         },
         {
           type: "paragraph",
-          text: "Based on this research, we designed, built, and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to draft customized NOFOs through a step-by-step experience that removed irrelevant sections and clarified expectations. <strong>Rather than attempting to replace familiar tools such as Microsoft Word, which teams rely on for drafting, formatting, and collaboration, or SharePoint, which supports document sharing and review, the experience was intentionally designed to work alongside existing workflows</strong>.",
+          text: "Across interviews and usability sessions, several clear themes emerged.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Writers needed a strong, policy-aligned starting point that reduced setup and formatting work rather than replacing familiar tools</strong>.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Policy administrators needed clear governance and visibility into what content was locked, who controlled it, and how updates affected work already in progress</strong>.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment</strong>.",
         },
         {
           type: "paragraph",
