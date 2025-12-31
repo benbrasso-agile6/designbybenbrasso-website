@@ -77,7 +77,7 @@ export const projectsData: Project[] = [
   {
     title: "Streamlining NOFO authoring and workflows",
     description:
-      "Designed and validated a NOFO Composer MVP to <strong>reduce administrative burden in the creation of Notices of Funding Opportunity at HHS.</strong>",
+      "Designed and validated a new approach to <strong>reduce administrative burden in creating federal funding opportunities at HHS</strong>.",
     slug: "streamlining-nofo-authoring-and-workflows",
     tags: ["Government", "Product Design", "Service Design"],
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767143023/Frame_684_vv4k8a.png",
