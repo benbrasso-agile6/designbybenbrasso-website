@@ -91,19 +91,15 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Across interviews and usability sessions, several clear themes emerged.",
+          text: "Across interviews and usability sessions, several clear themes emerged:",
         },
         {
-          type: "paragraph",
-          text: "<strong>Writers needed a strong, policy-aligned starting point that reduced setup and formatting work rather than replacing familiar tools</strong>.",
-        },
-        {
-          type: "paragraph",
-          text: "<strong>Policy administrators needed clear governance and visibility into what content was locked, who controlled it, and how updates affected work already in progress</strong>.",
-        },
-        {
-          type: "paragraph",
-          text: "<strong>Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment</strong>.",
+          type: "list",
+          items: [
+            "Writers needed a strong, policy-aligned starting point that reduced setup and formatting work rather than replacing familiar tools.",
+            "Policy administrators needed clear governance and visibility into what content was locked, who controlled it, and how updates affected work already in progress.",
+            "Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment.",
+          ],
         },
         {
           type: "paragraph",
