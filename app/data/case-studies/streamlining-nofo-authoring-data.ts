@@ -107,7 +107,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Based on these insights, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content while allowing writers to draft customized NOFOs through a guided, step-by-step experience.",
+          text: "Based on these insights, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. <strong>The MVP enabled administrators to centrally manage and validate policy-aligned content while allowing writers to draft customized NOFOs through a guided, step-by-step experience</strong>.",
         },
         {
           type: "paragraph",
