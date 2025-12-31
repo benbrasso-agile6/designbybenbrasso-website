@@ -74,7 +74,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>As a result, the same systems that supported document creation were now limiting the initiative's ability to scale</strong>. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
+          text: "<strong>As a result, the same systems that supported document creation were now limiting the initiative’s ability to scale</strong>. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
         },
       ],
     },
