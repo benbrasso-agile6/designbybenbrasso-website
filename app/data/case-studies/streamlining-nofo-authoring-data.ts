@@ -12,7 +12,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
-      "Figma, FigJam, GitHub, VS Code, GitHub Copilot Chat, US Web Design System, ChatGPT, Gemini's Nano Banana Pro, Python, Django CI, Airtable",
+      "Figma, FigJam, GitHub, VS Code, GitHub Copilot Chat, US Web Design System, ChatGPT, Gemini’s Nano Banana Pro, Python, Django CI, Airtable",
     date: "August – December 2025",
     disclaimer:
       "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
