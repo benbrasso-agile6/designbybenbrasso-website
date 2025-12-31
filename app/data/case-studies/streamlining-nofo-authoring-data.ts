@@ -8,7 +8,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     "Detailed case study of the NOFO Composer MVP project, focusing on reducing administrative burden in the creation of Notices of Funding Opportunity at HHS.",
   projectOverviewBanner: {
     description:
-      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity (NOFOs) by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants' broader technology modernization effort, known as Simpler Grants Management.",
+      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity (NOFOs) by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants’ broader technology modernization effort, known as Simpler Grants Management.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
