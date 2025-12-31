@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
   {
     title: "Ambient scribe KPI dashboard",
     description:
-      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office’s AI investments.</strong>",
+      "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office's AI investments.</strong>",
     slug: "ai-scribe-kpi-dashboard",
     tags: ["AI", "Healthcare", "Product Design"],
     imageUrl:
@@ -71,6 +71,25 @@ export const projectsData: Project[] = [
       {
         label: "Projected Veterans benefited",
         value: "250k per month",
+      },
+    ],
+  },
+  {
+    title: "Streamlining NOFO authoring and workflows",
+    description:
+      "Designed and validated a NOFO Composer MVP to <strong>reduce administrative burden in the creation of Notices of Funding Opportunity at HHS.</strong>",
+    slug: "streamlining-nofo-authoring-and-workflows",
+    tags: ["Government", "Product Design", "Service Design"],
+    imageUrl: "/images/image.png",
+    hasCaseStudy: true,
+    stats: [
+      {
+        label: "Users showing adoption readiness",
+        value: "87%",
+      },
+      {
+        label: "Users likely to use Composer",
+        value: "100%",
       },
     ],
   },
