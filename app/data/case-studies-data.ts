@@ -2,14 +2,14 @@ import type { CaseStudyData } from "./case-study-types"
 import { aiScribeKpiDashboardData } from "./case-studies/ai-scribe-kpi-dashboard-data"
 import { patientCheckInData } from "./case-studies/patient-check-in-data"
 import { providerOnlineSchedulingData } from "./case-studies/provider-online-scheduling-data"
-import { streamliningNofoAuthoringData } from "./case-studies/streamlining-nofo-authoring-data"
+// import { streamliningNofoAuthoringData } from "./case-studies/streamlining-nofo-authoring-data"
 
 // Ensure all imported data files are used here
 const allCaseStudies: CaseStudyData[] = [
   aiScribeKpiDashboardData,
   patientCheckInData,
   providerOnlineSchedulingData,
-  streamliningNofoAuthoringData,
+  // streamliningNofoAuthoringData,
 ]
 
 export function getCaseStudyData(slug: string): CaseStudyData | undefined {

@@ -206,7 +206,11 @@ export default function AiScribeKpiDashboardClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink
+          href="/work/streamlining-nofo-authoring-and-workflows"
+          text="Visit previous project"
+          isPrevious={true}
+        />
         <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 

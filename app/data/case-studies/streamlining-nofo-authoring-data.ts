@@ -8,11 +8,11 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     "Detailed case study of the NOFO Composer MVP project, focusing on reducing administrative burden in the creation of Notices of Funding Opportunity at HHS.",
   projectOverviewBanner: {
     description:
-      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity (NOFOs) by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants' broader technology modernization effort, known as Simpler Grants Management.",
+      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants’ broader technology modernization effort, known as Simpler Grants Management.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
-      "Figma, FigJam, GitHub, VS Code, GitHub Copilot Chat, US Web Design System, ChatGPT, Gemini's Nano Banana Pro, Python, Django CI, Airtable",
+      "Figma, FigJam, GitHub, VS Code, GitHub Copilot Chat, US Web Design System, ChatGPT, Gemini’s Nano Banana Pro, Python, Django CI, Airtable",
     date: "August – December 2025",
     disclaimer:
       "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
@@ -74,7 +74,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>As a result, the same systems that supported document creation were now limiting the initiative's ability to scale</strong>. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
+          text: "<strong>As a result, the same systems that supported document creation were now limiting the initiative’s ability to scale</strong>. Without better tooling to manage content, permissions, and timing upstream, reducing applicant burden increasingly depended on manual coordination and institutional knowledge behind the scenes.",
         },
       ],
     },
@@ -83,19 +83,51 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "<strong>To address these challenges, we explored the need for a new approach to NOFO authoring that treated content as a system rather than a static document. This work led to the concept of NOFO Composer,</strong> a structured authoring and content management tool designed to support governance, reuse, and program-level flexibility while fitting into existing review and clearance workflows.",
+          text: "To address these challenges, we explored a new approach to NOFO authoring that treated content as a governed system rather than a static document. <strong>This work led to NOFO Composer, a structured authoring and content management tool designed to support policy oversight, reuse, and program-level flexibility while fitting into existing review and clearance workflows</strong>.",
         },
         {
           type: "paragraph",
-          text: "We began with discovery research to understand how agency-wide policy writers, OpDiv policy administrators, and program-level writers author NOFOs in practice. This included examining how content guides were created, updated, shared, and reused, as well as how policy changes flowed downstream once drafting was already in progress. These insights clarified where friction occurred and what guardrails were required to support both consistency and flexibility.",
+          text: "We conducted research with agency-wide grant policy writers, OpDiv policy administrators, and program-level writers to understand how NOFOs are authored in practice. <strong>Research focused on real-world constraints, including how content guides are created and maintained, how policy updates flow once drafting is underway, and where friction occurs during review and clearance</strong>.",
         },
         {
           type: "paragraph",
-          text: "Based on this research, we designed, built, and evaluated a NOFO Composer MVP focused on the most critical workflows. The MVP enabled administrators to centrally manage and validate policy-aligned content guides, while allowing writers to draft customized NOFOs through a step-by-step experience that removed irrelevant sections and clarified expectations. <strong>Rather than attempting to replace familiar tools such as Microsoft Word, which teams rely on for drafting, formatting, and collaboration, or SharePoint, which supports document sharing and review, the experience was intentionally designed to work alongside existing workflows</strong>.",
+          text: "Across interviews and usability sessions, several clear themes emerged:",
+        },
+        {
+          type: "list",
+          items: [
+            "Writers needed a strong, policy-aligned starting point that reduced setup and formatting work rather than replacing familiar tools.",
+            "Policy administrators needed clear governance and visibility into what content was locked, who controlled it, and how updates affected work already in progress.",
+            "Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment.",
+          ],
         },
         {
           type: "paragraph",
-          text: 'Findings from this research informed concrete recommendations for fast-follow releases, including reliable Word export to support review and clearance, and foundational governance and workflow capabilities needed to scale Composer responsibly. <strong>These insights established a research-validated foundation that guides ongoing improvements to Composer and informs integration and prioritization within the HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a></strong>.',
+          text: "Based on these insights, we designed and evaluated a NOFO Composer MVP focused on the most critical workflows. <strong>The MVP enabled administrators to centrally manage and validate policy-aligned content while allowing writers to draft customized NOFOs through a guided, step-by-step experience</strong>.",
+        },
+        {
+          type: "paragraph",
+          text: "Rather than attempting to replace familiar tools such as Microsoft Word and SharePoint, the experience was intentionally designed to work alongside existing workflows and clearance processes.",
+        },
+        {
+          type: "paragraph",
+          text: 'Findings from this research informed concrete recommendations for fast-follow releases. These <strong>recommendations prioritized reliable Word export, governance and workflow capabilities needed for scale, and a research-validated foundation that guides ongoing improvements to Composer and integration with HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a></strong>.',
+        },
+      ],
+    },
+    {
+      title: "Key Outcomes",
+      content: [
+        {
+          type: "list",
+          items: [
+            "<strong>The NOFO Composer MVP met its defined success criteria as a validated starting point for improving NOFO authoring and governance workflows.</strong> Research demonstrated strong adoption readiness across both writers and administrators, confirming that the core problems identified in earlier discovery were being meaningfully addressed.",
+            "<strong>87% of participants rated Composer a 4 or 5 (on a 5-point scale) for confidence that it could meet their agency or program's needs.</strong> Participants consistently described the experience as intuitive and aligned with how NOFOs are structured today, reinforcing trust in the model even at an MVP stage.",
+            "<strong>Ease of use and workflow improvement signals were similarly strong.</strong> 87% of participants rated Composer a 4 or 5 for ease of use, and 71% rated it a 4 or 5 for improving NOFO drafting compared to their current processes. These results reflected reduced time spent navigating long Word documents, removing irrelevant sections, and interpreting unclear guidance.",
+            "<strong>Governance validation emerged as a critical outcome.</strong> HHS administrators confirmed that the MVP supported centralized content management and core OpDiv policy administration needs, establishing confidence that policy-aligned content could be managed and scaled without increasing manual oversight.",
+            "<strong>Adoption intent was directly tied to Composer’s ability to work alongside existing tools.</strong> 100% of respondents rated their likelihood of using Composer in future NOFO cycles as a 4 or 5, with many emphasizing the importance of reliable Word export for review and clearance.",
+            '<strong>Together, these outcomes demonstrated that the Composer MVP was not a one-off prototype, but a research-validated foundation for incremental release and scale.</strong> The work provided clear direction for fast-follow development, including Word export, governance and workflow scaling, and integration with the HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a>.',
+          ],
         },
       ],
     },

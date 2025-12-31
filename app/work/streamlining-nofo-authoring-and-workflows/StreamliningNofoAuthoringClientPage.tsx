@@ -141,7 +141,7 @@ export default function StreamliningNofoAuthoringClientPage() {
 
   const githubLinkData = {
     url: "https://github.com/HHS/simpler-grants-pdf-builder/tree/main/nofos/composer#nofo-composer-mvp-product-documentation",
-    text: "Visit HHS' NOFO Composer MVP product documentation on GitHub",
+    text: "Visit HHS’ NOFO Composer MVP product documentation on GitHub",
   }
 
   return (
@@ -155,7 +155,7 @@ export default function StreamliningNofoAuthoringClientPage() {
       </h1>
 
       <div className="relative mt-12">
-        {caseStudy.mainImage && (
+        {/* {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
             <Image
               src={caseStudy.mainImage.src || "/placeholder.svg"}
@@ -167,7 +167,7 @@ export default function StreamliningNofoAuthoringClientPage() {
               unoptimized
             />
           </div>
-        )}
+        )} */}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
           {caseStudy.projectOverviewBanner && (
@@ -213,8 +213,8 @@ export default function StreamliningNofoAuthoringClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit next project" />
+        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (
