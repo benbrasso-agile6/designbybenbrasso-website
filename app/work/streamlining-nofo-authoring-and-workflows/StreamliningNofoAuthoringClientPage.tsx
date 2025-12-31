@@ -155,7 +155,7 @@ export default function StreamliningNofoAuthoringClientPage() {
       </h1>
 
       <div className="relative mt-12">
-        {caseStudy.mainImage && (
+        {/* {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
             <Image
               src={caseStudy.mainImage.src || "/placeholder.svg"}
@@ -167,7 +167,7 @@ export default function StreamliningNofoAuthoringClientPage() {
               unoptimized
             />
           </div>
-        )}
+        )} */}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
           {caseStudy.projectOverviewBanner && (
