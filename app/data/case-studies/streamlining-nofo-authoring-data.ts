@@ -111,10 +111,6 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment</strong>.",
-        },
-        {
-          type: "paragraph",
           text: 'Findings from this research informed concrete recommendations for fast-follow releases. These <strong>recommendations prioritized reliable Word export, governance and workflow capabilities needed for scale, and a research-validated foundation that guides ongoing improvements to Composer and integration with HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a></strong>.',
         },
       ],
