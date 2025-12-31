@@ -111,7 +111,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>Trust across roles depended on the ability to move drafts into Word for collaboration and clearance without losing policy alignment</strong>.",
+          text: "Rather than attempting to replace familiar tools such as Microsoft Word and SharePoint, the experience was intentionally designed to work alongside existing workflows and clearance processes.",
         },
         {
           type: "paragraph",
@@ -119,7 +119,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: 'Findings from this research informed concrete recommendations for fast-follow releases, including reliable Word export to support review and clearance, and foundational governance and workflow capabilities needed to scale Composer responsibly. <strong>These insights established a research-validated foundation that guides ongoing improvements to Composer and informs integration and prioritization within the HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a></strong>.',
+          text: 'Findings from this research informed concrete recommendations for fast-follow releases. These <strong>recommendations prioritized reliable Word export, governance and workflow capabilities needed for scale, and a research-validated foundation that guides ongoing improvements to Composer and integration with HHS Office of Grants’ <a href="https://simpler.grants.gov/roadmap" target="_blank" rel="noopener noreferrer">broader Simpler Grants Management modernization effort</a></strong>.',
         },
       ],
     },
