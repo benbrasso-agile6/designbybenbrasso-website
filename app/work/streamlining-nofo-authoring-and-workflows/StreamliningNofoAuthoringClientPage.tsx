@@ -141,7 +141,7 @@ export default function StreamliningNofoAuthoringClientPage() {
 
   const githubLinkData = {
     url: "https://github.com/HHS/simpler-grants-pdf-builder/tree/main/nofos/composer#nofo-composer-mvp-product-documentation",
-    text: "Visit HHS' NOFO Composer MVP product documentation on GitHub",
+    text: "Visit HHS’ NOFO Composer MVP product documentation on GitHub",
   }
 
   return (
