@@ -162,7 +162,10 @@ export default function StreamliningNofoAuthoringClientPage() {
               alt={caseStudy.mainImage.alt}
               width={caseStudy.mainImage.width}
               height={caseStudy.mainImage.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
+              className={cn(
+                "rounded-lg w-full object-cover",
+                caseStudy.mainImage.showBorder && "border-2 border-neutral-700 dark:border-neutral-600",
+              )}
               priority={caseStudy.mainImage.priority}
               unoptimized
             />
