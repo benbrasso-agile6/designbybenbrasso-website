@@ -49,6 +49,14 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
           text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750022654/CleanShot_2025-06-15_at_17.20.29_e3a1du.gif",
+          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
+        {
           type: "paragraph",
           text: "At the same time, the end-to-end production design workflow was formalized to ensure designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. This documentation made roles, handoffs, and quality checks explicit, supporting consistency and accessibility as volume increased.",
         },
