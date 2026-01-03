@@ -50,7 +50,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1750022654/CleanShot_2025-06-15_at_17.20.29_e3a1du.gif",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767472154/CleanShot_2026-01-03_at_15.26.07_mjbeov.gif",
           alt: "Service blueprint mapping the end-to-end care encounter experience",
           width: 800,
           height: 450,
