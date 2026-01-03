@@ -33,7 +33,7 @@ export default function ContractVehiclesPage() {
             </h3>
             <h4 className="text-lg font-bold mt-4">HHS’s Simpler Notice of Funding Opportunities (NOFOs)</h4>
             <ul>
-              <li>Start Date: June 2025</li>
+              <li>Start date: June 2025</li>
             </ul>
           </section>
 
@@ -55,14 +55,14 @@ export default function ContractVehiclesPage() {
               Department of Veterans Affairs Digital Health Office (DHO) Program Development Staffing Services
             </h3>
             <ul>
-              <li>Start Date: July 2024</li>
+              <li>Start date: July 2024</li>
             </ul>
 
             <h3 className="text-xl font-semibold">GSA Multiple Award Schedule (MAS)</h3>
             <h4 className="text-lg font-bold mt-4">Veteran Appointments and Check-In Experience (CIE) Task Order</h4>
             <ul>
               <li>Proposal involvement: Technical factors, case study writer</li>
-              <li>Start Date: January 2024</li>
+              <li>Start date: January 2024</li>
             </ul>
 
             <h3 className="text-xl font-semibold">Technology for Next Generation (T4NG) IDIQ</h3>
@@ -71,7 +71,7 @@ export default function ContractVehiclesPage() {
             </h4>
             <h5 className="text-base font-semibold mt-3">CTO Health Products - Check-In Experience (CIE) Task Order</h5>
             <ul>
-              <li>Start Date: April 2022</li>
+              <li>Start date: April 2022</li>
             </ul>
           </section>
         </div>
