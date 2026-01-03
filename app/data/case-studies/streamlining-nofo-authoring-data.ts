@@ -51,7 +51,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767472154/CleanShot_2026-01-03_at_15.26.07_mjbeov.gif",
-          alt: "Service blueprint mapping the end-to-end care encounter experience",
+          alt: "Shared documentation outlining how teams use NOFO Builder to support consistent NOFO delivery",
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
