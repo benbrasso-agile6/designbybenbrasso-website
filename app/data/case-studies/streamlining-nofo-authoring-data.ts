@@ -46,7 +46,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use.",
+          text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use as more programs and agencies adopted the approach.",
         },
         {
           type: "image",
@@ -58,7 +58,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "At the same time, the end-to-end production design workflow was formalized to ensure designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. This documentation made roles, handoffs, and quality checks explicit, supporting consistency and accessibility as volume increased.",
+          text: "At the same time, <strong>an end-to-end production design workflow was formalized and executed by a dedicated team of production designers</strong>, with centralized design leadership oversight, to support OpDiv program teams during pilot and early scaling years when internal capacity was limited. This workflow ensured designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. The documentation made roles, handoffs, and quality checks explicit, providing transparency and accountability into the production process while also serving as staffing and planning guidance for OpDivs in future program years.",
         },
         {
           type: "paragraph",
