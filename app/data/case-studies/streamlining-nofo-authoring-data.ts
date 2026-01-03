@@ -63,7 +63,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767473661/CleanShot_2026-01-03_at_15.52.09_tpn7vm.gif",
-          alt: "Shared documentation outlining how teams use NOFO Builder to support consistent NOFO delivery",
+          alt: "Diagram illustrating roles, handoffs, and quality checks in the NOFO production design workflow",
           width: 800,
           height: 450,
           className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
