@@ -61,6 +61,14 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
           text: "At the same time, <strong>an end-to-end production design workflow was formalized and executed by a dedicated team of production designers</strong>, with centralized design leadership oversight, to support OpDiv program teams during pilot and early scaling years when internal capacity was limited. This workflow ensured designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. The documentation made roles, handoffs, and quality checks explicit, providing transparency and accountability into the production process while also serving as staffing and planning guidance for OpDivs in future program years.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767472154/CleanShot_2026-01-03_at_15.26.07_mjbeov.gif",
+          alt: "Shared documentation outlining how teams use NOFO Builder to support consistent NOFO delivery",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
+        },
+        {
           type: "paragraph",
           text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. As the work scaled, however, this growing maturity also exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes, making it clear that <strong>improving the applicant experience at scale required addressing how NOFOs were authored, governed, and maintained upstream.</strong>.",
         },
