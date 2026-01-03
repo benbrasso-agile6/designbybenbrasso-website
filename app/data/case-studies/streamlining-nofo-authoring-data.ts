@@ -62,7 +62,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767472154/CleanShot_2026-01-03_at_15.26.07_mjbeov.gif",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767473661/CleanShot_2026-01-03_at_15.52.09_tpn7vm.gif",
           alt: "Shared documentation outlining how teams use NOFO Builder to support consistent NOFO delivery",
           width: 800,
           height: 450,
