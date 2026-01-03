@@ -75,7 +75,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    title: "Streamlining NOFO authoring and workflows",
+    title: "NOFO authoring workflows",
     description:
       "Designed and validated a new approach to <strong>reduce administrative burden in creating federal funding opportunities at HHS</strong>.",
     slug: "streamlining-nofo-authoring-and-workflows",
