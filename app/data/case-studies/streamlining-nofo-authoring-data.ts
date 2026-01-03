@@ -24,8 +24,8 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     { label: "Tools", value: ["Figma", "GitHub", "Python", "Django"] },
   ],
   mainImage: {
-    src: "/images/image.png",
-    alt: "Streamlining NOFO authoring and workflows project overview",
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767470641/NOFO_Composer_mainImage_lxjpde.png",
+    alt: "Visual web pages of Composer representing a simplified, governed approach to creating federal funding opportunities at HHS",
     width: 800,
     height: 450,
     priority: true,
