@@ -8,7 +8,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     "Detailed case study of the NOFO Composer MVP project, focusing on reducing administrative burden in the creation of Notices of Funding Opportunity at HHS.",
   projectOverviewBanner: {
     description:
-      "The goal of this project was to reduce administrative burden in the creation of Notices of Funding Opportunity by improving how they are authored, governed, and maintained across HHS. As part of the Simpler NOFO initiative, the work resulted in a user-validated NOFO Composer MVP that established a research-backed foundation for fast-follow releases and informs ongoing improvements and prioritization within the HHS Office of Grants’ broader technology modernization effort, known as Simpler Grants Management.",
+      "This project focused on reducing administrative burden in how federal funding opportunities are created at HHS. It validated a research-backed foundation for improving authoring, governance, and future modernization efforts.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
@@ -24,12 +24,13 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     { label: "Tools", value: ["Figma", "GitHub", "Python", "Django"] },
   ],
   mainImage: {
-    src: "/images/image.png",
-    alt: "Streamlining NOFO authoring and workflows project overview",
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767470641/NOFO_Composer_mainImage_lxjpde.png",
+    alt: "Visual web pages of Composer representing a simplified, governed approach to creating federal funding opportunities at HHS",
     width: 800,
     height: 450,
     priority: true,
-    className: "rounded-lg my-6 w-full object-cover",
+    className: "rounded-lg mt-12 mb-6 w-full object-cover",
+    showBorder: false,
   },
   sections: [
     {
@@ -41,19 +42,35 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: '<strong>The Simpler NOFO initiative was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible</strong>. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. <a href="https://simplergrants.hhs.gov/simplernofos/overview" target="_blank" rel="noopener noreferrer">Early research, prototypes, and pilots</a> demonstrated that these changes could meaningfully improve clarity and usability for applicants.',
+          text: '<strong><a href="https://simplergrants.hhs.gov/simplernofos/overview" target="_blank" rel="noopener noreferrer">The Simpler NOFO initiative</a> was created to reduce applicant burden by making NOFOs clearer, more consistent, and more accessible</strong>. Through standardized content guides, simplified language, and an accessible design system, Simpler NOFOs helped applicants more easily find key information, understand requirements, and navigate the application process. Early research, prototypes, and <a href="https://simplergrants.hhs.gov/simplernofos/evaluation/evaluation-findings#pilot-findings" target="_blank" rel="noopener noreferrer">pilots demonstrated that these changes could meaningfully improve clarity and usability for applicants</a>.',
         },
         {
           type: "paragraph",
-          text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use.",
+          text: "As the initiative matured, <strong>the work expanded beyond improving individual NOFOs to supporting repeatable delivery at scale</strong>. Guidance for using NOFO Builder was documented and shared across teams, enabling consistent onboarding and day-to-day use as more programs and agencies adopted the approach.",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767472154/CleanShot_2026-01-03_at_15.26.07_mjbeov.gif",
+          alt: "Shared documentation outlining how teams use NOFO Builder to support consistent NOFO delivery",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
         },
         {
           type: "paragraph",
-          text: "At the same time, the end-to-end production design workflow was formalized to ensure designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. This documentation made roles, handoffs, and quality checks explicit, supporting consistency and accessibility as volume increased.",
+          text: "At the same time, <strong>an end-to-end production design workflow was formalized and executed by a dedicated team of production designers</strong>, with centralized design leadership oversight, to support OpDiv program teams during pilot and early scaling years when internal capacity was limited. This workflow ensured designed NOFOs could be produced, reviewed, and published reliably across agencies and timelines. The documentation made roles, handoffs, and quality checks explicit, providing transparency and accountability into the production process while also serving as staffing and planning guidance for OpDivs in future program years.",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767473661/CleanShot_2026-01-03_at_15.52.09_tpn7vm.gif",
+          alt: "Diagram illustrating roles, handoffs, and quality checks in the NOFO production design workflow",
+          width: 800,
+          height: 450,
+          className: "rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600",
         },
         {
           type: "paragraph",
-          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. At the same time, this growing maturity exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes. <strong>Improving the applicant experience at scale now required addressing how NOFOs were authored, governed, and maintained upstream</strong>.",
+          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. As the work scaled, however, this growing maturity also exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes, making it clear that <strong>improving the applicant experience at scale required addressing how NOFOs were authored, governed, and maintained upstream</strong>.",
         },
       ],
     },

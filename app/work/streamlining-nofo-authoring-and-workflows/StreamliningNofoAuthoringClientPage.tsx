@@ -155,19 +155,22 @@ export default function StreamliningNofoAuthoringClientPage() {
       </h1>
 
       <div className="relative mt-12">
-        {/* {caseStudy.mainImage && (
+        {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
             <Image
               src={caseStudy.mainImage.src || "/placeholder.svg"}
               alt={caseStudy.mainImage.alt}
               width={caseStudy.mainImage.width}
               height={caseStudy.mainImage.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
+              className={cn(
+                "rounded-lg w-full object-cover",
+                caseStudy.mainImage.showBorder && "border-2 border-neutral-700 dark:border-neutral-600",
+              )}
               priority={caseStudy.mainImage.priority}
               unoptimized
             />
           </div>
-        )} */}
+        )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
           {caseStudy.projectOverviewBanner && (

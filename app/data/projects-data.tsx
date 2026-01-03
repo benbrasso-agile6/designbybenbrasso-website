@@ -84,11 +84,11 @@ export const projectsData: Project[] = [
     hasCaseStudy: true,
     stats: [
       {
-        label: "Users showing adoption readiness",
+        label: "Program teams showing adoption readiness",
         value: "87%",
       },
       {
-        label: "Users likely to use Composer",
+        label: "Program teams likely to use Composer",
         value: "100%",
       },
     ],
