@@ -62,7 +62,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. At the same time, this growing maturity exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes. <strong>Improving the applicant experience at scale now required addressing how NOFOs were authored, governed, and maintained upstream</strong>.",
+          text: "Together, these efforts made it possible to support multiple agencies, designers, and timelines while maintaining consistency and accessibility. As the work scaled, however, this growing maturity also exposed the limits of existing authoring tools and workflows. Producing simpler and more accessible NOFOs increasingly depended on complex, manual coordination behind the scenes, making it clear that <strong>improving the applicant experience at scale required addressing how NOFOs were authored, governed, and maintained upstream.</strong>.",
         },
       ],
     },
