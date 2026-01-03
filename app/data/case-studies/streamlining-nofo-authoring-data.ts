@@ -29,7 +29,8 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
     width: 800,
     height: 450,
     priority: true,
-    className: "rounded-lg my-6 w-full object-cover",
+    className: "rounded-lg mt-12 mb-6 w-full object-cover",
+    showBorder: false,
   },
   sections: [
     {
