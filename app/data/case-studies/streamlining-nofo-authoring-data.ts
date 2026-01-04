@@ -153,7 +153,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1767570539/NOFO_Composer_bottom_image_pagliq.png",
-          alt: "Line chart of the amount of mobile check-ins and travel claims filed overtime",
+          alt: "Summary of key outcomes showing strong adoption readiness, ease of use, and policy administrator validation for the Composer MVP",
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
