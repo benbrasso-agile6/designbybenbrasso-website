@@ -168,7 +168,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Twelve of the thirteen participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
+          text: "12 of the 13 participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
         },
         {
           type: "paragraph",
