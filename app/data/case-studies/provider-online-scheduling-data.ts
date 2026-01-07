@@ -112,7 +112,15 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options. At the same time, <strong>we had to balance several competing priorities to define our minimum viable product (MVP). These included aligning with existing VA.gov scheduling design patterns, keeping the experience low in cognitive load, ensuring timely access to accurate data, and accounting for how much information the EPS and VA system APIs could return</strong> in one or multiple calls—factors that could directly affect page load performance.",
+          text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options.",
+        }, 
+        {
+          type: "paragraph",
+          text: "12 of 13 participants found the provider availability filter successfully; however, 1 screen reader user was unable to proceed — signaling a critical accessibility issue that shaped our next iteration.",
+        },
+        {
+          type: "paragraph",
+          text: "At the same time, <strong>we had to balance several competing priorities to define our minimum viable product (MVP). These included aligning with existing VA.gov scheduling design patterns, keeping the experience low in cognitive load, ensuring timely access to accurate data, and accounting for how much information the EPS and VA system APIs could return</strong> in one or multiple calls—factors that could directly affect page load performance.",
         },
         {
           type: "paragraph",
