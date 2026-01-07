@@ -55,6 +55,12 @@ export default function ProviderOnlineSchedulingClientPage() {
             ))}
           </ol>
         )
+      case "label":
+        return (
+          <p key={index} className="content-label">
+            {item.text}
+          </p>
+        )
       case "image":
         if (item.src && item.alt) {
           const isPng = item.src.toLowerCase().endsWith(".png")

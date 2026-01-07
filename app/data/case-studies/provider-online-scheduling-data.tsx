@@ -9,8 +9,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
-    role: 
-      "Lead product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
+    role: "Lead product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, executive communication, data storytelling, stakeholder advocate, consensus-builder, service design, information architecture, prototyping, accessibility specialist",
     tools:
@@ -113,7 +112,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options.",
-        }, 
+        },
         {
           type: "paragraph",
           text: "While most participants were able to use the provider availability filter successfully, testing surfaced an accessibility issue for a screen reader user that we needed to address before moving forward.",
@@ -167,6 +166,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           text: "15 Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
         },
         {
+          type: "label",
+          text: "Accessibility finding → design decision",
+        },
+        {
           type: "paragraph",
           text: "12 of the 13 participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
         },
@@ -177,7 +180,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: 'In parallel, Veterans responded positively to the filter and sort interface. Based on this feedback, <a href="https://github.com/department-of-veterans-affairs/vets-design-system-documentation/issues/3185" target="_blank" rel="noopener noreferrer">the filter and sort design pattern was contributed to the VA.gov Design System</a>, where it later <a href="https://design.va.gov/templates/search-results" target="_blank" rel="noopener noreferrer">helped shape a new experimental search results component</a>.',
-        },   
+        },
         {
           type: "paragraph",
           text: "<strong>Key takeaways:</strong>",
@@ -193,7 +196,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "While the Veteran-facing experience was being rapidly designed and tested, we also <strong>created an ecosystem map to give leadership, engineers, product managers, privacy officers, VA scheduling staff, and external partners a shared understanding of all the moving parts.</strong> The map helped visualize the people, systems, tools, environments, and dependencies involved in delivering a high-quality care experience for Veterans.",
-        },    
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",

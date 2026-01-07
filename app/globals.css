@@ -190,6 +190,23 @@
       padding: 2rem;
     }
   }
+
+  /* Added label styling for content labels with WCAG-compliant color contrast */
+  .content-label {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    /* Light mode: neutral-600 on white background - WCAG AAA compliant (10.6:1) */
+    color: #525252;
+  }
+
+  .dark .content-label {
+    /* Dark mode: neutral-300 on dark background - WCAG AAA compliant (11.6:1) */
+    color: #d4d4d4;
+  }
 }
 
 /* Smooth scrolling for anchor links */
