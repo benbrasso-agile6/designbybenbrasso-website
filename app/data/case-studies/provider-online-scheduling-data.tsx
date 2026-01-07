@@ -175,7 +175,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Because a screen reader participant was blocked by the provider availability pattern during testing, I simplified the provider list interaction and deprioritized advanced filtering for MVP to ensure all Veterans could complete scheduling without assistive-technology blockers.",
+          text: "<strong>Because a screen reader participant was blocked by the provider availability pattern during testing, I simplified the provider list interaction and deprioritized advanced filtering for MVP</strong> to ensure all Veterans could complete scheduling without assistive-technology blockers.",
         },
         {
           type: "paragraph",
