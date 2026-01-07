@@ -128,6 +128,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
+          text: "Our research goal was to understand how Veterans navigated referrals and where the biggest pain points were in the scheduling journey — particularly for accessibility users and first-time schedulers.",
+        },
+        {
+          type: "paragraph",
+          text: "We chose usability testing, contextual inquiry, and prototype concept testing to ensure we could both validate task flows and uncover mental-model mismatches.",
+        },
+        {
+          type: "paragraph",
           text: '<strong>We conducted a <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling/research/2024-06%20Community%20Care%20Self-Scheduling%20-%20Usability%20and%20Concept%20Testing" target="_blank" rel="noopener noreferrer">remote, moderated research study with Veterans</a> that included 3 methods of collecting feedback:</strong>',
         },
         {
