@@ -16,7 +16,7 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
     return null
   }
 
-  const { description, skills, tools, date, disclaimer } = bannerData // Destructure disclaimer from bannerData
+  const { description, role, skills, tools, date, disclaimer } = bannerData // Destructure role from bannerData
 
   const defaultDisclaimer =
     "Disclaimer: These views are my own and do not represent the U.S. Department of Veterans Affairs. Personally identifiable information (PII) and protected health information (PHI) were not used. Protected and sensitive information were excluded or redacted."
@@ -53,6 +53,14 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
       )}
 
       <div className="space-y-4 border-t border-brand-peach-text/30 dark:border-sky-800 pt-6">
+        {role && (
+          <div className="flex flex-col sm:flex-row sm:items-baseline">
+            <h3 className="text-base font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
+              Role
+            </h3>
+            <p className="text-neutral-600 dark:text-sky-200 text-base w-full sm:w-3/4">{role}</p>
+          </div>
+        )}
         <div className="flex flex-col sm:flex-row sm:items-baseline">
           {/* Label font size changed to 1rem */}
           <h3 className="text-base font-semibold text-brand-peach-text dark:text-white w-full sm:w-1/4 mb-1 sm:mb-0">
