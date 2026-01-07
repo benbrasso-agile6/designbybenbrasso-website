@@ -9,7 +9,6 @@ export const aiScribeKpiDashboardData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project aimed to understand gaps and opportunities in the existing care encounter experience to inform the ambient scribe pilot plan and visualize a concept for measuring and reporting outcomes to executive leadership.",
-    role: "Lead product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
     skills: "Human-centered design, UX research and synthesis, service design, AI-powered prototyping",
     tools: "v0 by Vercel, Vercel, Mural, Figma, ChatGPT, VA GPT (Beta), GitHub",
     date: "February - May 2025",
