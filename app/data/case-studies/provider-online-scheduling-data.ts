@@ -116,7 +116,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         }, 
         {
           type: "paragraph",
-          text: "12 of 13 participants found the provider availability filter successfully; however, 1 screen reader user was unable to proceed — signaling a critical accessibility issue that shaped our next iteration.",
+          text: "While most participants were able to use the provider availability filter successfully, testing surfaced an accessibility issue for a screen reader user that we needed to address before moving forward.",
         },
         {
           type: "paragraph",
