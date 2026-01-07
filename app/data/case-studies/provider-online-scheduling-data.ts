@@ -172,7 +172,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "12 of the 13 participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
+          text: "Because a screen reader participant was blocked by the provider availability pattern during testing, I partnered with accessibility specialists and engineering to simplify the provider list interaction and deprioritize advanced filtering for MVP. This ensured that all Veterans could complete scheduling without encountering assistive-technology blockers.",
         },
         {
           type: "paragraph",
