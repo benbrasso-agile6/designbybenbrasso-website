@@ -162,14 +162,6 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           text: "Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models. This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
         },
         {
-          type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
-          alt: "Community care appointment scheduling user interface process",
-          width: 400,
-          height: 225,
-          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
-        },
-        {
           type: "paragraph",
           text: "15 Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
         },
@@ -184,6 +176,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "<strong>Because a screen reader participant was blocked by the provider availability pattern during testing, I simplified the provider list interaction and deprioritized advanced filtering for MVP</strong> to ensure all Veterans could complete scheduling without assistive-technology blockers.",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
+          alt: "Community care appointment scheduling user interface process",
+          width: 400,
+          height: 225,
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
         },
         {
           type: "paragraph",
