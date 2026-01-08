@@ -229,10 +229,15 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "<strong>Dramatically reduced scheduling time through the External Provider Scheduling (EPS) platform,</strong> from an estimated 7 days (10,080 minutes) to just 7 minutes per appointment. If scaled across 250,000 referrals per month, this improvement could save over 41 million minutes—or nearly 700,000 staff hours—each month.",
             "<strong>Improved Veteran satisfaction with the scheduling experience,</strong> as evidenced by high task completion rates, low cognitive load, and unprompted positive feedback during usability testing",
             '<strong>Designed and tested an accessible userflow and prototype,</strong> incorporating feedback from Veterans using assistive technologies to ensure an inclusive experience. In addition, we <a href="https://depo-platform-documentation.scrollhelp.site/research-design/accessible-prototyping-with-codepen" target="_blank" rel="noopener noreferrer">contributed guidance on accessible prototyping with CodePen to the VA Platform research community,</a> helping other teams adopt more inclusive design and testing practices.',
-            "<strong>Contributed a new filter and sort design pattern to the VA.gov Design System,</strong> based on successful usability findings, which was later used to inform the platform’s experimental search results component—demonstrating platform reusability and cross-team impact",
+            "<strong>Contributed a new filter and sort design pattern to the VA.gov Design System,</strong> based on successful usability findings, which was later used to inform the platform's experimental search results component—demonstrating platform reusability and cross-team impact",
             "<strong>Created and shared a comprehensive ecosystem map</strong> that helped align engineers, product teams, privacy officers, and scheduling stakeholders—serving as a foundational artifact for cross-functional collaboration and future decision-making",
           ],
         },
+      ],
+    },
+    {
+      title: "",
+      content: [
         {
           type: "paragraph",
           text: "With more time and stabilized API responses, I would have run a second round of accessibility-focused usability testing on the provider list. This would have allowed us to validate richer interactions—such as scheduling an appointment directly from the provider list—without compromising accessibility, performance, or MVP reliability.",
