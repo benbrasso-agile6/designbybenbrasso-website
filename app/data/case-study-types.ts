@@ -4,8 +4,8 @@ export interface ProjectDetailItem {
 }
 
 export interface CaseStudyContentItem {
-  type: "paragraph" | "list" | "numeric-list" | "image" | "h3" // Added "numeric-list"
-  text?: string // For paragraph and h3
+  type: "paragraph" | "list" | "numeric-list" | "image" | "h3" | "label" // Added "numeric-list" and "label"
+  text?: string // For paragraph, h3, and label
   items?: string[] // For list and numeric-list
   src?: string // For image
   alt?: string // For image

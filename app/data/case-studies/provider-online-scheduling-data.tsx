@@ -9,6 +9,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
+    role: "Principal product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, executive communication, data storytelling, stakeholder advocate, consensus-builder, service design, information architecture, prototyping, accessibility specialist",
     tools:
@@ -110,7 +111,19 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options. At the same time, <strong>we had to balance several competing priorities to define our minimum viable product (MVP). These included aligning with existing VA.gov scheduling design patterns, keeping the experience low in cognitive load, ensuring timely access to accurate data, and accounting for how much information the EPS and VA system APIs could return</strong> in one or multiple calls—factors that could directly affect page load performance.",
+          text: "Veterans prioritized appointment availability and the ability to sort providers by distance or last name (A–Z), which gave us a clear North Star when exploring userflow options.",
+        },
+        {
+          type: "paragraph",
+          text: "While most participants were able to use the provider availability filter successfully, testing surfaced an accessibility issue for a screen reader user that we needed to address before moving forward.",
+        },
+        {
+          type: "paragraph",
+          text: "At the same time, <strong>we had to balance several competing priorities to define our minimum viable product (MVP). These included aligning with existing VA.gov scheduling design patterns, keeping the experience low in cognitive load, ensuring timely access to accurate data, and accounting for how much information the EPS and VA system APIs could return</strong> in one or multiple calls—factors that could directly affect page load performance.",
+        },
+        {
+          type: "paragraph",
+          text: "To align on MVP scope, <strong>I led cross-functional tradeoff discussions with product, engineering, referral operations, front-line community care scheduling offices, data and API partners, and VA stakeholders to balance accessibility, performance, and delivery timelines.</strong>",
         },
         {
           type: "paragraph",
@@ -126,6 +139,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
+          text: "Our research goal was to understand how Veterans navigated referrals and where the biggest pain points were in the scheduling journey — particularly for accessibility users and first-time schedulers.",
+        },
+        {
+          type: "paragraph",
+          text: "We chose usability testing, contextual inquiry, and prototype concept testing to ensure we could both validate task flows and uncover mental-model mismatches.",
+        },
+        {
+          type: "paragraph",
           text: '<strong>We conducted a <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling/research/2024-06%20Community%20Care%20Self-Scheduling%20-%20Usability%20and%20Concept%20Testing" target="_blank" rel="noopener noreferrer">remote, moderated research study with Veterans</a> that included 3 methods of collecting feedback:</strong>',
         },
         {
@@ -137,6 +158,30 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           ],
         },
         {
+          type: "label",
+          text: "Mental model finding → design decision",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models.</strong> This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
+        },
+        {
+          type: "paragraph",
+          text: "15 Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
+        },
+        {
+          type: "label",
+          text: "Accessibility finding → design decision",
+        },
+        {
+          type: "paragraph",
+          text: "12 of the 13 participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Because a screen reader participant was blocked by the provider availability pattern during testing, I simplified the provider list interaction and deprioritized advanced filtering for MVP</strong> to ensure all Veterans could complete scheduling without assistive-technology blockers.",
+        },
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751573044/CleanShot_2025-07-03_at_16.01.57_wszt2p.gif",
           alt: "Community care appointment scheduling user interface process",
@@ -146,16 +191,8 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Fifteen Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
+          text: 'While accessibility testing surfaced a blocker for one participant, the broader group responded positively to the filter and sort interface. Based on this feedback, <a href="https://github.com/department-of-veterans-affairs/vets-design-system-documentation/issues/3185" target="_blank" rel="noopener noreferrer">the filter and sort design pattern was contributed to the VA.gov Design System</a>, where it later <a href="https://design.va.gov/templates/search-results" target="_blank" rel="noopener noreferrer">helped shape a new experimental search results component</a>.',
         },
-        {
-          type: "paragraph",
-          text: "Twelve of the thirteen participants were able to find the call to action to review provider availability. However, one screen reader user (using JAWS) encountered significant issues navigating the provider list page and was unable to proceed.",
-        },
-        {
-          type: "paragraph",
-          text: 'Veterans responded positively to the filter and sort interface. Based on this feedback, <a href="https://github.com/department-of-veterans-affairs/vets-design-system-documentation/issues/3185" target="_blank" rel="noopener noreferrer">the filter and sort design pattern was contributed to the VA.gov Design System</a>, where it later <a href="https://design.va.gov/templates/search-results" target="_blank" rel="noopener noreferrer">helped shape a new experimental search results component</a>.',
-        },   
         {
           type: "paragraph",
           text: "<strong>Key takeaways:</strong>",
@@ -171,7 +208,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "While the Veteran-facing experience was being rapidly designed and tested, we also <strong>created an ecosystem map to give leadership, engineers, product managers, privacy officers, VA scheduling staff, and external partners a shared understanding of all the moving parts.</strong> The map helped visualize the people, systems, tools, environments, and dependencies involved in delivering a high-quality care experience for Veterans.",
-        },    
+        },
         {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751586617/CleanShot_2025-07-03_at_19.47.21_rmviky.gif",
@@ -192,9 +229,18 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "<strong>Dramatically reduced scheduling time through the External Provider Scheduling (EPS) platform,</strong> from an estimated 7 days (10,080 minutes) to just 7 minutes per appointment. If scaled across 250,000 referrals per month, this improvement could save over 41 million minutes—or nearly 700,000 staff hours—each month.",
             "<strong>Improved Veteran satisfaction with the scheduling experience,</strong> as evidenced by high task completion rates, low cognitive load, and unprompted positive feedback during usability testing",
             '<strong>Designed and tested an accessible userflow and prototype,</strong> incorporating feedback from Veterans using assistive technologies to ensure an inclusive experience. In addition, we <a href="https://depo-platform-documentation.scrollhelp.site/research-design/accessible-prototyping-with-codepen" target="_blank" rel="noopener noreferrer">contributed guidance on accessible prototyping with CodePen to the VA Platform research community,</a> helping other teams adopt more inclusive design and testing practices.',
-            "<strong>Contributed a new filter and sort design pattern to the VA.gov Design System,</strong> based on successful usability findings, which was later used to inform the platform’s experimental search results component—demonstrating platform reusability and cross-team impact",
+            "<strong>Contributed a new filter and sort design pattern to the VA.gov Design System,</strong> based on successful usability findings, which was later used to inform the platform's experimental search results component—demonstrating platform reusability and cross-team impact",
             "<strong>Created and shared a comprehensive ecosystem map</strong> that helped align engineers, product teams, privacy officers, and scheduling stakeholders—serving as a foundational artifact for cross-functional collaboration and future decision-making",
           ],
+        },
+      ],
+    },
+    {
+      title: "",
+      content: [
+        {
+          type: "paragraph",
+          text: "With more time and stabilized API responses, I would have run a second round of accessibility-focused usability testing on the provider list. This would have allowed us to validate richer interactions—such as scheduling an appointment directly from the provider list—without compromising accessibility, performance, or MVP reliability.",
         },
         {
           type: "image",
