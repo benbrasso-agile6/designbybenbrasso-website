@@ -123,7 +123,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "To align on MVP scope, I led cross-functional tradeoff discussions with product, engineering, referral operations, front-line community care scheduling offices, data and API partners, and VA stakeholders to balance accessibility, performance, and delivery timelines.",
+          text: "To align on MVP scope, <strong>I led cross-functional tradeoff discussions with product, engineering, referral operations, front-line community care scheduling offices, data and API partners, and VA stakeholders to balance accessibility, performance, and delivery timelines.</strong>",
         },
         {
           type: "paragraph",
