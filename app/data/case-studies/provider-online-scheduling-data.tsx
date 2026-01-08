@@ -166,6 +166,14 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           text: "<strong>Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models.</strong> This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
         },
         {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751852095/CleanShot_2025-07-06_at_21.33.20_lfgfui.gif",
+          alt: "Community care appointment scheduling user interface process from Referrals and Requests page",
+          width: 400,
+          height: 225,
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
+        },
+        {
           type: "paragraph",
           text: "15 Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
         },
@@ -236,19 +244,11 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       ],
     },
     {
-      title: "",
+      title: "Reflection",
       content: [
         {
           type: "paragraph",
           text: "With more time and stabilized API responses, I would have run a second round of accessibility-focused usability testing on the provider list. This would have allowed us to validate richer interactions—such as scheduling an appointment directly from the provider list—without compromising accessibility, performance, or MVP reliability.",
-        },
-        {
-          type: "image",
-          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751852095/CleanShot_2025-07-06_at_21.33.20_lfgfui.gif",
-          alt: "Community care appointment scheduling user interface process from Referrals and Requests page",
-          width: 400,
-          height: 225,
-          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
         },
       ],
     },
