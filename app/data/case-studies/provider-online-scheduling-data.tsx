@@ -236,7 +236,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
       ],
     },
     {
-      title: "",
+      title: "Reflection",
       content: [
         {
           type: "paragraph",
