@@ -234,6 +234,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           ],
         },
         {
+          type: "paragraph",
+          text: "With more time and stabilized API responses, I would have run a second round of accessibility-focused usability testing on the provider list. This would have allowed us to validate richer interactions—such as scheduling an appointment directly from the provider list—without compromising accessibility, performance, or MVP reliability.",
+        },
+        {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1751852095/CleanShot_2025-07-06_at_21.33.20_lfgfui.gif",
           alt: "Community care appointment scheduling user interface process from Referrals and Requests page",
