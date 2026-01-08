@@ -9,7 +9,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "The goal of this project was to quickly design and build an appointment scheduling experience that allowed Veterans to choose a community care provider and time slot—a first for VA.gov. This solution enabled Veterans to self-schedule appointments directly and securely through the trusted VA.gov platform.",
-    role: "Lead product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
+    role: "Principal product designer responsible for research strategy, defining the self-scheduling flow, stakeholder alignment, and leading design decision-making across product, engineering, and clinical partners.",
     skills:
       "HCD and product leadership, UX product design, UX research and synthesis, executive communication, data storytelling, stakeholder advocate, consensus-builder, service design, information architecture, prototyping, accessibility specialist",
     tools:
