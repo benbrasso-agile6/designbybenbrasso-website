@@ -143,10 +143,6 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models. This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
-        },
-        {
-          type: "paragraph",
           text: '<strong>We conducted a <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/products/health-care/appointments/va-online-scheduling/initiatives/community-care-direct-scheduling/research/2024-06%20Community%20Care%20Self-Scheduling%20-%20Usability%20and%20Concept%20Testing" target="_blank" rel="noopener noreferrer">remote, moderated research study with Veterans</a> that included 3 methods of collecting feedback:</strong>',
         },
         {
@@ -156,6 +152,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
             "<strong>Usability testing</strong> for self-scheduling a VA approved community care appointment using a Figma prototype for sighted users and a CodePen prototype for assistive technology (AT) users.",
             "<strong>Concept testing to obtain feedback on a prototype</strong> for finding VA approved community care referrals on VA.gov that need to be self-scheduled and accessing referrals from past appointments.",
           ],
+        },
+        {
+          type: "paragraph",
+          text: "Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models. This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
         },
         {
           type: "image",
