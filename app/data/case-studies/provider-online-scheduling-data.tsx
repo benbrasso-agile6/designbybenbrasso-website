@@ -159,7 +159,7 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models. This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
+          text: "<strong>Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models.</strong> This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
         },
         {
           type: "paragraph",
