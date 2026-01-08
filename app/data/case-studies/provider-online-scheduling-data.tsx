@@ -123,6 +123,10 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         },
         {
           type: "paragraph",
+          text: "To align on MVP scope, I led cross-functional tradeoff discussions with product, engineering, referral operations, front-line community care scheduling offices, data and API partners, and VA stakeholders to balance accessibility, performance, and delivery timelines.",
+        },
+        {
+          type: "paragraph",
           text: "<strong>We made a “big bet” that Veterans would prefer a userflow with fewer steps and provider availability accessible as early as possible.</strong> However, because we were designing in parallel with technical discovery around API capabilities, we had to remain flexible. This meant preparing for multiple userflows in case our preferred approach wasn't technically feasible.",
         },
         {
