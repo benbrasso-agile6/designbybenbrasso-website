@@ -158,10 +158,6 @@ export const providerOnlineSchedulingData: CaseStudyData = {
           ],
         },
         {
-          type: "label",
-          text: "Mental model finding → design decision",
-        },
-        {
           type: "paragraph",
           text: "<strong>Because fewer than half of participants could confidently locate referrals waiting to be scheduled, I recommended surfacing referrals through multiple entry points and clarifying terminology to better match Veterans’ mental models.</strong> This reduced navigation dead ends and helped Veterans understand referral status without needing staff intervention.",
         },
@@ -176,10 +172,6 @@ export const providerOnlineSchedulingData: CaseStudyData = {
         {
           type: "paragraph",
           text: "15 Veterans—including four who used assistive technology—participated in remote, moderated concept and usability testing of the community care self-scheduling prototype. <strong>Veterans were generally able to complete all tasks and navigate the scheduling process with ease,</strong> though a few friction points emerged. Despite this, many offered unprompted positive feedback about the tool.",
-        },
-        {
-          type: "label",
-          text: "Accessibility finding → design decision",
         },
         {
           type: "paragraph",
