@@ -25,7 +25,7 @@ export default function FeaturedWorkSection({
         {showHeading && (
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 px-8">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
-              My <span className="text-sky-600 dark:text-sky-500">case studies</span>
+              Featured  <span className="text-sky-600 dark:text-sky-500">case studies</span>
             </h2>
             <p className="max-w-[700px] text-neutral-700 dark:text-neutral-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               A selection of projects—not always completed in a linear process—that showcase my skills in UX design,
