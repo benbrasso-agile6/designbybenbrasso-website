@@ -63,7 +63,7 @@ export default function HeroSection() {
                 className="inline-block text-black dark:text-white"
               >
                 {" "}
-                UX product designer and navigator of the nebulous. 🧭
+                UX product designer and navigator of the nebulous 🧭
               </motion.span>
             </h1>
           </div>
