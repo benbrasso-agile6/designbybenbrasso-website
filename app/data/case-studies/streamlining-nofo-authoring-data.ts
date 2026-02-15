@@ -9,6 +9,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project focused on reducing administrative burden in how federal funding opportunities are created at HHS. It validated a research-backed foundation for improving authoring, governance, and future modernization efforts.",
+    role: "Principal Product Designer responsible for research strategy, workflow and service design, stakeholder alignment across HHS grants policy offices, and translating policy and operational constraints into scalable authoring and review experiences.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
@@ -99,7 +100,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
       ],
     },
-  {
+    {
       title: "Action",
       content: [
         {
@@ -157,6 +158,15 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },
+      ],
+    },
+    {
+      title: "Reflection",
+      content: [
+        {
+          type: "paragraph",
+          text: "Throughout this work, it became clear that streamlining NOFO authoring workflows was as much an organizational alignment challenge as it was a product design effort. While we successfully clarified and modernized core workflows, long-term impact depends on governance, shared standards, and structured adoption across HHS grant-making operating divisions. If I could revisit the project with additional runway, I would invest earlier in a cross-division governance and onboarding strategy to reduce interpretation variability and strengthen consistency at scale. This experience reinforced that in complex federal environments, sustainable modernization requires systems thinking across policy, process, and people—not just interface improvements.",
         },
       ],
     },

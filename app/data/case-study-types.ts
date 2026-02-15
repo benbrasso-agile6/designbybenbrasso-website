@@ -21,6 +21,7 @@ export interface CaseStudySection {
 
 export interface ProjectOverviewBannerData {
   description: string
+  role?: string // Optional role description for the project
   skills: string
   tools: string
   date: string
