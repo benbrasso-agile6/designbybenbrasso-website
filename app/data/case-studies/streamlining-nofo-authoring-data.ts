@@ -166,7 +166,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "With more time and a broader participant pool, I would have expanded research to include additional OpDiv administrators and program-level writers earlier in the process. This would have allowed us to validate governance workflows across a wider range of agency contexts and surface edge cases in content ownership and policy update timing before finalizing the MVP scope.",
+          text: "Throughout this work, it became clear that streamlining NOFO authoring workflows was as much an organizational alignment challenge as it was a product design effort. While we successfully clarified and modernized core workflows, long-term impact depends on governance, shared standards, and structured adoption across HHS grant-making operating divisions. If I could revisit the project with additional runway, I would invest earlier in a cross-division governance and onboarding strategy to reduce interpretation variability and strengthen consistency at scale. This experience reinforced that in complex federal environments, sustainable modernization requires systems thinking across policy, process, and people—not just interface improvements.",
         },
       ],
     },
