@@ -9,6 +9,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project focused on reducing administrative burden in how federal funding opportunities are created at HHS. It validated a research-backed foundation for improving authoring, governance, and future modernization efforts.",
+    role: "Product lead and UX designer responsible for research strategy, defining the authoring and governance model, stakeholder alignment, and leading design decision-making across product, engineering, and policy partners.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
@@ -157,6 +158,15 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
           width: 800,
           height: 450,
           className: "rounded-lg mt-12 mb-6 w-full object-cover",
+        },
+      ],
+    },
+    {
+      title: "Reflection",
+      content: [
+        {
+          type: "paragraph",
+          text: "With more time and a broader participant pool, I would have expanded research to include additional OpDiv administrators and program-level writers earlier in the process. This would have allowed us to validate governance workflows across a wider range of agency contexts and surface edge cases in content ownership and policy update timing before finalizing the MVP scope.",
         },
       ],
     },
