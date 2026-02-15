@@ -9,7 +9,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
   projectOverviewBanner: {
     description:
       "This project focused on reducing administrative burden in how federal funding opportunities are created at HHS. It validated a research-backed foundation for improving authoring, governance, and future modernization efforts.",
-    role: "Product lead and UX designer responsible for research strategy, defining the authoring and governance model, stakeholder alignment, and leading design decision-making across product, engineering, and policy partners.",
+    role: "Principal Product Designer responsible for research strategy, workflow and service design, stakeholder alignment across HHS grants policy offices, and translating policy and operational constraints into scalable authoring and review experiences.",
     skills:
       "HCD and product leadership, UX product design, UX research and AI-assisted synthesis, executive communication, storytelling, leadership and constituent advocacy, service design, user acceptance testing, prototyping, change management",
     tools:
@@ -100,7 +100,7 @@ export const streamliningNofoAuthoringData: CaseStudyData = {
         },
       ],
     },
-  {
+    {
       title: "Action",
       content: [
         {
