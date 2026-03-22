@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
       },
       {
         label: "Projected annual hours saved",
-        value: "750–1,050 hours across ~300 NOFOs/year",
+        value: "750–1,050 per year",
       },
     ],
   },
