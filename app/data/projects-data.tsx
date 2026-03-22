@@ -17,6 +17,26 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "NOFO Design Prep Checker",
+    description:
+      "Built a browser-based document prep tool for HHS SimplerNOFOs, <strong>automating a 3–4 hour manual design prep process down to minutes.</strong>",
+    slug: "nofo-design-prep-checker",
+    tags: ["Government", "Product Design", "Automation"],
+    imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1774197261/Frame_685_yvvihx.png",
+    hasCaseStudy: false,
+    caseStudyStatusText: "Case study coming soon",
+    stats: [
+      {
+        label: "Staff time saved per NOFO",
+        value: "2.5–3.5 hours",
+      },
+      {
+        label: "Projected annual hours saved",
+        value: "750–1,050 hours per year",
+      },
+    ],
+  },
+  {
     title: "Ambient scribe KPI dashboard",
     description:
       "Prototyped an Ambient Scribe Pilot KPI Dashboard <strong>using AI to inform VA Digital Health Office's AI investments.</strong>",

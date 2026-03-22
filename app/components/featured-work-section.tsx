@@ -17,7 +17,7 @@ export default function FeaturedWorkSection({
   sectionClassName = "w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-neutral-900",
   statsHeadingLevel,
 }: FeaturedWorkSectionProps) {
-  const projects = projectsToDisplay ?? projectsData.filter((p) => p.slug !== "direct-online-scheduling").slice(0, 2)
+  const projects = projectsToDisplay ?? projectsData.filter((p) => p.slug !== "direct-online-scheduling").slice(0, 3)
 
   return (
     <section id="work" className={sectionClassName}>
