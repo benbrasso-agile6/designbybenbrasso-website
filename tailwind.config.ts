@@ -12,15 +12,6 @@ const config = {
   prefix: "",
   future: {
     hoverOnlyWhenSupported: true,
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  corePlugins: {
-    lightBlue: false,
-    warmGray: false,
-    trueGray: false,
-    coolGray: false,
-    blueGray: false,
   },
   theme: {
     container: {
