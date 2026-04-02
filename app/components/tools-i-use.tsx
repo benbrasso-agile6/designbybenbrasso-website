@@ -156,18 +156,18 @@ export default function ToolsIUseSection() {
             Tools I use to <span className="text-sky-600 dark:text-sky-500">design</span>
           </h2>
           <div className="flex items-center justify-center gap-3 mt-6">
-            <Switch
-              id="tools-animation-toggle"
-              checked={animationsEnabled}
-              onCheckedChange={setAnimationsEnabled}
-              aria-label={animationsEnabled ? "Disable wiggle animations" : "Enable wiggle animations"}
-            />
             <Label
               htmlFor="tools-animation-toggle"
               className="text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer select-none"
             >
               {animationsEnabled ? "Animations on" : "Animations off"}
             </Label>
+            <Switch
+              id="tools-animation-toggle"
+              checked={animationsEnabled}
+              onCheckedChange={setAnimationsEnabled}
+              aria-label={animationsEnabled ? "Disable wiggle animations" : "Enable wiggle animations"}
+            />
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5">
