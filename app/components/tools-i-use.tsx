@@ -164,7 +164,6 @@ export default function ToolsIUseSection() {
             <Switch
               checked={animationsEnabled}
               onCheckedChange={setAnimationsEnabled}
-              aria-label={animationsEnabled ? "Disable wiggle animations" : "Enable wiggle animations"}
             />
           </label>
         </div>
