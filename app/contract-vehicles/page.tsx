@@ -19,7 +19,7 @@ export default function ContractVehiclesPage() {
 
             <p>
               As a staff member on these contracts, <strong>I’ve contributed to delivering high-quality, user-centered design
-              solutions that help agencies improve accessibility, efficiency, and impact</strong>.
+                solutions that help agencies improve accessibility, efficiency, and impact</strong>.
             </p>
           </article>
 
@@ -31,7 +31,12 @@ export default function ContractVehiclesPage() {
             <h3 className="text-xl font-semibold">
               HHS - Office of Grants (OG) Software Integration and Frontend Technology (SWIFT) BPA
             </h3>
-            <h4 className="text-lg font-bold mt-4">HHS’s Simpler Notice of Funding Opportunities (NOFOs)</h4>
+            <h4 className="text-lg font-bold mt-4">CLIN 3 Surge Support: Simpler Notice of Funding Opportunities (NOFOs)</h4>
+            <ul>
+              <li>Proposal involvement: Work definition writer</li>
+              <li>Start date: March 2026</li>
+            </ul>
+            <h4 className="text-lg font-bold mt-4">Simpler NOFOs Task Order</h4>
             <ul>
               <li>Start date: June 2025</li>
             </ul>
