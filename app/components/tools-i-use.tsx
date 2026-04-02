@@ -32,7 +32,6 @@ import type React from "react"
 import { useState } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
 
 interface ToolItem {
   icon: React.ElementType
@@ -113,7 +112,10 @@ function ToolItemComponent({
 }
 
 export default function ToolsIUseSection() {
-  const [animationsEnabled, setAnimationsEnabled] = useState(true)
+  const [animationsEnabled, setAnimationsEnabled] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true
+    return !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  })
 
   const tools: ToolItem[] = [
     { icon: PaletteIcon, text: "Figma" },
@@ -155,20 +157,16 @@ export default function ToolsIUseSection() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-neutral-900 dark:text-neutral-100">
             Tools I use to <span className="text-sky-600 dark:text-sky-500">design</span>
           </h2>
-          <div className="flex items-center justify-center gap-3 mt-6">
-            <Label
-              htmlFor="tools-animation-toggle"
-              className="text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer select-none"
-            >
+          <label className="flex items-center justify-center gap-3 mt-6 cursor-pointer select-none">
+            <span className="text-sm text-neutral-600 dark:text-neutral-400">
               {animationsEnabled ? "Animations on" : "Animations off"}
-            </Label>
+            </span>
             <Switch
-              id="tools-animation-toggle"
               checked={animationsEnabled}
               onCheckedChange={setAnimationsEnabled}
               aria-label={animationsEnabled ? "Disable wiggle animations" : "Enable wiggle animations"}
             />
-          </div>
+          </label>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5">
           {tools.map((item, index) => (
