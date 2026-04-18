@@ -8,8 +8,8 @@ import type React from "react"
 const caseStudy = nofoDesignPrepCheckerData
 
 const githubLinkData = {
-  url: "[TODO: Add GitHub URL]",
-  text: "Visit NOFO Design Prep Checker repo on GitHub",
+  url: "https://github.com/agilesix/nofo-design-prep-checker",
+  text: "Visit the NOFO Design Prep Checker repo on GitHub",
 }
 
 export default function NofoDesignPrepCheckerClientPage() {
