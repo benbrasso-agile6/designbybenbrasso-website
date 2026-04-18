@@ -150,8 +150,9 @@ export default function NofoDesignPrepCheckerClientPage() {
       </div>
 
       {/* Next Project Link */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <NextProjectLink currentSlug={caseStudy.slug} />
+      <div className="flex justify-between items-center mt-12 print:hidden">
+        <NextProjectLink href="/work/streamlining-nofo-authoring-and-workflows" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
       </div>
 
       {/* Lightbox */}
