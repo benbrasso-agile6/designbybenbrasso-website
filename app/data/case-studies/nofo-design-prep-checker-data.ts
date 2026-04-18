@@ -25,8 +25,8 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
     { label: "Tools", value: ["[TODO: Tool 1]", "[TODO: Tool 2]"] },
   ],
   mainImage: {
-    src: "[TODO: Main image URL]",
-    alt: "[TODO: Main image alt text]",
+    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1749843970/placeholder_case_study_nofo_prep_checker.gif",
+    alt: "NOFO Design Prep Checker project showcase",
     width: 800,
     height: 450,
     priority: true,
