@@ -143,7 +143,7 @@ export default function NofoDesignPrepCheckerClientPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {caseStudy.sections.map((section, index) => (
           <section key={index} className="mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6">{section.heading}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">{section.title}</h2>
             <div className="space-y-4">{section.content.map((item, idx) => renderContent(item, idx))}</div>
           </section>
         ))}
