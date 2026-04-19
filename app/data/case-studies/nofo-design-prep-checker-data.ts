@@ -56,11 +56,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "Every NOFO entering the design phase introduced variability.",
-        },
-        {
-          type: "paragraph",
-          text: "Before design could begin, I observed that teams needed to:",
+          text: "Every NOFO entering the design phase introduced variability. Before design could begin, I observed that teams needed to:",
         },
         {
           type: "list",
@@ -74,11 +70,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>This process typically took 3 to 4 hours per document.</strong>",
-        },
-        {
-          type: "paragraph",
-          text: "But the deeper issue wasn’t just time. <strong>This step introduced friction, inconsistency, and cognitive load at a critical transition point in the workflow.</strong>",
+          text: "<strong>This process typically took 3 to 4 hours per document.</strong> But the deeper issue wasn’t just time. This step introduced friction, inconsistency, and cognitive load at a critical transition point in the workflow.",
         },
         {
           type: "paragraph",
@@ -95,11 +87,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Rather than focusing on improving the manual process itself, I stepped back to understand how NOFOs moved through the system.",
-        },
-        {
-          type: "paragraph",
-          text: "What I saw was a pattern:",
+          text: "Rather than focusing on improving the manual process itself, I stepped back to understand how NOFOs moved through the system. What I saw was a pattern:",
         },
         {
           type: "list",
@@ -119,11 +107,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "I asked a simple but important question: <strong>what if we could automate the predictable parts of design preparation?</strong>",
-        },
-        {
-          type: "paragraph",
-          text: "From that point, the direction became clear. The solution needed to:",
+          text: "I asked a simple but important question: <strong>what if we could automate the predictable parts of design preparation?</strong> From that point, the direction became clear. The solution needed to:",
         },
         {
           type: "list",
@@ -144,15 +128,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>I designed the NOFO Design Prep Checker as a simple, guided workflow that mirrors how teams already think about document preparation.</strong>",
-        },
-        {
-          type: "paragraph",
-          text: "Users upload a document, the tool analyzes its structure and formatting, and then surfaces issues that need attention before design can begin. From there, users can download a cleaned, design-ready version.",
-        },
-        {
-          type: "paragraph",
-          text: "Users upload a document, the tool analyzes its structure and formatting, and then surfaces issues that need attention before design can begin. From there, users can download a cleaned, design-ready version.",
+          text: "<strong>I designed the NOFO Design Prep Checker as a simple, guided workflow that mirrors how teams already think about document preparation.</strong> Users upload a document, the tool analyzes its structure and formatting, and then surfaces issues that need attention before design can begin. From there, users can download a cleaned, design-ready version.",
         },
         {
           type: "paragraph",
@@ -189,11 +165,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "I designed, built, and deployed the application independently, using AI-assisted development tools to accelerate both design and implementation. This allowed me to move quickly from idea to working product while continuously refining the experience.",
-        },
-        {
-          type: "paragraph",
-          text: "<strong>Instead of separating design and development into phases, I worked in a more integrated way.</strong> I would define an interaction, implement it, test it against real documents, and refine it immediately. This created a tight feedback loop where usability and functionality evolved together.",
+          text: "I designed, built, and deployed the application independently, using AI-assisted development tools to accelerate both design and implementation. This allowed me to move quickly from idea to working product while continuously refining the experience. <strong>Instead of separating design and development into phases, I worked in a more integrated way.</strong> I would define an interaction, implement it, test it against real documents, and refine it immediately. This created a tight feedback loop where usability and functionality evolved together.",
         },
         {
           type: "h3",
@@ -230,11 +202,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>What previously took 3 to 4 hours per document was reduced to minutes,</strong> significantly accelerating the transition from content to design. This time savings scaled quickly across the program, allowing teams to move faster without sacrificing quality.",
-        },
-        {
-          type: "paragraph",
-          text: "Just as importantly, the tool improved the consistency of document structure and formatting before design even began. By catching issues earlier in the workflow, it reduced errors and rework downstream.",
+          text: "<strong>What previously took 3 to 4 hours per document was reduced to minutes,</strong> significantly accelerating the transition from content to design. This time savings scaled quickly across the program, allowing teams to move faster without sacrificing quality. Just as importantly, the tool improved the consistency of document structure and formatting before design even began. By catching issues earlier in the workflow, it reduced errors and rework downstream.",
         },
         {
           type: "paragraph",
@@ -246,11 +214,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "Beyond time savings, this work expanded the scope of the SimplerNOFOs initiative and demonstrated how targeted improvements can influence the broader system.",
-        },
-        {
-          type: "paragraph",
-          text: "By addressing a single point of friction, the work:",
+          text: "Beyond time savings, this work expanded the scope of the SimplerNOFOs initiative and demonstrated how targeted improvements can influence the broader system. By addressing a single point of friction, the work:",
         },
         {
           type: "list",
@@ -268,19 +232,11 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       content: [
         {
           type: "paragraph",
-          text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
+          text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design. Rather than relying on designers to manually prepare documents, program teams could now run documents through the tool themselves, identify issues earlier, and enter the design phase with cleaner inputs.",
         },
         {
           type: "paragraph",
-          text: "Rather than relying on designers to manually prepare documents, program teams could now run documents through the tool themselves, identify issues earlier, and enter the design phase with cleaner inputs.",
-        },
-        {
-          type: "paragraph",
-          text: "<strong>This shift enabled a more scalable and efficient workflow while redistributing ownership across teams.</strong>",
-        },
-        {
-          type: "paragraph",
-          text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
+          text: "<strong>This shift enabled a more scalable and efficient workflow while redistributing ownership across teams.</strong> After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
         },
       ],
     },
