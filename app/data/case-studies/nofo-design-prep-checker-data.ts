@@ -219,10 +219,10 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         {
           type: "list",
           items: [
-            "Improved both <strong>speed and quality</strong> across the workflow.",
-            "Strengthened the <strong>connection between content creation and design execution.</strong>",
-            "Reinforced a broader principle that <strong>the most impactful improvements come from fixing the connections between systems, not just the systems themselves.</strong>",
-            "Surfaced important considerations for future platforms, particularly around <strong>validation and content quality.</strong>",
+            "Improved both speed and quality across the workflow.",
+            "Strengthened the connection between content creation and design execution.",
+            "Reinforced a broader principle that the most impactful improvements come from fixing the connections between systems, not just the systems themselves.",
+            "Surfaced important considerations for future platforms, particularly around validation and content quality.",
           ],
         },
       ],

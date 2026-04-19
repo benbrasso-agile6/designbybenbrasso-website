@@ -211,7 +211,7 @@ export default function AiScribeKpiDashboardClientPage() {
           text="Visit previous project"
           isPrevious={true}
         />
-        <NextProjectLink href="/work/patient-check-in" text="Visit next project" />
+        <NextProjectLink href="/work/nofo-design-prep-checker" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (

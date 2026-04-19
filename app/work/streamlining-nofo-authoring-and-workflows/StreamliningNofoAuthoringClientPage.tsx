@@ -216,7 +216,7 @@ export default function StreamliningNofoAuthoringClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink href="/work/provider-online-scheduling" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/nofo-design-prep-checker" text="Visit previous project" isPrevious={true} />
         <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit next project" />
       </div>
 

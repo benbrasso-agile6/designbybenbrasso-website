@@ -23,8 +23,7 @@ export const projectsData: Project[] = [
     slug: "nofo-design-prep-checker",
     tags: ["Government", "Product Design", "Automation"],
     imageUrl: "https://res.cloudinary.com/dpl6apspp/image/upload/v1774197261/Frame_685_yvvihx.png",
-    hasCaseStudy: false,
-    caseStudyStatusText: "Case study coming soon",
+    hasCaseStudy: true,
     stats: [
       {
         label: "Staff time saved per NOFO",
