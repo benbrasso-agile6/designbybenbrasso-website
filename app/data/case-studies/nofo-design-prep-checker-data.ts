@@ -24,15 +24,15 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
   //   { label: "Timeline", value: "[TODO: Timeline]" },
   //   { label: "Tools", value: ["[TODO: Tool 1]", "[TODO: Tool 2]"] },
   // ],
-  mainImage: {
-    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1776624916/NOFO_Design_Prep_Checker_main_ysy1ou.png",
-    alt: "NOFO Design Prep Checker project showcase",
-    width: 800,
-    height: 450,
-    priority: true,
-    className: "rounded-lg mt-12 mb-6 w-full object-cover",
-    showBorder: false,
-  },
+  // mainImage: {
+  //   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1774197261/Frame_685_yvvihx.png",
+  //   alt: "NOFO Design Prep Checker project showcase",
+  //   width: 800,
+  //   height: 450,
+  //   priority: true,
+  //   className: "rounded-lg mt-12 mb-6 w-full object-cover",
+  //   showBorder: false,
+  // },
   sections: [
     {
       title: "Background",
@@ -166,6 +166,14 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         {
           type: "paragraph",
           text: "I designed, built, and deployed the application independently, using AI-assisted development tools to accelerate both design and implementation. This allowed me to move quickly from idea to working product while continuously refining the experience. <strong>Instead of separating design and development into phases, I worked in a more integrated way.</strong> I would define an interaction, implement it, test it against real documents, and refine it immediately. This created a tight feedback loop where usability and functionality evolved together.",
+        },
+        {
+          type: "image",
+          src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1776624916/NOFO_Design_Prep_Checker_main_ysy1ou.png",
+          alt: "Community care appointment scheduling user interface process",
+          width: 400,
+          height: 225,
+          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
         },
         {
           type: "h3",
