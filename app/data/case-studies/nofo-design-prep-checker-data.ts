@@ -13,7 +13,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
     skills:
       "Human-centered design, product strategy, UX design, UX writing, systems thinking, workflow optimization, AI-assisted development, rapid prototyping, front-end development, end-to-end product development",
     tools:
-      "GitHub, Claude.ai, Claude Code, GitHub Copilot, browser-based architecture, document parsing libraries, Cloudflare, US Web Design System",
+      "GitHub, Claude.ai, Claude Code, GitHub Copilot, browser-based architecture, document parsing libraries, Cloudflare, US Web Design System, TypeScript",
     date: "March - April 2026",
     disclaimer:
       "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
@@ -158,5 +158,78 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
           type: "paragraph",
           text: "What mattered most to me was not the technical complexity, but how clearly the tool communicated its output. <strong>I focused on making feedback understandable, actionable, and directly tied to design readiness.</strong>",
         },
+        {
+          type: "h3",
+          text: "Key design decisions",
+        },
+        {
+          type: "paragraph",
+          text: "As I developed the tool, <strong>I made a few deliberate decisions to ensure it would be trusted and adopted:</strong>",
+        },
+        {
+          type: "list",
+          items: [
+            "I prioritized clarity over technical detail so users could quickly understand what needed to be fixed.",
+            "I made it explicit that the tool does not alter policy content, only structure and formatting.",
+            "I designed the application to run entirely in the browser to avoid privacy concerns.",
+            "I treated speed as a core feature, ensuring results were returned in seconds.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "These decisions helped position the tool as both useful and reliable within an existing workflow.",
+        },
+        {
+          type: "h3",
+          text: "Prototyping and delivery",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>This was a true 0 → 1 effort, and I led it end-to-end from concept through release.</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "I designed, built, and deployed the application independently, using AI-assisted development tools to accelerate both design and implementation. This allowed me to move quickly from idea to working product while continuously refining the experience.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Instead of separating design and development into phases, I worked in a more integrated way.</strong> I would define an interaction, implement it, test it against real documents, and refine it immediately. This created a tight feedback loop where usability and functionality evolved together.",
+        },
+        {
+          type: "h3",
+          text: "Timeline and delivery approach",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>I took this project from initial idea to internal release in 40 days, with approximately 80 hours of active work.</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "I began by defining a clear architectural approach: a browser-based application with no backend, built using React and TypeScript, with mammoth.js handling document parsing and a custom rules engine running checks against the output. This upfront clarity allowed me to move quickly once development began.",
+        },
+        {
+          type: "paragraph",
+          text: "From there, the project became highly iterative. I merged over 180 pull requests, continuously expanding the rules engine, refining the interface, and addressing edge cases across multiple NOFO formats from different agencies.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>One of the more interesting aspects of the project was how the design process evolved. Rather than producing a full wireframe upfront, I used AI-assisted tools to prototype and refine the interface alongside development.</strong> Design and implementation informed each other in real time, creating a more fluid and responsive workflow.",
+        },
+        {
+          type: "paragraph",
+          text: "In the final phase, I focused on refining edge cases, improving reliability, and preparing the tool for release. I introduced it to internal teams along with guidance on how to incorporate it into their workflow.",
+        },
       ],
     },
+    {
+      title: "Key Outcomes",
+      content: [
+        {
+          type: "list",
+          items: [
+            "<strong>What previously took 3 to 4 hours per document was reduced to minutes.</strong> This translated into a significant time savings across the program and allowed teams to move more quickly from content to design.",
+            "<strong>Beyond efficiency, the tool improved consistency and reduced errors before they reached the design phase.</strong> Designers were able to spend less time preparing documents and more time focusing on higher-value work.",
+          ],
+        },
+      ],
+    } 
