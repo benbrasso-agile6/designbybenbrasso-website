@@ -107,6 +107,14 @@
     color: #e5e5e5; /* Consistent light color for dark mode */
   }
 
+  /* Normalize list item spacing - remove extra top margin from first list item */
+  .prose-neutral ul > li:first-child,
+  .prose-neutral ol > li:first-child,
+  .prose-invert ul > li:first-child,
+  .prose-invert ol > li:first-child {
+    margin-top: 0;
+  }
+
   /* Added mobile-specific strong text styling for better cross-device compatibility */
   .prose-neutral a strong,
   .prose-neutral strong a,
