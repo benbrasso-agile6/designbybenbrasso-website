@@ -236,9 +236,40 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>This shift enabled a more scalable and efficient workflow while redistributing ownership across teams.</strong> After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
+          text: "<strong>This shift enabled a more scalable and efficient workflow while redistributing ownership across teams.</strong>",
+        },
+        {
+          type: "h3",
+          text: "Informing future systems",
+        },
+        {
+          type: "paragraph",
+          text: "This work took place alongside a broader effort to modernize grants management into a unified platform. While that platform aims to streamline workflows, this project highlighted an important reality: even in integrated systems, human error in content creation will persist. Because of this, there is continued value in:",
+        },
+        {
+          type: "list",
+          items: [
+            "Validation layers that ensure quality before content moves downstream.",
+            'Lightweight “middleware” approaches that improve transitions between steps.',
+            "Feedback loops that strengthen upstream content quality.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "The Design Prep Checker serves as a practical example of how these capabilities can deliver immediate value while also informing how they might be built into future systems.",
         },
       ],
     },
-  ],
-}
+    {
+      title: "Adoption and future direction",
+      content: [
+        {
+          type: "paragraph",
+          text: "This project stands out because it addressed a problem that was widely experienced but not clearly owned. By focusing on a narrow but high-impact opportunity, I was able to deliver meaningful value quickly without requiring large system changes. At the same time, the work contributed to broader thinking about how systems should be designed moving forward.",
+        },
+        {
+          type: "paragraph",
+          text: "If I were to extend this work, I would focus on integrating validation earlier in the workflow, expanding accessibility checks, and creating feedback loops that improve content quality upstream. Ultimately, this project reinforced a core idea that continues to shape my work: <strong>meaningful system improvements often come from simplifying transitions, not just optimizing individual tools.</strong>",
+        },
+      ],
+    }
