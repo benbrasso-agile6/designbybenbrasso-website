@@ -1,21 +1,20 @@
 "use client"
 
 import type React from "react"
-import Image from "next/image"
 import { ArrowDownIcon } from "lucide-react"
-import { aiScribeKpiDashboardData } from "@/app/data/case-studies/ai-scribe-kpi-dashboard-data"
+import { nofoDesignPrepCheckerData } from "@/app/data/case-studies/nofo-design-prep-checker-data"
 import type { CaseStudyContentItem } from "@/app/data/case-study-types"
 import ProjectOverviewBanner from "@/app/components/project-overview-banner"
-import NextProjectLink from "@/app/components/next-project-link"
 import { useEffect, useState } from "react"
+import NextProjectLink from "@/app/components/next-project-link"
 import { useMobile } from "@/hooks/use-mobile"
 import Lightbox from "@/app/components/lightbox"
 import BackToAllCaseStudiesLink from "@/app/components/back-to-all-case-studies-link"
 import { cn } from "@/lib/utils"
 
-const caseStudy = aiScribeKpiDashboardData
+const caseStudy = nofoDesignPrepCheckerData
 
-export default function AiScribeKpiDashboardClientPage() {
+export default function NofoDesignPrepCheckerClientPage() {
   const isMobile = useMobile()
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
@@ -29,7 +28,6 @@ export default function AiScribeKpiDashboardClientPage() {
 
   const handleCloseLightbox = () => {
     setLightboxOpen(false)
-    // Delay clearing src/alt to allow fade-out animations if any
     setTimeout(() => {
       setLightboxSrc(null)
       setLightboxAlt(null)
@@ -54,28 +52,24 @@ export default function AiScribeKpiDashboardClientPage() {
           if (isMobile && isPng) {
             return (
               <div key={index} className="my-0 cursor-pointer" onClick={() => handleOpenLightbox(item.src!, item.alt!)}>
-                <Image
+                <img
                   src={item.src || "/placeholder.svg"}
                   alt={item.alt}
                   width={item.width || 800}
                   height={item.height || 450}
                   className={item.className || "rounded-lg w-full object-cover"}
-                  priority={item.priority}
-                  unoptimized
                 />
               </div>
             )
           }
           return (
             <div key={index} className="my-0">
-              <Image
+              <img
                 src={item.src || "/placeholder.svg"}
                 alt={item.alt}
                 width={item.width || 800}
                 height={item.height || 450}
                 className={item.className || "rounded-lg w-full object-cover"}
-                priority={item.priority}
-                unoptimized
               />
             </div>
           )
@@ -86,6 +80,30 @@ export default function AiScribeKpiDashboardClientPage() {
           <h3 key={index} className="text-2xl font-semibold mt-8 mb-3">
             {item.text}
           </h3>
+        )
+      case "video":
+        return (
+          <div key={index} className="my-0">
+            <video src={item.src} controls className="rounded-lg w-full" poster={item.poster}>
+              Your browser does not support the video tag.
+            </video>
+            {item.caption && (
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">{item.caption}</figcaption>
+            )}
+          </div>
+        )
+      case "quote":
+        return (
+          <blockquote key={index} className={cn("border-l-4 border-primary pl-4 italic my-6", item.className)}>
+            <p>{item.text}</p>
+            {item.attribution && <cite className="block mt-2 text-sm text-muted-foreground">— {item.attribution}</cite>}
+          </blockquote>
+        )
+      case "callout":
+        return (
+          <div key={index} className={cn("bg-muted p-4 rounded-lg my-6", item.className)}>
+            <p dangerouslySetInnerHTML={{ __html: item.text || "" }} />
+          </div>
         )
       default:
         return null
@@ -105,21 +123,16 @@ export default function AiScribeKpiDashboardClientPage() {
 
   useEffect(() => {
     const scrollToTopPrecise = () => {
-      // Force immediate scroll for iOS Safari
       if (typeof window !== "undefined") {
-        // Disable smooth scrolling temporarily
         document.documentElement.style.scrollBehavior = "auto"
         document.body.style.scrollBehavior = "auto"
 
-        // Multiple scroll methods for iOS Safari compatibility
         window.scrollTo(0, 0)
         document.body.scrollTop = 0
         document.documentElement.scrollTop = 0
 
-        // Force a reflow
         document.body.offsetHeight
 
-        // Try again with requestAnimationFrame
         requestAnimationFrame(() => {
           window.scrollTo(0, 0)
           document.body.scrollTop = 0
@@ -128,16 +141,19 @@ export default function AiScribeKpiDashboardClientPage() {
       }
     }
 
-    // Immediate scroll
     scrollToTopPrecise()
 
-    // Additional attempts with delays for iOS Safari
     const timeouts = [0, 10, 50, 100, 200].map((delay) => setTimeout(scrollToTopPrecise, delay))
 
     return () => {
       timeouts.forEach(clearTimeout)
     }
   }, [])
+
+  const githubLinkData = {
+    url: "https://github.com/agilesix/nofo-design-prep-checker",
+    text: "Visit the NOFO Design Prep Checker repo on GitHub",
+  }
 
   return (
     <>
@@ -152,20 +168,23 @@ export default function AiScribeKpiDashboardClientPage() {
       <div className="relative mt-12">
         {caseStudy.mainImage && (
           <div className="sticky top-16 z-0">
-            <Image
+            <img
               src={caseStudy.mainImage.src || "/placeholder.svg"}
               alt={caseStudy.mainImage.alt}
               width={caseStudy.mainImage.width}
               height={caseStudy.mainImage.height}
-              className="rounded-lg w-full object-cover border-2 border-neutral-700 dark:border-neutral-600"
-              priority={caseStudy.mainImage.priority}
-              unoptimized
+              className={cn(
+                "rounded-lg w-full object-cover",
+                caseStudy.mainImage.showBorder !== false && "border-2 border-neutral-700 dark:border-neutral-600",
+              )}
             />
           </div>
         )}
 
         <div className="relative z-10 bg-background dark:bg-neutral-950 transform-gpu">
-          {caseStudy.projectOverviewBanner && <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} />}
+          {caseStudy.projectOverviewBanner && (
+            <ProjectOverviewBanner bannerData={caseStudy.projectOverviewBanner} githubLink={githubLinkData} />
+          )}
 
           <article className="prose prose-lg max-w-none dark:prose-invert prose-neutral dark:prose-invert">
             <style jsx>{`
@@ -206,12 +225,8 @@ export default function AiScribeKpiDashboardClientPage() {
       </div>
 
       <div className="flex justify-between items-center mt-12 print:hidden">
-        <NextProjectLink
-          href="/work/streamlining-nofo-authoring-and-workflows"
-          text="Visit previous project"
-          isPrevious={true}
-        />
-        <NextProjectLink href="/work/nofo-design-prep-checker" text="Visit next project" />
+        <NextProjectLink href="/work/ai-scribe-kpi-dashboard" text="Visit previous project" isPrevious={true} />
+        <NextProjectLink href="/work/streamlining-nofo-authoring-and-workflows" text="Visit next project" />
       </div>
 
       {lightboxOpen && lightboxSrc && lightboxAlt && (

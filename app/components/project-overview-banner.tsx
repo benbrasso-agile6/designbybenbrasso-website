@@ -1,6 +1,5 @@
 import type { ProjectOverviewBannerData } from "@/app/data/case-study-types"
 import { GithubIcon } from "lucide-react" // Import GithubIcon
-import Link from "next/link" // Import Link
 
 interface ProjectOverviewBannerProps {
   bannerData: ProjectOverviewBannerData
@@ -40,7 +39,7 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
       {/* New GitHub link section */}
       {githubLink && (
         <p className="text-sm md:text-base mt-4 mb-6">
-          <Link
+          <a
             href={githubLink.url}
             target="_blank"
             rel="noopener noreferrer"
@@ -48,7 +47,7 @@ export default function ProjectOverviewBanner({ bannerData, githubLink }: Projec
           >
             <GithubIcon className="h-4 w-4 mr-2 text-neutral-600 dark:text-neutral-400 group-hover:text-brand-peach-text dark:group-hover:text-white transition-colors" />
             {githubLink.text}
-          </Link>
+          </a>
         </p>
       )}
 
