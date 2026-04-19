@@ -107,7 +107,15 @@
     color: #e5e5e5; /* Consistent light color for dark mode */
   }
 
-  /* Normalize list item spacing - remove extra top margin from first list item */
+  /* Normalize list item spacing - ensure consistent margins between all list items */
+  .prose-neutral ul > li,
+  .prose-neutral ol > li,
+  .prose-invert ul > li,
+  .prose-invert ol > li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
   .prose-neutral ul > li:first-child,
   .prose-neutral ol > li:first-child,
   .prose-invert ul > li:first-child,
