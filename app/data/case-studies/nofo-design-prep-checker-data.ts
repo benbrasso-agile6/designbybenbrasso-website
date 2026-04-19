@@ -8,12 +8,12 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
     "Case study on designing and shipping the NOFO Design Prep Checker, an AI-assisted tool that streamlines document prep and improves efficiency in federal grants workflows.",
   projectOverviewBanner: {
     description:
-      "[TODO: Project overview description]",
+      "I designed and shipped a browser-based tool in 40 days as a solo contributor, using AI-assisted development to automate NOFO document prep and reduce a 3–4 hour manual workflow to minutes. The tool addresses a key gap between content creation and design execution within the HHS SimplerNOFOs initiative, improving both efficiency and consistency.",
     role: "Principal Product Designer leading product design end-to-end, including problem framing, workflow definition, UX design, prototyping, and delivery. I independently designed, built, and released the application, leveraging AI-assisted development tools such as Claude.ai, Claude Code, and GitHub Copilot to accelerate implementation and iteration.",
     skills:
       "Human-centered design, product strategy, UX design, UX writing, systems thinking, workflow optimization, AI-assisted development, rapid prototyping, front-end development, end-to-end product development",
     tools:
-      "GitHub, Claude.ai, Claude Code, GitHub Copilot, browser-based architecture, document parsing libraries, Cloudflare",
+      "GitHub, Claude.ai, Claude Code, GitHub Copilot, browser-based architecture, document parsing libraries, Cloudflare, US Web Design System",
     date: "March - April 2026",
     disclaimer:
       "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
@@ -82,19 +82,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
         },
         {
           type: "paragraph",
-          text: "<strong>I reframed the problem as a system gap between steps, not just a task inefficiency.</strong>",
-        },
-        {
-          type: "paragraph",
-          text: "[TODO: Challenge paragraph 2]",
-        },
-        {
-          type: "paragraph",
-          text: "[TODO: Challenge paragraph 1]",
-        },
-        {
-          type: "paragraph",
-          text: "[TODO: Challenge paragraph 2]",
+          text: "I reframed the problem as a system gap between steps, not just a task inefficiency. <strong>The workflow between authoring and design lacked a reliable, scalable way to ensure quality and consistency.</strong>",
         },
       ],
     },
@@ -102,44 +90,73 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       title: "Action",
       content: [
         {
-          type: "paragraph",
-          text: "[TODO: Action paragraph 1]",
+          type: "h3",
+          text: "Reframing the problem",
         },
         {
           type: "paragraph",
-          text: "[TODO: Action paragraph 2]",
+          text: "Rather than focusing on improving the manual process itself, I stepped back to understand how NOFOs moved through the system.",
+        },
+        {
+          type: "paragraph",
+          text: "What I saw was a pattern:",
         },
         {
           type: "list",
           items: [
-            "[TODO: Action list item 1]",
-            "[TODO: Action list item 2]",
-            "[TODO: Action list item 3]",
+            "Authoring was improving.",
+            "Design systems were improving.",
+            "But the connection between them remained fragile.",
           ],
         },
-      ],
-    },
-    {
-      title: "Key Outcomes",
-      content: [
+        {
+          type: "paragraph",
+          text: "This shifted my focus from optimizing a task to strengthening a transition.",
+        },
+        {
+          type: "h3",
+          text: "Defining a focused solution",
+        },
+        {
+          type: "paragraph",
+          text: "I asked a simple but important question: <strong>what if we could automate the predictable parts of design preparation?</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "From that point, the direction became clear. The solution needed to:",
+        },
         {
           type: "list",
           items: [
-            "[TODO: Key outcome 1]",
-            "[TODO: Key outcome 2]",
-            "[TODO: Key outcome 3]",
+            "Remove repetitive, manual checks.",
+            "Standardize how documents are evaluated before design.",
+            "Provide clear, actionable feedback.",
+            "Fit into existing workflows without disruption.",
           ],
         },
-      ],
-    },
-    {
-      title: "Reflection",
-      content: [
         {
           type: "paragraph",
-          text: "[TODO: Reflection paragraph]",
+          text: "Instead of introducing a heavy system, I chose to design something lightweight and immediately usable.",
+        },
+        {
+          type: "h3",
+          text: "Designing the experience",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>I designed the NOFO Design Prep Checker as a simple, guided workflow that mirrors how teams already think about document preparation.</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "Users upload a document, the tool analyzes its structure and formatting, and then surfaces issues that need attention before design can begin. From there, users can download a cleaned, design-ready version.",
+        },
+        {
+          type: "paragraph",
+          text: "Users upload a document, the tool analyzes its structure and formatting, and then surfaces issues that need attention before design can begin. From there, users can download a cleaned, design-ready version.",
+        },
+        {
+          type: "paragraph",
+          text: "What mattered most to me was not the technical complexity, but how clearly the tool communicated its output. <strong>I focused on making feedback understandable, actionable, and directly tied to design readiness.</strong>",
         },
       ],
     },
-  ],
-}
