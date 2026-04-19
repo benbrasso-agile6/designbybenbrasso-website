@@ -225,11 +225,52 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       title: "Key Outcomes",
       content: [
         {
+          type: "paragraph",
+          text: "The impact of the tool was immediate.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>What previously took 3 to 4 hours per document was reduced to minutes,</strong> significantly accelerating the transition from content to design. This time savings scaled quickly across the program, allowing teams to move faster without sacrificing quality.",
+        },
+        {
+          type: "paragraph",
+          text: "Just as importantly, the tool improved the consistency of document structure and formatting before design even began. By catching issues earlier in the workflow, it reduced errors and rework downstream.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>As a result, coaches and designers were able to spend less time on manual preparation and more time focused on higher-value work.</strong>",
+        },
+        {
+          type: "h3",
+          text: "Extending impact beyond efficiency",
+        },
+        {
+          type: "paragraph",
+          text: "Beyond time savings, this work expanded the scope of the SimplerNOFOs initiative and demonstrated how targeted improvements can influence the broader system.",
+        },
+        {
+          type: "paragraph",
+          text: "By addressing a single point of friction, the work:",
+        },
+        {
           type: "list",
           items: [
-            "<strong>What previously took 3 to 4 hours per document was reduced to minutes.</strong> This translated into a significant time savings across the program and allowed teams to move more quickly from content to design.",
-            "<strong>Beyond efficiency, the tool improved consistency and reduced errors before they reached the design phase.</strong> Designers were able to spend less time preparing documents and more time focusing on higher-value work.",
+            "Improved both <strong>speed and quality</strong> across the workflow.",
+            "Strengthened the <strong>connection between content creation and design execution.</strong>",
+            "Reinforced a broader principle that <strong>the most impactful improvements come from fixing the connections between systems, not just the systems themselves.</strong>",
+            "Surfaced important considerations for future platforms, particularly around <strong>validation and content quality.</strong>",
           ],
         },
       ],
-    } 
+    },
+    {
+      title: "Reflection",
+      content: [
+        {
+          type: "paragraph",
+          text: "[TODO: Reflection content]",
+        },
+      ],
+    },
+  ],
+}
