@@ -18,12 +18,12 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
     disclaimer:
       "Disclaimer: This case study reflects open, research-driven process and system-level learnings from work supporting the Simpler NOFO initiative. It does not include or disclose draft, unpublished, or sensitive NOFO content. All examples and findings are presented at an abstracted level and do not represent the U.S. Department of Health and Human Services.",
   },
-  projectDetails: [
-    { label: "Client Type", value: "[TODO: Client type]" },
-    { label: "Role", value: ["[TODO: Role 1]", "[TODO: Role 2]"] },
-    { label: "Timeline", value: "[TODO: Timeline]" },
-    { label: "Tools", value: ["[TODO: Tool 1]", "[TODO: Tool 2]"] },
-  ],
+  // projectDetails: [
+  //   { label: "Client Type", value: "[TODO: Client type]" },
+  //   { label: "Role", value: ["[TODO: Role 1]", "[TODO: Role 2]"] },
+  //   { label: "Timeline", value: "[TODO: Timeline]" },
+  //   { label: "Tools", value: ["[TODO: Tool 1]", "[TODO: Tool 2]"] },
+  // ],
   mainImage: {
     src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1776624916/NOFO_Design_Prep_Checker_main_ysy1ou.png",
     alt: "NOFO Design Prep Checker project showcase",
