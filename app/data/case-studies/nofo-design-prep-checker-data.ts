@@ -24,15 +24,15 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
   //   { label: "Timeline", value: "[TODO: Timeline]" },
   //   { label: "Tools", value: ["[TODO: Tool 1]", "[TODO: Tool 2]"] },
   // ],
-  mainImage: {
-    src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1774197261/Frame_685_yvvihx.png",
-    alt: "NOFO Design Prep Checker project showcase",
-    width: 800,
-    height: 450,
-    priority: true,
-    className: "rounded-lg mt-12 mb-6 w-full object-cover",
-    showBorder: false,
-  },
+  // mainImage: {
+  //   src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1774197261/Frame_685_yvvihx.png",
+  //   alt: "NOFO Design Prep Checker project showcase",
+  //   width: 800,
+  //   height: 450,
+  //   priority: true,
+  //   className: "rounded-lg mt-12 mb-6 w-full object-cover",
+  //   showBorder: false,
+  // },
   sections: [
     {
       title: "Background",
