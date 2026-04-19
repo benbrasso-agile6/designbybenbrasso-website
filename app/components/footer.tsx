@@ -81,6 +81,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div className="w-full border-t border-sky-600/30 dark:border-sky-500/30 bg-neutral-100 dark:bg-neutral-900 py-3">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center">
+          benbrasso.com &mdash; not affiliated with any federal agency
+        </p>
+      </div>
     </footer>
   )
 }
