@@ -275,3 +275,5 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
     },
   ],
 }
+
+export default nofoDesignPrepCheckerData
