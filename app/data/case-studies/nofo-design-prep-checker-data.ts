@@ -264,11 +264,36 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       ],
     },
     {
+      title: "Adoption and future direction",
+      content: [
+        {
+          type: "paragraph",
+          text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
+        },
+        {
+          type: "paragraph",
+          text: "Rather than relying on designers to manually prepare documents, program teams could now run documents through the tool themselves, identify issues earlier, and enter the design phase with cleaner inputs.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>This shift enabled a more scalable and efficient workflow while redistributing ownership across teams.</strong>",
+        },
+        {
+          type: "paragraph",
+          text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
+        },
+        {
+          type: "h3",
+          text: "Informing future systems",
+        },
+      ],
+    },
+    {
       title: "Reflection",
       content: [
         {
           type: "paragraph",
-          text: "[TODO: Reflection content]",
+          text: "[TODO: Reflection paragraph 1]",
         },
       ],
     },
