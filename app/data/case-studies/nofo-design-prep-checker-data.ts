@@ -261,7 +261,7 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
       ],
     },
     {
-      title: "Adoption and future direction",
+      title: "Reflection",
       content: [
         {
           type: "paragraph",
@@ -272,4 +272,6 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
           text: "If I were to extend this work, I would focus on integrating validation earlier in the workflow, expanding accessibility checks, and creating feedback loops that improve content quality upstream. Ultimately, this project reinforced a core idea that continues to shape my work: <strong>meaningful system improvements often come from simplifying transitions, not just optimizing individual tools.</strong>",
         },
       ],
-    }
+    },
+  ],
+}
