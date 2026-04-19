@@ -282,19 +282,6 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
           type: "paragraph",
           text: "After introducing the tool, teams quickly incorporated it into their workflow as a standard step between document approval and design.",
         },
-        {
-          type: "h3",
-          text: "Informing future systems",
-        },
-      ],
-    },
-    {
-      title: "Reflection",
-      content: [
-        {
-          type: "paragraph",
-          text: "[TODO: Reflection paragraph 1]",
-        },
       ],
     },
   ],
