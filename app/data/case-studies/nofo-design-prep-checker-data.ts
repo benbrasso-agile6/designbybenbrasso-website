@@ -171,9 +171,9 @@ export const nofoDesignPrepCheckerData: CaseStudyData = {
           type: "image",
           src: "https://res.cloudinary.com/dpl6apspp/image/upload/v1776624916/NOFO_Design_Prep_Checker_main_ysy1ou.png",
           alt: "Community care appointment scheduling user interface process",
-          width: 400,
-          height: 225,
-          className: "rounded-lg mt-12 mb-6 mx-auto object-cover",
+          width: 800,
+          height: 450,
+          className: "rounded-lg mt-12 mb-6 w-full object-cover",
         },
         {
           type: "h3",
